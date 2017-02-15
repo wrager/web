@@ -1,0 +1,218 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.body, html {
+    overflow: hidden;
+}
+
+.header {
+    width: auto;
+    height: 61;
+}
+
+.header-logo img {
+    margin-left: 7;
+    margin-top: 6;
+    width: 127;
+    height: 52;
+}
+
+.help {
+    float: right;
+    margin-top: -40;
+    margin-right: -8; 
+}
+
+.about {
+    position: absolute;
+    margin-left: 490;
+    margin-top: 58;
+    width: 560;
+    height: auto;
+    font-family: Arial, sans-serif;
+}
+
+.about h3 {
+    font-size: 15pt;
+    letter-spacing: 0.2px;
+}
+
+.about p {
+    font-size: 16pt;
+    letter-spacing: 0.07px;
+}
+
+.signin-box-header {
+    position: absolute;
+    margin-left: 1107px;
+    margin-top: 3px;
+    width: 360px;
+    height: 4px;
+    background: linear-gradient(to right, #188fff, #400090);
+}
+
+.center {
+    display: table;
+    margin: 0 auto;
+}
+
+.right {
+    float: right;
+    width: auto;
+}
+
+.signin-box {
+    position: relative;
+    left: 1107px;
+    top: 2px;
+    padding: 30;
+    width: 300px;
+    height: 503px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+
+}
+
+.signin-box-logo img {
+    margin-top: 5px;
+    width: 116px;
+    height: 48px;
+}
+
+.signin-box-sign-in-text {
+    margin-top: 20px;
+    font-size: 13.5pt;
+    font-family: Arial, sans-serif;
+}
+
+.input-box {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+    padding: 0 8;
+    margin-top: 29px;
+    height: 40;
+    width: 300;
+    border: none;
+    border-bottom: 1px solid #cfd2d5;
+}
+
+.input-box:focus {
+    outline-style: none;
+    border: none;
+    border-bottom: 2px solid #188fff;
+}
+
+.next-btn {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #188fff;
+    margin-top: 23;
+    padding: 11 0;
+    width: 300; 
+    border: none;
+}
+
+.next-btn:hover {
+    background-color: #4ca9ff;
+    cursor: pointer;
+}
+
+.next-btn:active {
+    background-color: #0036b0;
+    background-image: linear-gradient(transparent,rgba(0,0,0,0.15) 75%,rgba(0,0,0,0.40));
+}
+
+.signin-box-helper {
+    margin-top: 16px;
+}
+
+#chkBox + label {
+    margin-left: 0;
+    color: #a497a4;
+}
+
+#chkBox:hover + label:hover {
+    cursor: pointer;
+}
+
+#chkBox:checked + label {
+    color: #188fff;
+}
+
+.stay-signed-label {
+    font-size: 10pt;
+    font-family: Arial, sans-serif;
+    margin-left: 5;
+}
+
+.lnk {
+    font-size: 10pt;
+    font-family: Arial, sans-serif;
+    padding-top: 4;
+    color: #188fff;
+    text-decoration: none;
+}
+
+.signin-box-security-issue {
+    background-color: #fff6d7;
+    margin-top: 13px;
+    padding: 5;
+    height: 170px;
+}
+
+.signin-box-security-issue a {
+    padding: 10 60;
+    text-align: center;
+}
+
+.important {
+    font-size: 9.5pt;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #dd1037;
+    margin-top: 10px;
+}
+
+.usual {
+    font-size: 9.5pt;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+
+.usual:before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAMAAAC3SZ14AAAAZlBMVEUAAABFT08tNT4tNT4tNT8yO0M2RUktNT4uNj4tNT8uNj8uNj8uNz8tOD8tNT4tNT4tNj4tNj8tNj4vNj8uNz8yOkYtNT4wN0IwNz4uNT4tNT8uNT4tNj8tNj8uNz8vNz8zOkItNT4lfUnHAAAAIXRSTlMAA+3f2BwJyMOkhWFZLPfzuaqYUEQVlCYl+9GsZa+afiMjWvc/AAAAtElEQVQY01WP2RaCMBBDp5tdpCA7Ci75/5+UThEwD01y50xPS5smayf6U1EBVXECnYMsCgnXcR2XRgG1ITI1oJplJAnIJhIrNqmR1FGk2rbpFFFL0opY1mZXmlyZY99nLx15GI7DwGbg6YorZ4AtVYP6jOa09Cj7A/XlI/0F4UCBrxGq+vzQVKn8SLjVQ1inFi2xBnieiRovyrrcMF9We+K22s501+md8Mr7DtyDoLNG7+MWv2QSC1pVZFdoAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    position:absolute;
+    margin-left: -24;
+    margin-top: -1;
+}
+
+.signin-box-signup {
+    padding-left: 37;
+    padding-top: 13;
+}
+
+.signin-box-footer-text {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+}
+
+.signin-box-footer-text a {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    margin-top: 319px;
+}
+
+.lnk-small {
+    font-size: 7pt;
+    font-family: Arial, sans-serif;
+    padding-top: 4;
+    color: #188fff;
+    text-decoration: none;
+}
