@@ -131,16 +131,16 @@
     margin-top: 16px;
 }
 
-#chkBox + label {
+#chkbox + label {
     margin-left: 0px;
     color: #a497a4;
 }
 
-#chkBox:hover + label:hover {
+#chkbox:hover + label:hover {
     cursor: pointer;
 }
 
-#chkBox:checked + label {
+#chkbox:checked + label {
     color: #188fff;
 }
 
