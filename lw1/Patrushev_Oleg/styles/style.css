@@ -20,7 +20,7 @@
 
 .help {
     float: right;
-    margin-top: -40px;
+    margin-top: -48px;
     margin-right: -8px;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .signin-box-sign-in-text {
-    margin-top: 20px;
+    margin-top: -2px;
     font-size: 18px;
     font-family: Arial, sans-serif;
 }
@@ -93,9 +93,9 @@
     font-size: 16px;
     font-family: Arial, sans-serif;
     padding: 0px 8px;
-    margin-top: 29px;
+    margin-top: 10px;
     height: 40px;
-    width: 300px;
+    width: 284px;
     border: none;
     border-bottom: 1px solid #cfd2d5;
 }
@@ -158,6 +158,10 @@
     text-decoration: none;
 }
 
+.lnk-dark {
+    color: #1D1DA3;
+}
+
 .signin-box-security-issue {
     background-color: #fff6d7;
     margin-top: 13px;
@@ -182,7 +186,7 @@
     font-size: 13px;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    margin-top: 13px;
+    margin-top: 11px;
     margin-bottom: 10px;
 }
 
