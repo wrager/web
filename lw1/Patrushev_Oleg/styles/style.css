@@ -8,27 +8,27 @@
 
 .header {
     width: auto;
-    height: 61;
+    height: 61px;
 }
 
 .header-logo img {
-    margin-left: 7;
-    margin-top: 6;
-    width: 127;
-    height: 52;
+    margin-left: 7px;
+    margin-top: 6px;
+    width: 127px;
+    height: 52px;
 }
 
 .help {
     float: right;
-    margin-top: -40;
-    margin-right: -8; 
+    margin-top: -40px;
+    margin-right: -8px;
 }
 
 .about {
     position: absolute;
-    margin-left: 490;
-    margin-top: 58;
-    width: 560;
+    margin-left: 490px;
+    margin-top: 58px;
+    width: 560px;
     height: auto;
     font-family: Arial, sans-serif;
 }
@@ -54,7 +54,7 @@
 
 .center {
     display: table;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 .right {
@@ -66,10 +66,10 @@
     position: relative;
     left: 1107px;
     top: 2px;
-    padding: 30;
+    padding: 30px;
     width: 300px;
     height: 503px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
 
 }
 
@@ -88,10 +88,10 @@
 .input-box {
     font-size: 12pt;
     font-family: Arial, sans-serif;
-    padding: 0 8;
+    padding: 0px 8px;
     margin-top: 29px;
-    height: 40;
-    width: 300;
+    height: 40px;
+    width: 300px;
     border: none;
     border-bottom: 1px solid #cfd2d5;
 }
@@ -107,9 +107,9 @@
     font-family: Arial, sans-serif;
     color: #ffffff;
     background-color: #188fff;
-    margin-top: 23;
-    padding: 11 0;
-    width: 300; 
+    margin-top: 23px;
+    padding: 11px 0px;
+    width: 300px; 
     border: none;
 }
 
@@ -128,7 +128,7 @@
 }
 
 #chkBox + label {
-    margin-left: 0;
+    margin-left: 0px;
     color: #a497a4;
 }
 
@@ -143,13 +143,13 @@
 .stay-signed-label {
     font-size: 10pt;
     font-family: Arial, sans-serif;
-    margin-left: 5;
+    margin-left: 5px;
 }
 
 .lnk {
     font-size: 10pt;
     font-family: Arial, sans-serif;
-    padding-top: 4;
+    padding-top: 4px;
     color: #188fff;
     text-decoration: none;
 }
@@ -157,12 +157,12 @@
 .signin-box-security-issue {
     background-color: #fff6d7;
     margin-top: 13px;
-    padding: 5;
+    padding: 5px;
     height: 170px;
 }
 
 .signin-box-security-issue a {
-    padding: 10 60;
+    padding: 10px 60px;
     text-align: center;
 }
 
@@ -186,13 +186,13 @@
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAMAAAC3SZ14AAAAZlBMVEUAAABFT08tNT4tNT4tNT8yO0M2RUktNT4uNj4tNT8uNj8uNj8uNz8tOD8tNT4tNT4tNj4tNj8tNj4vNj8uNz8yOkYtNT4wN0IwNz4uNT4tNT8uNT4tNj8tNj8uNz8vNz8zOkItNT4lfUnHAAAAIXRSTlMAA+3f2BwJyMOkhWFZLPfzuaqYUEQVlCYl+9GsZa+afiMjWvc/AAAAtElEQVQY01WP2RaCMBBDp5tdpCA7Ci75/5+UThEwD01y50xPS5smayf6U1EBVXECnYMsCgnXcR2XRgG1ITI1oJplJAnIJhIrNqmR1FGk2rbpFFFL0opY1mZXmlyZY99nLx15GI7DwGbg6YorZ4AtVYP6jOa09Cj7A/XlI/0F4UCBrxGq+vzQVKn8SLjVQ1inFi2xBnieiRovyrrcMF9We+K22s501+md8Mr7DtyDoLNG7+MWv2QSC1pVZFdoAAAAAElFTkSuQmCC);
     background-repeat: no-repeat;
     position:absolute;
-    margin-left: -24;
-    margin-top: -1;
+    margin-left: -24px;
+    margin-top: -1px;
 }
 
 .signin-box-signup {
-    padding-left: 37;
-    padding-top: 13;
+    padding-left: 37px;
+    padding-top: 13px;
 }
 
 .signin-box-footer-text {
@@ -212,7 +212,7 @@
 .lnk-small {
     font-size: 7pt;
     font-family: Arial, sans-serif;
-    padding-top: 4;
+    padding-top: 4px;
     color: #188fff;
     text-decoration: none;
 }
