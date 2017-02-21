@@ -184,6 +184,36 @@ body {
         margin: 0 auto;
         text-align: center;
         font-size: 14px; }
+    .main .container .footer {
+      height: 83px;
+      margin: 43px 0 0;
+      font-size: 11px; }
+      .main .container .footer .nav {
+        height: 37px;
+        max-height: 29px;
+        margin: 19px 0 2px;
+        padding: 7px 0 0px;
+        text-align: justify;
+        width: 100%;
+        border-bottom: 1px solid #e1e1e1;
+        background-color: white; }
+      .main .container .footer .list {
+        float: none;
+        display: inline-block;
+        width: 100%; }
+        .main .container .footer .list li {
+          float: none;
+          display: inline-block;
+          padding-right: 18.5px; }
+      .main .container .footer .list :last-child {
+        padding-right: 0;
+        margin-right: 0; }
+      .main .container .footer .about {
+        padding-bottom: 10px;
+        line-height: 15px;
+        margin-right: 110px;
+        margin-top: 7px;
+        color: #858585; }
 
 .button_origin {
   background-color: #fff;
@@ -228,7 +258,6 @@ input {
   box-shadow: inset 0 1px 1px rgba(142, 142, 142, 0.2);
   border: 1px solid #d8d8d8;
   border-radius: 2px;
-  outline: 0;
   width: 100%; }
 
 .btn {
@@ -252,20 +281,20 @@ input {
     background-size: 12px 20px;
     background-position-y: 7px; }
     .btn.btn_odnokl:hover {
-      background-color: #496f9a; }
+      background-color: #e0772a; }
   .btn.btn_fb {
     background-color: #395185;
     background-image: url("img/facebook.svg");
     background-size: 14px 25px;
     background-position-y: 4px; }
     .btn.btn_fb:hover {
-      background-color: #496f9a; }
+      background-color: #354c7c; }
   .btn.btn_google {
     background-color: #dd4b39;
     background-image: url("img/google+.svg");
     background-size: 26px 18px;
     background-position-y: 8px; }
     .btn.btn_google:hover {
-      background-color: #496f9a; }
+      background-color: #db412e; }
 
 /*# sourceMappingURL=style.css.map */
