@@ -181,8 +181,12 @@ input {
 }
 
 .text:focus {
-    outline: 1;
-    outline: 1px solid rgb(178, 178, 178);
+    border: 1px solid #b2b2b2;
+    outline: none;
+}
+
+.text:active {
+    box-shadow: none;
 }
 
 .reg {
@@ -264,7 +268,7 @@ footer {
 }
 
 .photo {
-    background-image: url(../images/screenshot1.jpg);
+    /*background-image: url(../images/screenshot1.jpg);*/
     width: 263px;
     background-repeat: no-repeat;
     float: right;
