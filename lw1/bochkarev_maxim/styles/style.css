@@ -56,15 +56,17 @@ label {
     margin: 0 0 6.25px;
 }
 
+.button {
+    font-family: Arial,sans-serif;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    border: none;
+    line-height: 22px;
+}
+
 .register_button {
     margin-top: 20px;
-    line-height: 22px;
-    font-family: Arial,sans-serif;
-    position: relative;
-    cursor: pointer;
-    text-align: center;
-    border: none;
-    outline: 0;
     background: linear-gradient(to bottom,#ffe34a,#ffdb03);;
     box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 204, 0, 0.5);
     text-shadow: 0 1px 0 rgba(255,255,255,.36);
@@ -74,21 +76,22 @@ label {
     border-radius: 4px;
 }
 
+.register_button:hover {
+    background: linear-gradient(to bottom, rgba(255, 227, 74, 0.81), rgba(255, 219, 3, 0.8));;
+}
+
 .get_mobile_code_button {
     right: -9px;
     bottom: -1px;
-    position: relative;
-    vertical-align: baseline;
-    user-select: none;
-    border: none;
-    border-radius: 3px;
+    background: -webkit-linear-gradient(#ffdf60,#fc0);
     box-shadow: 0 1px 0 rgba(0, 0, 0, .07), inset 0 0 0 1px rgb(183, 171, 153);
     font-size: 15px;
-    line-height: 22px;
     padding: 5px 15px;
-    background: #f9c400;
-    background: -webkit-linear-gradient(#ffdf60,#fc0);
-    cursor: pointer;
+    border-radius: 3px;
+}
+
+.get_mobile_code_button:hover {
+    background: -webkit-linear-gradient(rgba(255, 223, 96, 0.8), rgba(255, 204, 0, 0.8));
 }
 
 .mobile_link {
