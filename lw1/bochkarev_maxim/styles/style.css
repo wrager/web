@@ -1,0 +1,212 @@
+body {
+    line-height: 17px;
+    font-size: 13px;
+}
+
+.logo {
+    left: 70px;
+    top: 27px;
+    position: absolute;
+}
+
+label {
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+    color: #666;
+}
+
+.registration-form {
+    position: relative;
+    top: 47px;
+    margin: auto;
+    width: 495px;
+}
+
+.control {
+    position: relative;
+    width: 325px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.control_input:focus {
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);
+    -webkit-box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
+    box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
+    z-index: 9;
+}
+
+.control_input {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    line-height: 20px;
+    min-height: 32px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.16);
+    padding: 5px 10px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.2),inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.control__label {
+    margin: 0 0 6.25px;
+}
+
+.get_code_button {
+    font-family: Arial,sans-serif;
+    position: relative;
+    vertical-align: baseline;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #000;
+    border-radius: 3px;
+    border-color: grey;
+    box-shadow: 0 1px 0 rgba(0,0,0,.07);
+    font-size: 15px;
+    line-height: 22px;
+    padding: 5px 15px;
+    background: linear-gradient(to bottom,#ffe025,#f9c400 92%,#be8c05);;
+}
+
+.register_button {
+    line-height: 22px;
+    font-family: Arial,sans-serif;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    outline: 0;
+    background: linear-gradient(to bottom,#ffe025,#f9c400 92%,#be8c05);
+    text-shadow: 0 1px 0 rgba(255,255,255,.36);
+    color: #473e09;
+    box-shadow: 0 0 1px 0 #fff;
+    font-size: 24px;
+    padding: 13px 27px;
+    border-radius: 4px;
+}
+
+.link {
+    color: #0072bc;
+}
+
+.mobile_link {
+    color: #0072bc;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: -1px 5px 0;
+}
+
+.input_mobile {
+    font-family: Arial, sans-serif;
+    line-height: 20px;
+    width: 188px;
+    min-height: 32px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.16);
+    padding: 5px 10px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.2),inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.registration-form_agreement {
+    width: 700px;
+    margin-top: 23px;
+    line-height: 1.5;
+}
+
+.mobile_number_title {
+    display: table;
+}
+
+.mobile_number_title__item {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.mobile_number_input {
+    display: inline;
+}
+
+.mobile_number_input__item {
+
+}
+.link_mobile_phone {
+    float: right;
+    color: #666;
+}
+
+.mobile_phone_elem {
+    width: 325px;
+}
+
+.registration-form_mobile_number {
+    position: relative;
+    width: 325px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+.password-indicator {
+    height: 6px;
+    margin: 6px 0;
+    font: 0/0 a;
+    background: #ddd;
+    width: 325px;
+}
+
+.password-eye {
+    position: absolute;
+    left: 302px;
+    top: 34px;
+    opacity: .65;
+}
+.checkbox {
+    width: auto;
+    float: left;
+    margin: 1px 5px 0 0;
+}
+
+.promo-btn {
+    right: -9px;
+    bottom: -1px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    vertical-align: baseline;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #000;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .07), inset 0 0 0 1px rgba(193, 154, 0, 100);
+    font-size: 15px;
+    line-height: 22px;
+    padding: 5px 15px;
+    background: #f9c400;
+    background: -webkit-linear-gradient(top, #ffe025, #f9c400 92%, #be8c05);
+    background: -o-linear-gradient(top, #ffe025, #f9c400 92%, #be8c05);
+    background: linear-gradient(to bottom, #ffe025, #f9c400 92%, #be8c05);
+    background: linear-gradient(#ffdf60, #fc0);
+}
+
+.registration-form_mobile_title {
+    margin-bottom: 5px;
+}
+
+
