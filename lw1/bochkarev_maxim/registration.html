@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="icon" href="res/favicon.ico" type="image/png">
+</head>
+
+<body>
+<header class="header">
+    <div class="logo">
+        <a href="https://yandex.ru">
+        <img src="res/logo.png" alt="Яндекс">
+        </a>
+    </div>
+</header>
+
+<div class="registration-form">
+
+    <div class="registration-form_firstname control">
+        <div class="control__label control__label_name_firstname">
+            <label>Имя</label>
+        </div>
+
+        <input class="control_input" type="text" name="first_name" autofocus title="">
+    </div>
+
+    <div class="registration-form_secondname control">
+        <div class="control__label control__label_name_secondname">
+            <label>Фамилия</label>
+        </div>
+
+        <input class="control_input" type="text" name="second_name" title="">
+    </div>
+
+    <div class="registration-form_login control">
+        <div class="control__label control__label_name_login">
+            <label>Придумайте логин</label>
+        </div>
+
+        <input class="control_input" type="text" name="login" title="">
+    </div>
+
+    <div class="registration-form_password control">
+        <div class="control__label control__label_name_password">
+            <label>Придумайте пароль</label>
+        </div>
+
+        <input class="control_input" type="password" name="password" title="">
+        <img class="password-eye" src="res/show_password.png" alt="">
+        <div class="password-indicator">
+            <div class="password-indicator__i">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+
+    <div class="registration-form_password_confirm control">
+        <div class="control__label control__label_name_password_confirm">
+            <label>Повторите, чтобы не ошибиться</label>
+        </div>
+
+        <input class="control_input" type="password" name="password_confirm" style="margin-top: 1px;"title="">
+    </div>
+
+    <div class="mobile_phone_enter">
+        <div class="registration-form_mobile_title mobile_phone_elem">
+            <label class="control_label">Мобильный телефон</label>
+            <a class="mobile_link link_mobile_phone" href="https://yandex.ru/legal/rules/">У меня нет телефона</a>
+        </div>
+        <div>
+            <input type="tel" class="input_mobile"  title=""/>
+            <button class="register_button btn promo-btn">Получить код </button>
+        </div>
+        <div class="mobile_number_example">
+            <label>Например: +7 xxx xxx xx xx</label><br>
+        </div>
+    </div>
+
+    <div class="registration-form_agreement">
+        <input class="checkbox" name="eula_accepted" id="eula_accepted" checked="checked" type="checkbox">
+        <label for="eula_accepted">
+            Нажимая кнопку «Зарегистрироваться», я принимаю условия
+            <a class="link" href="https://yandex.ru/legal/rules/">Пользовательского соглашения</a>
+            и даю своё согласие Яндексу на обработку моих персональных данных, в соответствии с Федеральным законом от
+                27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных
+            <a class="link" href="https://yandex.ru/legal/confidential/">Политикой конфиденциальности.</a>
+        </label>
+        <br>
+        <br>
+    </div>
+
+    <div class="registration-form_register_button button">
+        <button class="register_button">Зарегистрироваться</button>
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+
+</body>
+</html>
