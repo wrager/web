@@ -15,7 +15,7 @@ label {
     color: #666;
 }
 
-.registration-form {
+.registration_form {
     position: relative;
     top: 47px;
     margin: auto;
@@ -45,34 +45,15 @@ label {
     line-height: 20px;
     min-height: 32px;
     box-sizing: border-box;
-    border: 1px solid transparent;
-    border-color: rgba(0,0,0,.27);
-    border-top-color: rgba(0,0,0,.38);
-    border-bottom-color: rgba(0,0,0,.16);
+    border: 1px solid rgba(0, 0, 0, .27);
+    border-top-color: rgba(0, 0, 0, .38);
+    border-bottom-color: rgba(0, 0, 0, .16);
     padding: 5px 10px;
     box-shadow: 0 1px 0 rgba(255,255,255,.2),inset 0 1px 1px rgba(0,0,0,.1);
 }
 
-.control__label {
-    margin: 0 0 6.25px;
-}
-
-.get_code_button {
-    font-family: Arial,sans-serif;
-    position: relative;
-    vertical-align: baseline;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: #000;
-    border-radius: 3px;
-    border-color: grey;
-    box-shadow: 0 1px 0 rgba(0,0,0,.07);
-    font-size: 15px;
-    line-height: 22px;
-    padding: 5px 15px;
-    background: linear-gradient(to bottom,#ffe025,#f9c400 92%,#be8c05);;
+.control_label {
+    margin: 0 0 6px;
 }
 
 .register_button {
@@ -92,8 +73,21 @@ label {
     border-radius: 4px;
 }
 
-.link {
-    color: #0072bc;
+.get_mobile_code_button {
+    right: -9px;
+    bottom: -1px;
+    position: relative;
+    vertical-align: baseline;
+    user-select: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .07), inset 0 0 0 1px rgb(222, 210, 185);
+    font-size: 15px;
+    line-height: 22px;
+    padding: 5px 15px;
+    background: #f9c400;
+    background: -webkit-linear-gradient(#ffdf60,#fc0);
+    cursor: pointer;
 }
 
 .mobile_link {
@@ -110,56 +104,31 @@ label {
     width: 188px;
     min-height: 32px;
     box-sizing: border-box;
-    border: 1px solid transparent;
-    border-color: rgba(0,0,0,.27);
-    border-top-color: rgba(0,0,0,.38);
-    border-bottom-color: rgba(0,0,0,.16);
+    border: 1px solid rgba(0, 0, 0, .27);
+    border-top-color: rgba(0, 0, 0, .38);
+    border-bottom-color: rgba(0, 0, 0, .16);
     padding: 5px 10px;
     box-shadow: 0 1px 0 rgba(255,255,255,.2),inset 0 1px 1px rgba(0,0,0,.1);
 }
 
-.registration-form_agreement {
+.registration_form_agreement {
     width: 700px;
     margin-top: 23px;
     line-height: 1.5;
 }
 
-.mobile_number_title {
-    display: table;
-}
-
-.mobile_number_title__item {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.mobile_number_input {
-    display: inline;
-}
-
-.mobile_number_input__item {
-
-}
-.link_mobile_phone {
-    float: right;
-    color: #666;
-}
-
-.mobile_phone_elem {
-    width: 325px;
-}
-
-.registration-form_mobile_number {
-    position: relative;
-    width: 325px;
-}
-
 a {
+    color: #0072bc;
     text-decoration: none;
 }
 
 a:hover {
     color: red;
+}
+
+.link_mobile_phone {
+    float: right;
+    color: #666;
 }
 
 .password-indicator {
@@ -176,37 +145,15 @@ a:hover {
     top: 34px;
     opacity: .65;
 }
-.checkbox {
+.checkbox_elem {
     width: auto;
     float: left;
     margin: 1px 5px 0 0;
 }
 
-.promo-btn {
-    right: -9px;
-    bottom: -1px;
-    font-family: Arial, sans-serif;
-    position: relative;
-    vertical-align: baseline;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: #000;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, .07), inset 0 0 0 1px rgba(193, 154, 0, 100);
-    font-size: 15px;
-    line-height: 22px;
-    padding: 5px 15px;
-    background: #f9c400;
-    background: -webkit-linear-gradient(top, #ffe025, #f9c400 92%, #be8c05);
-    background: -o-linear-gradient(top, #ffe025, #f9c400 92%, #be8c05);
-    background: linear-gradient(to bottom, #ffe025, #f9c400 92%, #be8c05);
-    background: linear-gradient(#ffdf60, #fc0);
-}
-
-.registration-form_mobile_title {
+.registration_form_mobile_title {
     margin-bottom: 5px;
+    width: 325px;
 }
 
 
