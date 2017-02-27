@@ -193,9 +193,9 @@ Triangle.prototype.draw = function () {
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
     context.beginPath();
-    context.moveTo(this.p1x, this.p1y);
-    context.lineTo(this.p2x, this.p2y);
-    context.lineTo(this.p3x, this.p3y);
+    context.moveTo(this.p1X, this.p1Y);
+    context.lineTo(this.p2X, this.p2Y);
+    context.lineTo(this.p3X, this.p3Y);
     context.closePath();
     context.fillStyle = this.getFillColor();
     context.fill();
@@ -203,8 +203,22 @@ Triangle.prototype.draw = function () {
     context.stroke();
 }
 
+Triangle.prototype.calculateArea = function () {
+    var line1 = Math.sqrt(Math.pow(p2X - p1X, 2) + (Math.pow(p2Y - P1Y, 2)));
+    var line2 = Math.sqrt(Math.pow(p3X - p1X, 2) + (Math.pow(p3Y - P1Y, 2)));
+    var line3 = Math.sqrt(Math.pow(p2X - p3X, 2) + (Math.pow(p2Y - P3Y, 2)));
+    var p = this.calculatePerimeter() / 2;
 
+    return Math.sqrt(p * (p - line1) * (p - line2) * (p - line3));
+}
 
+Triangle.prototype.calculatePerimeter = function () {
+    var line1 = Math.sqrt(Math.pow(p2X - p1X, 2) + (Math.pow(p2Y - P1Y, 2)));
+    var line2 = Math.sqrt(Math.pow(p3X - p1X, 2) + (Math.pow(p3Y - P1Y, 2)));
+    var line3 = Math.sqrt(Math.pow(p2X - p3X, 2) + (Math.pow(p2Y - P3Y, 2)));
+
+    return line1 + line2 + line3;
+}
 
 
 
