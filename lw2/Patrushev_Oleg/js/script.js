@@ -1,4 +1,4 @@
-// Shape class
+//------------------------------------ Shape class
 function Shape() {
     this.fillColor = "#000000";
     this.borderColor = "#000000";
@@ -32,9 +32,9 @@ Shape.prototype.calculatePerimeter = function () {
 
 }
 
-// Circle class
+//------------------------------------ Circle class
 function Circle() {
-    Shape.apply(this, arguments); //?????????????
+    Shape.apply(this, arguments);
     this.x = 0;
     this.y = 0;
     this.r = 0;
@@ -68,29 +68,161 @@ Circle.prototype.getY = function () {
 }
 
 Circle.prototype.draw = function () {
-    //draw here
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    context.beginPath();
+    context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
+    context.fillStyle = this.getFillColor();
+    context.fill();
+    context.strokeStyle = this.getBorderColor();
+    context.stroke();
 }
 
 Circle.prototype.calculateArea = function () {
     return Math.PI * Math.pow(this.r, 2);
 }
 
-Circle.prototype.calculateArea = function () {
+Circle.prototype.calculatePerimeter = function () {
     return 2 * Math.PI * this.r;
 }
 
-alert("hey");
+//------------------------------------ Rectangle class
+function Rectangle() {
+    Shape.apply(this, arguments);
+    this.topLeftX = 0;
+    this.topLeftY = 0;
+    this.downRightX = 0;
+    this.downRightY = 0;
+    this.width = Math.abs(topLeftX - downRightX);
+    this.height = Math.abs(topLeftY - downRightY);
+}
+
+Rectangle.prototype = Object.create(Shape.prototype);
+Rectangle.prototype.constructor = Rectangle;
+
+Rectangle.prototype.setTopLeftX = function (value) {
+    this.topLeftX = value;
+}
+
+Rectangle.prototype.getTopLeftX = function () {
+    return this.topLeftX;
+}
+
+Rectangle.prototype.setTopLeftY = function (value) {
+    this.topLeftY = value;
+}
+
+Rectangle.prototype.getTopLeftY = function () {
+    return this.topLeftY;
+}
+
+Rectangle.prototype.setDownRightX = function (value) {
+    this.downRightX = value;
+}
+
+Rectangle.prototype.getDownRightX = function () {
+    return this.downRightX;
+}
+
+Rectangle.prototype.setDownRightY = function (value) {
+    this.downRightY = value;
+}
+
+Rectangle.prototype.getDownRightY = function () {
+    return this.downRightY;
+}
+
+Rectangle.prototype.draw() = function () {
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    context.beginPath();
+    context.fillRect(topLeftX, topLeftY, width, height);
+    context.fillStyle = this.getFillColor();
+    context.fill();
+    context.strokeStyle = this.getBorderColor();
+    context.stroke();
+}
+
+Rectangle.prototype.calculateArea = function () {
+    return this.width * this.height;
+}
+
+Rectangle.prototype.calculatePerimeter = function () {
+    return this.width * 2 + this.height * 2;
+}
+
+//------------------------------------ Triangle class
+function Triangle() {
+    Shape.apply(this, arguments);
+    this.p1X = 0;
+    this.p1Y = 0;
+    this.p2X = 0;
+    this.p2Y = 0;
+    this.p3X = 0;
+    this.p3Y = 0;
+}
+
+Triangle.prototype = Object.create(Shape.prototype);
+Triangle.prototype.constructor = Triangle;
+
+Triangle.prototype.setP1X = function (value) {
+    this.p1X = value;
+}
+
+Triangle.prototype.getP1X = function () {
+    return this.p1X
+}
+
+Triangle.prototype.setP2X = function (value) {
+    this.p2X = value;
+}
+
+Triangle.prototype.getP3X = function () {
+    return this.p3X
+}
+
+Triangle.prototype.setP3X = function (value) {
+    this.p3X = value;
+}
+
+Triangle.prototype.getP3X = function () {
+    return this.p3X
+}
+
+Triangle.prototype.draw = function () {
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    context.beginPath();
+    context.moveTo(this.p1x, this.p1y);
+    context.lineTo(this.p2x, this.p2y);
+    context.lineTo(this.p3x, this.p3y);
+    context.closePath();
+    context.fillStyle = this.getFillColor();
+    context.fill();
+    context.strokeStyle = this.getBorderColor();
+    context.stroke();
+}
+
+
+
+
+
+
+
+
+
+
+
+//other stuff
 var circle = new Circle();
-circle.setBorderColor("#444444");
+circle.setFillColor("#00FF00");
+circle.setBorderColor("#FF0000");
 circle.setX(100);
 circle.setY(50);
 circle.setRadius(35);
 
-var canvas = document.getElementById("canvas");
-var context = canvas.getContext("2d");
-context.beginPath();
-context.arc(circle.getX, circle.getY, circle.getRadius, 0, 2 * Math.PI, false);
-context.fillStyle = circle.getFillColor;
-context.fill();
-context.strokeStyle = circle.getBorderColor;
-context.stroke();
+circle.draw();
+
+
+
+
