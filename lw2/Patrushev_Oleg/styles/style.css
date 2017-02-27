@@ -1,12 +1,27 @@
-.content {
-    display: flex;
-    justify-content: center;
-}
 
 #canvas {
-    margin-top: 200px;
-    height: 400px;
-    width: 800px;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100px;
+    margin-top: 100px;
+    height: 500px;
+    width: 1000px;
     background-color: #e8e8e8;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.normal-margin {
+    margin-top: 20px;
+    margin-left: 30%;
+}
+
+.fixed-height {
+    height: 120px;
+}
+
+.input-line {
+    padding: 4px;
 }
