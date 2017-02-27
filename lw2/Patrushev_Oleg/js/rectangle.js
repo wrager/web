@@ -42,15 +42,19 @@ Rectangle.prototype.getDownRightY = function () {
     return this.downRightY;
 }
 
-Rectangle.prototype.draw() = function () {
-    
-    this.width = Math.abs(topLeftX - downRightX);
-    this.height = Math.abs(topLeftY - downRightY);
+Rectangle.prototype.getWidth = function () {
+    return Math.abs(this.getTopLeftX() - this.getDownRightX());
+}
 
+Rectangle.prototype.getHeight = function () {
+    return Math.abs(this.getTopLeftY() - this.getDownRightY());
+}
+
+Rectangle.prototype.draw = function () {
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
     context.beginPath();
-    context.fillRect(topLeftX, topLeftY, width, height);
+    context.fillRect(this.getTopLeftX(), this.getTopLeftY(), this.getWidth(), this.getHeight());
     context.fillStyle = this.getFillColor();
     context.fill();
     context.strokeStyle = this.getBorderColor();
@@ -58,15 +62,9 @@ Rectangle.prototype.draw() = function () {
 }
 
 Rectangle.prototype.calculateArea = function () {
-    this.width = Math.abs(topLeftX - downRightX);
-    this.height = Math.abs(topLeftY - downRightY);
-
-    return this.width * this.height;
+    return this.getWidth() * this.getHeight();
 }
 
 Rectangle.prototype.calculatePerimeter = function () {
-    this.width = Math.abs(topLeftX - downRightX);
-    this.height = Math.abs(topLeftY - downRightY);
-
-    return this.width * 2 + this.height * 2;
+    return this.getWidth() * 2 + this.getHeight() * 2;
 }
