@@ -1,3 +1,5 @@
+var FONT_SIZE = 8;
+
 var circle;
 var rectangle;
 var triangle;
@@ -60,9 +62,16 @@ function exist(item) {
 }
 
 function draw(shapes, context) {
+    var index = 1;
+
     shapes.forEach(function(element) {
         if (exist(element)) {
             element.draw(context);
+            context.font=FONT_SIZE + "px Georgia";
+            context.fillText(element.constructor.name, 200, index * FONT_SIZE * 2);
+            context.fillText("Perimeter: " + element.calculatePerimeter(), 200, index * FONT_SIZE * 2 + FONT_SIZE);
+            context.fillText("Area: " + element.calculateArea(), 200, index * FONT_SIZE * 2 + FONT_SIZE * 2);
+            index+=2;
         }
     });
 }
