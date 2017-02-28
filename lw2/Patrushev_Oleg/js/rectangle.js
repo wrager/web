@@ -1,60 +1,62 @@
 //------------------------------------ Rectangle class
 function Rectangle() {
     Shape.apply(this, arguments);
-    this.topLeftX = 0;
-    this.topLeftY = 0;
-    this.downRightX = 0;
-    this.downRightY = 0;
+    this.x1 = 0;
+    this.y1 = 0;
+    this.x2 = 0;
+    this.y2 = 0;
 }
 
 Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.constructor = Rectangle;
 
-Rectangle.prototype.setTopLeftX = function (value) {
-    this.topLeftX = value;
+Rectangle.prototype.setX1 = function (value) {
+    this.x1 = value;
 }
 
-Rectangle.prototype.getTopLeftX = function () {
-    return this.topLeftX;
+Rectangle.prototype.getX1 = function () {
+    return this.x1;
 }
 
-Rectangle.prototype.setTopLeftY = function (value) {
-    this.topLeftY = value;
+Rectangle.prototype.setY1 = function (value) {
+    this.y1 = value;
 }
 
-Rectangle.prototype.getTopLeftY = function () {
-    return this.topLeftY;
+Rectangle.prototype.getY1 = function () {
+    return this.y1;
 }
 
-Rectangle.prototype.setDownRightX = function (value) {
-    this.downRightX = value;
+Rectangle.prototype.setX2 = function (value) {
+    this.x2 = value;
 }
 
-Rectangle.prototype.getDownRightX = function () {
-    return this.downRightX;
+Rectangle.prototype.getX2 = function () {
+    return this.x2;
 }
 
-Rectangle.prototype.setDownRightY = function (value) {
-    this.downRightY = value;
+Rectangle.prototype.setY2 = function (value) {
+    this.y2 = value;
 }
 
-Rectangle.prototype.getDownRightY = function () {
-    return this.downRightY;
+Rectangle.prototype.getY2 = function () {
+    return this.y2;
 }
 
 Rectangle.prototype.getWidth = function () {
-    return Math.abs(this.getTopLeftX() - this.getDownRightX());
+    return Math.abs(this.getX1() - this.getX2());
 }
 
 Rectangle.prototype.getHeight = function () {
-    return Math.abs(this.getTopLeftY() - this.getDownRightY());
+    return Math.abs(this.getY1() - this.getY2());
 }
 
 Rectangle.prototype.draw = function () {
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
+    var tLeftX = Math.min(this.getX1(), this.getX2());
+    var tLeftY = Math.min(this.getY1(), this.getY2());
     context.beginPath();
-    context.fillRect(this.getTopLeftX(), this.getTopLeftY(), this.getWidth(), this.getHeight());
+    context.rect(tLeftX, tLeftY, this.getWidth(), this.getHeight());
     context.fillStyle = this.getFillColor();
     context.fill();
     context.strokeStyle = this.getBorderColor();
