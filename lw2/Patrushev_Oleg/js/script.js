@@ -8,9 +8,7 @@ function onShapeSelect() {
     hide("triangle-optional-form");
     show("apply-btn");
 
-    var selector = getElement("shape-selector");
-    var selectedValue = selector.options[selector.selectedIndex].value;
-
+    var selectedValue = getSelectorValue();
     if (selectedValue == "Circle") {
         show("circle-optional-form");
     } else if (selectedValue == "Rectangle") {
@@ -21,8 +19,7 @@ function onShapeSelect() {
 }
 
 function onApplyClick() {
-    var selector = getElement("shape-selector");
-    var selectedValue = selector.options[selector.selectedIndex].value;
+    var selectedValue = getSelectorValue();
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     if (selectedValue == "Circle") {
@@ -73,4 +70,9 @@ function hide(id) {
 function show (id) {
     var element =  getElement(id);
     element.style.display = "block"
+}
+
+function getSelectorValue() {
+    var selector = getElement("shape-selector");
+    return selector.options[selector.selectedIndex].value;
 }

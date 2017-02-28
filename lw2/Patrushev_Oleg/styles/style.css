@@ -1,4 +1,3 @@
-
 #canvas {
     position: absolute; 
     left: 50%; 
@@ -25,7 +24,17 @@
 }
 
 .input-line {
-    padding: 4px;
+    padding: 5px;
+    width: 300px;
+    height: 17px;
+}
+
+.control-label {
+    float: left;
+}
+
+.input-box {
+    float: right;
 }
 
 #circle-optional-form {
@@ -42,7 +51,7 @@
 
 .button {
     position: absolute;
-    left: 50%;
+    left: 44%;
     top: 30%;
 }
 
