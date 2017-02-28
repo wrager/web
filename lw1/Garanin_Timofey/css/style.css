@@ -140,6 +140,11 @@ button:active {
     max-width: 102px;
 }
 
+.line2 {
+    max-width: 104px;
+    margin-left: 165px;
+}
+
 .field {
     position: relative;
 }
@@ -164,13 +169,6 @@ button:active {
     -ms-flex-direction: row;
     flex-direction: row;
     margin: 33px 40px 18px;
-}
-
-.line2 {
-    background-color: #c7c7c7;
-    height: 1px;
-    max-width: 104px;
-    margin-left: 165px;
 }
 
 .text {
