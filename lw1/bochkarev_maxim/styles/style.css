@@ -147,9 +147,14 @@ a:hover {
 
 .password-eye {
     position: absolute;
+    cursor: pointer;
     left: 302px;
     top: 34px;
     opacity: .65;
+}
+
+.password-eye:hover {
+    opacity: 1;
 }
 .checkbox_elem {
     width: auto;
