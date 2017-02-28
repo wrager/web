@@ -29,13 +29,13 @@ body {
           margin-right: 8px;
           float: left; }
           .header .container .header_services .header_menu .icon_container .icon {
-            background: url("img/favorite_icon.svg") center no-repeat;
+            background: url("../img/favorite_icon.svg") center no-repeat;
             background-size: 21px;
             height: 21px;
             width: 21px;
             padding: 0 7px 3px; }
             .header .container .header_services .header_menu .icon_container .icon:hover {
-              background-image: url("img/favorite_icon_over.svg"); }
+              background-image: url("../img/favorite_icon_over.svg"); }
         .header .container .header_services .header_menu .delimeter {
           display: inline-block;
           border-left: 1px solid #dcdcdc;
@@ -51,25 +51,31 @@ body {
       margin: 0 auto;
       background: #fff;
       border-bottom: 1px solid #d8d8d8; }
-      .header .container .header_basic .left {
+      .header .container .header_basic .left_position {
         float: left;
         display: inline; }
-        .header .container .header_basic .left .logo {
-          background: url(img/logo-avito.svg) center no-repeat;
+        .header .container .header_basic .left_position .logo {
+          background: url("../img/logo-avito.svg") center no-repeat;
           background-size: contain;
           width: 115px;
           height: 44px;
           margin: 2px 5px 0 -5px;
           float: left; }
-        .header .container .header_basic .left .categories {
+        .header .container .header_basic .left_position .categories {
           display: inline;
           float: left;
           margin: 12px 0 6px 0px;
           font-size: 14px;
           line-height: 20px; }
-          .header .container .header_basic .left .categories li {
+          .header .container .header_basic .left_position .categories li {
             margin: 0;
             padding: 6px 12px 4px; }
+      .header .container .header_basic .post_advert {
+        position: absolute;
+        right: 0;
+        display: flex;
+        margin: 7px 0;
+        float: right; }
       .header .container .header_basic .button {
         padding: 6px 13px;
         background: #0af;
@@ -125,7 +131,7 @@ body {
             top: 9px;
             width: 36px;
             height: 30px;
-            background: url(img/input-password-eye.png) 0 -15px no-repeat;
+            background: url("../img/input-password-eye.png") 0 -15px no-repeat;
             cursor: pointer; }
         .main .container .form_auth .login_form .description {
           height: 20px;
@@ -161,10 +167,10 @@ body {
           width: 116px;
           margin: 0 auto;
           text-align: center;
-          background-color: #fcd326;
-          border-color: #fba617;
-          padding-top: 7px;
-          padding-bottom: 5px; }
+          background-color: #fcc226;
+          border-color: #fcc226;
+          padding-top: 6px;
+          padding-bottom: 6px; }
           .main .container .form_auth .login_form .button:hover {
             background-color: #fcd326;
             border-color: #fba617; }
@@ -214,6 +220,11 @@ body {
         margin-right: 110px;
         margin-top: 7px;
         color: #858585; }
+        .main .container .footer .about .text_decorated {
+          border-bottom: 1px solid #dadada; }
+          .main .container .footer .about .text_decorated:hover {
+            color: #5e5e5e;
+            border-bottom-color: #5e5e5e; }
 
 .button_origin {
   background-color: #fff;
@@ -260,6 +271,9 @@ input {
   border-radius: 2px;
   width: 100%; }
 
+input[placeholder] {
+  color: grey; }
+
 .btn {
   width: 48px;
   height: 34px;
@@ -270,28 +284,28 @@ input {
   border-radius: 4px; }
   .btn.btn_vk {
     background-color: #4d75a3;
-    background-image: url("img/vkontakte.svg");
+    background-image: url("../img/vkontakte.svg");
     background-size: 15px 17px;
     background-position-y: 8px; }
     .btn.btn_vk:hover {
       background-color: #496f9a; }
   .btn.btn_odnokl {
     background-color: #e27e35;
-    background-image: url("img/odnoklassniki.svg");
+    background-image: url("../img/odnoklassniki.svg");
     background-size: 12px 20px;
     background-position-y: 7px; }
     .btn.btn_odnokl:hover {
       background-color: #e0772a; }
   .btn.btn_fb {
     background-color: #395185;
-    background-image: url("img/facebook.svg");
+    background-image: url("../img/facebook.svg");
     background-size: 14px 25px;
     background-position-y: 4px; }
     .btn.btn_fb:hover {
       background-color: #354c7c; }
   .btn.btn_google {
     background-color: #dd4b39;
-    background-image: url("img/google+.svg");
+    background-image: url("../img/google+.svg");
     background-size: 26px 18px;
     background-position-y: 8px; }
     .btn.btn_google:hover {
