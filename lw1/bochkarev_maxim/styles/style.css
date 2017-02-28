@@ -29,21 +29,9 @@ label {
     margin-bottom: 20px;
 }
 
-.control_input:focus {
-    outline: none;
-    border-color: rgba(94,76,2,.42);
-    border-top-color: rgba(78,62,2,.515);
-    border-bottom-color: rgba(117,93,0,.335);
-    -webkit-box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
-    box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
-    z-index: 9;
-}
-
 .control_input {
     font-family: Arial, sans-serif;
     font-size: 15px;
-    width: 100%;
-    line-height: 20px;
     min-height: 32px;
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, .27);
@@ -51,6 +39,21 @@ label {
     border-bottom-color: rgba(0, 0, 0, .16);
     padding: 5px 10px;
     box-shadow: 0 1px 0 rgba(255,255,255,.2),inset 0 1px 1px rgba(0,0,0,.1);
+    width: 100%;
+    line-height: 20px;
+}
+
+.input_mobile {
+    width: 188px;
+}
+
+.control_input:focus {
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);
+    box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
+    z-index: 9;
 }
 
 .control_label {
@@ -87,7 +90,6 @@ label {
 
 .get_mobile_code_button {
     right: -9px;
-    bottom: -1px;
     background: -webkit-linear-gradient(#ffdf60,#fc0);
     box-shadow: 0 1px 0 rgba(0, 0, 0, .07), inset 0 0 0 1px rgb(183, 171, 153);
     font-size: 15px;
@@ -109,29 +111,6 @@ label {
     font-size: 13px;
     line-height: 1.5;
     margin: -1px 5px 0;
-}
-
-.input_mobile {
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    line-height: 20px;
-    width: 188px;
-    min-height: 32px;
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, .27);
-    border-top-color: rgba(0, 0, 0, .38);
-    border-bottom-color: rgba(0, 0, 0, .16);
-    padding: 5px 10px;
-    box-shadow: 0 1px 0 rgba(255,255,255,.2),inset 0 1px 1px rgba(0,0,0,.1);
-}
-
-.input_mobile:focus {
-    outline: none;
-    border-color: rgba(94,76,2,.42);
-    border-top-color: rgba(78,62,2,.515);
-    border-bottom-color: rgba(117,93,0,.335);
-    box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
-    z-index: 9;
 }
 
 .registration_form_agreement {
@@ -180,8 +159,12 @@ a:hover {
 }
 
 .registration_form_mobile_title {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     width: 325px;
+}
+
+.control_label_name_password_confirm {
+    margin-bottom: 7px;
 }
 
 
