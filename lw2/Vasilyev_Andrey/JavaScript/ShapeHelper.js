@@ -1,7 +1,6 @@
 
 initializeShape = function() {
     e = document.getElementById("selectShape");
-    var myShape;
     switch (e.options[e.selectedIndex].text) {
         case "Окружность":
             var x = parseInt(document.getElementById("circle-x").value);
@@ -39,8 +38,8 @@ drawShape = function(myShape) {
     }
 
     canvas = document.getElementById('canvas');
+    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
     if(canvas && canvas.getContext) {
-        canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
         myShape.draw(canvas);
     }
     else alert('Error: No canvas');
