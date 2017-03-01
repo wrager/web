@@ -11,7 +11,7 @@ onSelectShapeType = function () {
     document.getElementById(e.options[e.selectedIndex].value).style.display = 'inline';
 }
 
-onClickCalculateResult = function () {
+onCalculateResult = function () {
     var shape = initializeShape();
     var resArea = shape.calculateArea();
     var resPerimeter = shape.calculatePerimeter();
