@@ -4,7 +4,14 @@
     <head>
         <link rel="stylesheet" type="text/css" href="Styles/style.css">
         <title>Shapes</title>
+        <script src="JavaScript/Shape.js"></script>
+        <script src="JavaScript/Circle.js"></script>
+        <script src="JavaScript/Rectangle.js"></script>
+        <script src="JavaScript/Triangle.js"></script>
+        <script src="JavaScript/ShapeHelper.js"></script>
+        <script src="JavaScript/Events.js"></script>
     </head>
+
     <body>
         <select id='selectShape' onchange= 'onSelectShapeType()'>
             <option value='circle-content'>Окружность</option>
@@ -12,17 +19,17 @@
             <option value='triangle-content'>Треугольник</option>
         </select>
         <br><label for='fill-color'>fillColor</label><input id='fill-color'><br>
-        <label for='border-'>borderColor</label><input id='border-color'>
+        <label for='border-color'>borderColor</label><input id='border-color'><br>
         <div id="circle-content" class='depending-content'>
             <label for='circle-x'>x</label><input id='circle-x'><br>
             <label for='circle-y'>y</label><input id='circle-y'><br>
-            <label for='circle-radius'>Радиус</label><input id='circle-radius'>
+            <label for='circle-radius'>Радиус</label><input id='circle-radius'><br>
         </div>
         <div id='rectangle-content' class='depending-content'>
             <label for='rectangle-x'>x</label><input id='rectangle-x'><br>
             <label for='rectangle-y'>y</label><input id='rectangle-y'><br>
             <label for='rectangle-width'>ширина</label><input id='rectangle-width'><br>
-            <label for='rectangle-height'>высота</label><input id='rectangle-height'>
+            <label for='rectangle-height'>высота</label><input id='rectangle-height'><br>
         </div>
         <div id='triangle-content' class='depending-content'>
             <label for='triangle-x1'>x1</label><input id='triangle-x1'><br>
@@ -30,13 +37,10 @@
             <label for='triangle-x2'>x2</label><input id='triangle-x2'><br>
             <label for='triangle-y2'>y2</label><input id='triangle-y2'><br>
             <label for='triangle-x3'>x3</label><input id='triangle-x3'><br>
-            <label for='triangle-y3'>y3</label><input id='triangle-y3'>
+            <label for='triangle-y3'>y3</label><input id='triangle-y3'><br>
         </div>
-
-        <script src="JavaScript/Shape.js"></script>
         <button id="ok-button" onclick="onClickCalculateResult()">Вычислить</button> <br>
-        
+        <p id='calculation-result'></p>
         <canvas id='canvas' class 'canvas-class'></canvas>
-
     </body>
 </html>
