@@ -38,9 +38,14 @@ drawShape = function(myShape) {
     }
 
     canvas = document.getElementById('canvas');
-    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+    clearCanvas();
     if(canvas && canvas.getContext) {
         myShape.draw(canvas);
     }
     else alert('Error: No canvas');
+}
+
+clearCanvas = function() {
+    canvas = document.getElementById('canvas');
+    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 }

@@ -10,10 +10,11 @@
         <script src="JavaScript/Triangle.js"></script>
         <script src="JavaScript/ShapeHelper.js"></script>
         <script src="JavaScript/Events.js"></script>
+
     </head>
 
     <body>
-        <select id='selectShape' onchange= 'onSelectShapeType()'>
+        <label for='selectShape'>Shape type<select id='selectShape' onchange= 'onSelectShapeType()'>
             <option value='circle-content'>Окружность</option>
             <option value='rectangle-content'>Прямоугольник</option>
             <option value='triangle-content'>Треугольник</option>
@@ -24,6 +25,7 @@
             <label for='circle-x'>x</label><input id='circle-x' onchange='onCalculateResult()'><br>
             <label for='circle-y'>y</label><input id='circle-y' onchange='onCalculateResult()'><br>
             <label for='circle-radius'>Радиус</label><input id='circle-radius' onchange='onCalculateResult()'><br>
+             <script src="JavaScript/Run.js"></script>
         </div>
         <div id='rectangle-content' class='depending-content'>
             <label for='rectangle-x'>x</label><input id='rectangle-x' onchange='onCalculateResult()'><br>

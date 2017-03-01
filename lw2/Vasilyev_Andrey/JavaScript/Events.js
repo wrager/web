@@ -5,7 +5,8 @@ onSelectShapeType = function () {
     for (i = 0; i < e.options.length; i++) {
         document.getElementById(e.options[i].value).style.display = 'none';
     }
-     document.getElementById("calculation-result").innerHTML = '';
+    clearCanvas();
+    document.getElementById("calculation-result").innerHTML = '';
 
     //set visible for selected-shape content
     document.getElementById(e.options[e.selectedIndex].value).style.display = 'inline';
