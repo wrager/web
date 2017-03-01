@@ -16,6 +16,6 @@ onCalculateResult = function () {
     var shape = initializeShape();
     var resArea = shape.calculateArea();
     var resPerimeter = shape.calculatePerimeter();
-    document.getElementById("calculation-result").innerHTML = "Area is: " + resArea + '\n' + "Perimeter is: " + resPerimeter;
+    document.getElementById("calculation-result").innerHTML = "Area: " + resArea + '\n' + "Perimeter: " + resPerimeter;
     drawShape(shape);
 }

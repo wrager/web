@@ -10,28 +10,27 @@
         <script src="JavaScript/Triangle.js"></script>
         <script src="JavaScript/ShapeHelper.js"></script>
         <script src="JavaScript/Events.js"></script>
-
     </head>
 
     <body>
         <label for='selectShape'>Shape type<select id='selectShape' onchange= 'onSelectShapeType()'>
-            <option value='circle-content'>Окружность</option>
-            <option value='rectangle-content'>Прямоугольник</option>
-            <option value='triangle-content'>Треугольник</option>
+            <option value='circle-content'>Circle</option>
+            <option value='rectangle-content'>Rectangle</option>
+            <option value='triangle-content'>Triangle</option>
         </select>
         <br><label for='fill-color'>fillColor</label><input id='fill-color' onchange='onCalculateResult()'><br>
         <label for='border-color'>borderColor</label><input id='border-color' onchange='onCalculateResult()'><br>
         <div id="circle-content" class='depending-content'>
             <label for='circle-x'>x</label><input id='circle-x' onchange='onCalculateResult()'><br>
             <label for='circle-y'>y</label><input id='circle-y' onchange='onCalculateResult()'><br>
-            <label for='circle-radius'>Радиус</label><input id='circle-radius' onchange='onCalculateResult()'><br>
+            <label for='circle-radius'>Radius</label><input id='circle-radius' onchange='onCalculateResult()'><br>
              <script src="JavaScript/Run.js"></script>
         </div>
         <div id='rectangle-content' class='depending-content'>
             <label for='rectangle-x'>x</label><input id='rectangle-x' onchange='onCalculateResult()'><br>
             <label for='rectangle-y'>y</label><input id='rectangle-y' onchange='onCalculateResult()'><br>
-            <label for='rectangle-width'>ширина</label><input id='rectangle-width' onchange='onCalculateResult()'><br>
-            <label for='rectangle-height'>высота</label><input id='rectangle-height' onchange='onCalculateResult()'><br>
+            <label for='rectangle-width'>width</label><input id='rectangle-width' onchange='onCalculateResult()'><br>
+            <label for='rectangle-height'>height</label><input id='rectangle-height' onchange='onCalculateResult()'><br>
         </div>
         <div id='triangle-content' class='depending-content'>
             <label for='triangle-x1'>x1</label><input id='triangle-x1' onchange='onCalculateResult()'><br>

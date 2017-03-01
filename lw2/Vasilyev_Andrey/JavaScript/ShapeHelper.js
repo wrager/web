@@ -2,18 +2,18 @@
 initializeShape = function() {
     e = document.getElementById("selectShape");
     switch (e.options[e.selectedIndex].text) {
-        case "Окружность":
+        case "Circle":
             var x = parseInt(document.getElementById("circle-x").value);
             var y = parseInt(document.getElementById('circle-y').value);
             var radius = parseInt(document.getElementById('circle-radius').value);       
             return new Circle(x, y, radius);
-        case "Прямоугольник":
+        case "Rectangle":
             var x = parseInt(document.getElementById("rectangle-x").value);
             var y = parseInt(document.getElementById('rectangle-y').value);
             var width = parseInt(document.getElementById('rectangle-width').value);
             var height = parseInt(document.getElementById('rectangle-height').value);
             return new Rectangle(x, y, width, height);
-        case "Треугольник":
+        case "Triangle":
             var x1 = parseInt(document.getElementById("triangle-x1").value);
             var y1 = parseInt(document.getElementById("triangle-y1").value);
             var x2 = parseInt(document.getElementById("triangle-x2").value);
@@ -21,8 +21,8 @@ initializeShape = function() {
             var x3 = parseInt(document.getElementById("triangle-x3").value);
             var y3 = parseInt(document.getElementById("triangle-y3").value);           
             return new Triangle(x1, y1, x2, y2, x3, y3);
-        default:
-            alert("Error: Undefined shape type.");
+        default:  
+            alert('Error: Undefined shape type (' + e.options[e.selectedIndex].text + ')');
             break;
     }
 }
