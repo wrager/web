@@ -13,8 +13,8 @@
 <div class="controls">
     <div class="figure_parameters">
         <div class="control_elem shape_select ">
-            <select name="shape_choice" required="required"
-                    onchange="shapeParametresChoice(this.options[this.selectedIndex].value)" title="">
+            <select id="shape_choice" required="required"
+                    onchange="shapeParametersChoice(this.options[this.selectedIndex].value)" title="">
                 <option value="" disabled selected>Select shape from list</option>
                 <option>Rectangle</option>
                 <option>Circle</option>
@@ -69,7 +69,7 @@
     </form>
 
     <div id="draw_button" class="control_elem">
-        <button class="button" name="draw_figure_button" onclick="drawShape()">Draw figure</button>
+        <button class="button" id="draw_figure_button" disabled onclick="drawShape()">Draw figure</button>
     </div>
 
 </div>
