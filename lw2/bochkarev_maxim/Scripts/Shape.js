@@ -1,5 +1,5 @@
 
-function Shape(params) {
+function Shape() {
     this.fillColor = '#000000';
     this.borderColor = '#000000';
 }
@@ -11,12 +11,5 @@ Shape.prototype = {
 
     getBorderColor: function () { return this.borderColor; },
 
-    setBorderColor: function(color) { this.borderColor = color; },
-
-    draw: function (context) {},
-
-    calculateArea: function () {},
-
-    calculatePerimeter: function () {}
-
+    setBorderColor: function(color) { this.borderColor = color; }
 };

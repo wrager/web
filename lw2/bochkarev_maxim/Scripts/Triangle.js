@@ -61,8 +61,16 @@ Triangle.prototype = {
         return sideA + sideB + sideC;
     },
 
-    draw: function () {
-        // TODO: TRIANGLE draw realization
+    draw: function (context) {
+        context.beginPath();
+        context.moveTo(this.getCoordX1(), this.getCoordY1());
+        context.lineTo(this.getCoordX2(), this.getCoordY2());
+        context.lineTo(this.getCoordX3(), this.getCoordY3());
+        context.closePath();
+        context.fillStyle = Shape.prototype.getFillColor.call(this);
+        context.strokeStyle = Shape.prototype.getBorderColor.call(this);
+        context.fill();
+        context.stroke();
     },
 
     calculateArea: function() {
