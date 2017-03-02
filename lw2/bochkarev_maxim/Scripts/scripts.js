@@ -1,3 +1,8 @@
+
+var circle = undefined;
+var rectangle = undefined;
+var triangle = undefined;
+
 function shapeParametersChoice(shapeType)
 {
     console.log("User has selected " + shapeType + ": " + getCurrentTime());
@@ -20,7 +25,6 @@ function shapeParametersChoice(shapeType)
         document.getElementById("circle_options").style.display = "none";
         document.getElementById("draw_figure_button").disabled = true;
     }
-
 }
 
 function drawShape() {
@@ -28,7 +32,10 @@ function drawShape() {
     var shapeType = sel.options[sel.selectedIndex].text;
 
     clearCanvas();
-    getDrawParameters(shapeType);
+    //getDrawParameters(shapeType);
+
+    rectangle = new Rectangle(getDrawParameters(shapeType));
+    console.log("RECT:" + JSON.stringify(rectangle));
 
 }
 

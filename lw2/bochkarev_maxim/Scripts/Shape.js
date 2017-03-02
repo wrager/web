@@ -23,12 +23,22 @@ Shape.prototype = {
 };
 
 // ==============================================================
-function Rectangle() {
+function Rectangle(params) {
     Shape.apply(this, arguments);
-    this.coordX1 = 0;
-    this.coordX2 = 0;
-    this.coordY1 = 0;
-    this.coordY2 = 0;
+    if (params == undefined){
+        this.coordX1 = 0;
+        this.coordX2 = 0;
+        this.coordY1 = 0;
+        this.coordY2 = 0;
+    } else {
+        this.coordX1 = params.coordX1;
+        this.coordX2 = params.coordX2;
+        this.coordY1 = params.coordY1;
+        this.coordY2 = params.coordY2;
+        this.fillColor = params.fillColor;
+        this.borderColor = params.borderColor;
+    }
+
 }
 
 Rectangle.prototype = Object.create(Shape.prototype);
@@ -68,12 +78,24 @@ Rectangle.prototype = {
 // ==============================================================
 function Triangle() {
     Shape.apply(this, arguments);
-    this.coordX1 = 0;
-    this.coordX2 = 0;
-    this.coordY1 = 0;
-    this.coordY2 = 0;
-    this.coordX3 = 0;
-    this.coordY3 = 0;
+    if (params == undefined){
+        this.coordX1 = 0;
+        this.coordX2 = 0;
+        this.coordY1 = 0;
+        this.coordY2 = 0;
+        this.coordX3 = 0;
+        this.coordY3 = 0;
+    } else {
+        this.coordX1 = params.coordX1;
+        this.coordX2 = params.coordX2;
+        this.coordX3 = params.coordX3;
+        this.coordY1 = params.coordY1;
+        this.coordY2 = params.coordY2;
+        this.coordY3 = params.coordY3;
+        this.fillColor = params.fillColor;
+        this.borderColor = params.borderColor;
+    }
+
 }
 
 Triangle.prototype = Object.create(Shape.prototype);
@@ -133,9 +155,18 @@ Triangle.prototype = {
 // ==============================================================
 function Circle() {
     Shape.apply(this, arguments);
-    this.coordX = 0;
-    this.coordY = 0;
-    this.radius = 0;
+    if (params == undefined){
+        this.coordX = 0;
+        this.coordY = 0;
+        this.radius = 0;
+    } else {
+        this.coordX = params.coordX;
+        this.coordY = params.coordY;
+        this.radius = params.radius;
+        this.fillColor = params.fillColor;
+        this.borderColor = params.borderColor;
+    }
+
 }
 
 Circle.prototype = Object.create(Shape.prototype);
