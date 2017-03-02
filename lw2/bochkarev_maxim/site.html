@@ -1,3 +1,82 @@
 <!DOCTYPE HTML>
 <html>
-</html>      
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Shapes Drawer</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="icon" href="res/favicon.ico" type="image/png">
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/Shape.js"></script>
+</head>
+
+<body>
+<div class="controls">
+    <div class="figure_parameters">
+        <div class="control_elem shape_select ">
+            <select name="shape_choice" required="required"
+                    onchange="shapeParametresChoice(this.options[this.selectedIndex].value)" title="">
+                <option value="" disabled selected>Select shape from list</option>
+                <option>Rectangle</option>
+                <option>Circle</option>
+                <option>Triangle</option>
+
+            </select>
+        </div>
+
+        <form id="rectangle_options" class="control_elem parameter_input_div">
+            <div class="controls_line">
+                <label><input id="rectX1" class="parameter_input" maxlength="3" value="0"> X1 coord</label>
+                <label><input id="rectY1" class="parameter_input" maxlength="3" value="0"> Y1 coord</label>
+            </div>
+
+            <div class="controls_line">
+                <label><input id="rectX2" class="parameter_input" maxlength="3" value="0"> X2 coord</label>
+                <label><input id="rectY2" class="parameter_input" maxlength="3" value="0"> Y2 coord</label>
+            </div>
+        </form>
+
+        <form id="triangle_options" class="control_elem parameter_input_div">
+            <div class="controls_line">
+                <label><input id="triangleX1" class="parameter_input" maxlength="3" value="0"> X1 coord</label>
+                <label><input id="triangleY1" class="parameter_input" maxlength="3" value="0"> Y1 coord</label>
+            </div>
+            <div class="controls_line">
+                <label><input id="triangleX2" class="parameter_input" maxlength="3" value="0"> X2 coord</label>
+                <label><input id="triangleY2" class="parameter_input" maxlength="3" value="0"> Y2 coord</label>
+            </div>
+            <div class="controls_line">
+                <label><input id="triangleX3" class="parameter_input" maxlength="3" value="0"> X3 coord</label>
+                <label><input id="triangleY3" class="parameter_input" maxlength="3" value="0"> Y3 coord</label>
+            </div>
+        </form>
+
+        <form id="circle_options" class="control_elem parameter_input_div">
+            <div class="controls_line">
+                <label><input id="circleRadius" class="parameter_input" maxlength="3" value="0"> Radius </label>
+            </div>
+            <div class="controls_line">
+                <label><input id="circleCenterX" class="parameter_input" maxlength="3" value="0"> Center X</label>
+            </div>
+            <div class="controls_line">
+                <label><input id="circleCenterY" class="parameter_input" maxlength="3" value="0"> Center Y</label>
+            </div>
+        </form>
+    </div>
+
+    <form class="controls_line control_elem mutual_parametres">
+        <label><input id="fillColor" class="parameter_input" maxlength="7" value="#000000"> Fill Color </label>
+        <label><input id="borderColor" class="parameter_input" maxlength="7" value="#000000"> Border Color </label>
+    </form>
+
+    <div id="draw_button" class="control_elem">
+        <button class="button" name="draw_figure_button" onclick="drawShape()">Draw figure</button>
+    </div>
+
+</div>
+
+<div class="draw_elem">
+    <canvas id="shape_canvas" width="600" height="250"></canvas>
+</div>
+
+</body>
+</html>
