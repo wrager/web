@@ -1,9 +1,7 @@
 
-var circle = undefined;
-var rectangle = undefined;
-var triangle = undefined;
+var shape = undefined;
 
-function shapeParametersChoice(shapeType)
+function onShapeParametersChoice(shapeType)
 {
     console.log("User has selected " + shapeType + ": " + getCurrentTime());
     document.getElementById("draw_figure_button").disabled = false;
@@ -27,16 +25,25 @@ function shapeParametersChoice(shapeType)
     }
 }
 
-function drawShape() {
+function onDrawButtonClick() {
     var sel = document.getElementById("shape_choice");
     var shapeType = sel.options[sel.selectedIndex].text;
 
+    var canvas = document.getElementById("shape_canvas");
+    var context = canvas.getContext("2d");
+
     clearCanvas();
-    //getDrawParameters(shapeType);
+    console.log("Shape type: " + shapeType + "-- " + getCurrentTime());
+    console.log("Program draw shape with parametres:" + JSON.stringify(getDrawParameters(shapeType)) + "-- " + getCurrentTime());
 
-    rectangle = new Rectangle(getDrawParameters(shapeType));
-    console.log("RECT:" + JSON.stringify(rectangle));
-
+    if (shapeType == 'Rectangle') {
+        shape = new Rectangle(getDrawParameters(shapeType));
+    } else if (shapeType == 'Triangle') {
+        shape = new Triangle(getDrawParameters(shapeType));
+    } else if (shapeType == 'Circle') {
+        shape = new Circle(getDrawParameters(shapeType));
+    }
+    shape.draw(context);
 }
 
 function getDrawParameters(shapeType){
@@ -58,14 +65,11 @@ function getDrawParameters(shapeType){
         params.coordY = getValidNumberValue("circleCenterY");
         params.radius = getValidNumberValue("circleRadius");
     }
-
     params.fillColor = getValidColorValue("fillColor");
     params.borderColor = getValidColorValue("borderColor");
 
-    console.log("Canvas drawing parameters: " + (JSON.stringify(params)));
     return params;
 }
-
 
 function getValidNumberValue(elem) {
     return (isNumber(getElementValue(elem)) ? getElementValue(elem) : 0);
@@ -80,7 +84,7 @@ function getElementValue(elem) {
 }
 
 function isNumber(value) {
-    return value.match(/^[0-9]$/);
+    return value.match(/^\d+$/);
 }
 
 function isColor(value) {
