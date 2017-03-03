@@ -1,0 +1,91 @@
+
+header {
+    display: block;
+    background: url("../images/header_gradient.png") right; /* Градиент */
+    height: 47px; /* Высота шапки */
+    width: 100%;
+    background-size: cover;
+    position: fixed; /* Фиксированное положение */
+    }
+.logo {
+	height: 18px;
+    width: 21px;
+}
+header a {
+	color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+header ul {
+    margin-top: 10px;
+}
+
+header li {
+    display: inline-block;
+    padding-right: 30px;
+    
+}
+body {
+    font-family: Arial,sans-serif;
+    color: #292f33;
+}
+a {
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+.signup-wrapper {
+    width: 392px;
+    padding: 140px 0;
+    margin: 0 auto;
+}
+
+.signup-wrapper h1 {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 300;
+    margin-bottom: 11px;
+}
+
+.text-license-agreement {
+    width: 392px;
+    display: block;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Arial,sans-serif;
+    color: #66757f;
+    margin-top: 12px;
+}
+
+input[type="text"] {
+    border: 0.5px solid #e1e8ed;
+    border-radius: 3px;
+    font-size: 18px;
+    width: 372px;
+    margin: 13px 0;
+    -webkit-text-fill-color: #aab8c2;
+}
+
+.signup-wrapper button {
+    background-color: #1da1f2;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 32px;
+    display: inline-block;
+    width: 392px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-top: 25px;
+}
+
+.text-license-agreement p {
+    font-size: 12px;
+    color: #9699a6;
+}
+
+/*  <a style = "float:right; margin-right: 300px;" href = "http://www.twitter.com">Язык: Русский</a>
+            <a style = "float:left; margin-right: 10px;" href = "http://www.twitter.com">Уже зарегестрированы? Войти</a>
+            <a href="http://www.twitter.com"><img class = "logo" src="images/white_logo.png"></a>*/
