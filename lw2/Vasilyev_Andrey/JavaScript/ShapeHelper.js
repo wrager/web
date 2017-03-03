@@ -1,5 +1,5 @@
 //переименовать (фабрика)(передать параметром тип шейпа)
-initializeShape = function() {
+function initializeShape() {
     e = document.getElementById("selectShape");
     switch (e.options[e.selectedIndex].text) {
         case "Circle":
@@ -29,7 +29,7 @@ initializeShape = function() {
     }
 }
 
-drawShape = function(myShape) {
+function drawShape(myShape) {
     var fillColor = document.getElementById('fill-color');
     var borderColor = document.getElementById('border-color');
     if(fillColor && fillColor.value) {
@@ -49,7 +49,7 @@ drawShape = function(myShape) {
     //ошибки - в консоль
 }
 
-clearCanvas = function() {
+function clearCanvas() {
     canvas = document.getElementById('canvas');
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 }

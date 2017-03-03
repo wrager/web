@@ -1,5 +1,5 @@
-//оформить как функцию
-Shape = function () {
+
+function Shape() {
     return this;
 }
 

@@ -1,5 +1,5 @@
 //TODO: обернуть в функцию скрытие и показ, декл функцию через func..name
-onSelectShapeType = function () {
+function onSelectShapeType() {
     e = document.getElementById("selectShape");
     //reset display property for all shapes-content
     for (i = 0; i < e.options.length; i++) {
@@ -14,7 +14,7 @@ onSelectShapeType = function () {
 
 //обернуть в фунцкцию получение значения селекта
 
-onCalculateResult = function () {
+function onCalculateResult() {
     var shape = initializeShape();
     var resArea = shape.calculateArea();
     var resPerimeter = shape.calculatePerimeter();
