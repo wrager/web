@@ -2,7 +2,13 @@
 .body, html {
     background: #f6f5f4
 }
-.header-logo img {
+
+.layout_inner
+{
+    width: 100%;
+}
+
+.layout_inner .header-logo img {
     margin-left: 21px;
     margin-top: 13px;
     width: 153px;
@@ -10,7 +16,7 @@
     position: absolute
 }
 
-.header .container {
+.layout_inner .header .container {
     box-sizing: border-box;
     width: 100%;
     height: 65px;
@@ -18,7 +24,7 @@
     background: white 
 }
 
-.login_form 
+.layout_inner .login_form 
 {
     width: 300px;
     height: 343px;
@@ -26,82 +32,119 @@
     margin: auto;
     text-align: center;
     padding: auto;
+
+    background: url("img/login_form.png") no-repeat;
 }
 
-.login_form .image_container img
+.layout_inner .login_form .phone img
 {  
     width: 300px;
-    height: 343px;
+    height: -343px;
 
-    position: inherit;
-    z-index: 0;
+    text-align: center;
+
+    position: relative;
+    margin: -343px 0px;
 }
 
 
-.login_form .login_area
+.layout_inner .login_form .login_area
 {
     box-sizing: border-box;
     text-align: center;
     width: 293px;
     height: 222px;
-    padding : 60px 20px 10px
-
-    
+    padding : 60px 20px 10px; 
 }
 
-.login_form .roof
+.layout_inner .login_form .roof
 {
     box-sizing: border-box;
     width: 300px;
     height: 50px;
 
+    margin: 50px 0px 0px;
     text-align: center;
 }
 
-.login_form .login_container
-{
-    margin: 0 0 10px;
-
-    min-height: 32px;
-    width: 100%;
-
-    position: relative;
-    text-align: center;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 62.5%;
-    padding: 5px 10px 5px
-}
-
-.login_form .login_container .text_box_login
+.layout_inner .login_form .login_container
 {
     width: 258px;
     height: 32px;
-}
 
-.login_form .password_container
-{
-    margin: 0 0 10px;
-
-    min-height: 32px;
-    width: 100%;
+    margin: 0px 0px 10px;
 
     position: relative;
     text-align: center;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 62.5%;
 
-    padding: 5px 10px 5px
 }
 
-.login_form .password_container .text_box_password
+.layout_inner .login_form .login_container .text_box_login
 {
-    box-sizing: border-box;
-
     width: 258px;
     height: 32px;
+    padding: 5px 10px 5px;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.16);
 }
 
-.login_form .buttons
+.layout_inner .login_form .password_container
+{
+    width: 258px;
+    height: 32px;
+
+    margin: 0px 0px 10px;
+}
+
+.layout_inner .login_form .password_container .text_box_password
+{
+    width: 258px;
+    height: 32px;
+    padding: 5px 10px 5px;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.16);
+}
+
+
+
+.layout_inner .login_form .login_area .log_in_row
+{
+    line-height: auto;
+
+    padding: 0px;
+    margin: 1px 0px 10px;
+}
+
+.layout_inner .login_form .login_area .log_in_row li
+{
+    display: inline; 
+}
+
+.layout_inner .login_form .login_area .log_in_row li .qr_code_img img
+{
+    display: inline; 
+
+    height: 32px;
+    width: 38px;
+}
+
+.layout_inner .login_form .login_area .log_in_button
+{
+    width: 222px;
+    height: 32px;
+    float: left;
+    background: linear-gradient(to top, #FFDE58, #FFCF0C);
+}
+
+.layout_inner .login_form .buttons
 {
     position: relative;
 
@@ -113,33 +156,34 @@
     left: 0;
 }
 
-.login_form .buttons .left_part
+.layout_inner .login_form .buttons .left_part
 {
     float:left; 
     padding : 15px 0px;
 }
 
-.login_form .buttons .right_part
+.layout_inner .login_form .buttons .right_part
 {
     float:right; 
     padding : 15px 0px;
 }
 
-.login_form .login_area
+.layout_inner .login_form .login_area
 {
     width: 300px;
     height: 293px;
     position:relative;
+    
 }
 
-.login_form .login_area img
+.layout_inner .login_form .login_area img
 {
     width: 24px;
     height: 24px;
     position:relative;
 }
 
-.login_form .login_area .alien_checkbox
+.layout_inner .login_form .login_area .alien_checkbox
 {
     display: inline-block;
     text-align: left;
@@ -152,19 +196,19 @@
     margin: 0px 0px 5px;
 }
 
-.login_form .login_area .alien_checkbox label
+.layout_inner .login_form .login_area .alien_checkbox label
 {
     display: inline;
     position: relative;
 }
 
-.login_form .login_area .alien_checkbox input::before
+.layout_inner .login_form .login_area .alien_checkbox input::before
 {
     display: inline;
     position: relative;
 }
 
-.login_form .login_area .alien_checkbox .label 
+.layout_inner .login_form .login_area .alien_checkbox .label 
 {
     display: inline;
     cursor: pointer;
@@ -172,13 +216,13 @@
     position: relative;
 }
 
-.login_form .login_area .social_icon
+.layout_inner .login_form .login_area .social_icon
 {
    padding: 0px;
    margin: 1px;
 }
 
-.login_form .login_area .social_icon li
+.layout_inner .login_form .login_area .social_icon li
 {
     display: inline;
 
@@ -190,6 +234,8 @@
     width:100%;
     height: 65px;
 
+     
+    margin: 50px auto;
     min-width: 860px;
    
     background: white;   
@@ -211,20 +257,14 @@
 
 .footer .footer_inner .left_part
 {
-    line-height: 40px;
-    margin-left: 3px;
-    float:left; 
-    padding : 15px 0px;
+    float:left;
+    line-height: 65px;
 }
 
-.fotter .footer_inner .left_part .Russian-flag
+.footer .footer_inner .left_part .elements_left_part li
 {
-    box-sizing: border-box; 
-    width: 41px;
-    height: 41px;
-
-    margin : auto;
-    padding : 12px 0px;
+    display: inline;
+    padding-right: 50px;
 
     font-family: Arial,sans-serif;
 }
@@ -232,15 +272,8 @@
 .footer .footer_inner .right_part
 {
     float:right;
-    line-height: 40px;
-    
-    font-family: Arial,sans-serif;
+    line-height: 65px;  
 }
-.footer .footer_inner .right_part .elements_right_part
-{
-
-}
-
 .footer .footer_inner .right_part .elements_right_part li
 {
     display: inline; /* Отображать как строчный элемент */
@@ -252,14 +285,13 @@
 .footer .footer_inner .right_part .fotter_help
 {
     margin-left: 50px;
-
-    font-size: 13px;
-    
+    padding: 0px;
+    font-size: 13px; 
 }
 
 .footer .footer_inner .fotter_copyright
 {
     margin-left: 50px;
-
+    padding: 0px;
     font-size: 13px;
 }
