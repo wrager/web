@@ -229,23 +229,25 @@
     padding: 2px;   
 }
 
-.footer
+footer
  {
     width:100%;
     height: 65px;
 
      
-    margin: 50px auto;
+    margin: 0 auto;
     min-width: 860px;
    
     background: white;   
     border-top: 1px solid #e4e4e4;
 
     font-family: Arial,sans-serif;
+
+    
 }
 
 
-.footer .footer_inner
+footer .footer_inner
 {
     width: 840px;
     height: 65px;
@@ -255,13 +257,13 @@
     margin: auto;
 }
 
-.footer .footer_inner .left_part
+footer .footer_inner .left_part
 {
     float:left;
     line-height: 65px;
 }
 
-.footer .footer_inner .left_part .elements_left_part li
+footer .footer_inner .left_part .elements_left_part li
 {
     display: inline;
     padding-right: 50px;
@@ -269,12 +271,12 @@
     font-family: Arial,sans-serif;
 }
 
-.footer .footer_inner .right_part
+footer .footer_inner .right_part
 {
     float:right;
     line-height: 65px;  
 }
-.footer .footer_inner .right_part .elements_right_part li
+footer .footer_inner .right_part .elements_right_part li
 {
     display: inline; /* Отображать как строчный элемент */
     padding-left: 50px;
@@ -282,14 +284,14 @@
     font-family: Arial,sans-serif;
 }
 
-.footer .footer_inner .right_part .fotter_help
+footer .footer_inner .right_part .fotter_help
 {
     margin-left: 50px;
     padding: 0px;
     font-size: 13px; 
 }
 
-.footer .footer_inner .fotter_copyright
+footer .footer_inner .fotter_copyright
 {
     margin-left: 50px;
     padding: 0px;
