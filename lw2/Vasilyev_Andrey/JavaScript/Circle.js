@@ -46,6 +46,7 @@ Circle.prototype.draw = function(canvas) {
     var context = canvas.getContext('2d');
     context.strokeStyle = this.borderColor;
     context.fillStyle = this.fillColor;
+    context.lineWidth = 1;
     context.beginPath();
     context.arc(this.x, this.y ,this.radius,0,Math.PI*2,true);
     context.closePath();

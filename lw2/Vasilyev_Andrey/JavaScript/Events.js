@@ -1,4 +1,4 @@
-
+//TODO: обернуть в функцию скрытие и показ, декл функцию через func..name
 onSelectShapeType = function () {
     e = document.getElementById("selectShape");
     //reset display property for all shapes-content
@@ -12,6 +12,8 @@ onSelectShapeType = function () {
     document.getElementById(e.options[e.selectedIndex].value).style.display = 'inline';
 }
 
+//обернуть в фунцкцию получение значения селекта
+
 onCalculateResult = function () {
     var shape = initializeShape();
     var resArea = shape.calculateArea();
@@ -19,3 +21,4 @@ onCalculateResult = function () {
     document.getElementById("calculation-result").innerHTML = "Area: " + resArea + '\n' + "Perimeter: " + resPerimeter;
     drawShape(shape);
 }
+//document.getElementById("calculation-result") обернуть в функцию

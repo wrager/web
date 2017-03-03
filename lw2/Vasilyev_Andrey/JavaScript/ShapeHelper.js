@@ -1,10 +1,12 @@
-
+//переименовать (фабрика)(передать параметром тип шейпа)
 initializeShape = function() {
     e = document.getElementById("selectShape");
     switch (e.options[e.selectedIndex].text) {
         case "Circle":
             var x = parseInt(document.getElementById("circle-x").value);
             var y = parseInt(document.getElementById('circle-y').value);
+            //проверку на заполнение x y, если нет то прототипные значения
+            
             var radius = parseInt(document.getElementById('circle-radius').value);       
             return new Circle(x, y, radius);
         case "Rectangle":
@@ -43,6 +45,8 @@ drawShape = function(myShape) {
         myShape.draw(canvas);
     }
     else alert('Error: No canvas');
+
+    //ошибки - в консоль
 }
 
 clearCanvas = function() {

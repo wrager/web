@@ -1,4 +1,4 @@
-
+//оформить как функцию
 Shape = function () {
     return this;
 }
