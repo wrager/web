@@ -44,6 +44,7 @@ function onDrawButtonClick() {
         shape = new Circle(getDrawParameters(shapeType));
     }
     shape.draw(context);
+    printCalcResultOnCanvas(context);
 }
 
 function getDrawParameters(shapeType){
@@ -69,6 +70,15 @@ function getDrawParameters(shapeType){
     params.borderColor = getValidColorValue("borderColor");
 
     return params;
+}
+
+function printCalcResultOnCanvas(context) {
+    var areaResult = "Area: " + Number(shape.calculateArea()).toFixed(2);
+    var perimeterResult = "Perimeter: " + Number(shape.calculatePerimeter()).toFixed(2);
+    context.fillStyle = "black";
+    context.font = "bold 12px Arial";
+    context.fillText(perimeterResult, 5, 220);
+    context.fillText(areaResult, 5, 240);
 }
 
 function getValidNumberValue(elem) {
