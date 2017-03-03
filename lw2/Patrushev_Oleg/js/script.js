@@ -1,4 +1,5 @@
-var FONT_SIZE = 8;
+var FONT_SIZE = 16;
+var INFO_TEXT_COLOR = "#000000";
 
 var circle;
 var rectangle;
@@ -67,13 +68,18 @@ function draw(shapes, context) {
     shapes.forEach(function(element) {
         if (exist(element)) {
             element.draw(context);
-            context.font=FONT_SIZE + "px Georgia";
-            context.fillText(element.constructor.name, 200, index * FONT_SIZE * 2);
-            context.fillText("Perimeter: " + element.calculatePerimeter(), 200, index * FONT_SIZE * 2 + FONT_SIZE);
-            context.fillText("Area: " + element.calculateArea(), 200, index * FONT_SIZE * 2 + FONT_SIZE * 2);
+            drawShapeInfo(context, element, index);
             index+=2;
         }
     });
+}
+
+function drawShapeInfo(context, shape, shift) {
+    context.font=FONT_SIZE + "px Georgia";
+    context.fillStyle = INFO_TEXT_COLOR;
+    context.fillText(shape.constructor.name, 800, shift * FONT_SIZE * 2);
+    context.fillText("Perimeter: " + shape.calculatePerimeter(), 800, shift * FONT_SIZE * 2 + FONT_SIZE);
+    context.fillText("Area: " + shape.calculateArea(), 800, shift * FONT_SIZE * 2 + FONT_SIZE * 2);
 }
 
 function getElement(id) {

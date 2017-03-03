@@ -76,13 +76,13 @@ Triangle.prototype.calculateArea = function () {
     var p = this.calculatePerimeter() / 2;
     var lines = this.getSides();
 
-    return Math.sqrt(p * (p - lines[0]) * (p - lines[1]) * (p - lines[2]));
+    return (Math.sqrt(p * (p - lines[0]) * (p - lines[1]) * (p - lines[2]))).toFixed(3);
 }
 
 Triangle.prototype.calculatePerimeter = function () {
     var lines = this.getSides();
 
-    return lines[0] + lines[1] + lines[2];
+    return (lines[0] + lines[1] + lines[2]).toFixed(3);
 }
 
 Triangle.prototype.getLineLength = function (x1, y1, x2, y2) {

@@ -3,7 +3,6 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <!-- Loading scripts here -->
     <script type="text/javascript" src="js/shape.js"></script>
     <script type="text/javascript" src="js/circle.js"></script>
     <script type="text/javascript" src="js/rectangle.js"></script>
@@ -17,8 +16,8 @@
         
             <div class="normal-margin figure-input">
                 <div class="input-line">
-                    <label for="shape-selector" class="control-label">Select shape:</label>
-                    <select class="selector" id="shape-selector" onchange="onShapeSelect()">
+                    <label for="shape-selector" class="control-label">Shape:</label>
+                    <select class="input-box selector" id="shape-selector" onchange="onShapeSelect()">
                         <option disabled selected hidden>Select shape</option>
                         <option>Circle</option>
                         <option>Rectangle</option>
@@ -104,7 +103,7 @@
                     <button class="button" id="apply-btn" onclick="onApplyClick()">Apply</button>
             </div>
 
-            <canvas id="canvas"></canvas>
+            <canvas id="canvas" width="1000" height="500"></canvas>
         
     </div>
 

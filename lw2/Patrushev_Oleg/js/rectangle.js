@@ -62,9 +62,9 @@ Rectangle.prototype.draw = function (context) {
 }
 
 Rectangle.prototype.calculateArea = function () {
-    return this.getWidth() * this.getHeight();
+    return (this.getWidth() * this.getHeight()).toFixed(3);
 }
 
 Rectangle.prototype.calculatePerimeter = function () {
-    return this.getWidth() * 2 + this.getHeight() * 2;
+    return (this.getWidth() * 2 + this.getHeight() * 2).toFixed(3);
 }

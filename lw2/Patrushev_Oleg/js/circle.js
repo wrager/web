@@ -43,9 +43,9 @@ Circle.prototype.draw = function (context) {
 }
 
 Circle.prototype.calculateArea = function () {
-    return Math.PI * Math.pow(this.r, 2);
+    return (Math.PI * Math.pow(this.r, 2)).toFixed(3);
 }
 
 Circle.prototype.calculatePerimeter = function () {
-    return 2 * Math.PI * this.r;
+    return (2 * Math.PI * this.r).toFixed(3);
 }
