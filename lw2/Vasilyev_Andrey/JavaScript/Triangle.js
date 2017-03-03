@@ -34,7 +34,6 @@ Triangle.prototype.getY3 = function() {
     return this.y3
 }
 
-
 Triangle.prototype.setX1 = function(value) {
     this.x1 = value;
 }
@@ -58,7 +57,6 @@ Triangle.prototype.setY2 = function(value) {
 Triangle.prototype.setY3 = function(value) {
     this.y3 = value;
 }
-
 
 Triangle.prototype.calculateArea = function () {
     return Math.abs((this.x1 - this.x3)*(this.y2 - this.y3) - (this.x2 - this.x3)*(this.y1 - this.y3)) * 0.5;

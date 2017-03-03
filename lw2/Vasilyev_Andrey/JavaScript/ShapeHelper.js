@@ -1,27 +1,27 @@
 //переименовать (фабрика)(передать параметром тип шейпа)
 function initializeShape() {
-    e = document.getElementById("selectShape");
+    e = getElementById("selectShape");
     switch (e.options[e.selectedIndex].text) {
         case "Circle":
-            var x = parseInt(document.getElementById("circle-x").value);
-            var y = parseInt(document.getElementById('circle-y').value);
+            var x = parseInt(getElementValueById("circle-x"));
+            var y = parseInt(getElementValueById('circle-y'));
             //проверку на заполнение x y, если нет то прототипные значения
             
-            var radius = parseInt(document.getElementById('circle-radius').value);       
+            var radius = parseInt(getElementValueById('circle-radius'));       
             return new Circle(x, y, radius);
         case "Rectangle":
-            var x = parseInt(document.getElementById("rectangle-x").value);
-            var y = parseInt(document.getElementById('rectangle-y').value);
-            var width = parseInt(document.getElementById('rectangle-width').value);
-            var height = parseInt(document.getElementById('rectangle-height').value);
+            var x = parseInt(getElementValueById("rectangle-x"));
+            var y = parseInt(getElementValueById('rectangle-y'));
+            var width = parseInt(getElementValueById('rectangle-width'));
+            var height = parseInt(getElementValueById('rectangle-height'));
             return new Rectangle(x, y, width, height);
         case "Triangle":
-            var x1 = parseInt(document.getElementById("triangle-x1").value);
-            var y1 = parseInt(document.getElementById("triangle-y1").value);
-            var x2 = parseInt(document.getElementById("triangle-x2").value);
-            var y2 = parseInt(document.getElementById("triangle-y2").value);
-            var x3 = parseInt(document.getElementById("triangle-x3").value);
-            var y3 = parseInt(document.getElementById("triangle-y3").value);           
+            var x1 = parseInt(getElementValueById("triangle-x1"));
+            var y1 = parseInt(getElementValueById("triangle-y1"));
+            var x2 = parseInt(getElementValueById("triangle-x2"));
+            var y2 = parseInt(getElementValueById("triangle-y2"));
+            var x3 = parseInt(getElementValueById("triangle-x3"));
+            var y3 = parseInt(getElementValueById("triangle-y3"));           
             return new Triangle(x1, y1, x2, y2, x3, y3);
         default:  
             alert('Error: Undefined shape type (' + e.options[e.selectedIndex].text + ')');
@@ -30,8 +30,8 @@ function initializeShape() {
 }
 
 function drawShape(myShape) {
-    var fillColor = document.getElementById('fill-color');
-    var borderColor = document.getElementById('border-color');
+    var fillColor = getElementById('fill-color');
+    var borderColor = getElementById('border-color');
     if(fillColor && fillColor.value) {
         myShape.setFillColor(fillColor.value);
     }
@@ -39,17 +39,14 @@ function drawShape(myShape) {
         myShape.setBorderColor(borderColor.value);
     }
 
-    canvas = document.getElementById('canvas');
+    canvas = getElementById('canvas');
+    canvas.lineWidth = Shape.LINE_WIDTH;
     clearCanvas();
-    if(canvas && canvas.getContext) {
-        myShape.draw(canvas);
-    }
-    else alert('Error: No canvas');
 
-    //ошибки - в консоль
+    myShape.draw(canvas);
 }
 
 function clearCanvas() {
-    canvas = document.getElementById('canvas');
+    canvas = getElementById('canvas');
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 }

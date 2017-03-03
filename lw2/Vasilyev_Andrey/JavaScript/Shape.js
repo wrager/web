@@ -5,6 +5,7 @@ function Shape() {
 
 Shape.prototype.borderColor = "#000000";
 Shape.prototype.fillColor = "#FFFFFF";
+Shape.prototype.LINE_WIDTH = 1;
 
 Shape.prototype.setFillColor = function (value) {
     this.fillColor = value;
