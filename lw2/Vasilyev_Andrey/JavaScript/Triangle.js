@@ -7,6 +7,7 @@ function Triangle(x1, y1, x2, y2, x3, y3) {
     this.x3 = x3;
     this.y3 = y3;
 }
+
 //todo отступы между полями, записаь все в таблицу, размер полей
 Triangle.prototype = Object.create(Shape.prototype);
 

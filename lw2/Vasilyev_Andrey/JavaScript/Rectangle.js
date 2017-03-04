@@ -57,12 +57,9 @@ Rectangle.prototype.draw = function (canvas) {
     var context = canvas.getContext('2d');
     context.strokeStyle = this.borderColor;
     context.fillStyle = this.fillColor;
-    context.lineWidth = 1;
     context.beginPath();
     context.rect(this.x, this.y ,this.width, this.height);
     context.closePath();
     context.fill();
     context.stroke();
-    //вынести в шейп (как константу) (разобраться с толщиной(ректангл - не 1 пиксель))
-    context.lineWidth = 1;
 }

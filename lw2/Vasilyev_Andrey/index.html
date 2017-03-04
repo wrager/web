@@ -1,46 +1,84 @@
 <!DOCTYPE html>
 <html>
-   
-    <head>
-        <link rel="stylesheet" type="text/css" href="Styles/style.css">
-        <title>Shapes</title>
-        <script src="JavaScript/DocumentHelper.js"></script>
-        <script src="JavaScript/Shape.js"></script>
-        <script src="JavaScript/Circle.js"></script>
-        <script src="JavaScript/Rectangle.js"></script>
-        <script src="JavaScript/Triangle.js"></script>
-        <script src="JavaScript/ShapeHelper.js"></script>
-        <script src="JavaScript/Events.js"></script>
-    </head>
 
-    <body>
-        <label for='selectShape'>Shape type<select id='selectShape' onchange= 'onSelectShapeType()'>
+<head>
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <title>Shapes</title>
+    <script src="JavaScript/DocumentHelper.js"></script>
+    <script src="JavaScript/Shape.js"></script>
+    <script src="JavaScript/Circle.js"></script>
+    <script src="JavaScript/Rectangle.js"></script>
+    <script src="JavaScript/Triangle.js"></script>
+    <script src="JavaScript/ShapeHelper.js"></script>
+    <script src="JavaScript/Events.js"></script>
+</head>
+
+<body>
+
+    <div class='block'>
+        <label for='selectShape'>Shape type</label>
+        <select id='selectShape' class ='select-shape' onchange= 'onSelectShapeType()'>
             <option value='circle-content'>Circle</option>
             <option value='rectangle-content'>Rectangle</option>
             <option value='triangle-content'>Triangle</option>
-        </select>
-        <br><label for='fill-color'>fillColor</label><input id='fill-color' onchange='onCalculateResult()'><br>
-        <label for='border-color'>borderColor</label><input id='border-color' onchange='onCalculateResult()'><br>
-        <div id="circle-content" class='depending-content' style="display:block">
-            <label for='circle-x'>x</label><input id='circle-x' onchange='onCalculateResult()'><br>
-            <label for='circle-y'>y</label><input id='circle-y' onchange='onCalculateResult()'><br>
-            <label for='circle-radius'>Radius</label><input id='circle-radius' onchange='onCalculateResult()'><br>
+        </select>         
+    </div>
+
+    <div class='block'>
+        <label for='fill-color' class='block-label'>fillColor</label><input id='fill-color' class='block-input' onchange='onCalculateResult()'>
+    </div>
+    <div class='block'>
+        <label for='border-color' class='block-label'>borderColor</label><input id='border-color' class='block-input' onchange='onCalculateResult()'>
+    </div>
+
+    <div id="circle-content" class='depending-content' style="display:block">
+        <div class='block'>
+            <label for='circle-x'>x</label><input id='circle-x' onchange='onCalculateResult()'>
         </div>
-        <div id='rectangle-content' class='depending-content'>
-            <label for='rectangle-x'>x</label><input id='rectangle-x' onchange='onCalculateResult()'><br>
-            <label for='rectangle-y'>y</label><input id='rectangle-y' onchange='onCalculateResult()'><br>
-            <label for='rectangle-width'>width</label><input id='rectangle-width' onchange='onCalculateResult()'><br>
-            <label for='rectangle-height'>height</label><input id='rectangle-height' onchange='onCalculateResult()'><br>
+        <div class='block'>
+            <label for='circle-y'>y</label><input id='circle-y' onchange='onCalculateResult()'>
         </div>
-        <div id='triangle-content' class='depending-content'>
-            <label for='triangle-x1'>x1</label><input id='triangle-x1' onchange='onCalculateResult()'><br>
-            <label for='triangle-y1'>y1</label><input id='triangle-y1' onchange='onCalculateResult()'><br>
-            <label for='triangle-x2'>x2</label><input id='triangle-x2' onchange='onCalculateResult()'><br>
-            <label for='triangle-y2'>y2</label><input id='triangle-y2' onchange='onCalculateResult()'><br>
-            <label for='triangle-x3'>x3</label><input id='triangle-x3' onchange='onCalculateResult()'><br>
-            <label for='triangle-y3'>y3</label><input id='triangle-y3' onchange='onCalculateResult()'><br>
+        <div class='block'>
+            <label for='circle-radius'>Radius</label><input id='circle-radius' onchange='onCalculateResult()'>
         </div>
-        <p id='calculation-result'></p>
-        <canvas id='canvas' class 'canvas-class'></canvas>
-    </body>
+    </div>
+    <div id='rectangle-content' class='depending-content'>
+        <div class='block'>
+            <label for='rectangle-x'>x</label><input id='rectangle-x' onchange='onCalculateResult()'>
+        </div>
+        <div class='block'>
+            <label for='rectangle-y'>y</label><input id='rectangle-y' onchange='onCalculateResult()'>
+        </div>
+        <div class='block'>
+            <label for='rectangle-width'>width</label><input id='rectangle-width' onchange='onCalculateResult()'>
+        </div>
+        <div class='block'>
+            <label for='rectangle-height'>height</label><input id='rectangle-height' onchange='onCalculateResult()'>
+        </div>
+    </div>
+    <div id='triangle-content' class='depending-content'>
+        <div class='block'>
+            <label for='triangle-x1'>x1</label><input id='triangle-x1' onchange='onCalculateResult()'>
+        </div>
+        <div class='block'>
+            <label for='triangle-y1'>y1</label><input id='triangle-y1' onchange='onCalculateResult()'>
+        </div>
+        <div class='block'>
+            <label for='triangle-x2'>x2</label><input id='triangle-x2' onchange='onCalculateResult()'>
+        </div>
+        <div class='block'>
+            <label for='triangle-y2'>y2</label><input id='triangle-y2' onchange='onCalculateResult()'>
+        </div>
+        <div class='block'>
+            <label for='triangle-x3'>x3</label><input id='triangle-x3' onchange='onCalculateResult()'>
+        </div>
+        <div class='block'>
+            <label for='triangle-y3'>y3</label><input id='triangle-y3' onchange='onCalculateResult()'>
+        </div>
+    </div>
+
+    <p id='calculation-result'></p>
+    <canvas id='canvas' class 'canvas-class'></canvas>
+</body>
+
 </html>
