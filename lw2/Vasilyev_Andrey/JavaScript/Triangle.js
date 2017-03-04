@@ -1,15 +1,15 @@
 
-function Triangle(x1, y1, x2, y2, x3, y3) {
-    this.x1 = x1;
-    this.y1 = y1;
-    this.x2 = x2;
-    this.y2 = y2;
-    this.x3 = x3;
-    this.y3 = y3;
+function Triangle() {
 }
 
-//todo отступы между полями, записаь все в таблицу, размер полей
 Triangle.prototype = Object.create(Shape.prototype);
+
+Triangle.prototype.x1 = 0;
+Triangle.prototype.y1 = 0;
+Triangle.prototype.x2 = 0;
+Triangle.prototype.y2 = 0;
+Triangle.prototype.x3 = 0;
+Triangle.prototype.y3 = 0;
 
 Triangle.prototype.getX1 = function() {
     return this.x1

@@ -1,7 +1,5 @@
-function Circle(x, y, radius) {
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
+
+function Circle() {
 }
 
 Circle.prototype = Object.create(Shape.prototype);

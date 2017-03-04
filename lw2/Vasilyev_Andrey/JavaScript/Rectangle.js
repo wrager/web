@@ -1,8 +1,4 @@
-function Rectangle(x, y, width, height) {
-    this.x = x;
-    this.y = y;
-    this.width = width;
-    this.height = height;
+function Rectangle() {
 }
 
 Rectangle.prototype = Object.create(Shape.prototype);
@@ -34,11 +30,11 @@ Rectangle.prototype.setX = function (value) {
 }
 
 Rectangle.prototype.setY = function (value) {
-    this.Y = value;
+    this.y = value;
 }
 
 Rectangle.prototype.setWidth = function (value) {
-    this.Width = value;
+    this.width = value;
 }
 
 Rectangle.prototype.setHeight = function (value) {
