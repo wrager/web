@@ -1,19 +1,19 @@
 function Triangle(params) {
     Shape.apply(this, arguments);
     if (params == undefined) {
-        this.X1 = 0;
-        this.X2 = 0;
-        this.Y1 = 0;
-        this.Y2 = 0;
-        this.X3 = 0;
-        this.Y3 = 0;
+        this.x1 = 0;
+        this.x2 = 0;
+        this.y1 = 0;
+        this.y2 = 0;
+        this.x3 = 0;
+        this.y3 = 0;
     } else {
-        this.X1 = params.X1;
-        this.X2 = params.X2;
-        this.X3 = params.X3;
-        this.Y1 = params.Y1;
-        this.Y2 = params.Y2;
-        this.Y3 = params.Y3;
+        this.x1 = params.x1;
+        this.x2 = params.x2;
+        this.x3 = params.x3;
+        this.y1 = params.y1;
+        this.y2 = params.y2;
+        this.y3 = params.y3;
         this.fillColor = params.fillColor;
         this.borderColor = params.borderColor;
     }
@@ -25,55 +25,55 @@ Triangle.prototype.constructor = Triangle;
 
 Triangle.prototype = {
     setX1: function (coord) {
-        this.X1 = coord;
+        this.x1 = coord;
     },
 
     setX2: function (coord) {
-        this.X2 = coord;
+        this.x2 = coord;
     },
 
     setX3: function (coord) {
-        this.X3 = coord;
+        this.x3 = coord;
     },
 
     setY1: function (coord) {
-        this.Y1 = coord;
+        this.y1 = coord;
     },
 
     setY2: function (coord) {
-        this.Y2 = coord;
+        this.y2 = coord;
     },
 
     setY3: function (coord) {
-        this.Y3 = coord;
+        this.y3 = coord;
     },
 
     getX1: function () {
-        return this.X1;
+        return this.x1;
     },
 
     getX2: function () {
-        return this.X2;
+        return this.x2;
     },
 
     getX3: function () {
-        return this.X3;
+        return this.x3;
     },
 
     getY1: function () {
-        return this.Y1;
+        return this.y1;
     },
 
     getY2: function () {
-        return this.Y2;
+        return this.y2;
     },
 
     getY3: function () {
-        return this.Y3;
+        return this.y3;
     },
 
-    getLineLength: function (X1, Y1, X2, Y2) {
-        return Math.sqrt(Math.pow(X2 - X1, 2) + (Math.pow(Y2 - Y1, 2)));
+    getLineLength: function (x1, y1, x2, y2) {
+        return Math.sqrt(Math.pow(x2 - x1, 2) + (Math.pow(y2 - y1, 2)));
     },
 
     calculatePerimeter: function () {
