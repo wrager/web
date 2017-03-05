@@ -1,25 +1,24 @@
 var shape = undefined;
 
 function onShapeParametersChoice(shapeType) {
-    //TODO: wrap style display
     console.log("User has selected " + shapeType + ": " + getCurrentTime());
     document.getElementById("draw_figure_button").disabled = false;
     if (shapeType == 'Rectangle') {
-        document.getElementById("rectangle_options").style.display = "block";
-        document.getElementById("triangle_options").style.display = "none";
-        document.getElementById("circle_options").style.display = "none";
+        showElement("rectangle_options");
+        hideElement("triangle_options");
+        hideElement("circle_options");
     } else if (shapeType == 'Triangle') {
-        document.getElementById("rectangle_options").style.display = "none";
-        document.getElementById("triangle_options").style.display = "block";
-        document.getElementById("circle_options").style.display = "none";
+        hideElement("rectangle_options");
+        showElement("triangle_options");
+        hideElement("circle_options");
     } else if (shapeType == 'Circle') {
-        document.getElementById("rectangle_options").style.display = "none";
-        document.getElementById("triangle_options").style.display = "none";
-        document.getElementById("circle_options").style.display = "block";
+        hideElement("rectangle_options");
+        hideElement("triangle_options");
+        showElement("circle_options");
     } else {
-        document.getElementById("rectangle_options").style.display = "none";
-        document.getElementById("triangle_options").style.display = "none";
-        document.getElementById("circle_options").style.display = "none";
+        hideElement("rectangle_options");
+        hideElement("triangle_options");
+        hideElement("circle_options");
         document.getElementById("draw_figure_button").disabled = true;
     }
 }
@@ -49,8 +48,6 @@ function onDrawButtonClick() {
 function getDrawParameters(shapeType) {
     var params = {};
     if (shapeType == 'Rectangle') {
-
-        //TODO: rename Classes members
         params.X1 = getElementNumberValue("rectX1");
         params.X2 = getElementNumberValue("rectX2");
         params.Y1 = getElementNumberValue("rectY1");
@@ -67,8 +64,8 @@ function getDrawParameters(shapeType) {
         params.centerY = getElementNumberValue("circleCenterY");
         params.radius = getElementNumberValue("circleRadius");
     }
-    params.fillColor = getValidColorValue("fillColor");
-    params.borderColor = getValidColorValue("borderColor");
+    params.fillColor = getElementColorValue("fillColor");
+    params.borderColor = getElementColorValue("borderColor");
 
     return params;
 }
@@ -86,7 +83,7 @@ function getElementNumberValue(elem) {
     return (isNumber(getElementValue(elem)) ? getElementValue(elem) : 0);
 }
 
-function getValidColorValue(elem) {
+function getElementColorValue(elem) {
     return (isColor(getElementValue(elem)) ? getElementValue(elem) : '#000000');
 }
 
@@ -105,6 +102,14 @@ function isColor(value) {
 
 function getCurrentTime() {
     return new Date().toLocaleTimeString();
+}
+
+function showElement(elemId) {
+    document.getElementById(elemId).style.display = "block";
+}
+
+function hideElement(elemId) {
+    document.getElementById(elemId).style.display = "none";
 }
 
 function clearCanvas() {
