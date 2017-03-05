@@ -2,14 +2,14 @@ function Rectangle(params) {
     Shape.apply(this, arguments);
     if (params == undefined) {
         this.X1 = 0;
-        this.coordX2 = 0;
-        this.coordY1 = 0;
-        this.coordY2 = 0;
+        this.X2 = 0;
+        this.Y1 = 0;
+        this.Y2 = 0;
     } else {
         this.X1 = params.X1;
-        this.coordX2 = params.coordX2;
-        this.coordY1 = params.coordY1;
-        this.coordY2 = params.coordY2;
+        this.X2 = params.X2;
+        this.Y1 = params.Y1;
+        this.Y2 = params.Y2;
         this.fillColor = params.fillColor;
         this.borderColor = params.borderColor;
     }
@@ -24,45 +24,45 @@ Rectangle.prototype = {
         this.X1 = coord;
     },
 
-    setCoordX2: function (coord) {
-        this.coordX2 = coord;
+    setX2: function (coord) {
+        this.X2 = coord;
     },
 
-    setCoordY1: function (coord) {
-        this.coordY1 = coord;
+    setY1: function (coord) {
+        this.Y1 = coord;
     },
 
-    setCoordY2: function (coord) {
-        this.coordY2 = coord;
+    setY2: function (coord) {
+        this.Y2 = coord;
     },
 
     getCoordX1: function () {
         return this.X1;
     },
 
-    getCoordX2: function () {
-        return this.coordX2;
+    getX2: function () {
+        return this.X2;
     },
 
-    getCoordY1: function () {
-        return this.coordY1;
+    getY1: function () {
+        return this.Y1;
     },
 
-    getCoordY2: function () {
-        return this.coordY2;
+    getY2: function () {
+        return this.Y2;
     },
 
     getHeight: function () {
-        return Math.abs(this.getCoordY1() - this.getCoordY2());
+        return Math.abs(this.getY1() - this.getY2());
     },
 
     getWidth: function () {
-        return Math.abs(this.getCoordX1() - this.getCoordX2());
+        return Math.abs(this.getCoordX1() - this.getX2());
     },
 
     draw: function (context) {
-        var xCoord = Math.min(this.getCoordX1(), this.getCoordX2());
-        var yCoord = Math.min(this.getCoordY1(), this.getCoordY2());
+        var xCoord = Math.min(this.getCoordX1(), this.getX2());
+        var yCoord = Math.min(this.getY1(), this.getY2());
         context.beginPath();
         context.rect(xCoord, yCoord, this.getWidth(), this.getHeight());
         context.fillStyle = Shape.prototype.getFillColor.call(this);

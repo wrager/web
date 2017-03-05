@@ -2,7 +2,6 @@ var shape = undefined;
 
 function onShapeParametersChoice(shapeType) {
     //TODO: wrap style display
-    //TODO: each tag on new line
     console.log("User has selected " + shapeType + ": " + getCurrentTime());
     document.getElementById("draw_figure_button").disabled = false;
     if (shapeType == 'Rectangle') {
@@ -34,7 +33,7 @@ function onDrawButtonClick() {
 
     clearCanvas();
     console.log("Shape type: " + shapeType + "-- " + getCurrentTime());
-    console.log("Program draw shape with parametres:" + JSON.stringify(getDrawParameters(shapeType)) + "-- " + getCurrentTime());
+    console.log("Program draw shape with parametres:" + JSON.stringify(getDrawParameters(shapeType)) + "-" + getCurrentTime());
 
     if (shapeType == 'Rectangle') {
         shape = new Rectangle(getDrawParameters(shapeType));
@@ -53,19 +52,19 @@ function getDrawParameters(shapeType) {
 
         //TODO: rename Classes members
         params.X1 = getElementNumberValue("rectX1");
-        params.coordX2 = getElementNumberValue("rectX2");
-        params.coordY1 = getElementNumberValue("rectY1");
-        params.coordY2 = getElementNumberValue("rectY2");
+        params.X2 = getElementNumberValue("rectX2");
+        params.Y1 = getElementNumberValue("rectY1");
+        params.Y2 = getElementNumberValue("rectY2");
     } else if (shapeType == 'Triangle') {
         params.X1 = getElementNumberValue("triangleX1");
-        params.coordX2 = getElementNumberValue("triangleX2");
-        params.coordX3 = getElementNumberValue("triangleX3");
-        params.coordY1 = getElementNumberValue("triangleY1");
-        params.coordY2 = getElementNumberValue("triangleY2");
-        params.coordY3 = getElementNumberValue("triangleY3");
+        params.X2 = getElementNumberValue("triangleX2");
+        params.X3 = getElementNumberValue("triangleX3");
+        params.Y1 = getElementNumberValue("triangleY1");
+        params.Y2 = getElementNumberValue("triangleY2");
+        params.Y3 = getElementNumberValue("triangleY3");
     } else if (shapeType == 'Circle') {
-        params.coordX = getElementNumberValue("circleCenterX");
-        params.coordY = getElementNumberValue("circleCenterY");
+        params.centerX = getElementNumberValue("circleCenterX");
+        params.centerY = getElementNumberValue("circleCenterY");
         params.radius = getElementNumberValue("circleRadius");
     }
     params.fillColor = getValidColorValue("fillColor");

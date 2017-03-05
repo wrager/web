@@ -1,12 +1,12 @@
 function Circle(params) {
     Shape.apply(this, arguments);
     if (params == undefined) {
-        this.coordX = 0;
-        this.coordY = 0;
+        this.centerX = 0;
+        this.centerY = 0;
         this.radius = 0;
     } else {
-        this.coordX = params.coordX;
-        this.coordY = params.coordY;
+        this.centerX = params.centerX;
+        this.centerY = params.centerY;
         this.radius = params.radius;
         this.fillColor = params.fillColor;
         this.borderColor = params.borderColor;
@@ -18,24 +18,24 @@ Circle.prototype.constructor = Circle;
 
 Circle.prototype = {
 
-    setCoordX: function (coord) {
-        this.coordX = coord;
+    setCenterX: function (coord) {
+        this.centerX = coord;
     },
 
-    setCoordY: function (coord) {
-        this.coordY = coord;
+    setCenterY: function (coord) {
+        this.centerY = coord;
     },
 
     setRadius: function (value) {
         this.radius = value;
     },
 
-    getCoordX: function () {
-        return this.coordX;
+    getCenterX: function () {
+        return this.centerX;
     },
 
-    getCoordY: function () {
-        return this.coordY;
+    getCenterY: function () {
+        return this.centerY;
     },
 
     getRadius: function () {
@@ -44,7 +44,7 @@ Circle.prototype = {
 
     draw: function (context) {
         context.beginPath();
-        context.arc(this.getCoordX(), this.getCoordY(), this.getRadius(), 0, 2 * Math.PI, false);
+        context.arc(this.getCenterX(), this.getCenterY(), this.getRadius(), 0, 2 * Math.PI, false);
         context.fillStyle = Shape.prototype.getFillColor.call(this);
         context.strokeStyle = Shape.prototype.getBorderColor.call(this);
         context.fill();
