@@ -1,8 +1,8 @@
-
 var shape = undefined;
 
-function onShapeParametersChoice(shapeType)
-{
+function onShapeParametersChoice(shapeType) {
+    //TODO: wrap style display
+    //TODO: each tag on new line
     console.log("User has selected " + shapeType + ": " + getCurrentTime());
     document.getElementById("draw_figure_button").disabled = false;
     if (shapeType == 'Rectangle') {
@@ -47,24 +47,26 @@ function onDrawButtonClick() {
     printCalcResultOnCanvas(context);
 }
 
-function getDrawParameters(shapeType){
+function getDrawParameters(shapeType) {
     var params = {};
-    if(shapeType == 'Rectangle') {
-        params.coordX1 = getValidNumberValue("rectX1");
-        params.coordX2 = getValidNumberValue("rectX2");
-        params.coordY1 = getValidNumberValue("rectY1");
-        params.coordY2 = getValidNumberValue("rectY2");
+    if (shapeType == 'Rectangle') {
+
+        //TODO: rename Classes members
+        params.X1 = getElementNumberValue("rectX1");
+        params.coordX2 = getElementNumberValue("rectX2");
+        params.coordY1 = getElementNumberValue("rectY1");
+        params.coordY2 = getElementNumberValue("rectY2");
     } else if (shapeType == 'Triangle') {
-        params.coordX1 = getValidNumberValue("triangleX1");
-        params.coordX2 = getValidNumberValue("triangleX2");
-        params.coordX3 = getValidNumberValue("triangleX3");
-        params.coordY1 = getValidNumberValue("triangleY1");
-        params.coordY2 = getValidNumberValue("triangleY2");
-        params.coordY3 = getValidNumberValue("triangleY3");
+        params.X1 = getElementNumberValue("triangleX1");
+        params.coordX2 = getElementNumberValue("triangleX2");
+        params.coordX3 = getElementNumberValue("triangleX3");
+        params.coordY1 = getElementNumberValue("triangleY1");
+        params.coordY2 = getElementNumberValue("triangleY2");
+        params.coordY3 = getElementNumberValue("triangleY3");
     } else if (shapeType == 'Circle') {
-        params.coordX = getValidNumberValue("circleCenterX");
-        params.coordY = getValidNumberValue("circleCenterY");
-        params.radius = getValidNumberValue("circleRadius");
+        params.coordX = getElementNumberValue("circleCenterX");
+        params.coordY = getElementNumberValue("circleCenterY");
+        params.radius = getElementNumberValue("circleRadius");
     }
     params.fillColor = getValidColorValue("fillColor");
     params.borderColor = getValidColorValue("borderColor");
@@ -81,7 +83,7 @@ function printCalcResultOnCanvas(context) {
     context.fillText(areaResult, 5, 240);
 }
 
-function getValidNumberValue(elem) {
+function getElementNumberValue(elem) {
     return (isNumber(getElementValue(elem)) ? getElementValue(elem) : 0);
 }
 
@@ -89,11 +91,12 @@ function getValidColorValue(elem) {
     return (isColor(getElementValue(elem)) ? getElementValue(elem) : '#000000');
 }
 
-function getElementValue(elem) {
-    return document.getElementById(elem).value;
+function getElementValue(id) {
+    return document.getElementById(id).value;
 }
 
 function isNumber(value) {
+    //TODO: replace by NUMBER
     return value.match(/^\d+$/);
 }
 
@@ -111,4 +114,3 @@ function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     console.log("Canvas cleared: " + getCurrentTime());
 }
-

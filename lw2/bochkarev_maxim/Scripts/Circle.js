@@ -1,7 +1,6 @@
-
 function Circle(params) {
     Shape.apply(this, arguments);
-    if (params == undefined){
+    if (params == undefined) {
         this.coordX = 0;
         this.coordY = 0;
         this.radius = 0;
@@ -19,17 +18,29 @@ Circle.prototype.constructor = Circle;
 
 Circle.prototype = {
 
-    setCoordX: function(coord) { this.coordX = coord; },
+    setCoordX: function (coord) {
+        this.coordX = coord;
+    },
 
-    setCoordY: function(coord) { this.coordY = coord; },
+    setCoordY: function (coord) {
+        this.coordY = coord;
+    },
 
-    setRadius: function(value) { this.radius = value; },
+    setRadius: function (value) {
+        this.radius = value;
+    },
 
-    getCoordX: function() { return this.coordX; },
+    getCoordX: function () {
+        return this.coordX;
+    },
 
-    getCoordY: function() { return this.coordY; },
+    getCoordY: function () {
+        return this.coordY;
+    },
 
-    getRadius: function() { return this.radius; },
+    getRadius: function () {
+        return this.radius;
+    },
 
     draw: function (context) {
         context.beginPath();
@@ -40,7 +51,11 @@ Circle.prototype = {
         context.stroke();
     },
 
-    calculatePerimeter: function(){ return Math.PI * this.getRadius() * 2; },
+    calculatePerimeter: function () {
+        return Math.PI * this.getRadius() * 2;
+    },
 
-    calculateArea: function(){ return Math.pow(this.getRadius(), 2) * Math.PI; }
+    calculateArea: function () {
+        return Math.pow(this.getRadius(), 2) * Math.PI;
+    }
 };

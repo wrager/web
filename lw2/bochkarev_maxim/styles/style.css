@@ -6,6 +6,10 @@ body {
     display: flex;
 }
 
+label {
+    margin-right: 30px;
+}
+
 .parameter_input {
     width: 60px;
 }
@@ -19,8 +23,6 @@ canvas {
     padding-left: 0;
     padding-right: 0;
     margin-left: 25px;
-    /*display: block;*/
-    /*width: 900px;*/
 }
 
 .control_elem {
