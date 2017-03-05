@@ -92,8 +92,7 @@ function getElementValue(id) {
 }
 
 function isNumber(value) {
-    //TODO: replace by NUMBER
-    return value.match(/^\d+$/);
+    return !(Number(value) !== Number(value));
 }
 
 function isColor(value) {
