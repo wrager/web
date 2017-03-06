@@ -92,6 +92,8 @@
     border-color: rgba(0,0,0,.27);
     border-top-color: rgba(0,0,0,.38);
     border-bottom-color: rgba(0,0,0,.16);
+
+
 }
 
 .layout_inner .login_form .password_container
@@ -111,10 +113,8 @@
     border: 1px solid transparent;
     border-color: rgba(0,0,0,.27);
     border-top-color: rgba(0,0,0,.38);
-    border-bottom-color: rgba(0,0,0,.16);
+    border-bottom-color: rgba(0,0,0,.16); 
 }
-
-
 
 .layout_inner .login_form .login_area .log_in_row
 {
@@ -143,30 +143,43 @@
     height: 32px;
     float: left;
     background: linear-gradient(to top, #FFDE58, #FFCF0C);
+
+    cursor: pointer;
 }
 
 .layout_inner .login_form .buttons
 {
     position: relative;
 
-    height: 50px;
+    height: 24px;
 
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
 }
 
 .layout_inner .login_form .buttons .left_part
 {
     float:left; 
-    padding : 15px 0px;
+    margin: 13px 0px 0px;
+    padding : 2px 4px 2px;
+    height: 24px;
+    background-color: #DEE9FF;
+
+    cursor: pointer;
 }
 
 .layout_inner .login_form .buttons .right_part
 {
     float:right; 
-    padding : 15px 0px;
+    margin: 13px 0px 0px;
+    padding : 2px 4px 2px;
+    height: 24px;
+    background-color: #DEE9FF;
+
+    cursor: pointer;
 }
 
 .layout_inner .login_form .login_area
@@ -190,31 +203,36 @@
     text-align: left;
 
     cursor: pointer;
-    width: 293px;
+    width: 277px;
     height: 20px;
     
     line-height: 10px;
-    margin: 0px 0px 5px;
+    margin: 0px 0px 10px;
+
+
 }
 
-.layout_inner .login_form .login_area .alien_checkbox label
+.layout_inner .login_form .login_area .alien_checkbox .label
 {
     display: inline;
     position: relative;
-}
 
-.layout_inner .login_form .login_area .alien_checkbox input::before
-{
-    display: inline;
-    position: relative;
-}
-
-.layout_inner .login_form .login_area .alien_checkbox .label 
-{
-    display: inline;
     cursor: pointer;
 
+    font-size: 16px;
+    font-family: Arial,sans-serif;
+}
+
+.layout_inner .login_form .login_area .alien_checkbox .checkbox1
+{
+    display: inline;
     position: relative;
+
+
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
 }
 
 .layout_inner .login_form .login_area .social_icon
@@ -230,19 +248,23 @@
     padding: 2px;   
 }
 
+.layout_inner .login_form .login_area .buttons .right_part .i
+{
+   font-weight: bold;
+}
+
 footer
  {
     width:100%;
     height: 65px;
 
-     
-    margin: 50px auto;
+    position: absolute;
+    
+    margin: 0px auto;
     min-width: 860px;
    
     background: white;   
     border-top: 3px solid #e4e4e4;
-
-    font-family: Arial,sans-serif; 
 }
 
 
@@ -254,6 +276,9 @@ footer .footer_inner
     padding: 0px 10px 0px;
     
     margin: auto;
+
+    font-size: 13px;
+    font-family: Arial,sans-serif;
 }
 
 footer .footer_inner .left_part
@@ -267,7 +292,7 @@ footer .footer_inner .left_part .elements_left_part li
     display: inline;
     padding-right: 50px;
 
-    font-family: Arial,sans-serif;
+    cursor: pointer;
 }
 
 footer .footer_inner .right_part
@@ -280,7 +305,6 @@ footer .footer_inner .right_part .elements_right_part li
     display: inline; /* Отображать как строчный элемент */
     padding-left: 50px;
 
-    font-family: Arial,sans-serif;
 }
 
 footer .footer_inner .right_part .fotter_help
