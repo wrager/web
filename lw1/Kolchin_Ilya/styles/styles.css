@@ -6,6 +6,8 @@
 .layout_inner
 {
     width: 100%;
+
+    padding: 0px 0px 85px;
 }
 
 .layout_inner .header-logo img {
@@ -38,13 +40,11 @@
 
 .layout_inner .login_form .phone img
 {  
+    box-sizing: border-box;
     width: 300px;
-    height: -343px;
+    height: 343px;
 
-    text-align: center;
-
-    position: relative;
-    margin: -343px 0px;
+    margin: 50px 0px -383px;
 }
 
 
@@ -54,7 +54,8 @@
     text-align: center;
     width: 293px;
     height: 222px;
-    padding : 60px 20px 10px; 
+    padding : 50px 20px 10px; 
+    margin: 0px 0px 50px;
 }
 
 .layout_inner .login_form .roof
@@ -235,15 +236,13 @@ footer
     height: 65px;
 
      
-    margin: 0 auto;
+    margin: 50px auto;
     min-width: 860px;
    
     background: white;   
-    border-top: 1px solid #e4e4e4;
+    border-top: 3px solid #e4e4e4;
 
-    font-family: Arial,sans-serif;
-
-    
+    font-family: Arial,sans-serif; 
 }
 
 
