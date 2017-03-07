@@ -94,6 +94,8 @@
 
    font-size: 15px;
    font-family: Arial;
+
+   background-clip: padding-box;
 }
 
 .layout_inner .login_form .login_container .text_box_login:focus
@@ -132,8 +134,9 @@
     border-bottom-color: rgba(0,0,0,.16); 
 
     font-size: 15px;
-   font-family: Arial;
+    font-family: Arial;
 
+    background-clip: padding-box;
 }
 
 .layout_inner .login_form .password_container .text_box_password:focus
@@ -274,7 +277,7 @@
     display: inline;
     position: relative;
 
-
+    background: linear-gradient(#fff,#eee);
     width: 16px;
     height: 16px;
 
@@ -294,9 +297,37 @@
     padding: 2px;   
 }
 
-.layout_inner .login_form .login_area .buttons .right_part .i
+.layout_inner .login_form .login_area .buttons .left_part
 {
-   font-weight: bold;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 3px;
+    padding-top: 2px;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.17);
+    border-top-color: rgba(0,0,0,.28);
+    border-bottom-color: rgba(0,0,0,.27); 
+
+    border-radius: 3px 3px 3px 3px;
+
+    font-size: 13px;
+}
+.layout_inner .login_form .login_area .buttons .right_part
+{
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 3px;
+    padding-top: 2px;
+
+    font-weight: bold;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.17);
+    border-top-color: rgba(0,0,0,.28);
+    border-bottom-color: rgba(0,0,0,.27); 
+
+    border-radius: 3px 3px 3px 3px;
 }
 
 footer
