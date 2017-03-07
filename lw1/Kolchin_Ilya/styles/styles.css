@@ -6,7 +6,7 @@
 .layout_inner
 {
     width: 100%;
-
+    
     padding: 0px 0px 85px;
 }
 
@@ -291,7 +291,7 @@
 .layout_inner .login_form .login_area .social_icon
 {
    padding: 0px;
-   margin: 1px;
+   margin: -2px;
 }
 
 .layout_inner .login_form .login_area .social_icon li
@@ -309,10 +309,29 @@
     width: 24px;
     height: 24px;
 
-        display: inline;
+    display: inline;
 
 }
 
+.button:hover
+{
+    background-image: url("img/vkontakte.svg");
+}
+
+
+.button .button_vk:after {
+    background-color: #4d75a3;
+    background-image: url("img/vkontakte.svg");
+    background-size: 15px 17px;
+    background-position-y: 8px;
+    &:hover {
+        background-color: #496f9a;
+    }
+}
+.layout_inner .login_form .login_area .buttons
+{
+    margin: 18px 0px 0px;
+}
 
 .layout_inner .login_form .login_area .buttons .left_part
 {
@@ -320,7 +339,9 @@
     padding-left: 8px;
     padding-bottom: 3px;
     padding-top: 2px;
-    margin: 12px 0px 0px;
+
+    margin: 0px;
+
     border: 1px solid transparent;
     border-color: rgba(0,0,0,.17);
     border-top-color: rgba(0,0,0,.28);
@@ -336,7 +357,8 @@
     padding-left: 8px;
     padding-bottom: 3px;
     padding-top: 2px;
-    margin: 12px 0px 0px;
+
+    margin: 0px;
     font-weight: bold;
 
     border: 1px solid transparent;
@@ -354,11 +376,10 @@ footer
 
     position: absolute;
     
-    margin: 0px auto;
+    margin: 65px auto;
     min-width: 860px;
    
-    background: white;   
-    border-top: 3px solid #e4e4e4;
+    border-top: 2px solid #e4e4e4;
 }
 
 
