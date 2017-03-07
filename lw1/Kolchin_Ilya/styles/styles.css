@@ -264,12 +264,14 @@
 .layout_inner .login_form .login_area .alien_checkbox .label
 {
     display: inline;
-    position: relative;
+    position: absolute;
 
     cursor: pointer;
 
-    font-size: 16px;
+    font-size: 15px;
     font-family: Arial,sans-serif;
+
+    line-height: 17px;
 }
 
 .layout_inner .login_form .login_area .alien_checkbox .checkbox1
@@ -278,8 +280,10 @@
     position: relative;
 
     background: linear-gradient(#fff,#eee);
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
+
+    margin: 0px 5px 0px 0px;
 
     cursor: pointer;
 }
@@ -297,13 +301,21 @@
     padding: 2px;   
 }
 
+.layout_inner .login_form .login_area .buttons
+{
+    width: 258px;
+    height: 24px;
+
+
+}
+
 .layout_inner .login_form .login_area .buttons .left_part
 {
     padding-right: 8px;
     padding-left: 8px;
     padding-bottom: 3px;
     padding-top: 2px;
-
+    margin: 12px 0px 0px;
     border: 1px solid transparent;
     border-color: rgba(0,0,0,.17);
     border-top-color: rgba(0,0,0,.28);
@@ -319,7 +331,7 @@
     padding-left: 8px;
     padding-bottom: 3px;
     padding-top: 2px;
-
+    margin: 12px 0px 0px;
     font-weight: bold;
 
     border: 1px solid transparent;
