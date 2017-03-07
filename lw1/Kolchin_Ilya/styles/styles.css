@@ -178,10 +178,19 @@
     width: 222px;
     height: 32px;
     float: left;
-    background: linear-gradient(to top, #FFDE58, #FFCF0C);
+    background: linear-gradient(to top, #FFCF0C, #FFDE58);
 
     cursor: pointer;
     
+    font-size: 15px;
+    font-family: Arial;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.47); 
+
+    border-radius: 3px 0px 0px 3px;
 }
 
 .layout_inner .login_form .buttons
