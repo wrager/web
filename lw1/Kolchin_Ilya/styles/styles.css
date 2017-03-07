@@ -298,16 +298,21 @@
 {
     display: inline;
 
+    width:24px;
+    height: 24px;
+
     padding: 2px;   
 }
 
-.layout_inner .login_form .login_area .buttons
+.button
 {
-    width: 258px;
+    width: 24px;
     height: 24px;
 
+        display: inline;
 
 }
+
 
 .layout_inner .login_form .login_area .buttons .left_part
 {
@@ -409,3 +414,4 @@ footer .footer_inner .fotter_copyright
     padding: 0px;
     font-size: 13px;
 }
+
