@@ -10,13 +10,25 @@
 
 <body>
     <div class="main">
-        <div class="toolbar">
-            <div></div>
-        </div>
         <div class="canvas">
-            <canvas></canvas>
+            <canvas id="canvas"></canvas>
         </div>
+        <div class="toolbar">
+            <div class="select_shape">
+                <select>
+                    <option value="triangle">Треугольник</option>
+                    <option value="rectangle">Прямоугольник</option>
+                    <option value="circle">Эллипс</option>
+                </select>
+            </div>
+            <div id="setting" class="setting_shape"></div>
+        </div>
+
     </div>
+
+    <script>
+        ShapeManager();
+    </script>
 </body>
 
 </html>

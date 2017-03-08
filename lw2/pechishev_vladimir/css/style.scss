@@ -1,4 +1,29 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 984px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-content: space-between;
+  flex-direction: row;
+
+  .canvas {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+  }
+
+  .toolbar {
+     &.select_shape {
+
+     }
+
+     .setting_shape {
+
+     }
+   }
 }
