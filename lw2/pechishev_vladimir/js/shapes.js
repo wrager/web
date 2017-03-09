@@ -5,7 +5,7 @@ function Position(x , y){
 
 function Shape() {
     this._color = "#000000";
-    this._borderColor = "#000000";
+    this._borderColor = "green";
     this._perimeter = 0;
     this._area = 0;
 }
@@ -24,10 +24,7 @@ Shape.prototype = {
     getBorderColor: function() {
         return this._borderColor;
     },
-    draw: function(ctx) {
-		ctx.fillStyle = this._color;
-		ctx.strokeStyle = this._borderColor;
-	},
+    draw: function(ctx) {},
     calculateArea: function() {},
     calculatePerimeter: function() {},
 

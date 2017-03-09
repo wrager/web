@@ -43,7 +43,9 @@ ShapeManager.prototype = {
 		this._ctx.clearRect(0,0, width, height);
 		if (this._currentShape)
 		{
-			this._updareShape();
+			console.log(this._ctx);
+			this._currentShape.draw(this._ctx);
+			this._updateShape();
 			this._outputData();
 		}
 	},
@@ -52,41 +54,72 @@ ShapeManager.prototype = {
 		// TODO: replace data in result div or create result field
 	},
 
-	_updareShape: function () {
-		this._currentShape.draw();
+	_updateShape: function () {
 		this._currentShape.calculatePerimeter();
 		this._currentShape.calculateArea();
 	},
 
 	_initSettingForRectangle: function () {
-		this._createInputField("x1", this._currentShape.setX1);
-		this._createInputField("y1", this._currentShape.setY1);
-		this._createInputField("x2", this._currentShape.setX2);
-		this._createInputField("y2", this._currentShape.setY2);
+		this._currentShape = new Rectangle();
+		this._createInputField("x1", function(value) {
+			this._currentShape.setX1(value);
+		}.bind(this));
+		this._createInputField("y1", function(value) {
+			this._currentShape.setY1(value);
+		}.bind(this));
+		this._createInputField("x2", function(value) {
+			this._currentShape.setX2(value);
+		}.bind(this));
+		this._createInputField("y2", function(value) {
+			this._currentShape.setY2(value);
+		}.bind(this));
 	},
 
 	_initSettingForTriangle: function () {
-		this._createInputField("x1", this._currentShape.setX1);
-		this._createInputField("y1", this._currentShape.setY1);
-		this._createInputField("x2", this._currentShape.setX2);
-		this._createInputField("y2", this._currentShape.setY2);
-		this._createInputField("x3", this._currentShape.setX3);
-		this._createInputField("y3", this._currentShape.setY3);
+		this._currentShape = new Triangle();
+		this._createInputField("x1", function(value) {
+			this._currentShape.setX1(value);
+		}.bind(this));
+		this._createInputField("y1", function(value) {
+			this._currentShape.setY1(value);
+		}.bind(this));
+		this._createInputField("x2", function(value) {
+			this._currentShape.setX2(value);
+		}.bind(this));
+		this._createInputField("y2", function(value) {
+			this._currentShape.setY2(value);
+		}.bind(this));
+		this._createInputField("x3", function(value) {
+			this._currentShape.setX3(value);
+		}.bind(this));
+		this._createInputField("y3", function(value) {
+			this._currentShape.setY3(value);
+		}.bind(this));
 	},
 
 	_initSettingForCircle: function () {
-		this._createInputField("radius", this._currentShape.setRadius);
-		this._createInputField("centerX", this._currentShape.setCenterX);
-		this._createInputField("centerY", this._currentShape.setCenterY);
+		this._currentShape = new Circle();
+		this._createInputField("radius", function(value) {
+			this._currentShape.setRadius(value);
+			console.log(this._currentShape);
+		}.bind(this));
+		this._createInputField("centerX", function(value) {
+			this._currentShape.setCenterX(value);
+			console.log(this._currentShape);
+		}.bind(this));
+		this._createInputField("centerY", function(value) {
+			this._currentShape.setCenterY(value);
+			console.log(this._currentShape);
+		}.bind(this));
+
 	},
 
 	_createInputField: function (text, func) {
 		const input = document.createElement("input");
 		input.setAttribute("class", "input");
 		input.setAttribute("placeholder", text);
-		input.onchange = function () {
-			const value = Number(input.value);
-			func(value);
+		input.onchange = function() {
+			func(Number(input.value));
 		};
 		this._settingField.appendChild(input);
 	},

@@ -1,29 +1,115 @@
+$widthLeftContainer: 600px;
+$heightContainer: 800px;
+$heightCanvas: 500px;
+
 body {
   margin: 0;
   padding: 0;
 }
 
-.main {
-  width: 984px;
-  height: auto;
-  margin: 0 auto;
-  display: flex;
-  align-content: space-between;
-  flex-direction: row;
+.has_border
+{
+  outline: 1px solid black;
+}
+
+.has_margin {
+  margin: 10px;
+}
+
+.scalable {
+  box-sizing: border-box;
+}
+
+.left_container {
+  float: left;
+  width: $widthLeftContainer;
+  min-width: 570px;
+  height: 800px;
+  padding: 15px 15px 0;
 
   .canvas {
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
+    height: $heightCanvas;
   }
 
-  .toolbar {
-     &.select_shape {
+  .out_data {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
 
-     }
+    .out_perimeter,
+    .out_area {
+      margin: 20px 15px;
+    }
 
-     .setting_shape {
+    .out_perimeter::before {
+      content: 'Perimeter: ';
+    }
 
-     }
-   }
+    .out_area::before {
+      content: 'Area: ';
+    }
+  }
 }
+
+.right_container {
+  float: left;
+  width: 400px;
+  height: $heightContainer;
+
+  .toolbar {
+    height: 250px;
+    padding: 15px;
+
+    .toolbar_element {
+      margin: 0 auto 15px;
+    }
+
+    .select_shape_button {
+      float: right;
+    }
+
+    .change_color input {
+        margin: 10px 0;
+      }
+
+      .color_shape::after {
+        content: 'Color shape ';
+      }
+
+      .color_border::after {
+        content: 'Color shape border ';
+      }
+
+      .color_shape,
+      .color_border {
+        &::after {
+          margin-left: 10px;
+        }
+      }
+
+    }
+
+
+  .setting {
+    position: relative;
+    min-height: 200px;
+    height: auto;
+
+    .setting_shape {
+
+      input {
+        width: 100px;
+        margin: 15px 16px;
+      }
+    }
+
+    .draw_shape {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0 15px 15px;
+    }
+  }
+}
+
+

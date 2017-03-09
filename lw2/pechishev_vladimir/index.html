@@ -9,25 +9,36 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="canvas">
-            <canvas id="canvas"></canvas>
+    <div class="left_container has_border has_margin scalable">
+        <div class="canvas has_border scalable">
+            <canvas id="canvas" width="570px" height="500px"></canvas>
         </div>
-        <div class="toolbar">
-            <div class="select_shape">
-                <select>
-                    <option value="triangle">Треугольник</option>
-                    <option value="rectangle">Прямоугольник</option>
-                    <option value="circle">Эллипс</option>
-                </select>
+        <div class="out_data has_border scalable" id="shape_data">
+            <div class="out_perimeter" id="perimeter"></div>
+            <div class="out_area" id="area"></div>
+        </div>
+    </div>
+    <div class="right_container has_border has_margin">
+        <div class="toolbar has_border scalable has_margin">
+            <select class="toolbar_element">
+                <option value="triangle">Треугольник</option>
+                <option value="rectangle">Прямоугольник</option>
+                <option value="circle">Эллипс</option>
+            </select>
+            <button class="select_shape_button toolbar_element">Выбрать</button>
+            <div class="change_color toolbar_element">
+                <div class="color_shape"><input id="color_shape"></div>
+                <div class="color_border"><input id="color_border"></div>
             </div>
-            <div id="setting" class="setting_shape"></div>
         </div>
-
+        <div class="setting scalable has_border has_margin">
+            <div id="setting" class="setting_shape"></div>
+            <button class="draw_shape">Отрисовать фигуру</button>
+        </div>
     </div>
 
     <script>
-        ShapeManager();
+        var app = new ShapeManager();
     </script>
 </body>
 

@@ -5061,3 +5061,6 @@
 /lw1/pechishev_vladimir/css/*.map
 /lw1/pechishev_vladimir/css/.sass-cache/da06aa663f13d7109369477aad8db48b90e15d57/*.scssc
 /lw1/pechishev_vladimir/.sass-cache/cd240b93342b7cd02df7255925ebb4564685b122/*.scssc
+/lw2/pechishev_vladimir/css/*.map
+/lw2/pechishev_vladimir/css/.sass-cache/f91ec546f4a34c71a4a3550744fa39bbe11a4a17/*.scssc
+/.idea/web.iml
