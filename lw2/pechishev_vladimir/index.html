@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script src="js/shapes.js" type="text/javascript"></script>
+    <script src="js/ShapeManager.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
 </head>
 
@@ -20,25 +21,27 @@
     </div>
     <div class="right_container has_border has_margin">
         <div class="toolbar has_border scalable has_margin">
-            <select class="toolbar_element">
-                <option value="triangle">Треугольник</option>
-                <option value="rectangle">Прямоугольник</option>
-                <option value="circle">Эллипс</option>
+            <select class="toolbar_element" id="type_shape">
+                <option value="Rectangle">Прямоугольник</option>
+                <option value="Triangle">Треугольник</option>
+                <option value="Circle">Эллипс</option>
             </select>
-            <button class="select_shape_button toolbar_element">Выбрать</button>
+            <button class="select_shape_button toolbar_element" id="select_shape">Выбрать</button>
             <div class="change_color toolbar_element">
                 <div class="color_shape"><input id="color_shape"></div>
                 <div class="color_border"><input id="color_border"></div>
+
             </div>
+            <button class="toolbar_element" id="apply_colors">Применить цвета</button>
         </div>
         <div class="setting scalable has_border has_margin">
             <div id="setting" class="setting_shape"></div>
-            <button class="draw_shape">Отрисовать фигуру</button>
+            <button class="draw_shape" id="draw_shape">Отрисовать фигуру</button>
         </div>
     </div>
 
     <script>
-        var app = new ShapeManager();
+        Start();
     </script>
 </body>
 

@@ -71,6 +71,7 @@ Circle.prototype = {
 		ctx.beginPath();
 		ctx.arc(this._centerX, this._centerY, this._radius, 0, Math.PI * 2, true);
 		ctx.fill();
+		ctx.stroke();
     },
 };
 
@@ -112,6 +113,7 @@ Rectangle.prototype = {
     draw: function(ctx) {
 		Shape.prototype.draw.apply(this, ctx);
 		ctx.fillRect(this._x1, this._y1, this._x2 - this._x1, this._y2 - this._y1);
+		ctx.strokeRect(this._x1, this._y1, this._x2 - this._x1, this._y2 - this._y1);
     },
 };
 
@@ -159,7 +161,7 @@ Triangle.prototype = {
         const sideAB = this._getSide(new Position(this._x1, this._y1), new Position(this._x2, this._y2));
         const sideAC = this._getSide(new Position(this._x1, this._y1), new Position(this._x3, this._y3));
         const sideBC = this._getSide(new Position(this._x2, this._y2), new Position(this._x3, this._y3));
-        this._area = Math.sqrt(this._perimeter * (this._perimeter - sideAB) * (this._perimeter - sideAC) * (this._perimeter - sideBC));;
+        this._area = Math.sqrt(this._perimeter * (this._perimeter - sideAB) * (this._perimeter - sideAC) * (this._perimeter - sideBC));
     },
 
     calculatePerimeter: function() {
@@ -176,6 +178,7 @@ Triangle.prototype = {
 		ctx.lineTo(this._x2, this._y2);
 		ctx.lineTo(this._x3, this._y3);
 		ctx.fill();
+		ctx.stroke();
     },
 
     _getSide: function(point1, point2) {
