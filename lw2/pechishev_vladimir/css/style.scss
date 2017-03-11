@@ -49,6 +49,16 @@ body {
       content: 'Area: ';
     }
   }
+
+  .add_shape button {
+    margin-left: 15px;
+  }
+
+  .add_shape{
+    &.has_margin {
+      margin-top: 30px;
+    }
+  }
 }
 
 .right_container {
@@ -60,12 +70,12 @@ body {
     height: 250px;
     padding: 15px;
 
-    .toolbar_element {
-      margin: 0 auto 15px;
+    select {
+      min-width: 100px;
     }
 
-    .select_shape_button {
-      float: right;
+    .toolbar_element {
+      margin: 0 auto 15px;
     }
 
     .change_color input {
@@ -94,6 +104,12 @@ body {
     position: relative;
     min-height: 200px;
     height: auto;
+
+    .title {
+      padding-top: 5px;
+      text-align: center;
+      font-size: 20px;
+    }
 
     .setting_shape {
 

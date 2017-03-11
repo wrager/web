@@ -3,11 +3,10 @@ function Position(x , y){
 	this.y = y;
 }
 
-function Shape() {
+function Shape(type) {
 	this._color= "#000000";
 	this._borderColor=  "#000000";
-	this._perimeter = 0;
-	this._area = 0;
+	this._type = type;
 }
 
 Shape.prototype = {
@@ -27,10 +26,14 @@ Shape.prototype = {
     draw: function(ctx) {},
     calculateArea: function() {},
     calculatePerimeter: function() {},
+	
+	type: function() {
+		return this._type;
+	},
 };
 
-function Circle() {
-	Shape.call(this);
+function Circle(type) {
+	Shape.call(this, type);
     this._centerX = 0;
 	this._centerY = 0;
     this._radius = 0;
@@ -48,6 +51,17 @@ Circle.prototype.setCenterX = function(value) {
 Circle.prototype.setCenterY = function(value) {
 	this._centerY = value;
 };
+
+Circle.prototype.getRadius = function() {
+	return this._radius;
+};
+Circle.prototype.getCenterX = function() {
+	return this._centerX;
+};
+Circle.prototype.getCenterY = function() {
+	return this._centerY;
+};
+
 Circle.prototype.calculateArea = function() {
 	return Math.PI * Math.pow(this._radius, 2);
 };
@@ -63,8 +77,8 @@ Circle.prototype.draw = function(ctx) {
 };
 
 
-function Rectangle() {
-	Shape.call(this);
+function Rectangle(type) {
+	Shape.call(this, type);
 	this._x1 = 0;
 	this._x2 = 0;
 	this._y1 = 0;
@@ -85,6 +99,20 @@ Rectangle.prototype.setY1 = function(value) {
 Rectangle.prototype.setY2 = function(value) {
 	this._y2 = value;
 };
+
+Rectangle.prototype.getX1 = function() {
+	return this._x1;
+};
+Rectangle.prototype.getY1 = function() {
+	return this._y1;
+};
+Rectangle.prototype.getX2 = function() {
+	return this._x2;
+};
+Rectangle.prototype.getY2 = function() {
+	return this._y2;
+};
+
 Rectangle.prototype.calculateArea = function() {
 	return (this._x2 - this._x1) * (this._y2 - this._y1);
 };
@@ -96,8 +124,8 @@ Rectangle.prototype.draw = function(ctx) {
 	ctx.strokeRect(this._x1, this._y1, this._x2 - this._x1, this._y2 - this._y1);
 };
 
-function Triangle() {
-	Shape.call(this);
+function Triangle(type) {
+	Shape.call(this, type);
 	this._x1 = 0;
 	this._x2 = 0;
 	this._y1 = 0;
@@ -133,19 +161,38 @@ Triangle.prototype.setY3 = function(value) {
 	this._y3 = value;
 };
 
+Triangle.prototype.getX1 = function() {
+	return this._x1;
+};
+Triangle.prototype.getY1 = function() {
+	return this._y1;
+};
+Triangle.prototype.getX2 = function() {
+	return this._x2;
+};
+Triangle.prototype.getY2 = function() {
+	return this._y2;
+};
+Triangle.prototype.getX3 = function() {
+	return this._x3;
+};
+Triangle.prototype.getY3 = function() {
+	return this._y3;
+};
+
 Triangle.prototype.calculateArea = function() {
 	const perimeter = this.calculatePerimeter();
 	const sideAB = this._getSide(new Position(this._x1, this._y1), new Position(this._x2, this._y2));
 	const sideAC = this._getSide(new Position(this._x1, this._y1), new Position(this._x3, this._y3));
 	const sideBC = this._getSide(new Position(this._x2, this._y2), new Position(this._x3, this._y3));
-	this._area = Math.sqrt(perimeter * (perimeter - sideAB) * (perimeter - sideAC) * (perimeter - sideBC));
+	return Math.sqrt(perimeter * (perimeter - sideAB) * (perimeter - sideAC) * (perimeter - sideBC));
 };
 
 Triangle.prototype.calculatePerimeter = function() {
 	const sideAB = this._getSide(new Position(this._x1, this._y1), new Position(this._x2, this._y2));
 	const sideAC = this._getSide(new Position(this._x1, this._y1), new Position(this._x3, this._y3));
 	const sideBC = this._getSide(new Position(this._x2, this._y2), new Position(this._x3, this._y3));
-	this._perimeter =  (sideAB + sideAC + sideBC) * 0.5;
+	return (sideAB + sideAC + sideBC) * 0.5;
 };
 
 Triangle.prototype.draw = function(ctx) {

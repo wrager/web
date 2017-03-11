@@ -4849,7 +4849,7 @@
 /closure_sample/bin/lw1/build.bat
 /closure_sample/bin/lw1/build_css.bat
 /closure_sample/bin/lw1/build_debug.bat
-/closure_sample/bin/lw1/main.js
+/closure_sample/bin/lw1/ShapeManager.js
 /closure_sample/bin/lw1/out/index.html
 /closure_sample/bin/lw1/out/player.js
 /closure_sample/bin/lw1/out/style.css

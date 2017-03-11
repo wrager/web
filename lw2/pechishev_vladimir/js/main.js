@@ -1,24 +1,23 @@
 
 function Start() {
-	var shapeManager = new ShapeManager();
+	const shapeManager = new ShapeManager();
 
-	var selectShapeButton = document.getElementById("select_shape");
-	selectShapeButton.onclick = function () {
-		var select = document.getElementById("type_shape"); // Получаем наш список
-		var typeShape = select.options[select.selectedIndex].value;
-		shapeManager.choiseShape(typeShape);
-		shapeManager.clearCanvas();
+	const addShapeButton = document.getElementById("add_shape");
+	addShapeButton.onclick = function () {
+		var select = document.getElementById("shape_type"); 
+		var type = select.options[select.selectedIndex].value;
+		shapeManager.addShape(type);
 	};
 
-	var applyColorsButton = document.getElementById("apply_colors");
-	applyColorsButton.onclick = function () {
-		shapeManager.draw();
+	const selectShapeButton = document.getElementById("type_shape");
+	selectShapeButton.onchange = function () {
+		const select = document.getElementById("type_shape");
+		console.log(select.selectedIndex);
+		shapeManager.choiseShape(select.selectedIndex);
 	};
 
-	var drawShapeButton = document.getElementById("draw_shape");
+	const drawShapeButton = document.getElementById("draw_shape");
 	drawShapeButton.onclick = function () {
 		shapeManager.draw();
 	};
-
-	
 };
