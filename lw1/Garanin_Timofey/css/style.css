@@ -103,11 +103,7 @@ button {
     font-weight: 600;
 }
 
-button:focus {
-    opacity: .7;
-}
-
-button:active {
+button:focus, button:active {
     opacity: .7;
 }
 
