@@ -4,10 +4,10 @@ function Position(x , y){
 }
 
 function Shape() {
-    this._color = "#000000";
-    this._borderColor = "green";
-    this._perimeter = 0;
-    this._area = 0;
+	this._color= "#000000";
+	this._borderColor=  "#000000";
+	this._perimeter = 0;
+	this._area = 0;
 }
 
 Shape.prototype = {
@@ -27,16 +27,10 @@ Shape.prototype = {
     draw: function(ctx) {},
     calculateArea: function() {},
     calculatePerimeter: function() {},
-
-    getPerimeter: function() {
-        return this._perimeter;
-    },
-    getArea: function() {
-        return this._area;
-    },
 };
 
 function Circle() {
+	Shape.call(this);
     this._centerX = 0;
 	this._centerY = 0;
     this._radius = 0;
@@ -45,79 +39,65 @@ function Circle() {
 Circle.prototype = Object.create(Shape.prototype);
 Circle.prototype.constructor = Circle;
 
-Circle.prototype = {
-    setRadius: function(value) {
-        this._radius = value;
-    },
-
-	setCenterX: function(value) {
-		this._centerX = value;
-    },
-
-	setCenterY: function(value) {
-		this._centerY = value;
-	},
-
-    calculateArea: function() {
-        this._area = Math.PI * Math.pow(this._radius, 2);
-    },
-
-    calculatePerimeter: function() {
-        this._perimeter = 2 * Math.PI * this._radius;
-    },
-
-    draw: function(ctx) {
-		Shape.prototype.draw.apply(this, ctx);
-		ctx.beginPath();
-		ctx.arc(this._centerX, this._centerY, this._radius, 0, Math.PI * 2, true);
-		ctx.fill();
-		ctx.stroke();
-    },
+Circle.prototype.setRadius = function(value) {
+	this._radius = value;
+};
+Circle.prototype.setCenterX = function(value) {
+	this._centerX = value;
+};
+Circle.prototype.setCenterY = function(value) {
+	this._centerY = value;
+};
+Circle.prototype.calculateArea = function() {
+	return Math.PI * Math.pow(this._radius, 2);
+};
+Circle.prototype.calculatePerimeter = function() {
+	return 2 * Math.PI * this._radius;
+};
+Circle.prototype.draw = function(ctx) {
+	ctx.beginPath();
+	ctx.arc(this._centerX, this._centerY, this._radius, 0, Math.PI * 2, true);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
 };
 
+
 function Rectangle() {
+	Shape.call(this);
 	this._x1 = 0;
 	this._x2 = 0;
 	this._y1 = 0;
 	this._y2 = 0;
 }
-
 Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.constructor = Rectangle;
 
-Rectangle.prototype = {
-	setX1: function(value) {
-		this._x1 = value;
-    },
-
-	setX2: function(value) {
-		this._x2 = value;
-	},
-
-	setY1: function(value) {
-		this._y1 = value;
-	},
-
-	setY2: function(value) {
-		this._y2 = value;
-	},
-
-    calculateArea: function() {
-        this._area = (this._x2 - this._x1) * (this._y2 - this._y1);
-    },
-
-    calculatePerimeter: function() {
-        this._perimeter = ((this._x2 - this._x1) + (this._y2 - this._y1)) * 2;
-    },
-
-    draw: function(ctx) {
-		Shape.prototype.draw.apply(this, ctx);
-		ctx.fillRect(this._x1, this._y1, this._x2 - this._x1, this._y2 - this._y1);
-		ctx.strokeRect(this._x1, this._y1, this._x2 - this._x1, this._y2 - this._y1);
-    },
+Rectangle.prototype.setX1 = function(value) {
+	this._x1 = value;
+};
+Rectangle.prototype.setX2 = function(value) {
+	this._x2 = value;
+};
+Rectangle.prototype.setY1 = function(value) {
+	this._y1 = value;
+};
+Rectangle.prototype.setY2 = function(value) {
+	this._y2 = value;
+};
+Rectangle.prototype.calculateArea = function() {
+	return (this._x2 - this._x1) * (this._y2 - this._y1);
+};
+Rectangle.prototype.calculatePerimeter = function() {
+	return ((this._x2 - this._x1) + (this._y2 - this._y1)) * 2;
+};
+Rectangle.prototype.draw = function(ctx) {
+	ctx.fillRect(this._x1, this._y1, this._x2 - this._x1, this._y2 - this._y1);
+	ctx.strokeRect(this._x1, this._y1, this._x2 - this._x1, this._y2 - this._y1);
 };
 
 function Triangle() {
+	Shape.call(this);
 	this._x1 = 0;
 	this._x2 = 0;
 	this._y1 = 0;
@@ -129,59 +109,55 @@ function Triangle() {
 Triangle.prototype = Object.create(Shape.prototype);
 Triangle.prototype.constructor = Triangle;
 
-Triangle.prototype = {
-	setX1: function(value) {
-		this._x1 = value;
-	},
+Triangle.prototype.setX1 = function(value) {
+	this._x1 = value;
+} ;
 
-	setX2: function(value) {
-		this._x2 = value;
-	},
+Triangle.prototype.setX2 = function(value) {
+	this._x2 = value;
+};
 
-	setY1: function(value) {
-		this._y1 = value;
-	},
+Triangle.prototype.setY1 = function(value) {
+	this._y1 = value;
+};
 
-	setY2: function(value) {
-		this._y2 = value;
-	},
+Triangle.prototype.setY2 = function(value) {
+	this._y2 = value;
+};
 
-	setX3: function(value) {
-		this._x3 = value;
-	},
+Triangle.prototype.setX3 = function(value) {
+	this._x3 = value;
+};
 
-	setY3: function(value) {
-		this._y3 = value;
-	},
+Triangle.prototype.setY3 = function(value) {
+	this._y3 = value;
+};
 
-    calculateArea: function() {
-        if (this.getPerimeter() == 0) {
-            this.calculatePerimeter();
-        }
-        const sideAB = this._getSide(new Position(this._x1, this._y1), new Position(this._x2, this._y2));
-        const sideAC = this._getSide(new Position(this._x1, this._y1), new Position(this._x3, this._y3));
-        const sideBC = this._getSide(new Position(this._x2, this._y2), new Position(this._x3, this._y3));
-        this._area = Math.sqrt(this._perimeter * (this._perimeter - sideAB) * (this._perimeter - sideAC) * (this._perimeter - sideBC));
-    },
+Triangle.prototype.calculateArea = function() {
+	const perimeter = this.calculatePerimeter();
+	const sideAB = this._getSide(new Position(this._x1, this._y1), new Position(this._x2, this._y2));
+	const sideAC = this._getSide(new Position(this._x1, this._y1), new Position(this._x3, this._y3));
+	const sideBC = this._getSide(new Position(this._x2, this._y2), new Position(this._x3, this._y3));
+	this._area = Math.sqrt(perimeter * (perimeter - sideAB) * (perimeter - sideAC) * (perimeter - sideBC));
+};
 
-    calculatePerimeter: function() {
-		const sideAB = this._getSide(new Position(this._x1, this._y1), new Position(this._x2, this._y2));
-		const sideAC = this._getSide(new Position(this._x1, this._y1), new Position(this._x3, this._y3));
-		const sideBC = this._getSide(new Position(this._x2, this._y2), new Position(this._x3, this._y3));
-        this._perimeter = (sideAB + sideAC + sideBC) * 0.5;
-    },
+Triangle.prototype.calculatePerimeter = function() {
+	const sideAB = this._getSide(new Position(this._x1, this._y1), new Position(this._x2, this._y2));
+	const sideAC = this._getSide(new Position(this._x1, this._y1), new Position(this._x3, this._y3));
+	const sideBC = this._getSide(new Position(this._x2, this._y2), new Position(this._x3, this._y3));
+	this._perimeter =  (sideAB + sideAC + sideBC) * 0.5;
+};
 
-    draw: function(ctx) {
-		Shape.prototype.draw.apply(this, ctx);
-		ctx.beginPath();
-		ctx.moveTo(this._x1, this._y1);
-		ctx.lineTo(this._x2, this._y2);
-		ctx.lineTo(this._x3, this._y3);
-		ctx.fill();
-		ctx.stroke();
-    },
+Triangle.prototype.draw = function(ctx) {
+	ctx.beginPath();
+	ctx.moveTo(this._x1, this._y1);
+	ctx.lineTo(this._x2, this._y2);
+	ctx.lineTo(this._x3, this._y3);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+};
 
-    _getSide: function(point1, point2) {
-        return Math.sqrt(Math.pow((point2["x"] - point1["x"]), 2) + Math.pow((point2["y"] - point1["y"]), 2));
-    }
+Triangle.prototype._getSide = function(point1, point2) {
+	return Math.sqrt(Math.pow((point2["x"] - point1["x"]), 2) + Math.pow((point2["y"] - point1["y"]), 2));
 };
