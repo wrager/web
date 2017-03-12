@@ -5,14 +5,12 @@ function Rectangle() {
 }
 extend(Rectangle, Shape);
 
-Rectangle.prototype.setLeftTop = function (x1, y1) {
-    this._leftTop._x = x1;
-    this._leftTop._y = y1;
+Rectangle.prototype.setLeftTop = function (leftTop) {
+    this._leftTop = leftTop;
 }
 
-Rectangle.prototype.setRightButtom = function (x1, y1) {
-    this._rightButtom._x = x1;
-    this._rightButtom._y = y1;
+Rectangle.prototype.setRightButtom = function (rightButtom) {
+    this._rightButtom = rightButtom;
 }
 
 Rectangle.prototype.getRightButtom = function () {
@@ -34,6 +32,7 @@ Rectangle.prototype.getHeight = function () {
 Rectangle.prototype.draw = function (context) {
     var tLeftX = Math.min(this._leftTop._x, this._rightButtom._x);
     var tLeftY = Math.min(this._leftTop._y, this._rightButtom._y);
+
     context.beginPath();
     context.rect(tLeftX, tLeftY, this.getWidth(), this.getHeight());
     context.fillStyle = this.getFillColor();

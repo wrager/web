@@ -13,9 +13,8 @@ Circle.prototype.getRadius = function () {
     return this._radius;
 }
 
-Circle.prototype.setCenter = function (x1, y1) {
-    this._center._x = x1;
-    this._center._y = y1;
+Circle.prototype.setCenter = function (center) {
+    this._center = center;
 }
 
 Circle.prototype.getCenter = function () {

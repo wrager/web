@@ -6,19 +6,16 @@ function Triangle() {
 }
 extend(Triangle, Shape);
 
-Triangle.prototype.setFirstVertex = function (x1, y1) {
-    this._firstVertex._x = x1;
-    this._firstVertex._y = y1;
+Triangle.prototype.setFirstVertex = function (firstVertex) {
+    this._firstVertex = firstVertex;
 }
 
-Triangle.prototype.setSecondVertex = function (x1, y1) {
-    this._secondVertex._x = x1;
-    this._secondVertex._y = y1;
+Triangle.prototype.setSecondVertex = function (secondVertex) {
+    this._secondVertex = secondVertex;
 }
 
-Triangle.prototype.setThirdVertex = function (x1, y1) {
-    this._thirdVertex._x = x1;
-    this._thirdVertex._y = y1;
+Triangle.prototype.setThirdVertex = function (thirdVertex) {
+    this._thirdVertex = thirdVertex;
 }
 
 Triangle.prototype.getLineSegmentLength = function (point1, point2) {
