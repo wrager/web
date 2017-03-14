@@ -1,16 +1,3 @@
-function Point() {
-    this._x = 0;
-    this._y = 0;
-}
-
-function extend(Child, Parent) {
-    var F = function() { }
-    F.prototype = Parent.prototype
-    Child.prototype = new F()
-    Child.prototype.constructor = Child
-    Child.superclass = Parent.prototype
-}
-
 function Shape() {
     this._fillColor = "#000000";
     this._borderColor = "#000000";

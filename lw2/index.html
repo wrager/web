@@ -4,18 +4,21 @@
 <head>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+    <script type="text/javascript" src="js/inherit.js"></script>
     <script type="text/javascript" src="js/shape.js"></script>
     <script type="text/javascript" src="js/circle.js"></script>
     <script type="text/javascript" src="js/rectangle.js"></script>
     <script type="text/javascript" src="js/triangle.js"></script>
     <script type="text/javascript" src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/point.js"></script>
+    <script type="text/javascript" src="js/painter.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
     <div class="normal-margin">
         <div class="text-element">
-            <select class="edittext" id="shape-combobox" onchange="onShapeSelect()">
+            <select class="edittext" id="shape-combobox" onchange="painter.onShapeSelect()">
                 <option disabled selected hidden>Select shape type</option>
                 <option>Triangle</option>
                 <option>Rectangle</option>
@@ -96,7 +99,7 @@
         </div>
         
         <div class="button">
-            <button class="button" id="draw" onclick="onDrawButtonClick()">Draw</button>
+            <button class="button" id="draw" onclick="painter.onDrawButtonClick()">Draw</button>
         </div>
     </div>
     <canvas id="canvas" width="1000" height="600"></canvas>

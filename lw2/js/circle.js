@@ -28,7 +28,6 @@ Circle.prototype.draw = function (context) {
     context.fill();
     context.strokeStyle = this.getBorderColor();
     context.stroke();
-    Circle.superclass.draw.apply(this, context);
 }
 
 Circle.prototype.calculateArea = function () {
