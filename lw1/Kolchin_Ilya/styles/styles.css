@@ -5,9 +5,10 @@
 
 .layout_inner
 {
-    width: 100%;
+
     
-    padding: 0px 0px 85px;
+    padding-bottom: 85px;
+    
 }
 
 .layout_inner .header-logo img {
@@ -196,6 +197,11 @@
     border-radius: 3px 0px 0px 3px;
 }
 
+.layout_inner .login_form .login_area .log_in_button:hover
+{
+    background: linear-gradient(to top, #FFDF0C, #FFDE98);
+}
+
 .layout_inner .login_form .buttons
 {
     position: relative;
@@ -220,6 +226,25 @@
     cursor: pointer;
 }
 
+.layout_inner .login_form .buttons .left_part:active
+{
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+.layout_inner .login_form .buttons .left_part:focus
+{
+    outline-color: rgba(255,204,0,.7);
+    outline-width: 5px;
+
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
 .layout_inner .login_form .buttons .right_part
 {
     float:right; 
@@ -229,6 +254,25 @@
     background-color: #DEE9FF;
 
     cursor: pointer;
+}
+
+.layout_inner .login_form .buttons .right_part:active
+{
+    box-shadow: 
+        0 0 3px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.layout_inner .login_form .buttons .right_part:focus
+{
+    outline-color: rgba(255,204,0,.7);
+    outline-width: 5px;
+
+    box-shadow: 
+        0 0 3px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
 }
 
 .layout_inner .login_form .login_area
@@ -313,11 +357,10 @@
 
 .button:hover
 {
-
     cursor: pointer;
     opacity: 0.5;
-
 }
+
 
 .layout_inner .login_form .login_area .buttons
 {
@@ -366,8 +409,8 @@ footer
     height: 65px;
 
     position: absolute;
-    
-    margin: 65px auto;
+
+    margin-top: 65px; 
     min-width: 860px;
    
     border-top: 2px solid #e4e4e4;
@@ -390,7 +433,7 @@ footer .footer_inner
 footer .footer_inner .left_part
 {
     float:left;
-    line-height: 65px;
+    line-height: 45px;
 }
 
 footer .footer_inner .left_part .elements_left_part li
@@ -404,8 +447,9 @@ footer .footer_inner .left_part .elements_left_part li
 footer .footer_inner .right_part
 {
     float:right;
-    line-height: 65px;  
+    line-height: 45px;  
 }
+
 footer .footer_inner .right_part .elements_right_part li
 {
     display: inline; /* Отображать как строчный элемент */
