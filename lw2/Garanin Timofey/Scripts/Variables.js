@@ -1,0 +1,10 @@
+RECTANGLE = "Прямоугольник";
+CIRCLE = "Круг";
+TRIANGLE = "Треугольник";
+ATTRIBUTES_TRIANGLE = ["X1", "Y1", "X2", "Y2", "X3", "Y3"];
+ATTRIBUTES_RECTANGLE = ["X1", "Y1", "X2", "Y2"];
+ATTRIBUTES_CIRCLE = ["CenterX", "CenterY", "Radius"];
+CANVAS = "canvas";
+PARAMS = "params";
+INPUT = "input";
+OPTION = "option";
