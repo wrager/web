@@ -304,30 +304,21 @@
     padding: 2px;   
 }
 
-.button
-{
+.button {
     width: 24px;
     height: 24px;
 
     display: inline;
-
 }
 
 .button:hover
 {
-    background-image: url("img/vkontakte.svg");
+
+    cursor: pointer;
+    opacity: 0.5;
+
 }
 
-
-.button .button_vk:after {
-    background-color: #4d75a3;
-    background-image: url("img/vkontakte.svg");
-    background-size: 15px 17px;
-    background-position-y: 8px;
-    &:hover {
-        background-color: #496f9a;
-    }
-}
 .layout_inner .login_form .login_area .buttons
 {
     margin: 18px 0px 0px;
