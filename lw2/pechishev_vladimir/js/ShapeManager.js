@@ -34,7 +34,6 @@ ShapeManager.prototype = {
 
 		this._shapes.push(shape);
 
-		console.log(shape, this._shapes);
 		this._addShapeToSelectElement(type);
 	},
 

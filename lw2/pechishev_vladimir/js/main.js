@@ -11,9 +11,7 @@ function Start() {
 
 	const selectShapeButton = document.getElementById("type_shape");
 	selectShapeButton.onchange = function () {
-		const select = document.getElementById("type_shape");
-		console.log(select.selectedIndex);
-		shapeManager.choiseShape(select.selectedIndex);
+		shapeManager.choiseShape(selectShapeButton.selectedIndex);
 	};
 
 	const drawShapeButton = document.getElementById("draw_shape");
