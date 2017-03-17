@@ -33,7 +33,7 @@ Circle.prototype.setX = function(value) {
 }
 
 Circle.prototype.setY = function(value) {
-    this.x = value;
+    this.y = value;
 }
 
 Circle.prototype.setRadius = function(value) {
