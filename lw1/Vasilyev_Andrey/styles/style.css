@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'my-font';
+    font-style: normal;
+    src: url("../fonts/font3.ttf") format('truetype');
+}
+
+
+.center {
+    margin: 0px 0px; 
+    padding: 0px;
+    text-align: center;
+}
+
+.header-logo img {
+    margin: 14px 0px 35px -3px;
+    padding-top: 2px;
+    width: 116px;
+    height: 38px;
+}
+
+.header-tagline {
+    margin-top: -13px;
+}
+
+.header-tagline p {
+    font-family: 'my-font';
+    -webkit-font-smoothing: antialiased;
+    color: #555555;
+    font-weight: 200;
+    font-size: 38px;
+    margin-top: 0px;
+    margin-bottom: -4px;
+}
+
+.header-info p {
+    font-family: 'my-font';
+    -webkit-font-smoothing: antialiased;
+    color: #555555;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.login-form {
+    background-color: #f7f7f7;
+    padding: 40px 25px 30px;
+    margin: -2px auto 25px;
+    width: 304px;
+    height: 247px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.user-img {
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding-bottom: 50;
+    background-size: 96px;
+    background-image: url("../img/user-img.png");
+}
+
+.user-input {
+    position: relative;
+    margin-top: 24px;
+    padding-bottom: 7px;
+}
+
+.email-input {
+    display: inline-block;
+    width: 274px;
+    height: 44px;  
+    padding: 0px 8px;   
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top-color: #c0c0c0;
+    box-sizing: border-box;
+    border-radius: 1px;
+    font-size: 16px;
+    color: #404040;
+}
+
+.email-input:hover {
+    border: 1px solid #b9b9b9;
+    border-top-color:#a0a0a0
+}
+
+.email-input:focus {
+    border: 1px solid #4d90fe;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    outline: none;
+}
+
+.btn {
+    position: relative;
+}
+
+.next-btn {
+    display: inline-block;
+    width: 274px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    height: 36px;
+    border: 1px solid #3079ed;
+    border-radius: 3px;
+    text-shadow: 0px 1px rgba(0,0,0,0.1);
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+    background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);
+    background-image: -ms-linear-gradient(top,#4d90fe,#4787ed);
+    background-image: -o-linear-gradient(top,#4d90fe,#4787ed);
+    background-image: linear-gradient(top,#4d90fe,#4787ed);
+}
+
+.next-btn:hover {
+    border: 1px solid #2f5bb7;
+    border-radius: 3px;
+    color: #fff;
+    text-shadow: 0px 1px rgba(0,0,0,0.3);
+    background-color: #357ae8;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: -moz-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: -ms-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: -o-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: linear-gradient(top,#4d90fe,#357ae8);
+}
+
+.find-account {
+    position: relative;
+    left: 94px;
+    top: 8px;
+}
+
+a {
+    color: #578DEE;
+    text-decoration: none;
+}
+
+a:hover {
+    
+    color: #578DEE;
+    text-decoration: underline;
+}
+
+.small-lnk {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: -0.02px;
+}
+
+.normal-lnk {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.create-account-lnk {
+    position: relative;
+    top: 76px;
+}
+
+.services {
+    position: relative;
+    top: 91px;
+}
+
+.services p {
+    font-family: Arial;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 10;
+    margin-bottom: 0; 
+    color: #555555;
+}
+
+.services img {
+    margin-top: 10px;
+}
+
+.footer {
+  position: relative;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 195px;
+  width: 100%;
+  height: 27px;
+}
+
+.ul-list {
+    margin: 0px;
+    padding-top:8px;
+    padding-left:36px;
+    padding-bottom: 1px;
+}
+
+.ul-list li {
+    display: inline;
+    padding-right: 15px;
+    color: #737373;
+    font-family: Arial;
+    font-size: 11px;
+}
+
+.footer-left {
+    float: left;
+    position: relative;
+}
+
+.footer-right {
+    position: relative;
+    float: right;
+    margin-right: 35px;
+    vertical-align: middle;
+}
+
+.footer-right select {
+    margin-right: 1px;
+    margin-top: 7px;
+    width: 171px;
+    height: 24px;
+}
+
+.footer-right img {  
+    position: relative;
+    top: 5px;
+    left: 1px;
+}
+
+.a-footer {
+    color: #737373;
+    text-decoration: none;
+}
+
+.a-footer:hover {
+    color: #737373;
+    text-decoration: underline;
+}
