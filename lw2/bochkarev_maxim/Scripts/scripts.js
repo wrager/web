@@ -1,7 +1,6 @@
 var shape = undefined;
 
 function onShapeParametersChoice(shapeType) {
-    console.log("User has selected " + shapeType + ": " + getCurrentTime());
     document.getElementById("draw_figure_button").disabled = false;
     if (shapeType == 'Rectangle') {
         showElement("rectangle_options");
@@ -31,8 +30,6 @@ function onDrawButtonClick() {
     var context = canvas.getContext("2d");
 
     clearCanvas();
-    console.log("Shape type: " + shapeType + "-- " + getCurrentTime());
-    console.log("Program draw shape with parametres:" + JSON.stringify(getDrawParameters(shapeType)) + "-" + getCurrentTime());
 
     if (shapeType == 'Rectangle') {
         shape = new Rectangle(getDrawParameters(shapeType));
@@ -99,10 +96,6 @@ function isColor(value) {
     return value.match(/^#[0-9A-F]{6}$/);
 }
 
-function getCurrentTime() {
-    return new Date().toLocaleTimeString();
-}
-
 function showElement(elemId) {
     document.getElementById(elemId).style.display = "block";
 }
@@ -115,5 +108,4 @@ function clearCanvas() {
     var canvas = document.getElementById('shape_canvas');
     var ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    console.log("Canvas cleared: " + getCurrentTime());
 }
