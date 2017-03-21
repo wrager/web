@@ -6,7 +6,7 @@
 .layout_inner
 {
 
-    
+
     padding-bottom: 85px;
     
 }
@@ -101,7 +101,7 @@
 
 .layout_inner .login_form .login_container .text_box_login:focus
 {
-     outline: none;
+    outline: none;
     border-color: rgba(94,76,2,.42);
     border-top-color: rgba(78,62,2,.515);
     border-bottom-color: rgba(117,93,0,.335);
@@ -169,21 +169,45 @@
     display: inline; 
 }
 
-.layout_inner .login_form .login_area .log_in_row li .qr_code_img img
+.qr_code_img
 {
-    display: inline; 
-
+    box-sizing: border-box;
     height: 32px;
     width: 38px;
+
+    display: inline; 
+}
+.qr_code_img:focus
+{
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+.qr_code_img:hover
+{
+    background: linear-gradient(to top, #FFDF0C, #FFDE98);
 }
 
+.qr_code_img center_img
+{
+    position: inherit;
+
+    size: box
+    background-image: url("img/qrCode.png");
+}
 .layout_inner .login_form .login_area .log_in_button
 {
     width: 222px;
     height: 32px;
     float: left;
     background: linear-gradient(to top, #FFCF0C, #FFDE58);
-
+    margin-right: 0px;
     cursor: pointer;
     
     font-size: 15px;
@@ -202,6 +226,60 @@
     background: linear-gradient(to top, #FFDF0C, #FFDE98);
 }
 
+.layout_inner .login_form .login_area .log_in_button:focus
+{
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);       
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.qr_button
+{
+    width: 38px;
+    height: 32px;
+    background: linear-gradient(to top, #FFCF0C, #FFDE58);
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.47); 
+
+    border-radius: 0px 3px 3px 3px;
+}
+.qr_button:hover
+{
+    background: linear-gradient(to top, #FFDF0C, #FFDE98);
+}
+.qr_button:focus
+{
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);       
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.qr_button .center_img
+{
+    box-sizing: border-box;
+width: 38px;
+height: 32px;
+
+    background-image: url("qrCode.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .layout_inner .login_form .buttons
 {
     position: relative;
@@ -214,6 +292,7 @@
     left: 0;
 
 }
+
 
 .layout_inner .login_form .buttons .left_part
 {
@@ -352,13 +431,26 @@
     width: 24px;
     height: 24px;
 
-    display: inline;
+    display: inline;  
 }
 
 .button:hover
 {
-    cursor: pointer;
     opacity: 0.5;
+}
+
+.button .button_vk:
+{
+    
+        width: 24px;
+    height: 24px;
+
+    src : url("img/vkontakte_icon.png");
+}
+
+.button .button_vk:hover
+{
+    background-image : url("img/vkontakte_icon_active.png");
 }
 
 
@@ -406,7 +498,7 @@
 footer
  {
     width:100%;
-    height: 65px;
+
 
     position: absolute;
 
@@ -441,8 +533,14 @@ footer .footer_inner .left_part .elements_left_part li
     display: inline;
     padding-right: 50px;
 
-    cursor: pointer;
+    color: blue;
 }
+footer .footer_inner .left_part .elements_left_part:hover li
+{
+    cursor: pointer;
+    color: red;
+}
+
 
 footer .footer_inner .right_part
 {
@@ -454,7 +552,10 @@ footer .footer_inner .right_part .elements_right_part li
 {
     display: inline; /* Отображать как строчный элемент */
     padding-left: 50px;
-
+}
+footer .footer_inner .right_part .elements_right_part li a
+{
+    text-decoration: none;
 }
 
 footer .footer_inner .right_part .fotter_help
