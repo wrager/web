@@ -1,8 +1,5 @@
-body,
-button,
-option,
-input,
-select {
+body
+body {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
