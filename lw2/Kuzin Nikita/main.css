@@ -1,0 +1,17 @@
+#canvas {
+  display: inline;
+  float: left;
+  background-color: antiquewhite;
+  margin-right: 50px;
+}
+
+.forms {
+}
+
+input, select {
+  margin-bottom: 10px;
+}
+
+.shape_fields input {
+  margin-right: 5px;
+}

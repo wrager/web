@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+<body>
+  <canvas height="600px" width="800px" id='canvas'>Обновите браузер</canvas>
+  <div class="forms">
+    <select onchange="tagManager.onShapeSelect(this)" title="Выберите фигуру">
+      <option selected="selected">Фигура не указана</option>
+      <option >Прямоугольник</option>
+      <option>Треугольник</option>
+      <option>Окружность</option>
+    </select>
+    <div class="shape_fields" id="shape_fields">
+    </div>
+  </div>
+  <script type="text/javascript" src="model/shape.js"></script>
+  <script type="text/javascript" src="model/circle.js"></script>
+  <script type="text/javascript" src="model/rectangle.js"></script>
+  <script type="text/javascript" src="model/triangle.js"></script>
+  <script type="text/javascript" src="view/base_drawer.js"></script>
+  <script type="text/javascript" src="view/circle_drawer.js"></script>
+  <script type="text/javascript" src="view/rectangle_drawer.js"></script>
+  <script type="text/javascript" src="view/triangle_drawer.js"></script>
+  <script type="text/javascript" src="presenter/base_shape_presenter.js"></script>
+  <script type="text/javascript" src="presenter/circle_presenter.js"></script>
+  <script type="text/javascript" src="presenter/rectangle_presenter.js"></script>
+  <script type="text/javascript" src="presenter/triangle_presenter.js"></script>
+
+  <script type="text/javascript" src="presenter/window_presenter.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
