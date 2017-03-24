@@ -169,7 +169,7 @@
     display: inline; 
 }
 
-.qr_code_img
+.qr_code_button
 {
     box-sizing: border-box;
     height: 32px;
@@ -177,7 +177,7 @@
 
     display: inline; 
 }
-.qr_code_img:focus
+.qr_code_button:focus
 {
     outline: none;
     border-color: rgba(94,76,2,.42);
@@ -189,21 +189,15 @@
         0 1px 0 rgba(255,255,255,.2),
         inset 0 1px 1px rgba(0,0,0,.1);
 }
-.qr_code_img:hover
+.qr_code_button:hover
 {
     background: linear-gradient(to top, #FFDF0C, #FFDE98);
 }
 
-.qr_code_img center_img
-{
-    position: inherit;
-
-    background-image: url("img/qrCode.png");
-}
 
 .layout_inner .login_form .login_area .log_in_button
 {
-    width: 222px;
+    width: 221px;
     height: 32px;
     float: left;
     background: linear-gradient(to top, #FFCF0C, #FFDE58);
@@ -241,15 +235,15 @@
 
 .qr_button
 {
-    width: 38px;
+    width: 39px;
     height: 32px;
 
-    border: 1px solid transparent;
+    border: 0px solid transparent;
     border-color: rgba(0,0,0,.27);
     border-top-color: rgba(0,0,0,.38);
     border-bottom-color: rgba(0,0,0,.47); 
 
-    border-radius: 0px 3px 3px 3px;
+    border-radius: 0px 2px 2px 0px;
 
     background-image: url("qrCode.png");
     background-repeat: no-repeat;
@@ -271,7 +265,7 @@
     box-shadow: 
         0 0 6px 2px rgba(255,204,0,.7),
         0 1px 0 rgba(255,255,255,.2),
-        inset 0 1px 1px rgba(0,0,0,.1);
+        inset 0 1px 1px rgba(0,0,0,.1); 
 }
 
 
@@ -374,8 +368,6 @@
     
     line-height: 10px;
     margin: 0px 0px 10px;
-
-
 }
 
 .layout_inner .login_form .login_area .alien_checkbox .label
@@ -405,6 +397,17 @@
     cursor: pointer;
 }
 
+.layout_inner .login_form .login_area .alien_checkbox .checkbox1:focus
+{
+    outline-color: rgba(255,204,0,.7);
+    outline-width: 0px;
+
+    box-shadow: 
+        0 0 2px 1px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
 .layout_inner .login_form .login_area .social_icon
 {
    padding: 0px;
@@ -419,6 +422,17 @@
     height: 24px;
 
     padding: 2px;   
+}
+
+.layout_inner .login_form .login_area .social_icon li:focus
+{
+    outline-color: rgba(255,204,0,.7);
+    outline-width: 0px;
+
+    box-shadow: 
+        0 0 2px 1px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
 }
 
 .button {
@@ -593,6 +607,7 @@ footer
 
     margin-top: 65px; 
     min-width: 860px;
+    
    
     border-top: 2px solid #e4e4e4;
 }
@@ -615,11 +630,18 @@ footer .footer_inner .left_part
 {
     float:left;
     line-height: 45px;
+
 }
 
+footer .footer_inner .left_part .elements_left_part
+{
+    padding-left: 0px;
+}
 footer .footer_inner .left_part .elements_left_part li
 {
     display: inline;
+    
+
     padding-right: 50px;
 
     color: blue;
