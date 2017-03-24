@@ -1,8 +1,8 @@
 
-.body, html {
-    background: #f6f5f4
+.html, body {
+    background: #f6f5f4;
+    margin: 0px;
 }
-
 .layout_inner
 {
 
@@ -645,6 +645,13 @@ footer .footer_inner .right_part .elements_right_part li
 footer .footer_inner .right_part .elements_right_part li a
 {
     text-decoration: none;
+    
+}
+
+.data
+{
+    display: inline;
+    color: gray;
 }
 
 footer .footer_inner .right_part .fotter_help
