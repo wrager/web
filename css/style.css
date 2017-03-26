@@ -65,9 +65,9 @@ sw_tb {
 }
 
 .logo {
-   background-position: 0 0;
+	background-position: 0 0;
     margin: -7px 21px 0 0;
-    width: 132px;
+    width: 124px;
     height: 52px;
     background-image: url(../images/logo.png);
 }
