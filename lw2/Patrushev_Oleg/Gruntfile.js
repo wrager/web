@@ -7,14 +7,6 @@ module.exports = function( grunt ) {
 			},
 			target: ['file.js']
 		},
-		connect: {
-			server: {
-				options: {
-					port: 8080,
-					base: 'www-root'
-				}
-			}
-		},
         concat: {
             css: {
                 src: ['project/styles/*.css'],
@@ -29,10 +21,23 @@ module.exports = function( grunt ) {
                 dest: 'build/index.html'
 			}
         },
+		connect: {
+			server: {
+				options: {
+					port: 8080,
+					livereload: true,
+					hostname: 'localhost'
+				},
+				livereload: {
+					options: {
+						open: true,
+						base: ['build/']
+					}
+				}
+			}
+		},
         watch: {
-			options: {
-				livereload: 8080
-			},
+
             css: {
                 files: ['project/styles/*.css'],
                 tasks: ['concat:css', 'default']
@@ -51,7 +56,9 @@ module.exports = function( grunt ) {
     // 2. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-eslint');
 
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'eslint']);
+    grunt.registerTask('default', ['concat', 'eslint', 'connect', 'watch']);
 };

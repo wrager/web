@@ -13,6 +13,7 @@
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-eslint": "0.0.5",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^19.0.0",
     "grunt-file-hash": "^0.1.6"
