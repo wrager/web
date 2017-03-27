@@ -1,0 +1,11 @@
+{
+	"description": "lab3",
+	"repository": {
+		"type": "git",
+		"url": "JokerSSmile/web"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"bootstrap": "3.3.7"
+	}
+}
