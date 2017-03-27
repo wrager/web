@@ -1,11 +1,20 @@
 {
-	"description": "lab3",
-	"repository": {
-		"type": "git",
-		"url": "JokerSSmile/web"
-	},
-	"license": "MIT",
-	"devDependencies": {
-		"bootstrap": "3.3.7"
-	}
+  "description": "lab3",
+  "repository": {
+    "type": "git",
+    "url": "JokerSSmile/web"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "Gruntfile.js"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-file-hash": "^0.1.6"
+  }
 }
