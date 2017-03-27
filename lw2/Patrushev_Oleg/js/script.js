@@ -13,6 +13,8 @@ function onShapeSelect() {
     show("apply-btn");
 
     var selectedValue = getSelectorValue();
+
+
     if (selectedValue == "Circle") {
         show("circle-optional-form");
     } else if (selectedValue == "Rectangle") {
@@ -32,27 +34,27 @@ function onApplyClick() {
         circle = new Circle();
         circle.setFillColor(getElementValue("input-fill-color"));
         circle.setBorderColor(getElementValue("input-border-color"));
-        circle.setRadius(getElementValue("circle-r"));
-        circle.setX(getElementValue("circle-x"));
-        circle.setY(getElementValue("circle-y"));
+        circle.setRadius(getElementValue("input-circle-r"));
+        circle.setX(getElementValue("input-circle-x"));
+        circle.setY(getElementValue("input-circle-y"));
     } else if (selectedValue == "Rectangle") {
         rectangle = new Rectangle();
         rectangle.setFillColor(getElementValue("input-fill-color"));
         rectangle.setBorderColor(getElementValue("input-border-color"));
-        rectangle.setX1(getElementValue("rectangle-x1"));
-        rectangle.setY1(getElementValue("rectangle-y1"));
-        rectangle.setX2(getElementValue("rectangle-x2"));
-        rectangle.setY2(getElementValue("rectangle-y2"));
+        rectangle.setX1(getElementValue("input-rectangle-x1"));
+        rectangle.setY1(getElementValue("input-rectangle-y1"));
+        rectangle.setX2(getElementValue("input-rectangle-x2"));
+        rectangle.setY2(getElementValue("input-rectangle-y2"));
     } else if (selectedValue == "Triangle") {
         triangle = new Triangle();
         triangle.setFillColor(getElementValue("input-fill-color"));
         triangle.setBorderColor(getElementValue("input-border-color"));
-        triangle.setP1X(getElementValue("triangle-x1"));
-        triangle.setP1Y(getElementValue("triangle-y1"));
-        triangle.setP2X(getElementValue("triangle-x2"));
-        triangle.setP2Y(getElementValue("triangle-y2"));
-        triangle.setP3X(getElementValue("triangle-x3"));
-        triangle.setP3Y(getElementValue("triangle-y3"));
+        triangle.setP1X(getElementValue("input-triangle-x1"));
+        triangle.setP1Y(getElementValue("input-triangle-y1"));
+        triangle.setP2X(getElementValue("input-triangle-x2"));
+        triangle.setP2Y(getElementValue("input-triangle-y2"));
+        triangle.setP3X(getElementValue("input-triangle-x3"));
+        triangle.setP3Y(getElementValue("input-triangle-y3"));
     }
 
     draw([circle, rectangle, triangle], context);
