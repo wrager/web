@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shapes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="scripts/main.js"></script>
+    </head>
+    <body>
+        <div class="shapeParamField">
+            <h3>Choose shape and shape's parameters:</h3>
+            <form>
+                <select id="selectShape" onchange="f(this.value)">
+                    <option selected value="circle">Circle</option>
+                    <option value="rectangle">Rectangle</option>
+                    <option value="triangle">Triangle</option>
+                </select>
+            </form>
+        </div>
+        <div class="circleProp"> 
+            <p><form id="setRaduisCircle">
+                Radius: <input type="number" onchange="setCircleRadiusAndDraw(circle,this.value)">
+            </form>
+            <form id="setPosXCircle">
+                X: <input type="number" onchange="setShapePosX(circle,this.value)">
+            </form>
+                Y: <input type="number" onchange="setShapePosY(circle,this.value)">
+            </form></p>
+            <p><form id="setCircleFillColor">
+                Fill Color: <input type="text" onchange="setShapeFillColor(circle,this.value)">
+            </form>
+            <form id="setCircleBorderColor">
+                Border Color: <input type="text" onchange="setShapeBorderColor(circle,this.value)">
+            </form></p>
+        </div>
+        <div class="rectangleProp">
+            <p><form id="setRaduisCircle">
+                Width: <input type="number" onchange="setRctangleWidth(rectangle,this.value)">
+            </form>
+            <form id="setRaduisCircle">
+                Height: <input type="number" onchange="setRctangleHeight(rectangle,this.value)">
+            </form>
+            <form id="setXBegin">
+                X: <input type="number" onchange="setShapePosX(rectangle,this.value)">
+            </form>
+            <form>
+                Y: <input type="number" onchange="setShapePosY(rectangle,this.value)">
+            </form></p>
+            <p><form id="setCircleFillColor">
+                Fill Color: <input type="text" onchange="setShapeFillColor(rectangle,this.value)">
+            </form>
+            <form id="setCircleBorderColor">
+                Border Color: <input type="text" onchange="setShapeBorderColor(rectangle,this.value)">
+            </form></p>
+        </div>
+        <div class="triangleProp">
+            <p><form id="setXBegin">
+                X(begin): <input type="number" onchange="">
+            </form>
+        </div>
+        <div class="drawShapeField">
+            <canvas id="canvasText" width="1000" height="25"></canvas>
+            <canvas id="canvasLine" width="1000" height="1"></canvas>
+            <script src="scripts/drawLine.js"></script>
+            <canvas id="canvasShape" width="1000" height="1000"></canvas>
+        </div>
+    </body>
+</html>

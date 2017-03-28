@@ -1,0 +1,72 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.shapeParamField {
+    height: 20%;
+}
+.shapeParamField h3 {
+    margin-left: 35%;
+}
+.shapeParamField select {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 35%;
+    text-align-last: center; /*для Хром*/
+    text-align: center;/*для FF*/
+}
+
+.circleProp {
+    visibility: visible;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+}
+form {
+    display: inline-block;
+    margin-right: 3%;
+}
+input {
+    width: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    text-align-last: center; /*для Хром*/
+    text-align: center;/*для FF*/
+}
+
+input[type="text"] {
+    width: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    text-align-last: center; /*для Хром*/
+    text-align: center;/*для FF*/
+}
+
+.drawShapeField {
+    height: 1020px;
+    width: 1000px;
+    margin: auto;
+    border: 5px solid #1da1f2;
+    font-size:0; /* убираем горизонтальные отступы */
+    line-height:0; /* ...и вертикальные в некоторых браузерах */
+    letter-spacing:-1px; /* переубеждаем webkit'ы */
+}
+
+.rectangleProp {
+    visibility: hidden;
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
+
+.triangleProp {
+    visibility: hidden;
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+}
