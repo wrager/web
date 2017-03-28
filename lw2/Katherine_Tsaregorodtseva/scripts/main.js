@@ -21,6 +21,12 @@ Shape.prototype.getBorderColor = function() {
 
 Shape.prototype.draw = function() {
 };
+Shape.prototype.setBorderWidth = function(value) {
+    this.borderLine = value;
+};
+Shape.prototype.getBorderWidth = function() {
+    return this.borderLine;
+};
 
 function Rectangle() {
     this.x = 0;
@@ -65,7 +71,9 @@ Rectangle.prototype.draw = function() {
     ctx.clearRect(0, 0, 1000, 1000);
     ctx.fillStyle = this.fillColor;
     ctx.fillRect(this.x, this.y, this.width, this.height);
-
+    ctx.strokeStyle = this.borderColor;
+    ctx.lineWidth = this.borderLine;
+    ctx.strokeRect(this.x, this.y, this.width, this.height);
     this.drawText();
 }
 Rectangle.prototype.drawText = function()
@@ -168,11 +176,13 @@ function setShapePosY(shape, y) {
     shape.setY(y);
     shape.draw();
 }
-function setShapeFillColor(shape, fillColor) {
+function setShapeFillColor(fillColor) {
+    var shape = getCurrentShape();
     shape.setFillColor(fillColor);
     shape.draw();
 }
-function setShapeBorderColor(shape, borderColor) {
+function setShapeBorderColor(borderColor) {
+    var shape = getCurrentShape();
     shape.setBorderColor(borderColor);
     shape.draw();
 }
@@ -185,5 +195,19 @@ function setRctangleHeight(rectangle, value) {
     rectangle.draw();
 }
 
+function setShapeBorderWidth(value) {
+    var shape = getCurrentShape();
+    shape.setBorderWidth(value);
+    shape.draw();
+}
+function getCurrentShape() {
+    var shapeName = document.getElementById("selectShape").value;
+    switch (shapeName) {
+        case 'circle':
+            return circle;
+        case 'rectangle':
+            return rectangle;
+    }
+}
 var circle = new Circle;
 var rectangle = new Rectangle;

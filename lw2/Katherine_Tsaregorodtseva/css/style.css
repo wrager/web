@@ -22,12 +22,8 @@ body {
     visibility: visible;
     display: block;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-left: 35%;
-}
-form {
-    display: inline-block;
-    margin-right: 3%;
 }
 input {
     width: 50px;
@@ -35,6 +31,7 @@ input {
     font-size: 16px;
     text-align-last: center; /*для Хром*/
     text-align: center;/*для FF*/
+    margin-right: 3%;
 }
 
 input[type="text"] {
@@ -59,14 +56,19 @@ input[type="text"] {
     visibility: hidden;
     display: none;
     margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 10%;
+    margin-bottom: 10px;
+    margin-left: 35%;
 }
 
 .triangleProp {
     visibility: hidden;
     display: none;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 35%;
+}
+
+.commonProp {
     margin-bottom: 20px;
     margin-left: 35%;
 }
