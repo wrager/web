@@ -2,7 +2,7 @@ module.exports = function( grunt ) {
   grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 		eslint: {
-			target: ['project/js/shape.js']
+			target: ['qwer.js']
 		},
         concat: {
             css: {
@@ -51,11 +51,11 @@ module.exports = function( grunt ) {
     });
 
     // 2. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-eslint');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'eslint', 'connect', 'watch']);
+    grunt.registerTask('default', ['eslint', 'concat', 'connect', 'watch']);
 };

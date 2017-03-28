@@ -6,7 +6,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "Gruntfile.js"
+    "start": "grunt"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
