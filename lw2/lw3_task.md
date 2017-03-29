@@ -31,7 +31,8 @@
 * grunt-contrib-connect
 * grunt-contrib-concat
 * grunt-contrib-watch
-* grunt-file-hash
+* grunt-assets-hash
+* grunt-cache-breaker
 * grunt-eslint
 * bootstrap@3
 
