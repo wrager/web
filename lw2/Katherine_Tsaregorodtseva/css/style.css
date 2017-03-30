@@ -6,14 +6,14 @@ body {
 .shapeParamField {
     height: 20%;
 }
-.shapeParamField h3 {
-    margin-left: 35%;
+header {
+    margin-left: 20%
 }
+
 .shapeParamField select {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     margin-top: 10px;
-    margin-left: 35%;
     text-align-last: center; /*для Хром*/
     text-align: center;/*для FF*/
 }
@@ -23,7 +23,6 @@ body {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 35%;
 }
 input {
     width: 50px;
@@ -46,7 +45,9 @@ input[type="text"] {
     height: 1020px;
     width: 1000px;
     margin: auto;
-    border: 5px solid #1da1f2;
+    margin-top: 20px;
+    border: 2px solid #ffffff;
+    background-color: #
     font-size:0; /* убираем горизонтальные отступы */
     line-height:0; /* ...и вертикальные в некоторых браузерах */
     letter-spacing:-1px; /* переубеждаем webkit'ы */
@@ -57,7 +58,6 @@ input[type="text"] {
     display: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 35%;
 }
 
 .triangleProp {
@@ -65,10 +65,4 @@ input[type="text"] {
     display: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 35%;
-}
-
-.commonProp {
-    margin-bottom: 20px;
-    margin-left: 35%;
 }

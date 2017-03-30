@@ -209,5 +209,12 @@ function getCurrentShape() {
             return rectangle;
     }
 }
+function setTriangleVertexX(index, value) {
+    triangle.setVertexX(index, value);
+}
+function setTriangleVertexY(index, value) {
+    triangle.setVertexY(index, value);
+}
 var circle = new Circle;
 var rectangle = new Rectangle;
+var triangle = new Triangle;
