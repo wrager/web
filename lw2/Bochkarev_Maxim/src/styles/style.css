@@ -2,16 +2,17 @@ option[default] {
     display: none;
 }
 
-body {
-    display: flex;
-}
-
 label {
     margin-right: 30px;
+    margin-left: 20px;
+}
+
+.header {
+    margin-left: 20px;
 }
 
 .parameter_input {
-    width: 60px;
+    width: 80px;
 }
 
 .parameter_input_div {
@@ -20,25 +21,30 @@ label {
 
 canvas {
     border: 1px solid black;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 25px;
 }
 
 .control_elem {
     margin: 20px;
 }
 
-.controls {
+.parameter_input_col {
     border: 1px solid black;
-    height: 250px;
-    width: 400px;
+    height: 300px;
+    width: 500px;
 }
 
 .controls_line {
     margin-top: 5px;
 }
 
-.button {
-    padding: 5px;
+.mutual_parametres {
+    box-sizing: content-box;
+}
+
+.btn {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
