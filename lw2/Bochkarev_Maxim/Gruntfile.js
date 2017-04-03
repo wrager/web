@@ -51,12 +51,43 @@ module.exports = function(grunt){
 			options: {
 				livereload: 35729
 			}
-		}
+		},
+		assets_hash: {
+			options: {
+				algorithm: 'md5',
+				length: 16,
+				clear: false,
+				suffix: true,
+				jsonFile: 'assets_hash.json',
+			},
+			target: {
+				src: ['.build/scripts.js', '.build/styles.css'],
+			}
+		},
+		cachebreaker: {
+			dev: {
+				options: {
+					match: [
+						{
+							'scripts.js': '.build/scripts.js',
+							'styles.css': '.build/styles.css'
+						}
+					],
+					replacement: 'md5'
+				},
+				files: {
+					src: ['.build/index.html']
+				}
+			}
+		}		
 	});
+	
 	grunt.loadNpmTasks('grunt-eslint');	
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-
-	grunt.registerTask('default', ['eslint', 'concat', 'connect', 'watch']);
+	grunt.loadNpmTasks('grunt-assets-hash');
+	grunt.loadNpmTasks('grunt-cache-breaker');
+	
+	grunt.registerTask('default', ['eslint', 'concat', 'connect', 'assets_hash', 'cachebreaker', 'watch']);
 };
