@@ -244,13 +244,13 @@
 
     border-radius: 0px 2px 2px 0px;
 
-    background-image: url("qrCode.png");
+    background-image: url("img/qrCode.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 .qr_button:hover
 {
-    background-image: url("qrCode_active.png");
+    background-image: url("img/qrCode_active.png");
     cursor: pointer;
 
 }
@@ -450,14 +450,14 @@
       
     border-width: 0px;
 
-    background-image : url("vkontakte_icon.png");
+    background-image : url("img/vkontakte_icon.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button_vk:hover
 {
-    background-image : url("vkontakte_icon_active.png");
+    background-image : url("img/vkontakte_icon_active.png");
     cursor: pointer;
 }
 
@@ -469,14 +469,14 @@
       
     border-width: 0px;
 
-    background-image : url("facebook_icon.png");
+    background-image : url("img/facebook_icon.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button_facebook:hover
 {
-    background-image : url("facebook_icon_active.png");
+    background-image : url("img/facebook_icon_active.png");
     cursor: pointer;
 }
 
@@ -488,14 +488,14 @@
       
     border-width: 0px;
 
-    background-image : url("twitter_icon.png");
+    background-image : url("img/twitter_icon.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button_twitter:hover
 {
-    background-image : url("twitter_icon_active.png");
+    background-image : url("img/twitter_icon_active.png");
     cursor: pointer;
 }
 
@@ -507,14 +507,14 @@
       
     border-width: 0px;
 
-    background-image : url("mailRu_icon.png");
+    background-image : url("img/mailRu_icon.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button_mail:hover
 {
-    background-image : url("mailRu_icon_active.png");
+    background-image : url("img/mailRu_icon_active.png");
     cursor: pointer;
 }
 
@@ -526,14 +526,14 @@
       
     border-width: 0px;
 
-    background-image : url("google_icon.png");
+    background-image : url("img/google_icon.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button_google:hover
 {
-    background-image : url("google_icon_active.png");
+    background-image : url("img/google_icon_active.png");
     cursor: pointer;
 }
 
@@ -545,14 +545,14 @@
       
     border-width: 0px;
 
-    background-image : url("odnoklassniki_icon.png");
+    background-image : url("img/odnoklassniki_icon.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button_od:hover
 {
-    background-image : url("odnoklassniki_icon_active.png");
+    background-image : url("img/odnoklassniki_icon_active.png");
     cursor: pointer;
 }
 
