@@ -21,11 +21,25 @@ module.exports = function(grunt){
 				src: ['node_modules/bootstrap/dist/css/bootstrap.min.css', 'src/styles/style.css'],
 				dest: '.build/styles.css'
 			}
+		},
+		connect: {
+			server: {
+				options: {
+					hostname: 'localhost', 
+					port: 8080,
+					base: '.build/',
+					livereload: 35729,
+					keepalive: 'true',
+					open: {
+						target: 'http://localhost:8080'
+					}
+				}		
+			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-eslint');	
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.registerTask('default', ['eslint', 'concat']);
+	grunt.registerTask('default', ['eslint', 'concat', 'connect']);
 };
