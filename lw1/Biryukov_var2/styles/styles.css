@@ -1,0 +1,691 @@
+
+.html, body {
+    background: #f6f5f4;
+    margin: 0px;
+}
+.layout_inner
+{
+
+    padding-bottom: 21%;
+    
+}
+
+.layout_inner .header-logo img {
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 153px;
+    height: 28px;
+    position: absolute
+}
+
+.layout_inner .header .container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #d8d8d8;
+    background: white 
+}
+
+.layout_inner .login_form 
+{
+    width: 300px;
+    height: 343px;
+
+    margin: auto;
+    text-align: center;
+    padding: auto;
+
+    background: url("img/login_form.png") no-repeat;
+}
+
+.layout_inner .login_form .phone img
+{  
+    box-sizing: border-box;
+    width: 300px;
+    height: 343px;
+
+    margin: 50px 0px -383px;
+}
+
+
+.layout_inner .login_form .login_area
+{
+    box-sizing: border-box;
+    text-align: center;
+    width: 293px;
+    height: 222px;
+    padding : 50px 20px 10px; 
+    margin: 0px 0px 50px;
+}
+
+.layout_inner .login_form .roof
+{
+    box-sizing: border-box;
+    width: 300px;
+    height: 50px;
+
+    margin: 50px 0px 0px;
+    text-align: center;
+}
+
+.layout_inner .login_form .login_container
+{
+    width: 258px;
+    height: 32px;
+
+    margin: 0px 0px 10px;
+
+    position: relative;
+    text-align: center;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+}
+
+.layout_inner .login_form .login_container .text_box_login
+{
+    width: 258px;
+    height: 32px;
+    padding: 5px 10px 5px;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.16);
+
+   font-size: 15px;
+   font-family: Arial;
+
+   background-clip: padding-box;
+}
+
+.layout_inner .login_form .login_container .text_box_login:focus
+{
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);
+
+    font-size: 15px;
+    font-family: Arial;
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.layout_inner .login_form .password_container
+{
+    width: 258px;
+    height: 32px;
+
+    margin: 0px 0px 10px;
+}
+
+.layout_inner .login_form .password_container .text_box_password
+{
+    width: 258px;
+    height: 32px;
+    padding: 5px 10px 5px;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.16); 
+
+    font-size: 15px;
+    font-family: Arial;
+
+    background-clip: padding-box;
+}
+
+.layout_inner .login_form .password_container .text_box_password:focus
+{
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);
+
+    font-size: 15px;
+    font-family: Arial;
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.layout_inner .login_form .login_area .log_in_row
+{
+    line-height: auto;
+
+    padding: 0px;
+    margin: 1px 0px 10px;
+}
+
+.layout_inner .login_form .login_area .log_in_row li
+{
+    display: inline; 
+}
+
+.qr_code_button
+{
+    box-sizing: border-box;
+    height: 32px;
+    width: 38px;
+
+    display: inline; 
+}
+.qr_code_button:focus
+{
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+.qr_code_button:hover
+{
+    background: linear-gradient(to top, #FFDF0C, #FFDE98);
+}
+
+
+.layout_inner .login_form .login_area .log_in_button
+{
+    width: 221px;
+    height: 32px;
+    float: left;
+    background: linear-gradient(to top, #FFCF0C, #FFDE58);
+    margin-right: 0px;
+    cursor: pointer;
+    
+    font-size: 15px;
+    font-family: Arial;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.47); 
+
+    border-radius: 3px 0px 0px 3px;
+}
+
+.layout_inner .login_form .login_area .log_in_button:hover
+{
+    background: linear-gradient(to top, #FFDF0C, #FFDE98);
+}
+
+.layout_inner .login_form .login_area .log_in_button:focus
+{
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);       
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.qr_button
+{
+    width: 39px;
+    height: 32px;
+
+    border: 0px solid transparent;
+    border-color: rgba(0,0,0,.27);
+    border-top-color: rgba(0,0,0,.38);
+    border-bottom-color: rgba(0,0,0,.47); 
+
+    border-radius: 0px 2px 2px 0px;
+
+    background-image: url("qrCode.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.qr_button:hover
+{
+    background-image: url("qrCode_active.png");
+    cursor: pointer;
+
+}
+.qr_button:focus
+{
+    outline: none;
+    border-color: rgba(94,76,2,.42);
+    border-top-color: rgba(78,62,2,.515);
+    border-bottom-color: rgba(117,93,0,.335);       
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1); 
+}
+
+
+.layout_inner .login_form .buttons
+{
+    position: relative;
+
+    height: 24px;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.layout_inner .login_form .buttons .left_part
+{
+    float:left; 
+    margin: 13px 0px 0px;
+    padding : 2px 4px 2px;
+    height: 24px;
+    background-color: #DEE9FF;
+
+    cursor: pointer;
+}
+
+.layout_inner .login_form .buttons .left_part:active
+{
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+.layout_inner .login_form .buttons .left_part:focus
+{
+    outline-color: rgba(255,204,0,.7);
+    outline-width: 5px;
+
+
+    box-shadow: 
+        0 0 6px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.layout_inner .login_form .buttons .right_part
+{
+    float:right; 
+    margin: 13px 0px 0px;
+    padding : 2px 4px 2px;
+    height: 24px;
+    background-color: #DEE9FF;
+
+    cursor: pointer;
+}
+
+.layout_inner .login_form .buttons .right_part:active
+{
+    box-shadow: 
+        0 0 3px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.layout_inner .login_form .buttons .right_part:focus
+{
+    outline-color: rgba(255,204,0,.7);
+    outline-width: 5px;
+
+    box-shadow: 
+        0 0 3px 2px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.layout_inner .login_form .login_area
+{
+    width: 300px;
+    height: 293px;
+    position:relative;
+    
+}
+
+.layout_inner .login_form .login_area img
+{
+    width: 24px;
+    height: 24px;
+    position:relative;
+}
+
+.layout_inner .login_form .login_area .alien_checkbox
+{
+    display: inline-block;
+    text-align: left;
+
+    cursor: pointer;
+    width: 277px;
+    height: 20px;
+    
+    line-height: 10px;
+    margin: 0px 0px 10px;
+}
+
+.layout_inner .login_form .login_area .alien_checkbox .label
+{
+    display: inline;
+    position: absolute;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-family: Arial,sans-serif;
+
+    line-height: 17px;
+}
+
+.layout_inner .login_form .login_area .alien_checkbox .checkbox1
+{
+    display: inline;
+    position: relative;
+
+    background: linear-gradient(#fff,#eee);
+    width: 17px;
+    height: 17px;
+
+    margin: 0px 5px 0px 0px;
+
+    cursor: pointer;
+}
+
+.layout_inner .login_form .login_area .alien_checkbox .checkbox1:focus
+{
+    outline-color: rgba(255,204,0,.7);
+    outline-width: 0px;
+
+    box-shadow: 
+        0 0 2px 1px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.layout_inner .login_form .login_area .social_icon
+{
+   padding: 0px;
+   margin: -2px;
+}
+
+.layout_inner .login_form .login_area .social_icon li
+{
+    display: inline;
+
+    width:24px;
+    height: 24px;
+
+    padding: 2px;   
+}
+
+.layout_inner .login_form .login_area .social_icon li:focus
+{
+    outline-color: rgba(255,204,0,.7);
+    outline-width: 0px;
+
+    box-shadow: 
+        0 0 2px 1px rgba(255,204,0,.7),
+        0 1px 0 rgba(255,255,255,.2),
+        inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.button {
+    width: 24px;
+    height: 24px;
+
+    display: inline;  
+}
+
+
+.button_vk
+{   
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+      
+    border-width: 0px;
+
+    background-image : url("vkontakte_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_vk:hover
+{
+    background-image : url("vkontakte_icon_active.png");
+    cursor: pointer;
+}
+
+.button_facebook
+{   
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+      
+    border-width: 0px;
+
+    background-image : url("facebook_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_facebook:hover
+{
+    background-image : url("facebook_icon_active.png");
+    cursor: pointer;
+}
+
+.button_twitter
+{   
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+      
+    border-width: 0px;
+
+    background-image : url("twitter_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_twitter:hover
+{
+    background-image : url("twitter_icon_active.png");
+    cursor: pointer;
+}
+
+.button_mail
+{   
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+      
+    border-width: 0px;
+
+    background-image : url("mailRu_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_mail:hover
+{
+    background-image : url("mailRu_icon_active.png");
+    cursor: pointer;
+}
+
+.button_google
+{   
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+      
+    border-width: 0px;
+
+    background-image : url("google_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_google:hover
+{
+    background-image : url("google_icon_active.png");
+    cursor: pointer;
+}
+
+.button_od
+{   
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+      
+    border-width: 0px;
+
+    background-image : url("odnoklassniki_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_od:hover
+{
+    background-image : url("odnoklassniki_icon_active.png");
+    cursor: pointer;
+}
+
+.layout_inner .login_form .login_area .buttons
+{
+    margin: 18px 0px 0px;
+}
+
+.layout_inner .login_form .login_area .buttons .left_part
+{
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 3px;
+    padding-top: 2px;
+
+    margin: 0px;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.17);
+    border-top-color: rgba(0,0,0,.28);
+    border-bottom-color: rgba(0,0,0,.27); 
+
+    border-radius: 3px 3px 3px 3px;
+
+    font-size: 13px;
+}
+.layout_inner .login_form .login_area .buttons .right_part
+{
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 3px;
+    padding-top: 2px;
+
+    margin: 0px;
+    font-weight: bold;
+
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,.17);
+    border-top-color: rgba(0,0,0,.28);
+    border-bottom-color: rgba(0,0,0,.27); 
+
+    border-radius: 3px 3px 3px 3px;
+}
+
+footer
+ {
+    width:100%;
+
+
+    position: absolute;
+
+    margin-top: 60px; 
+    min-width: 860px;
+    
+   
+    border-top: 2px solid #e4e4e4;
+}
+
+
+footer .footer_inner
+{
+    width: 840px;
+    height: 60px;
+
+    padding: 0px 10px 0px;
+    
+    margin: auto;
+
+    font-size: 13px;
+    font-family: Arial,sans-serif;
+}
+
+footer .footer_inner .left_part
+{
+    float:left;
+    line-height: 45px;
+
+}
+
+footer .footer_inner .left_part .elements_left_part
+{
+    padding-left: 0px;
+}
+footer .footer_inner .left_part .elements_left_part li
+{
+    display: inline;
+    
+
+    padding-right: 50px;
+
+    color: blue;
+}
+footer .footer_inner .left_part .elements_left_part:hover li
+{
+    cursor: pointer;
+    color: red;
+}
+
+
+footer .footer_inner .right_part
+{
+    float:right;
+    line-height: 45px;  
+}
+
+footer .footer_inner .right_part .elements_right_part li
+{
+    display: inline;
+    padding-left: 50px;
+}
+footer .footer_inner .right_part .elements_right_part li a
+{
+    text-decoration: none;
+    
+}
+
+.data
+{
+    display: inline;
+    color: gray;
+}
+
+footer .footer_inner .right_part .fotter_help
+{
+    margin-left: 50px;
+    padding: 0px;
+    font-size: 13px; 
+}
+
+footer .footer_inner .fotter_copyright
+{
+    margin-left: 50px;
+    padding: 0px;
+    font-size: 13px;
+}
+
