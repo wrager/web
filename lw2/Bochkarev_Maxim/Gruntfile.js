@@ -29,17 +29,34 @@ module.exports = function(grunt){
 					port: 8080,
 					base: '.build/',
 					livereload: 35729,
-					keepalive: 'true',
 					open: {
 						target: 'http://localhost:8080'
 					}
 				}		
 			}
+		},
+		watch: {
+			js: {
+				files: ['src/Scripts/*js'],
+				tasks: ['eslint', 'concat:js']
+			},
+			html: {
+				files: ['src/site.html'],
+				tasks: ['concat:html']
+			},
+			css: {
+				files: ['src/styles/style.css'],
+				tasks: ['concat:css']			
+			},
+			options: {
+				livereload: 35729
+			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-eslint');	
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.registerTask('default', ['eslint', 'concat', 'connect']);
+
+	grunt.registerTask('default', ['eslint', 'concat', 'connect', 'watch']);
 };
