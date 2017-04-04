@@ -36,7 +36,7 @@ a:hover{
     height:16px;
     display:inline-block;
     box-sizing:border-box;
-    padding-right:18px;
+    margin-right:18px;
 }
 
 .application:hover, .application:focus, .application:active{
