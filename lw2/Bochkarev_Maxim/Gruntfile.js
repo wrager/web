@@ -3,7 +3,7 @@ module.exports = function(grunt){
 
 	grunt.initConfig({
 		eslint: {
-			src: ['src/Scripts/*.js'],
+			src: ['/.build/*.js'],
 			options: {
 				configFile: "eslint_config.json",
 			}		
@@ -52,18 +52,6 @@ module.exports = function(grunt){
 				livereload: 35729
 			}
 		},
-		assets_hash: {
-			options: {
-				algorithm: 'md5',
-				length: 16,
-				clear: false,
-				suffix: true,
-				jsonFile: 'assets_hash.json',
-			},
-			target: {
-				src: ['.build/scripts.js', '.build/styles.css'],
-			}
-		},
 		cachebreaker: {
 			dev: {
 				options: {
@@ -86,8 +74,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-assets-hash');
 	grunt.loadNpmTasks('grunt-cache-breaker');
 	
-	grunt.registerTask('default', ['eslint', 'concat', 'connect', 'assets_hash', 'cachebreaker', 'watch']);
+	grunt.registerTask('default', ['concat', 'eslint', 'cachebreaker', 'connect', 'watch']);
 };
