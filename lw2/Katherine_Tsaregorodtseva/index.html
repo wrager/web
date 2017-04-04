@@ -5,13 +5,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
+        <script src="scripts/shape.js"></script>
+        <script src="scripts/circle.js"></script>
+        <script src="scripts/rectangle.js"></script>
+        <script src="scripts/triangle.js"></script>
         <script src="scripts/main.js"></script>
     </head>
     <body>
         <header>
+            <h1>HTML5 Canvas Shape Draw</h1>
+        </header>
+        <div class="propertiesBlock">
             <div class="shapeParamField">
-                <h3>Choose shape and shape's parameters:</h3>
-                <select id="selectShape" onchange="f(this.value)">
+                <select id="selectShape" onchange="changeShape(this.value)">
                     <option selected value="circle">Circle</option>
                     <option value="rectangle">Rectangle</option>
                     <option value="triangle">Triangle</option>
@@ -19,33 +25,31 @@
             </div>
             <div class="circleProp"> 
                 Radius: <input type="number" onchange="setCircleRadiusAndDraw(circle,this.value)">
-                X: <input type="number" onchange="setShapePosX(circle,this.value)">
-                Y: <input type="number" onchange="setShapePosY(circle,this.value)">
+                <p>X: <input type="number" onchange="setShapePosX(circle,this.value)">
+                <p>Y: <input type="number" onchange="setShapePosY(circle,this.value)">
             </div>
             <div class="rectangleProp">
-                Width: <input type="number" onchange="setRctangleWidth(rectangle,this.value)">
-                Height: <input type="number" onchange="setRctangleHeight(rectangle,this.value)">
-                X: <input type="number" onchange="setShapePosX(rectangle,this.value)">
-                Y: <input type="number" onchange="setShapePosY(rectangle,this.value)">
+                Width: <input type="number" onchange="setRectangleWidth(rectangle,this.value)">
+                <p>Height: <input type="number" onchange="setRectangleHeight(rectangle,this.value)">
+                <p>X: <input type="number" onchange="setShapePosX(rectangle,this.value)">
+                <p>Y: <input type="number" onchange="setShapePosY(rectangle,this.value)">
             </div>
             <div class="triangleProp">
                 Vertex1 X: <input type="number" onchange="setTriangleVertexX(1,this.value)">
-                Vertex1 Y: <input type="number" onchange="setTriangleVertexY(1,this.value)">
-                Vertex2 X: <input type="number" onchange="setTriangleVertexX(2,this.value)">
-                Vertex2 Y: <input type="number" onchange="setTriangleVertexY(2,this.value)">
-                Vertex3 X: <input type="number" onchange="setTriangleVertexX(3,this.value)">
-                Vertex3 Y: <input type="number" onchange="setTriangleVertexY(3,this.value)">
+                <p>Vertex1 Y: <input type="number" onchange="setTriangleVertexY(1,this.value)">
+                <p>Vertex2 X: <input type="number" onchange="setTriangleVertexX(2,this.value)">
+                <p>Vertex2 Y: <input type="number" onchange="setTriangleVertexY(2,this.value)">
+                <p>Vertex3 X: <input type="number" onchange="setTriangleVertexX(3,this.value)">
+                <p>Vertex3 Y: <input type="number" onchange="setTriangleVertexY(3,this.value)">
             </div>
             <div class="commonProp">
-                Fill Color: <input type="text" onchange="setShapeFillColor(this.value)">
-                Border Width: <input type="number" onchange="setShapeBorderWidth(this.value)">
-                Border Color: <input type="text" onchange="setShapeBorderColor(this.value)">
+                <p>Fill Color: <input type="text" onchange="setShapeFillColor(this.value)">
+                <p>Border Width: <input type="number" onchange="setShapeBorderWidth(this.value)">
+                <p>Border Color: <input type="text" onchange="setShapeBorderColor(this.value)">
             </div>
-        </header>
+        </div>
         <div class="drawShapeField">
             <canvas id="canvasText" width="1000" height="25"></canvas>
-            <canvas id="canvasLine" width="1000" height="1"></canvas>
-            <script src="scripts/drawLine.js"></script>
             <canvas id="canvasShape" width="1000" height="1000"></canvas>
         </div>
     </body>

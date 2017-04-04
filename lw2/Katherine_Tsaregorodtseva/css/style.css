@@ -1,19 +1,30 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-family: "Century Gothic";
+    font-size: 17px;
+    white-space: nowrap;
 }
 
 .shapeParamField {
     height: 20%;
 }
 header {
-    margin-left: 20%
+    margin: 0;
+    margin-left: 0;
+    color: #ffffff;
+    font-family: "Century Gothic";
+    background-color: #292f33;
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    line-height: 1.1;
 }
 
 .shapeParamField select {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     margin-top: 10px;
+    margin-bottom: 10px;
     text-align-last: center; /*для Хром*/
     text-align: center;/*для FF*/
 }
@@ -23,46 +34,51 @@ header {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-input {
-    width: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    text-align-last: center; /*для Хром*/
-    text-align: center;/*для FF*/
-    margin-right: 3%;
+    margin-top: 10px;
 }
 
-input[type="text"] {
+input {
+    float: right;
+    margin-right: 20px;
     width: 70px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     text-align-last: center; /*для Хром*/
     text-align: center;/*для FF*/
 }
 
 .drawShapeField {
+    display: inline-block;
     height: 1020px;
     width: 1000px;
     margin: auto;
     margin-top: 20px;
-    border: 2px solid #ffffff;
-    background-color: #
+    border: 2px solid #000000;
     font-size:0; /* убираем горизонтальные отступы */
     line-height:0; /* ...и вертикальные в некоторых браузерах */
     letter-spacing:-1px; /* переубеждаем webkit'ы */
 }
 
 .rectangleProp {
-    visibility: hidden;
+    visibility: visible;
     display: none;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .triangleProp {
-    visibility: hidden;
+    visibility: visible;
     display: none;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.propertiesBlock {
+    display: inline-block;
+    width: 20%;
+    height: 80%;
+    margin-left: 15px;
+    vertical-align: top;
+}
+canvas {
+    display: block;
 }
