@@ -1,0 +1,16 @@
+{
+  "name": "shapes",
+  "version": "1.0.0",
+  "devDependencies": {
+    "bootstrap": "3",
+    "eslint": "3.18.0",
+    "grunt": "~0.4.1",
+    "grunt-cache-breaker": "^2.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "scripts": { "start" : "grunt" }
+}
