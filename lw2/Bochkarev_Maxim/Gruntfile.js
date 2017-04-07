@@ -3,7 +3,7 @@ module.exports = function(grunt){
 
 	grunt.initConfig({
 		eslint: {
-			src: ['/.build/*.js'],
+			src: ['build/scripts.js'],
 			options: {
 				configFile: "eslint_config.json",
 			}		
@@ -11,15 +11,15 @@ module.exports = function(grunt){
 		concat: {
 			js: {
 				src: ['src/Scripts/*js'],
-				dest: '.build/scripts.js'
+				dest: 'build/scripts.js'
 			},
 			html: {
 				src: ['src/site.html'],
-				dest: '.build/index.html'
+				dest: 'build/index.html'
 			},
 			css: {
 				src: ['node_modules/bootstrap/dist/css/bootstrap.min.css', 'src/styles/style.css'],
-				dest: '.build/styles.css'
+				dest: 'build/styles.css'
 			}
 		},
 		connect: {
@@ -27,7 +27,7 @@ module.exports = function(grunt){
 				options: {
 					hostname: 'localhost', 
 					port: 8080,
-					base: '.build/',
+					base: 'build/',
 					livereload: 35729,
 					open: {
 						target: 'http://localhost:8080'
@@ -57,14 +57,14 @@ module.exports = function(grunt){
 				options: {
 					match: [
 						{
-							'scripts.js': '.build/scripts.js',
-							'styles.css': '.build/styles.css'
+							'scripts.js': 'build/scripts.js',
+							'styles.css': 'build/styles.css'
 						}
 					],
 					replacement: 'md5'
 				},
 				files: {
-					src: ['.build/index.html']
+					src: ['build/index.html']
 				}
 			}
 		}		
