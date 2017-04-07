@@ -1,9 +1,7 @@
-option[default] {
-    display: none;
-}
+
 
 label {
-    margin-right: 30px;
+    margin-right: 10px;
     margin-left: 20px;
 }
 
@@ -12,7 +10,11 @@ label {
 }
 
 .parameter_input {
-    width: 80px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    margin: auto;
 }
 
 .parameter_input_div {
@@ -20,7 +22,7 @@ label {
 }
 
 canvas {
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .control_elem {
@@ -28,8 +30,8 @@ canvas {
 }
 
 .parameter_input_col {
-    border: 1px solid black;
-    height: 300px;
+    border: 2px solid black;
+    height: 400px;
     width: 500px;
 }
 
@@ -46,5 +48,13 @@ canvas {
     bottom: 15px;
     left: 0;
     right: 0;
+    margin: auto;
+}
+
+.shape_select {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
     margin: auto;
 }

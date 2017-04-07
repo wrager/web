@@ -21,7 +21,7 @@ function onShapeParametersChoice(shapeType) {
         document.getElementById("draw_figure_button").disabled = true;
     }
 }
-
+    
 function onDrawButtonClick() {
     var sel = document.getElementById("shape_choice");
     var shapeType = sel.options[sel.selectedIndex].text;
@@ -72,8 +72,8 @@ function printCalcResultOnCanvas(context) {
     var perimeterResult = "Perimeter: " + Number(shape.calculatePerimeter()).toFixed(2);
     context.fillStyle = "black";
     context.font = "bold 12px Arial";
-    context.fillText(perimeterResult, 5, 220);
-    context.fillText(areaResult, 5, 240);
+    context.fillText(perimeterResult, 5, 370);
+    context.fillText(areaResult, 5, 390);
 }
 
 function getElementNumberValue(elem) {
