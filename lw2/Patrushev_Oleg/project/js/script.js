@@ -1,6 +1,8 @@
 var FONT_SIZE = 16;
 var INFO_TEXT_COLOR = "#000000";
 
+var document = document.getElementById('root');
+var canvas = getElement("canvas");
 var circle;
 var rectangle;
 var triangle;
@@ -23,11 +25,11 @@ function onShapeSelect() {
         show("triangle-optional-form");
     }
 }
+document.getElementById("shape-selector").onchange = onShapeSelect;
 
 function onApplyClick() {
-    var canvas = getElement("canvas");
-    var context = canvas.getContext("2d");
     var selectedValue = getSelectorValue();
+    var context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     if (selectedValue == "Circle") {
@@ -59,6 +61,7 @@ function onApplyClick() {
 
     draw([circle, rectangle, triangle], context);
 }
+document.getElementById("apply-btn").onchange = onApplyClick;
 
 function exist(item) {
     return typeof (item) != 'undefined' && item != null;

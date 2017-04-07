@@ -15,23 +15,11 @@ module.exports = function( grunt ) {
 				}
 			}
 		},
-		assets_hash: {
-			assets: {
-				options: {
-					algorithm: 'md5',
-					jsonFile: 'versions.json',
-					length: 10,
-					clear: false,
-					suffix: true
-				},
-				src: ['build/scripts.js', 'build/styles.css']
-			}
-		},
 		eslint: {
 			options: {
 				configFile: "eslint.json",
 			},
-			src: ['project/js/*.js']
+			src: ['build/scripts.js']
 		},
         concat: {
             css: {
@@ -39,7 +27,7 @@ module.exports = function( grunt ) {
                 dest: 'build/styles.css'
             },
             js: {
-                src: ['project/js/*.js'],
+                src: ['project/js/script.js', 'project/js/shape.js', 'project/js/circle.js', 'project/js/rectangle.js', 'project/js/triangle.js'],
                 dest: 'build/scripts.js'
             },
 			html: {
@@ -63,15 +51,15 @@ module.exports = function( grunt ) {
 			},
             css: {
                 files: ['project/styles/*.css'],
-                tasks: ['concat:css', 'assets_hash', 'cachebreaker']
+                tasks: ['concat:css', 'cachebreaker']
             },
             js: {
                 files: ['project/js/*.js'],
-                tasks: ['eslint', 'concat:js', 'assets_hash', 'cachebreaker']
+                tasks: ['concat:js', 'eslint', 'cachebreaker']
             },
 			html: {
 				files: ['project/index.html'],
-                tasks: ['assets_hash', 'cachebreaker']
+                tasks: ['cachebreaker']
 			}
         }
     });
@@ -81,9 +69,8 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-assets-hash');
 	grunt.loadNpmTasks('grunt-cache-breaker');
 
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['eslint', 'concat', 'assets_hash', 'cachebreaker', 'connect', 'watch']);
+    grunt.registerTask('default', ['concat', 'eslint', 'cachebreaker', 'connect', 'watch']);
 };

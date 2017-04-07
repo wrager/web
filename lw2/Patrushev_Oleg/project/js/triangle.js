@@ -8,17 +8,18 @@ function Triangle() {
     this.p3X = 0;
     this.p3Y = 0;
 
-    this.getLineLength = function(x1, y1, x2, y2) {
-    return Math.sqrt(Math.pow(x2 - x1, 2) + (Math.pow(y2 - y1, 2)));
-}
+    var getLineLength = function(x1, y1, x2, y2) {
+        return Math.sqrt(Math.pow(x2 - x1, 2) + (Math.pow(y2 - y1, 2)));
+    }
 
-    this.getSides = function() {
-    var line1 = this.getLineLength(this.getP1X(), this.getP1Y(), this.getP2X(), this.getP2Y());
-    var line2 = this.getLineLength(this.getP1X(), this.getP1Y(), this.getP3X(), this.getP3Y());
-    var line3 = this.getLineLength(this.getP2X(), this.getP2Y(), this.getP3X(), this.getP3Y());
+     this.getSides = function() {
+        var sides = [];
+        sides.push(getLineLength(this.getP1X(), this.getP1Y(), this.getP2X(), this.getP2Y()));
+        sides.push(getLineLength(this.getP1X(), this.getP1Y(), this.getP3X(), this.getP3Y()));
+        sides.push(getLineLength(this.getP2X(), this.getP2Y(), this.getP3X(), this.getP3Y()));
 
-    return [line1, line2, line3];
-}
+        return sides;
+    }
 }
 
 Triangle.prototype = Object.create(Shape.prototype);
@@ -86,7 +87,7 @@ Triangle.prototype.draw = function (context) {
 
 Triangle.prototype.calculateArea = function () {
     var p = this.calculatePerimeter() / 2;
-    var lines = this.getSides();
+    var lines = this.getSides(); 
 
     return (Math.sqrt(p * (p - lines[0]) * (p - lines[1]) * (p - lines[2]))).toFixed(3);
 }
