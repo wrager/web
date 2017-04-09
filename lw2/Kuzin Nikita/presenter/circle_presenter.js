@@ -7,7 +7,7 @@ function CirclePresenter(model, view) {
     this._addCircleFields();
 }
 
-CirclePresenter.prototype = BaseShapePresenter.prototype;
+CirclePresenter.prototype = Object.create(BaseShapePresenter.prototype);
 
 CirclePresenter.prototype._addCircleFields = function () {
     this._addRadiusField();
@@ -20,7 +20,7 @@ CirclePresenter.prototype._addRadiusField = function () {
     element.type = "text";
     element.title = "Введите радиус";
     element.setAttribute("placeholder", "Радиус");
-    element.style.display = "block";
+    element.className = "form-control";
     var self = this;
 
     element.onchange = function () {
@@ -29,7 +29,7 @@ CirclePresenter.prototype._addRadiusField = function () {
         self._updateShapeInfo();
     };
 
-    this._baseElement.appendChild(element);
+    this.createFormGroupDiv().appendChild(element);
 };
 
 CirclePresenter.prototype._addCenterXField = function () {
@@ -37,7 +37,7 @@ CirclePresenter.prototype._addCenterXField = function () {
     element.type = "text";
     element.title = "Введите X окружности";
     element.setAttribute("placeholder", "X");
-    element.display = "inline";
+    element.className = "form-control";
     var self = this;
 
     element.onchange = function () {
@@ -45,7 +45,7 @@ CirclePresenter.prototype._addCenterXField = function () {
         self._view.draw();
     };
 
-    this._baseElement.appendChild(element);
+    this.createFormGroupDiv().appendChild(element);
 };
 
 CirclePresenter.prototype._addCenterYField = function () {
@@ -53,7 +53,7 @@ CirclePresenter.prototype._addCenterYField = function () {
     element.type = "text";
     element.title = "Введите X окружности";
     element.setAttribute("placeholder", "Y");
-    element.display = "inline";
+    element.className = "form-control";
     var self = this;
 
     element.onchange = function () {
@@ -61,5 +61,5 @@ CirclePresenter.prototype._addCenterYField = function () {
         self._view.draw();
     };
 
-    this._baseElement.appendChild(element);
+    this.createFormGroupDiv().appendChild(element);
 };

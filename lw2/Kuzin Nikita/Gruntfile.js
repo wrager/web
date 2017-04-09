@@ -20,6 +20,10 @@ module.exports = function(grunt) {
 	  styles: {
 		src: ['styles.css'],
 		dest: '.build/styles.css'
+	  },
+	  bootstrap: {
+		src: ['node_modules/bootstrap/dist/css/bootstrap.min.css'],
+		dest: '.build/bootstrap.min.css'
 	  }
 	},
 	eslint: {

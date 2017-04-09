@@ -27,7 +27,7 @@ BaseShapePresenter.prototype._addFillColorField = function () {
     element.type = "text";
     element.title = "Введите цвет заливки";
     element.setAttribute("placeholder", "Цвет заливки");
-    element.style.display = "block";
+    element.className = "form-control";
     var self = this;
 
     element.onchange = function () {
@@ -35,7 +35,7 @@ BaseShapePresenter.prototype._addFillColorField = function () {
         self._view.draw();
     };
 
-    this._baseElement.appendChild(element);
+    this.createFormGroupDiv().appendChild(element);
 };
 
 BaseShapePresenter.prototype._addBorderColorField = function () {
@@ -43,7 +43,7 @@ BaseShapePresenter.prototype._addBorderColorField = function () {
     element.type = "text";
     element.title = "Введите цвет обводки";
     element.setAttribute("placeholder", "Цвет обводки");
-    element.style.display = "block";
+    element.className = "form-control";
     var self = this;
 
     element.onchange = function () {
@@ -51,11 +51,11 @@ BaseShapePresenter.prototype._addBorderColorField = function () {
         self._view.draw();
     };
 
-    this._baseElement.appendChild(element);
+    this.createFormGroupDiv().appendChild(element);
 };
 
 BaseShapePresenter.prototype._addAreaInfo = function () {
-    var paragraph = document.createElement("p");
+    var paragraph = document.createElement("label");
     var text = document.createTextNode("Площадь: " + this._model.getArea());
     paragraph.id = "area";
     paragraph.style.display = "block";
@@ -64,7 +64,7 @@ BaseShapePresenter.prototype._addAreaInfo = function () {
 };
 
 BaseShapePresenter.prototype._addPerimeterInfo = function () {
-    var paragraph = document.createElement("p");
+    var paragraph = document.createElement("label");
     var text = document.createTextNode("Периметр: " + this._model.getPerimeter());
     paragraph.id = "perimeter";
     paragraph.style.display = "block";
@@ -78,5 +78,12 @@ BaseShapePresenter.prototype._updateShapeInfo = function () {
 
     var areaParagraph = document.getElementById("area");
     areaParagraph.innerHTML = "Площадь: " + this._model.getArea();
+};
+
+BaseShapePresenter.prototype.createFormGroupDiv = function () {
+    var element = document.createElement("div");
+    element.className = "form-group";
+    this._baseElement.appendChild(element);
+    return element;
 };
 

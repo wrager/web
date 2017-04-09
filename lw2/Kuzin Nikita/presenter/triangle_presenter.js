@@ -20,7 +20,8 @@ TrianglePresenter.prototype._addFirstPointFields = function () {
     firstX.type = "text";
     firstX.title = "Первая точка: X";
     firstX.setAttribute("placeholder", "Первая точка: X");
-    firstX.style.display = "block";
+    firstX.className = "form-control";
+
     var self = this;
 
     firstX.onchange = function () {
@@ -34,7 +35,7 @@ TrianglePresenter.prototype._addFirstPointFields = function () {
     firstY.type = "text";
     firstY.title = "Первая точка: Y";
     firstY.setAttribute("placeholder", "Первая точка: Y");
-    firstY.style.display = "inline";
+    firstY.className = "form-control";
 
     firstY.onchange = function () {
         var oldX = self._model.getFirstPoint().x;
@@ -43,8 +44,8 @@ TrianglePresenter.prototype._addFirstPointFields = function () {
         self._updateShapeInfo();
     };
 
-    this._baseElement.appendChild(firstX);
-    this._baseElement.appendChild(firstY);
+    this.createFormGroupDiv().appendChild(firstX);
+    this.createFormGroupDiv().appendChild(firstY);
 };
 
 TrianglePresenter.prototype._addSecondPointFields = function () {
@@ -52,7 +53,8 @@ TrianglePresenter.prototype._addSecondPointFields = function () {
     secondX.type = "text";
     secondX.title = "Вторая точка: X";
     secondX.setAttribute("placeholder", "Вторая точка: X");
-    secondX.style.display = "block";
+    secondX.className = "form-control";
+
     var self = this;
 
     secondX.onchange = function () {
@@ -66,7 +68,7 @@ TrianglePresenter.prototype._addSecondPointFields = function () {
     secondY.type = "text";
     secondY.title = "Вторая точка: Y";
     secondY.setAttribute("placeholder", "Вторая точка: Y");
-    secondY.style.display = "inline";
+    secondY.className = "form-control";
 
     secondY.onchange = function () {
         var oldX = self._model.getSecondPoint().x;
@@ -75,8 +77,8 @@ TrianglePresenter.prototype._addSecondPointFields = function () {
         self._updateShapeInfo();
     };
 
-    this._baseElement.appendChild(secondX);
-    this._baseElement.appendChild(secondY);
+    this.createFormGroupDiv().appendChild(secondX);
+    this.createFormGroupDiv().appendChild(secondY);
 };
 
 TrianglePresenter.prototype._addThirdPointFields = function () {
@@ -84,7 +86,8 @@ TrianglePresenter.prototype._addThirdPointFields = function () {
     thirdX.type = "text";
     thirdX.title = "Третья точка: X";
     thirdX.setAttribute("placeholder", "Третья точка: X");
-    thirdX.style.display = "block";
+    thirdX.className = "form-control";
+
     var self = this;
 
     thirdX.onchange = function () {
@@ -98,7 +101,7 @@ TrianglePresenter.prototype._addThirdPointFields = function () {
     thirdY.type = "text";
     thirdY.title = "Третья точка: Y";
     thirdY.setAttribute("placeholder", "Третья точка: Y");
-    thirdY.style.display = "inline";
+    thirdY.className = "form-control";
 
     thirdY.onchange = function () {
         var oldX = self._model.getThirdPoint().x;
@@ -107,7 +110,7 @@ TrianglePresenter.prototype._addThirdPointFields = function () {
         self._updateShapeInfo();
     };
 
-    this._baseElement.appendChild(thirdX);
-    this._baseElement.appendChild(thirdY);
+    this.createFormGroupDiv().appendChild(thirdX);
+    this.createFormGroupDiv().appendChild(thirdY);
 };
 

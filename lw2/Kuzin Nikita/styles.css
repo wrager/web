@@ -1,11 +1,14 @@
 #canvas {
   display: inline;
-  float: left;
+  height: 100%;
+  width: 100%;
   background-color: antiquewhite;
   margin-right: 50px;
 }
 
-.forms {
+.form-group {
+  height: 100%;
+  width: 100%;
 }
 
 input, select {

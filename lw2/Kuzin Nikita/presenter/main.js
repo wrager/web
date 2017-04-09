@@ -6,4 +6,5 @@
 window.tagManager = new WindowPresenter();
 
 var main = function () {
+
 }();

@@ -19,7 +19,8 @@ RectanglePresenter.prototype._addUpperLeftPointFields = function () {
     upperLeftX.type = "text";
     upperLeftX.title = "Верхний левый X";
     upperLeftX.setAttribute("placeholder", "Верхний левый X");
-    upperLeftX.style.display = "block";
+    upperLeftX.className = "form-control";
+
     var self = this;
 
     upperLeftX.onchange = function () {
@@ -33,7 +34,7 @@ RectanglePresenter.prototype._addUpperLeftPointFields = function () {
     upperLeftY.type = "text";
     upperLeftY.title = "Верхний левый Y";
     upperLeftY.setAttribute("placeholder", "Верхний левый Y");
-    upperLeftY.style.display = "inline";
+    upperLeftY.className = "form-control";
 
     upperLeftY.onchange = function () {
         var oldX = self._model.getUpperLeftPoint().x;
@@ -42,8 +43,8 @@ RectanglePresenter.prototype._addUpperLeftPointFields = function () {
         self._updateShapeInfo();
     };
 
-    this._baseElement.appendChild(upperLeftX);
-    this._baseElement.appendChild(upperLeftY);
+    this.createFormGroupDiv().appendChild(upperLeftX);
+    this.createFormGroupDiv().appendChild(upperLeftY);
 };
 
 RectanglePresenter.prototype._addBottomRightFields = function () {
@@ -51,7 +52,8 @@ RectanglePresenter.prototype._addBottomRightFields = function () {
     bottomRightX.type = "text";
     bottomRightX.title = "Нижний правый X";
     bottomRightX.setAttribute("placeholder", "Нижний правый X");
-    bottomRightX.style.display = "block";
+    bottomRightX.className = "form-control";
+
     var self = this;
 
     bottomRightX.onchange = function () {
@@ -65,7 +67,8 @@ RectanglePresenter.prototype._addBottomRightFields = function () {
     bottomRightY.type = "text";
     bottomRightY.title = "Нижний правый Y";
     bottomRightY.setAttribute("placeholder", "Нижний правый Y");
-    bottomRightY.style.display = "inline";
+    bottomRightY.className = "form-control";
+
 
     bottomRightY.onchange = function () {
         var oldX = self._model.getBottomRightPoint().x;
@@ -74,6 +77,6 @@ RectanglePresenter.prototype._addBottomRightFields = function () {
         self._updateShapeInfo();
     };
 
-    this._baseElement.appendChild(bottomRightX);
-    this._baseElement.appendChild(bottomRightY);
+    this.createFormGroupDiv().appendChild(bottomRightX);
+    this.createFormGroupDiv().appendChild(bottomRightY);
 };
