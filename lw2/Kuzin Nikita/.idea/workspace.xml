@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbd3224f-33ba-4014-8a6a-ac1b96929caf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main_html.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eslint.json" afterPath="$PROJECT_DIR$/eslint.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presenter/base_shape_presenter.js" afterPath="$PROJECT_DIR$/presenter/base_shape_presenter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presenter/circle_presenter.js" afterPath="$PROJECT_DIR$/presenter/circle_presenter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presenter/main.js" afterPath="$PROJECT_DIR$/presenter/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presenter/rectangle_presenter.js" afterPath="$PROJECT_DIR$/presenter/rectangle_presenter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presenter/triangle_presenter.js" afterPath="$PROJECT_DIR$/presenter/triangle_presenter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles.css" afterPath="$PROJECT_DIR$/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/circle.js" afterPath="$PROJECT_DIR$/model/circle.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,11 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rectangle_presenter.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rectangle_presenter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presenter/rectangle_presenter.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
               <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="circle.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/circle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -164,7 +166,6 @@
         <option value="$PROJECT_DIR$/view/circle_drawer.js" />
         <option value="$PROJECT_DIR$/presenter/triangle_presenter'.js" />
         <option value="$PROJECT_DIR$/view/triangle_drawer.js" />
-        <option value="$PROJECT_DIR$/model/circle.js" />
         <option value="$PROJECT_DIR$/model/rectangle.js" />
         <option value="$PROJECT_DIR$/model/triangle.js" />
         <option value="$PROJECT_DIR$/main_html.html" />
@@ -179,6 +180,7 @@
         <option value="$PROJECT_DIR$/presenter/triangle_presenter.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/presenter/rectangle_presenter.js" />
+        <option value="$PROJECT_DIR$/model/circle.js" />
       </list>
     </option>
   </component>
@@ -416,12 +418,20 @@
       <workItem from="1490344660599" duration="683000" />
       <workItem from="1490961752048" duration="605000" />
       <workItem from="1491545828269" duration="4750000" />
-      <workItem from="1491739467212" duration="4727000" />
+      <workItem from="1491739467212" duration="5981000" />
     </task>
+    <task id="LOCAL-00001" summary="frontend changed to bootstrap">
+      <created>1491744237944</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1491744237944</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80505000" />
+    <option name="totallyTimeSpent" value="81759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -450,6 +460,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="frontend changed to bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend changed to bootstrap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -609,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/circle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/rectangle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -743,6 +750,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/circle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
           <folding />
         </state>
       </provider>

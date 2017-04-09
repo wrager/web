@@ -3,5 +3,6 @@
         "eqeqeq": "off",
         "curly": "warn",
         "quotes": ["warn", "double"]
-    }
+    },
+	"extends": "eslint:recommended"
 }

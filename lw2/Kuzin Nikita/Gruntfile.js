@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                 configFile: 'eslint.json',
                 reset: true
             },
-		target: ['model/**/*.js', 'view/**/*.js', 'presenter/**/*.js']
+		target: ['.build/scripts.js']
 	},
 	cachebreaker: {
 		dev: {
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-cache-breaker');
   grunt.loadNpmTasks('grunt-contrib-connect');
   
-  grunt.registerTask('main', ['eslint', 'concat', 'cachebreaker']);
+  grunt.registerTask('main', ['concat', 'eslint', 'cachebreaker']);
   grunt.registerTask('default', ['main', 'connect', 'watch']);
 
 };

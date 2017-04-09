@@ -12,7 +12,6 @@ Circle.prototype = Object.create(Shape.prototype) ;
 Circle.prototype.setCenter = function (x, y) {
     this._mPos.x = x;
     this._mPos.y = y;
-	this._mPos = this._mPos;
 };
 
 Circle.prototype.getCenter = function () {
