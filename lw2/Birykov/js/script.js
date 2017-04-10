@@ -1,5 +1,6 @@
-var canvas = getElement("canvas");
-var context = canvas.getContext("2d");
+var circle;
+var rectangle;
+var triangle;
 
 function onShapeSelect() {
 
@@ -8,9 +9,7 @@ function onShapeSelect() {
     hide("triangle-optional-form");
     show("apply-btn");
 
-    var selector = getElement("shape-selector");
-    var selectedValue = selector.options[selector.selectedIndex].value;
-
+    var selectedValue = getSelectorValue();
     if (selectedValue == "Circle") {
         show("circle-optional-form");
     } else if (selectedValue == "Rectangle") {
@@ -21,19 +20,20 @@ function onShapeSelect() {
 }
 
 function onApplyClick() {
-    var selector = getElement("shape-selector");
-    var selectedValue = selector.options[selector.selectedIndex].value;
+    var canvas = getElement("canvas");
+    var context = canvas.getContext("2d");
+    var selectedValue = getSelectorValue();
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     if (selectedValue == "Circle") {
-        var circle = new Circle();
+        circle = new Circle();
         circle.setFillColor(getElementValue("input-fill-color"));
         circle.setBorderColor(getElementValue("input-border-color"));
         circle.setRadius(getElementValue("circle-r"));
         circle.setX(getElementValue("circle-x"));
         circle.setY(getElementValue("circle-y"));
     } else if (selectedValue == "Rectangle") {
-        var rectangle = new Rectangle();
+        rectangle = new Rectangle();
         rectangle.setFillColor(getElementValue("input-fill-color"));
         rectangle.setBorderColor(getElementValue("input-border-color"));
         rectangle.setX1(getElementValue("rectangle-x1"));
@@ -41,7 +41,7 @@ function onApplyClick() {
         rectangle.setX2(getElementValue("rectangle-x2"));
         rectangle.setY2(getElementValue("rectangle-y2"));
     } else if (selectedValue == "Triangle") {
-        var triangle = new Triangle();
+        triangle = new Triangle();
         triangle.setFillColor(getElementValue("input-fill-color"));
         triangle.setBorderColor(getElementValue("input-border-color"));
         triangle.setP1X(getElementValue("triangle-x1"));
@@ -52,9 +52,19 @@ function onApplyClick() {
         triangle.setP3Y(getElementValue("triangle-y3"));
     }
 
-    circle && circle.draw();
-    rectangle && rectangle.draw();
-    triangle && triangle.draw();
+    draw([circle, rectangle, triangle], context);
+}
+
+function exist(item) {
+    return typeof (item) != 'undefined' && item != null;
+}
+
+function draw(shapes, context) {
+    shapes.forEach(function(element) {
+        if (exist(element)) {
+            element.draw(context);
+        }
+    });
 }
 
 function getElement(id) {
@@ -73,4 +83,9 @@ function hide(id) {
 function show (id) {
     var element =  getElement(id);
     element.style.display = "block"
+}
+
+function getSelectorValue() {
+    var selector = getElement("shape-selector");
+    return selector.options[selector.selectedIndex].value;
 }
