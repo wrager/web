@@ -60,9 +60,7 @@ Triangle.prototype.getP3Y = function () {
     return this.p3Y
 }
 
-Triangle.prototype.draw = function () {
-    var canvas = document.getElementById("canvas");
-    var context = canvas.getContext("2d");
+Triangle.prototype.draw = function (context) {
     context.beginPath();
     context.moveTo(this.getP1X(), this.getP1Y());
     context.lineTo(this.getP2X(), this.getP2Y());
@@ -75,9 +73,6 @@ Triangle.prototype.draw = function () {
 }
 
 Triangle.prototype.calculateArea = function () {
-    //var line1 = this.getLineLength(this.getP1X(), this.getP1Y(), this.getP2X(), this.getP2Y());
-    //var line2 = this.getLineLength(this.getP1X(), this.getP1Y(), this.getP3X(), this.getP3Y());
-    //var line3 = this.getLineLength(this.getP2X(), this.getP2Y(), this.getP3X(), this.getP3Y());
     var p = this.calculatePerimeter() / 2;
     var lines = this.getLines();
 
@@ -85,12 +80,9 @@ Triangle.prototype.calculateArea = function () {
 }
 
 Triangle.prototype.calculatePerimeter = function () {
-    //var line1 = this.getLineLength(this.getP1X(), this.getP1Y(), this.getP2X(), this.getP2Y());
-    //var line2 = this.getLineLength(this.getP1X(), this.getP1Y(), this.getP3X(), this.getP3Y());
-    //var line3 = this.getLineLength(this.getP2X(), this.getP2Y(), this.getP3X(), this.getP3Y());
     var lines = this.getLines();
 
-    return lines[0] + lines[1] + line[2];
+    return lines[0] + lines[1] + lines[2];
 }
 
 Triangle.prototype.getLineLength = function (x1, y1, x2, y2) {
