@@ -1,15 +1,15 @@
 function Rectangle(params) {
     Shape.apply(this, arguments);
     if (params == undefined) {
-        this.x1 = 0;
-        this.x2 = 0;
-        this.y1 = 0;
-        this.y2 = 0;
+        this.X1 = 0;
+        this.X2 = 0;
+        this.Y1 = 0;
+        this.Y2 = 0;
     } else {
-        this.x1 = params.x1;
-        this.x2 = params.x2;
-        this.y1 = params.y1;
-        this.y2 = params.y2;
+        this.X1 = params.X1;
+        this.X2 = params.X2;
+        this.Y1 = params.Y1;
+        this.Y2 = params.Y2;
         this.fillColor = params.fillColor;
         this.borderColor = params.borderColor;
     }
@@ -21,35 +21,35 @@ Rectangle.prototype.constructor = Rectangle;
 Rectangle.prototype = {
 
     setX1: function (coord) {
-        this.x1 = coord;
+        this.X1 = coord;
     },
 
     setX2: function (coord) {
-        this.x2 = coord;
+        this.X2 = coord;
     },
 
     setY1: function (coord) {
-        this.y1 = coord;
+        this.Y1 = coord;
     },
 
     setY2: function (coord) {
-        this.y2 = coord;
+        this.Y2 = coord;
     },
 
     getCoordX1: function () {
-        return this.x1;
+        return this.X1;
     },
 
     getX2: function () {
-        return this.x2;
+        return this.X2;
     },
 
     getY1: function () {
-        return this.y1;
+        return this.Y1;
     },
 
     getY2: function () {
-        return this.y2;
+        return this.Y2;
     },
 
     getHeight: function () {
