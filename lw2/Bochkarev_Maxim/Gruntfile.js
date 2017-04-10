@@ -5,7 +5,7 @@ module.exports = function(grunt){
 		eslint: {
 			src: ['build/scripts.js'],
 			options: {
-				configFile: "eslint_config.json",
+				configFile: "eslint.json",
 			}		
 		},
 		concat: {

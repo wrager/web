@@ -1,16 +1,21 @@
 var shape = undefined;
 
-function onShapeParametersChoice(shapeType) {
-    document.getElementById("draw_figure_button").disabled = false;
-    if (shapeType == 'Rectangle') {
+getElement("draw_figure_button").onclick = onDrawButtonClick;
+getElement("shape_select").onchange = onShapeParametersChoice;
+
+function onShapeParametersChoice() {
+    var shapeType = getShapeTypeValue();
+    getElement("draw_figure_button").disabled = false;
+
+    if (shapeType == "Rectangle") {
         showElement("rectangle_options");
         hideElement("triangle_options");
         hideElement("circle_options");
-    } else if (shapeType == 'Triangle') {
+    } else if (shapeType == "Triangle") {
         hideElement("rectangle_options");
         showElement("triangle_options");
         hideElement("circle_options");
-    } else if (shapeType == 'Circle') {
+    } else if (shapeType == "Circle") {
         hideElement("rectangle_options");
         hideElement("triangle_options");
         showElement("circle_options");
@@ -18,25 +23,24 @@ function onShapeParametersChoice(shapeType) {
         hideElement("rectangle_options");
         hideElement("triangle_options");
         hideElement("circle_options");
-        document.getElementById("draw_figure_button").disabled = true;
+        getElement("draw_figure_button").disabled = true;
     }
 }
-    
-function onDrawButtonClick() {
-    var sel = document.getElementById("shape_choice");
-    var shapeType = sel.options[sel.selectedIndex].text;
 
-    var canvas = document.getElementById("shape_canvas");
+function onDrawButtonClick() {
+    var shapeType = getShapeTypeValue();
+
+    var canvas = getElement("shape_canvas");
     var context = canvas.getContext("2d");
 
     clearCanvas();
-
-    if (shapeType == 'Rectangle') {
-        shape = new Rectangle(getDrawParameters(shapeType));
-    } else if (shapeType == 'Triangle') {
-        shape = new Triangle(getDrawParameters(shapeType));
-    } else if (shapeType == 'Circle') {
-        shape = new Circle(getDrawParameters(shapeType));
+    var drawParameters = getDrawParameters(shapeType);
+    if (shapeType == "Rectangle") {
+        shape = new Rectangle(drawParameters);
+    } else if (shapeType == "Triangle") {
+        shape = new Triangle(drawParameters);
+    } else if (shapeType == "Circle") {
+        shape = new Circle(drawParameters);
     }
     shape.draw(context);
     printCalcResultOnCanvas(context);
@@ -44,19 +48,19 @@ function onDrawButtonClick() {
 
 function getDrawParameters(shapeType) {
     var params = {};
-    if (shapeType == 'Rectangle') {
+    if (shapeType == "Rectangle") {
         params.X1 = getElementNumberValue("rectX1");
         params.X2 = getElementNumberValue("rectX2");
         params.Y1 = getElementNumberValue("rectY1");
         params.Y2 = getElementNumberValue("rectY2");
-    } else if (shapeType == 'Triangle') {
+    } else if (shapeType == "Triangle") {
         params.X1 = getElementNumberValue("triangleX1");
         params.X2 = getElementNumberValue("triangleX2");
         params.X3 = getElementNumberValue("triangleX3");
         params.Y1 = getElementNumberValue("triangleY1");
         params.Y2 = getElementNumberValue("triangleY2");
         params.Y3 = getElementNumberValue("triangleY3");
-    } else if (shapeType == 'Circle') {
+    } else if (shapeType == "Circle") {
         params.centerX = getElementNumberValue("circleCenterX");
         params.centerY = getElementNumberValue("circleCenterY");
         params.radius = getElementNumberValue("circleRadius");
@@ -81,11 +85,14 @@ function getElementNumberValue(elem) {
 }
 
 function getElementColorValue(elem) {
-    return (isColor(getElementValue(elem)) ? getElementValue(elem) : '#000000');
+    return (isColor(getElementValue(elem)) ? getElementValue(elem) : "#000000");
+}
+function getElement(id) {
+    return document.getElementById(id);
 }
 
 function getElementValue(id) {
-    return document.getElementById(id).value;
+    return getElement(id).value;
 }
 
 function isNumber(value) {
@@ -97,15 +104,19 @@ function isColor(value) {
 }
 
 function showElement(elemId) {
-    document.getElementById(elemId).style.display = "block";
+    getElement(elemId).style.display = "block";
 }
 
 function hideElement(elemId) {
-    document.getElementById(elemId).style.display = "none";
+    getElement(elemId).style.display = "none";
 }
 
 function clearCanvas() {
-    var canvas = document.getElementById('shape_canvas');
-    var ctx = canvas.getContext('2d');
+    var canvas = getElement("shape_canvas");
+    var ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function getShapeTypeValue() {
+    return getElement("shape_select").options[getElement("shape_select").selectedIndex].text;
 }
