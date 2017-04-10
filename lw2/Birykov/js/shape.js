@@ -20,7 +20,7 @@ Shape.prototype.getBorderColor = function () {
     return this.borderColor;
 }
 
-Shape.prototype.draw = function (context) {
+Shape.prototype.draw = function () {
 
 }
 
