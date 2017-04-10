@@ -1,0 +1,29 @@
+
+.depending-content {
+    display: none;
+}
+
+.block {
+    padding: 5px;
+    width: 180px;
+    height: 17px;
+}
+
+.block label {
+    float: left;
+    text-align: right;
+}
+
+.block input {
+    float: right;
+    width: 79px;
+}
+
+.block select {
+    float: right;
+    
+}
+
+.canvas-class {
+    display: none;
+}
