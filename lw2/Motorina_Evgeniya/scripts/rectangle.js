@@ -40,3 +40,17 @@ Rectangle.prototype.getY2 = function () {
 Rectangle.prototype.setY2 = function (value) {
     this._y2 = value;
 }
+
+Rectangle.prototype.draw = function () {
+
+}
+
+Rectangle.prototype.calculateArea = function () {
+    var area = Math.abs(this._x1 - this._x2) * Math.abs(this._y1 - this._y2);
+    return area;
+}
+
+Rectangle.prototype.calculatePerimetr = function () {
+    var perimetr = (Math.abs(this._x1 - this._x2) + Math.abs(this._y1 - this._y2)) * 2;
+    return perimetr;
+}

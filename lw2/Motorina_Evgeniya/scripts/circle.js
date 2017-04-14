@@ -32,3 +32,14 @@ Circle.prototype.setY = function (value) {
     this._y = value;
 }
 
+Circle.prototype.draw = function () {
+
+}
+
+Circle.prototype.calculateArea = function () {
+    var area = Math.PI * Math.pow(r, 2);
+}
+
+Circle.prototype.calculatePerimetr = function () {
+    var perimetr = 2 * Math.PI * r;
+}

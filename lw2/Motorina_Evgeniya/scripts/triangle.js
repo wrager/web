@@ -58,3 +58,23 @@ Triangle.prototype.getY3 = function () {
 Triangle.prototype.setY3 = function (value) {
     this._y3 = value;
 }
+
+Triangle.prototype.draw = function () {
+
+}
+
+Triangle.prototype.calculateArea = function () {
+    var a = Math.sqrt(Math.pow(this._x2 - this._x1, 2) + Math.pow(this._y2 - this._y1, 2));
+    var b = Math.sqrt(Math.pow(this._x3 - this._x2, 2) + Math.pow(this._y3 - this._y2, 2));
+    var c = Math.sqrt(Math.pow(this._x1 - this._x3, 2) + Math.pow(this._y1 - this._y3, 2));
+    var p = (a + b + c) / 2;
+    var area = Math.sqrt(p * (p-a) * (p-b) * (p-c));
+    return area;
+}
+
+Triangle.prototype.calculatePerimetr = function () {
+    var a = Math.sqrt(Math.pow(this._x2 - this._x1, 2) + Math.pow(this._y2 - this._y1, 2));
+    var b = Math.sqrt(Math.pow(this._x3 - this._x2, 2) + Math.pow(this._y3 - this._y2, 2));
+    var c = Math.sqrt(Math.pow(this._x1 - this._x3, 2) + Math.pow(this._y1 - this._y3, 2));
+    var perimetr = a + b + c;
+}
