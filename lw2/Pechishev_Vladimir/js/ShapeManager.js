@@ -134,10 +134,10 @@ ShapeManager.prototype = {
 
 	_outputData: function (firstData, secondData) {
 		const perimeterContainer = document.getElementById("perimeter");
-		perimeterContainer.textContent = firstData;
+		perimeterContainer.textContent = "Perimeter: " + firstData;
 
 		const areaContainer = document.getElementById("area");
-		areaContainer.textContent = secondData;
+		areaContainer.textContent = "Area: " + secondData;
 	},
 
 	_initSettingForRectangle: function () {
