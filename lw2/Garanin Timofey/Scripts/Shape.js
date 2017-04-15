@@ -1,7 +1,6 @@
 function Shape() {
     this._fillColor = "#000000";
     this._borderColor = "#000000";
-    this._ctx;
 };
 
 Shape.prototype.SetFillColor = function(value) {
