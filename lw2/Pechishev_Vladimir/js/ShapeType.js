@@ -1,4 +1,3 @@
-
 var ShapeType = {
 	RECTANGLE: "Rectangle",
 	TRIANGLE: "Triangle",

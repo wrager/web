@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		// вся наша конфигурация будет здесь
 		eslint: {
-			src: ['/.build/script.js'],
+			src: ['.build/script.js'],
 			options: {
 				configFile: "eslint.json"
 			}
@@ -37,6 +37,60 @@ module.exports = function(grunt) {
 					separator: ';'
 				}
 			}
+		},
+		connect: {
+			server: {
+				options: {
+					hostname: 'localhost',
+					port: 8080,
+					base: '.build/',
+					livereload: 5000,
+					open: {
+						target: 'http://localhost:8080'
+					}
+				}
+			}
+		},
+		watch: {
+			js: {
+				files: [
+					'js/ShapeType.js',
+					'js/Position.js',
+					'js/Shape.js',
+					'js/Rectangle.js',
+					'js/Circle.js',
+					'js/Triangle.js',
+					'js/ShapeManager.js',
+					'js/main.js'],
+				tasks: ['eslint', 'concat:js']
+			},
+			html: {
+				files: ['index.html'],
+				tasks: ['concat:html']
+			},
+			css: {
+				files: ['css/style.css'],
+				tasks: ['concat:css']
+			},
+			options: {
+				livereload: 5000
+			}
+		},
+		cachebreaker: {
+			dev: {
+				options: {
+					match: [
+						{
+							'script.js': '.build/script.js',
+							'styles.css': '.build/styles.css'
+						}
+					],
+					replacement: 'md5'
+				},
+				files: {
+					src: ['build/index.html']
+				}
+			}
 		}
 	});
 
@@ -51,6 +105,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-cache-breaker');
 
-	grunt.registerTask('default', ['concat', 'eslint']);
+	grunt.registerTask('default', ['concat', 'eslint', 'connect', 'watch']);
 
 };
