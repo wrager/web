@@ -77,15 +77,15 @@ Painter.prototype.drawShape = function(shape, index) {
 var FONT_SIZE = 16;
 var INFO_TEXT_COLOR = "#000000";
 
-getElement = function(id) {
+function getElement(id) {
     return document.getElementById(id);
 }
 
-getElementValue = function(id) {
+ function getElementValue(id) {
     return getElement(id).value;
 }
 
-showElement = function(id, show = true) {
+ function showElement(id, show = true) {
     var element = getElement(id);
     if (show) {
         element.style.display = "block";
@@ -94,7 +94,7 @@ showElement = function(id, show = true) {
     }
 }
 
-getComboValue = function() {
+function getComboValue() {
     var combobox = getElement("shape-combobox");
     return combobox.options[combobox.selectedIndex].value;
 }
