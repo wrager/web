@@ -50,7 +50,9 @@ Rectangle.prototype.getHeight = function () {
     return Math.abs(this.getY1() - this.getY2());
 }
 
-Rectangle.prototype.draw = function (context) {
+Rectangle.prototype.draw = function () {
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
     var tLeftX = Math.min(this.getX1(), this.getX2());
     var tLeftY = Math.min(this.getY1(), this.getY2());
     context.beginPath();

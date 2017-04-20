@@ -33,7 +33,9 @@ Circle.prototype.getY = function () {
     return this.y;
 }
 
-Circle.prototype.draw = function (context) {
+Circle.prototype.draw = function () {
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
     context.beginPath();
     context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
     context.fillStyle = this.getFillColor();
