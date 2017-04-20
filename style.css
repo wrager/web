@@ -1,177 +1,188 @@
-		div
-        {
-        	text-align: center;
-        	
-        	padding-top: 23px;
-        }
-        div.column
-        {
-        	padding-top: 0px;
-        	display: inline-block;
-        	padding-left: 550px;
+div
+{
+	text-align: center;
+	padding-top: 23px;
+}
 
-        }
-   		h1
-   		{
-   			font-size: 24px;
-   			font-family: "Segoe UI";
-   			text-align: center;
-   			padding-top: 5px;
-   			font-weight: 300;
-   			letter-spacing: -0.5px;
-   			padding-bottom: 2px;
-   		}
-   		h2
-   		{
-   			padding-top: 15px;
-   			width: 306px;
-   			margin: 0 auto;
-   			border: 1px solid #d8dee2;
-   			border-top: 1px solid #d8dee2;
-   			border-radius: 5px;
-   			background-color: #fff;
-   		}
-   		h3
-   		{
-   			width: 262px;
-   			margin: 0 auto;
-   			margin-top: 16px;
-   			border: 1px solid #d8dee2;
-   			border-top: 1px solid #d8dee2;
-   			border-radius: 5px;
-   			text-align: center;
-  			font-family: "Segoe UI";
-  			padding: 11px 22px;
-  			padding-bottom: 15px;
-   		}	
-   		label
-   		{
-   			font-family: "Segoe UI";
-   		}
-   		label.lab
-   		{
-   			text-align: left;
-   			font-weight: 600;
-   			padding: 20px;
-   			font-size: 14px;   			
-   			padding-top: 5px;
-   		}
-   		label.lab2
-   		{
-   			font-color: #24292e;
-   			padding-left: 1px;
-   			font-weight: 400;
-   			font-size: 14px;	
-   			cursor: text;
-   		}
-   		a
-   		{
-   			text-decoration: none;
-   		}
-   		a:hover
-   		{
-   			text-decoration:  underline;
- 		}	
-   		a.hyper
-   		{
-   			color:#0366d6;
-			font-family: "Segoe UI";
-   			font-weight: 600;
-   			border: 1px solid transparent;
-   			font-size: 12px;
-   			text-decoration: none;
-   			float:right;
-   			padding-top: 6px;
-   			padding-right: 20px;
-   		}
+div.column
+{
+	padding-top: 0px;
+	display: inline-block;
+	padding-left: 550px;
+}
+
+h1
+{
+	font-size: 24px;
+	font-family: "Segoe UI";
+	text-align: center;
+	padding-top: 5px;
+	font-weight: 300;
+	letter-spacing: -0.5px;
+	padding-bottom: 2px;
+}
+
+h2
+{
+	padding-top: 15px;
+	width: 306px;
+	margin: 0 auto;
+	border: 1px solid #d8dee2;
+	border-top: 1px solid #d8dee2;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+h3
+{
+	width: 262px;
+	margin: 0 auto;
+	margin-top: 16px;
+	border: 1px solid #d8dee2;
+	border-top: 1px solid #d8dee2;
+	border-radius: 5px;
+	text-align: center;
+	font-family: "Segoe UI";
+	padding: 11px 22px;
+	padding-bottom: 15px;
+}	
+
+label
+{
+	font-family: "Segoe UI";
+}
+
+label.lab
+{
+	text-align: left;
+	font-weight: 600;
+	padding: 20px;
+	font-size: 14px;   			
+	padding-top: 5px;
+}
+
+label.lab2
+{
+	font-color: #24292e;
+	padding-left: 1px;
+	font-weight: 400;
+	font-size: 14px;	
+	cursor: text;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration:  underline;
+}	
+
+a.hyper
+{
+	color:#0366d6;
+	font-family: "Segoe UI";
+	font-weight: 600;
+	border: 1px solid transparent;
+	font-size: 12px;
+	text-decoration: none;
+	float:right;
+	padding-top: 6px;
+	padding-right: 20px;
+}
    	
-   		a.under	
-   		{
-   			font-family: "Segoe UI";
-   			text-align: center;
-   			margin-bottom: : 200px;
-   			color:#9b9b9b;
-   			font-weight: 400;
-   			border -top: 1px solid #eaecef;
-   			font-size: 12px;
-   			padding-left: 9px;
-   			letter-spacing: 0.03px;
+a.under	
+{
+	font-family: "Segoe UI";
+	text-align: center;
+	margin-bottom: : 200px;
+	color:#9b9b9b;
+	font-weight: 400;
+	border-top: 1px solid #eaecef;
+	font-size: 12px;
+	padding-left: 9px;
+	letter-spacing: 0.03px;
+}
 
-	    }
-   		a.hyper2
-   		{
-   			color:#0366d6;
-   			font-weight: 400;
-   			border: 1px solid transparent;
-   			font-size: 14px;
-   			padding-left: 3px;
-   		}
-   		form
-   		{
-   			padding-top: 6px;
-   			text-align: center;
+a.hyper2
+{
+	color:#0366d6;
+	font-weight: 400;
+	border: 1px solid transparent;
+	font-size: 14px;
+	padding-left: 3px;
+}
 
-   		}
-   		form.first
-   		{
-   			padding-bottom: 10px;
-   		}
+form
+{
+	padding-top: 6px;
+	text-align: center;
+}
 
-   		input.clickBtn:hover
-   		{
-   			background-color: #269f42;
-        	background-image: linear-gradient(-180deg, #2fcb53 0%, #269f42 90%);
-        	border: 1px solid #0B6121;
-        	border-radius: 3px;
-    		border-color: rgba(27,31,35,0.5);
+form.first
+{
+	padding-bottom: 10px;
+}
 
-   		}
-   		input.text
-   		{
-   			border: 1px solid #ddd;	
-   			border-radius: 3px;
-   			box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
-   	   	 	width:  264px;
-		    height: 30px;
-        	text-indent: 0.45em;
+input.clickBtn:hover
+{
+	background-color: #269f42;
+	background-image: linear-gradient(-180deg, #2fcb53 0%, #269f42 90%);
+	border: 1px solid #0B6121;
+	border-radius: 3px;
+	border-color: rgba(27,31,35,0.5);
+}
 
-   		}
-      input.text:focus
-      {
-        outline-style: none;
-        border: 1px solid #39c;  
-        border-radius: 3px;
-        box-shadow: 0 0 0 3px #A9D0F5; 
-        font-size: 17px;
-      }
+input.text
+{
+	border: 1px solid #ddd;	
+	border-radius: 3px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+	width:  264px;
+	height: 30px;
+	text-indent: 0.45em;
+}
+
+input.text:focus
+{
+	outline-style: none;
+	border: 1px solid #39c;  
+	border-radius: 3px;
+	box-shadow: 0 0 0 3px #A9D0F5; 
+	font-size: 17px;
+}
 		
-   		input.clickBtn
-   		{
-   			width: 266px;
-   			height: 34px;
-   			border: 1px solid #5aad35;
-   			border-radius: 3px;
-   			color: #fff;
-   			font-weight: 600;
-   			font-family: "Segoe UI";
-   			font-size: 14px;
-   			padding-bottom: 2px;
-	        background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
-   			font-style: #fff;
-   			cursor: pointer;
-   		}
-   		p.button
-   		{
-   			margin-top: 20px;
-   			margin-bottom: 20px;
-   			padding-left: 20px;	
-   		}
+input.clickBtn
+{
+	width: 266px;
+	height: 34px;
+	border: 1px solid #5aad35;
+	border-radius: 3px;
+	color: #fff;
+	font-weight: 600;
+	font-family: "Segoe UI";
+	font-size: 14px;
+	padding-bottom: 2px;
+	background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+	font-style: #fff;
+	cursor: pointer;
+}
 
-   		p.space
-   		{
-   			margin-top: 80px;
-   		}
-   		img
-   		{
-   			cursor: pointer;
-   		}	
+p.button
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 20px;	
+}
+
+p.space
+{
+	margin-top: 80px;
+}
+
+img
+{
+	cursor: pointer;
+}
