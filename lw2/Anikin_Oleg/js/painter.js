@@ -1,9 +1,9 @@
 function Painter() {
     this._canvas = new Canvas();
 
-    this._cssCavas = null;
-    this._drawContext =  null;
-    this._selectedShapeType = null
+    this._cssCavas = undefined;
+    this._drawContext =  undefined;
+    this._selectedShapeType = undefined
 }
 
 Painter.prototype.onShapeSelect = function() {
@@ -23,7 +23,7 @@ Painter.prototype.onShapeSelect = function() {
 }
 
 Painter.prototype.onDrawButtonClick = function() {
-    if(this._cssCavas == null) {
+    if(this._cssCavas == undefined) {
         this._cssCavas = getElement("canvas");
         this._drawContext = this._cssCavas.getContext("2d");
     }

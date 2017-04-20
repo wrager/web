@@ -4,13 +4,13 @@ setShapeColor = function(shape, fillColor, borderColor) {
 }
 
 function Canvas() {
-    this._circle = null;
-    this._rectangle = null;
-    this._triangle = null;
+    this._circle = undefined;
+    this._rectangle = undefined;
+    this._triangle = undefined;
 }
 
 Canvas.prototype.updateCircle = function(center, radius, fillColor, borderColor) {
-    if(this._circle == null) {
+    if(this._circle == undefined) {
         this._circle = new Circle();
     }
 
@@ -21,7 +21,7 @@ Canvas.prototype.updateCircle = function(center, radius, fillColor, borderColor)
 }
 
 Canvas.prototype.updateRectangle = function(leftTop, rightButtom, fillColor, borderColor) {
-    if(this._rectangle == null) {
+    if(this._rectangle == undefined) {
         this._rectangle = new Rectangle();
     }
 
@@ -32,7 +32,7 @@ Canvas.prototype.updateRectangle = function(leftTop, rightButtom, fillColor, bor
 }
 
 Canvas.prototype.updateTriangle = function(first, second, third, fillColor, borderColor) {
-    if(this._triangle == null) {
+    if(this._triangle == undefined) {
         this._triangle = new Triangle();
     }
 
