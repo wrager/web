@@ -146,29 +146,29 @@ ShapeManager.prototype = {
 		this._createInputField(
 			"x1",
 			function(value) {
-			this._currentShape.setX1(value);
-			}.bind(this),
+				this._currentShape.setX1(value);
+			},
 			this._currentShape.getX1()
 		);
 		this._createInputField(
 			"y1",
 			function(value) {
 				this._currentShape.setY1(value);
-			}.bind(this),
+			},
 			this._currentShape.getY1()
 		);
 		this._createInputField(
 			"x2",
 			function(value) {
 				this._currentShape.setX2(value);
-			}.bind(this),
+			},
 			this._currentShape.getX2()
 		);
 		this._createInputField(
 			"y2",
 			function(value) {
 				this._currentShape.setY2(value);
-			}.bind(this),
+			},
 			this._currentShape.getY2()
 		);
 	},
@@ -178,38 +178,38 @@ ShapeManager.prototype = {
 			"x1",
 			function(value) {
 				this._currentShape.setX1(value);
-			}.bind(this),
+			},
 			this._currentShape.getX1()
 		);
 		this._createInputField(
 			"y1",
 			function(value) {
 				this._currentShape.setY1(value);
-			}.bind(this),
+			},
 			this._currentShape.getY1()
 		);
 		this._createInputField("x2",
 			function(value) {
 				this._currentShape.setX2(value);
-			}.bind(this),
+			},
 			this._currentShape.getX2()
 		);
 		this._createInputField("y2",
 			function(value) {
 				this._currentShape.setY2(value);
-			}.bind(this),
+			},
 			this._currentShape.getY2()
 		);
 		this._createInputField("x3",
 			function(value) {
 				this._currentShape.setX3(value);
-			}.bind(this),
+			},
 			this._currentShape.getX3()
 		);
 		this._createInputField("y3",
 			function(value) {
 				this._currentShape.setY3(value);
-			}.bind(this),
+			},
 			this._currentShape.getY3()
 		);
 	},
@@ -219,21 +219,21 @@ ShapeManager.prototype = {
             "centerX",
             function(value) {
                 this._currentShape.setCenterX(value);
-            }.bind(this),
+            },
             this._currentShape.getCenterX()
         );
         this._createInputField(
             "centerY",
             function(value) {
                 this._currentShape.setCenterY(value);
-            }.bind(this),
+            },
             this._currentShape.getCenterY()
         );
 		this._createInputField(
 			"radius",
 			function(value) {
 				this._currentShape.setRadius(value);
-			}.bind(this),
+			},
 			this._currentShape.getRadius()
 		);
 	},
@@ -242,6 +242,11 @@ ShapeManager.prototype = {
 		const input = document.createElement("input");
         input.setAttribute("class", "input");
 		input.setAttribute("placeholder", text);
+
+        input.onchange = function () {
+        	this.draw();
+        };
+
 		if (value > 0)
 		{
 			input.value = value;

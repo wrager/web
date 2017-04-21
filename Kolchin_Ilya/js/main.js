@@ -1,4 +1,3 @@
-
 function Start() {
 	const shapeManager = new ShapeManager();
 
@@ -18,4 +17,5 @@ function Start() {
 	drawShapeButton.onclick = function () {
 		shapeManager.draw();
 	};
+
 };
