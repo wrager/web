@@ -1,0 +1,168 @@
+body {
+    font: 13px Tahoma, sans-serif;
+    margin: auto;
+    overflow: hidden;
+    background-image: url(../images/bg.jpg);
+}
+
+.left-text {
+    line-height: 40px;
+    margin-left: 3px;
+    float:left;
+}
+
+.right-text {
+    float:right;
+    line-height: 40px;
+    margin-right: 30px;
+}
+
+body, td, a, p, .h {
+    font-family: arial,sans-serif;
+}
+
+a  {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+        text-decoration: underline;
+}
+
+.header {
+    width: auto;
+    height: 43px;
+}
+
+.header_panel_left {
+    display: inline-block;
+    line-height: 45px;
+    left: 20px;
+    position: relative;
+    top: 14px;
+}
+
+.header_panel_left a {
+    text-align: left;
+    font-size: 13px;
+    position: relative;
+    top: -15px;
+    margin-left: 32px;
+}
+
+.header_panel_right {
+    display: inline-block;
+    line-height: 45px;
+    left: 950px;
+    position: relative;
+    top: 14px;
+}
+
+.header_panel_right a {
+    text-align: right;
+    font-size: 13px;
+    position: relative;
+    top: -15px;
+    margin-right: 16px;
+}
+
+.active_menu {
+    margin-left: 122px;
+    margin-top: 0px;
+}
+
+.active_menu img { 
+    opacity: 0.55; 
+}
+
+.active_menu img:hover {
+    opacity: 1; 
+}
+
+.avatar img {
+	background-color: #555;
+    background-size: 193px 179px;
+    background-position: -5px -116px;
+    border-radius: 16px;
+    display: inline-block;
+	height: 32px;
+    width: 32px;
+    transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+    transform-origin: 0px 0px;
+    border-radius: 50%;
+    margin-left: 210px;
+    margin-top: -26px;
+	cursor: pointer;
+}
+
+.main {
+    width: auto;
+    height: 550px;
+	margin-left: 30px;
+}
+
+.hp_ctrls {
+    width: auto;
+}
+
+.header-logo img {
+    margin-top: 6%;
+	margin-left: -70%;
+    width: 441;
+    height: 141;
+}
+
+.search_box input {
+    font: 16px arial,sans-serif;
+    height: 44px;
+    width: 491px; 
+    border: none;  
+    padding: 0px;    
+    text-indent: 16px;
+    margin-top: 152px;
+    margin-left: 150px;
+    position: relative;
+}
+
+
+.search_box img {
+    position: relative;
+    top: 16px;
+    left: 125px;
+}
+
+.seachbox {
+    top: -44px;
+    left: 768px;
+    height: 24px;
+    width: 24px;
+	background-color: #0c8484;
+    position: relative;
+    padding: 10px;
+}
+
+img {
+    cursor: pointer;
+}
+
+
+footer {
+    background: #333;
+    height: 40px;
+    width:100%;
+    min-width: 980px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    font-size: 10pt;
+}
+
+footer a {
+    font-size: small;
+    display: inline-block;
+    color: #666666;
+    padding-left: 10px;
+	
+}
+
