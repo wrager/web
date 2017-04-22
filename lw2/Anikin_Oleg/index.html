@@ -2,106 +2,124 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="styles/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-3">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="shape-combobox" class="col-sm-4 control-label">Type</label>
+                    <div class="col-sm-7">
+                        <select class="form-control btn-danger" id="shape-combobox" onchange="painter.onShapeSelect()">
+                            <option selected disabled hidden>Select shape</option>
+                            <option>Rectangle</option>
+                            <option>Circle</option>
+                            <option>Triangle</option>
+                        </select>
+                    </div>
+
+                    <label for="fill-color" class="col-sm-4 control-label">Fill color</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="fill-color" value="#00000">
+                    </div>
+
+                    <label for="border-color" class="col-sm-4 control-label">Border color</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="border-color" value="#00000">
+                    </div>
+                </div>
+            </form>
+
+             <button type="submit" class="center-block btn-block btn-danger" onclick="painter.onDrawButtonClick()" id="draw">Draw</button>
+        </div>
+
+        <div class="col-md-2">
+            <form class="form-horizontal" id="circle-form" hidden>
+                <div class="form-group">
+                    <label for="circle-r" class="col-sm-4 control-label">Radius</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="circle-r">
+                    </div>
+                    <label for="circle-x" class="col-sm-4 control-label">X</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="circle-x">
+                    </div>
+                    <label for="circle-y" class="col-sm-4 control-label">Y</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="circle-y">
+                    </div>
+                </div>
+            </form>
+
+            <form class="form-horizontal" id="rectangle-form" hidden>
+                <div class="form-group">
+                    <label for="rectangle-x1" class="col-sm-4 control-label">X1</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="rectangle-x1">
+                    </div>
+                    <label for="rectangle-y1" class="col-sm-4 control-label">Y1</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="rectangle-y1">
+                    </div>
+                    <label for="rectangle-x2" class="col-sm-4 control-label">X2</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="rectangle-x2">
+                    </div>
+                    <label for="rectangle-y2" class="col-sm-4 control-label">Y2</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="rectangle-y2">
+                    </div>
+                </div>
+            </form>
+
+            <form class="form-horizontal" id="triangle-form" hidden>
+                <div class="form-group">
+                    <label for="triangle-x1" class="col-sm-4 control-label">X1</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="triangle-x1">
+                    </div>
+                    <label for="triangle-y1" class="col-sm-4 control-label">Y1</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="triangle-y1">
+                    </div>
+                    <label for="triangle-x2" class="col-sm-4 control-label">X2</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="triangle-x2">
+                    </div>
+                    <label for="triangle-y2" class="col-sm-4 control-label">Y2</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="triangle-y2">
+                    </div>
+                    <label for="triangle-x3" class="col-sm-4 control-label">X3</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="triangle-x3">
+                    </div>
+                    <label for="triangle-y3" class="col-sm-4 control-label">Y3</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="triangle-y3">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+            <canvas id="canvas" width="600" height="600">
+        </div>
+
+    </div>
+
     <script type="text/javascript" src="js/inherit.js"></script>
+    <script type="text/javascript" src="js/point.js"></script>
     <script type="text/javascript" src="js/shape.js"></script>
     <script type="text/javascript" src="js/circle.js"></script>
     <script type="text/javascript" src="js/rectangle.js"></script>
     <script type="text/javascript" src="js/triangle.js"></script>
     <script type="text/javascript" src="js/canvas.js"></script>
-    <script type="text/javascript" src="js/point.js"></script>
     <script type="text/javascript" src="js/painter.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-</head>
-
-<body>
-    <div class="normal-margin">
-        <div class="text-element">
-            <select class="edittext" id="shape-combobox" onchange="painter.onShapeSelect()">
-                <option disabled selected hidden>Select shape type</option>
-                <option>Triangle</option>
-                <option>Rectangle</option>
-                <option>Circle</option>
-            </select>
-            <label for="shape-combobox" class="combobox-label">Shape:</label>
-        </div>
-        <div class="text-element">
-            <input type="text" class="edittext" id="fill-color" value="#000000"/>
-            <label for="fill-color" class="text-label">Fill color:</label>
-        </div>
-        <div class="text-element">    
-            <input type="text" class="edittext" id="border-color" value="#000000"/>
-            <label for="border-color" class="text-label">Border color:</label>
-        </div>
-    </div>
-
-    <div class=" normal-margin">
-        <div class="fixed-height" id="circle-form">
-            <div class="text-element">
-                <input type="text" class="edittext" id="circle-r" value="0"/>
-                <label for="circle-r" class="text-label">Circle radius:</label>
-            </div>
-            <div class="text-element">
-                <input type="text" class="edittext" id="circle-x" value="0"/>
-                <label for="circle-x" class="text-label">Circle center X:</label>
-            </div>
-            <div class="text-element">
-                <input type="text" class="edittext" id="circle-y" value="0"/>
-                <label for="circle-y" class="text-label">Circle center Y:</label>
-            </div>
-        </div>
-
-        <div class="fixed-height" id="rectangle-form">
-            <div class="text-element">
-                <input type="text" class="edittext" id="rectangle-x1" value="0"/>
-                <label for="rectangle-x1" class="text-label">Recangle x1:</label>
-            </div>
-            <div class="text-element">
-                <input type="text" class="edittext" id="rectangle-y1" value="0"/>
-                <label for="rectangle-y1" class="text-label">Recangle y1:</label>
-            </div>
-            <div class="text-element">
-                <input type="text" class="edittext" id="rectangle-x2" value="0"/>
-                <label for="rectangle-x2" class="text-label">Recangle x2:</label>
-            </div>
-            <div class="text-element">
-                <input type="text" class="edittext" id="rectangle-y2" value="0"/>
-                <label for="rectangle-y2" class="text-label">Recangle y2:</label>
-            </div>
-        </div>
-
-        <div class="fixed-height" id="triangle-form">
-            <div class="text-element">
-                <input type="text" class="edittext" id="triangle-x1" value="0"/>
-                <label for="triangle-x1" class="text-label">Triangle x1:</label>
-            </div>
-            <div class="text-element">
-                <input type="text" class="edittext" id="triangle-y1" value="0"/>
-                <label for="triangle-y1" class="text-label">Triangle y1:</label>
-            </div>
-            <div class="text-element">
-                <label for="triangle-x2" class="text-label">Triangle x2:</label>
-                <input type="text" class="edittext" id="triangle-x2" value="0"/>
-            </div>
-            <div class="text-element">
-                <input type="text" class="edittext" id="triangle-y2" value="0"/>
-                <label for="triangle-y2" class="text-label">Triangle y2:</label>
-            </div>
-            <div class="text-element">
-                <input type="text" class="edittext" id="triangle-x3" value="0"/>
-                <label for="triangle-x3" class="text-label">Triangle x3:</label>
-            </div>
-            <div class="text-element">
-                <input type="text" class="edittext" id="triangle-y3" value="0"/>
-                <label for="triangle-y3" class="text-label">Triangle y3:</label>
-            </div>
-        </div>
-        
-        <div class="button">
-            <button class="button" id="draw" onclick="painter.onDrawButtonClick()">Draw</button>
-        </div>
-    </div>
-    <canvas id="canvas" width="1000" height="600"></canvas>
 </body>
 </html>

@@ -1,63 +1,7 @@
-body,
-button,
-option,
-input,
-select {
-    font-family: 'Arial', sans-serif;
-}
-
 #canvas {
-    position: absolute; 
-    left: 25%; 
-    top: -10%; 
-    margin-left: auto; 
-    margin-right: auto; 
-    margin-top: 100px;
     background-color: #ffaaff;
 }
 
-.normal-margin {
-    margin-top: 5%;
-    margin-right: 10%;
-}
-
-.fixed-height {
-    height: 120px;
-}
-
-.text-element {
-    padding: 5px;
-    width: 300px;
-    height: 17px;
-}
-
-.combobox-label {
-    float: left;
-}
-
-.edittext {
-    float: right;
-}
-
-#circle-form {
-    display: none;
-}
-
-#rectangle-form {
-    display: none;
-}
-
-#triangle-form {
-    display: none;
-}
-
-.button {
-    position: relative;
-    margin-top: -15%; 
-    left: 0%;
-    top: 30%;
-}
-
-#draw {
-    display: none;
+#draw-btn {
+display: none;
 }
