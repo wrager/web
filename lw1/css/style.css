@@ -1,13 +1,14 @@
 
 header {
     display: inline-block;
-    background: url("../images/header_gradient.png") right; /* Градиент */
-    height: 47px; /* Высота шапки */
+    background: linear-gradient(to right, #59adeb, #35ce93);
+    height: 47px;
     width: 100%;
     background-size: cover;
-    position: fixed; /* Фиксированное положение */
+    position: fixed;
     white-space: nowrap;
 }
+
 
 .ghost-button {
     display: inline-block;
@@ -77,6 +78,10 @@ a:hover {
     margin-bottom: 11px;
 }
 
+.signup-wrapper input {
+    padding: 10px;
+}
+
 .text-license-agreement {
     width: 392px;
     display: block;
@@ -93,9 +98,12 @@ input[type="text"] {
     font-size: 18px;
     width: 372px;
     margin: 13px 0;
-    -webkit-text-fill-color: #aab8c2;
     outline: none;
 }
+input[type="text"]::-webkit-input-placeholder {color:#aab8c2;}
+input[type="text"]::-moz-placeholder          {color:#aab8c2;}/* Firefox 19+ */
+input[type="text"]:-moz-placeholder           {color:#aab8c2;}/* Firefox 18- */
+input[type="text"]:-ms-input-placeholder      {color:#aab8c2;}
 
 input[type="text"]:focus {
     border-color: #1da1f2;
