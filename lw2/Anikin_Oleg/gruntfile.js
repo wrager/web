@@ -15,23 +15,29 @@ module.exports = function( grunt ) {
                 dest: 'build/index.html'
 			}
         },
-		connect: {
-			server: {
-				options: {
-					hostname: 'localhost',
-					keepalive: true,
-					port: 8080,
-					base: 'build/',
-					open: {
-						target: 'http://localhost:8080'
-					}
+	eslint: {
+		options: {
+			configFile: "eslint.json",
+		},
+		src: ['build/script.js']
+	},
+	connect: {
+		server: {
+			options: {
+				hostname: 'localhost',
+				keepalive: true,
+				port: 8080,
+				base: 'build/',
+				open: {
+					target: 'http://localhost:8080'
 				}
 			}
-		},
+		}
+	},
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-connect');
-
-    grunt.registerTask('default', ['concat', 'connect']);
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks("gruntify-eslint");
+    grunt.registerTask('default', ['concat', 'eslint', 'connect']);
 };

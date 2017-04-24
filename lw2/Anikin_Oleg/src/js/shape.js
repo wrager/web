@@ -19,7 +19,9 @@ Shape.prototype.getBorderColor = function () {
     return this._borderColor;
 }
 
-Shape.prototype.draw = function (context) {}
+Shape.prototype.draw = function (context) {
+    context;
+}
 
 Shape.prototype.calculateArea = function () {}
 

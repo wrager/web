@@ -13,14 +13,14 @@ Painter.prototype.onShapeSelect = function() {
 
     this._selectedShapeType = getComboValue();
     if (this._selectedShapeType == "Circle") {
-        showElement("circle-form");
+        showElement("circle-form", true);
     } else if (this._selectedShapeType == "Rectangle") {
-        showElement("rectangle-form");
+        showElement("rectangle-form", true);
     } else if (this._selectedShapeType == "Triangle") {
-        showElement("triangle-form");
+        showElement("triangle-form", true);
     }
 
-    showElement("draw");
+    showElement("draw", true);
 }
 
 Painter.prototype.onDrawButtonClick = function() {
@@ -85,7 +85,7 @@ function getElement(id) {
     return getElement(id).value;
 }
 
- function showElement(id, show = true) {
+ function showElement(id, show) {
     var element = getElement(id);
     if (show) {
         element.style.display = "block";
