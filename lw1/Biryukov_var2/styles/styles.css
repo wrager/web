@@ -244,16 +244,15 @@
 
     border-radius: 0px 2px 2px 0px;
 
-    background-image: url("img/qrCode.png");
+    background-image: url("../img/spritesheet_qrCode.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -5px -5px;
 }
-.qr_button:hover
-{
-    background-image: url("img/qrCode_active.png");
-    cursor: pointer;
 
+.qr_button:hover{
+    background-position: -54px -5px;
 }
+
 .qr_button:focus
 {
     outline: none;
