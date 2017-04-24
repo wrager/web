@@ -21,7 +21,10 @@ module.exports = function( grunt ) {
 					hostname: 'localhost',
 					keepalive: true,
 					port: 8080,
-					base: 'build/'
+					base: 'build/',
+					open: {
+						target: 'http://localhost:8080'
+					}
 				}
 			}
 		},
