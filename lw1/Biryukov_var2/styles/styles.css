@@ -434,128 +434,6 @@
         inset 0 1px 1px rgba(0,0,0,.1);
 }
 
-.button {
-    width: 24px;
-    height: 24px;
-
-    display: inline;  
-}
-
-
-.button_vk
-{   
-    box-sizing: border-box;
-    height: 24px;
-    width: 24px;
-      
-    border-width: 0px;
-
-    background-image : url("img/vkontakte_icon.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.button_vk:hover
-{
-    background-image : url("img/vkontakte_icon_active.png");
-    cursor: pointer;
-}
-
-.button_facebook
-{   
-    box-sizing: border-box;
-    height: 24px;
-    width: 24px;
-      
-    border-width: 0px;
-
-    background-image : url("img/facebook_icon.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.button_facebook:hover
-{
-    background-image : url("img/facebook_icon_active.png");
-    cursor: pointer;
-}
-
-.button_twitter
-{   
-    box-sizing: border-box;
-    height: 24px;
-    width: 24px;
-      
-    border-width: 0px;
-
-    background-image : url("img/twitter_icon.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.button_twitter:hover
-{
-    background-image : url("img/twitter_icon_active.png");
-    cursor: pointer;
-}
-
-.button_mail
-{   
-    box-sizing: border-box;
-    height: 24px;
-    width: 24px;
-      
-    border-width: 0px;
-
-    background-image : url("img/mailRu_icon.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.button_mail:hover
-{
-    background-image : url("img/mailRu_icon_active.png");
-    cursor: pointer;
-}
-
-.button_google
-{   
-    box-sizing: border-box;
-    height: 24px;
-    width: 24px;
-      
-    border-width: 0px;
-
-    background-image : url("img/google_icon.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.button_google:hover
-{
-    background-image : url("img/google_icon_active.png");
-    cursor: pointer;
-}
-
-.button_od
-{   
-    box-sizing: border-box;
-    height: 24px;
-    width: 24px;
-      
-    border-width: 0px;
-
-    background-image : url("img/odnoklassniki_icon.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.button_od:hover
-{
-    background-image : url("img/odnoklassniki_icon_active.png");
-    cursor: pointer;
-}
-
 .layout_inner .login_form .login_area .buttons
 {
     margin: 18px 0px 0px;
@@ -689,3 +567,61 @@ footer .footer_inner .fotter_copyright
     font-size: 13px;
 }
 
+.sprite {
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite-facebook_icon {
+    background-position: -5px -5px;
+}
+
+.sprite-facebook_icon:hover {
+    background-position: -39px -5px;
+}
+
+.sprite-google_icon {
+    background-position: -73px -5px;
+}
+
+.sprite-google_icon:hover {
+    background-position: -5px -39px;
+}
+
+.sprite-mailRu_icon {
+    background-position: -39px -39px;
+}
+
+.sprite-mailRu_icon:hover {
+    background-position: -73px -39px;
+}
+
+.sprite-odnoklassniki_icon {
+    background-position: -5px -73px;
+}
+
+.sprite-odnoklassniki_icon:hover {
+    background-position: -39px -73px;
+}
+
+.sprite-twitter_icon {
+    background-position: -73px -73px;
+}
+
+.sprite-twitter_icon:hover {
+    background-position: -107px -5px;
+}
+
+.sprite-vkontakte_icon {
+    background-position: -107px -39px;
+}
+
+.sprite-vkontakte_icon:hover {
+    background-position: -107px -73px;
+}
