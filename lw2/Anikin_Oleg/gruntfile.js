@@ -8,7 +8,7 @@ module.exports = function( grunt ) {
             },
             js: {
                 src: ['src/js/*.js'],
-                dest: 'build/scripts.js'
+                dest: 'build/script.js'
             },
 			html: {
 				src: ['src/index.html'],
@@ -19,6 +19,7 @@ module.exports = function( grunt ) {
 			server: {
 				options: {
 					hostname: 'localhost',
+					keepalive: true,
 					port: 8080,
 					base: 'build/'
 				}
