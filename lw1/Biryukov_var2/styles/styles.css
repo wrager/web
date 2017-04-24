@@ -545,6 +545,11 @@ footer .footer_inner .right_part .elements_right_part li a
     text-decoration: none;
     
 }
+footer .footer_inner .right_part .elements_right_part:hover li a
+{
+    cursor: pointer;
+    color: red;
+}
 
 .data
 {
