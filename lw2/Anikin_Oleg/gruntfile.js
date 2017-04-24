@@ -1,20 +1,20 @@
 module.exports = function( grunt ) {
-  grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        concat: {
-            css: {
-                src: ['src/styles/*.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css', 'node_modules/bootstrap/dist/css/bootstrap-theme.min.css'],
-                dest: 'build/styles.css'
-            },
-            js: {
-                src: ['src/js/*.js'],
-                dest: 'build/script.js'
-            },
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
+		concat: {
+			css: {
+                		src: ['src/styles/*.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css', 'node_modules/bootstrap/dist/css/bootstrap-theme.min.css'],
+                		dest: 'build/styles.css'
+			},
+			js: {
+				src: ['src/js/*.js'],
+				dest: 'build/script.js'
+			},
 			html: {
 				src: ['src/index.html'],
-                dest: 'build/index.html'
+                		dest: 'build/index.html'
 			}
-        },
+        	},
 	eslint: {
 		options: {
 			configFile: "eslint.json",
@@ -25,7 +25,7 @@ module.exports = function( grunt ) {
 		server: {
 			options: {
 				hostname: 'localhost',
-				keepalive: true,
+				livereload: true,
 				port: 8080,
 				base: 'build/',
 				open: {
@@ -34,10 +34,28 @@ module.exports = function( grunt ) {
 			}
 		}
 	},
+	watch: {
+		options: {
+			livereload: true
+		},
+		css: {
+                	files: ['src/styles/*.css'],
+                	tasks: ['concat:css']
+            	},
+		js: {
+                	files: ['src/js/*.js'],
+                	tasks: ['concat:js', 'eslint']
+		},
+		html: {
+			files: ['src/index.html'],
+                	tasks: ['concat:html']
+		}
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks("gruntify-eslint");
-    grunt.registerTask('default', ['concat', 'eslint', 'connect']);
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.registerTask('default', ['concat', 'eslint', 'connect', 'watch']);
 };
