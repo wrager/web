@@ -12,7 +12,7 @@
                 <div class="form-group">
                     <label for="shape-combobox" class="col-sm-4 control-label">Type</label>
                     <div class="col-sm-7">
-                        <select class="form-control btn-danger" id="shape-combobox" onchange="painter.onShapeSelect()">
+                        <select class="form-control btn-danger" id="shape-combobox">
                             <option selected disabled hidden>Select shape</option>
                             <option>Rectangle</option>
                             <option>Circle</option>
@@ -32,7 +32,7 @@
                 </div>
             </form>
 
-             <button type="submit" class="center-block btn-block btn-danger" onclick="painter.onDrawButtonClick()" id="draw">Draw</button>
+             <button type="submit" class="center-block btn-block btn-danger btn" id="draw">Draw</button>
         </div>
 
         <div class="col-md-2">
