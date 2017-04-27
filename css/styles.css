@@ -3,6 +3,27 @@ body {
     margin: auto;
     overflow: hidden;
     background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+}
+
+.avatarNew {
+    margin: 20px 0px 20px 0px;	
+}
+
+.langLbl {
+    display: table-cell;
+
+}
+
+.userExit {
+    display: table-cell;
+    padding-left: 20px;
+}
+
+.userExit1 {
+    display: table-cell;
+	padding-right: 40px;
+	float:right;
 }
 
 .left-text {
@@ -31,39 +52,36 @@ a:hover {
 }
 
 .header {
-    width: auto;
-    height: 43px;
+    display: inline;
 }
 
 .header_panel_left {
-    display: inline-block;
+    display: inline;
     line-height: 45px;
     left: 20px;
     position: relative;
-    top: 14px;
 }
 
 .header_panel_left a {
     text-align: left;
     font-size: 13px;
     position: relative;
-    top: -15px;
+    top: -25px;
     margin-left: 32px;
 }
 
 .header_panel_right {
-    display: inline-block;
+    display: inline;
     line-height: 45px;
     left: 950px;
     position: relative;
-    top: 14px;
 }
 
 .header_panel_right a {
     text-align: right;
     font-size: 13px;
     position: relative;
-    top: -15px;
+    top: -25px;
     margin-right: 16px;
 }
 
@@ -80,22 +98,6 @@ a:hover {
     opacity: 1; 
 }
 
-.avatar img {
-	background-color: #555;
-    background-size: 193px 179px;
-    background-position: -5px -116px;
-    border-radius: 16px;
-    display: inline-block;
-	height: 32px;
-    width: 32px;
-    transform: matrix(1.5, 0, 0, 1.5, 0, 0);
-    transform-origin: 0px 0px;
-    border-radius: 50%;
-    margin-left: 210px;
-    margin-top: -26px;
-	cursor: pointer;
-}
-
 .main {
     width: auto;
     height: 550px;
@@ -104,6 +106,7 @@ a:hover {
 
 .hp_ctrls {
     width: auto;
+	margin-top:550px
 }
 
 .header-logo img {
