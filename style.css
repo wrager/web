@@ -9,8 +9,6 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-header {}
-
 .icon {
     width: 95px;
     height: 37px;
@@ -119,15 +117,10 @@ header {}
 
 .promo-btn:hover {
     background: #ffe57d;
-    /* Old browsers */
     background: -moz-linear-gradient(top, #ffe57d 0%, #ffd52c 100%);
-    /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #ffe57d 0%, #ffd52c 100%);
-    /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #ffe57d 0%, #ffd52c 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffe57d', endColorstr='#ffd52c', GradientType=0);
-    /* IE6-9 */
 }
 
 .promo-btn {
@@ -156,15 +149,10 @@ header {}
 
 .action-btn:hover {
     background: #ffe57d;
-    /* Old browsers */
     background: -moz-linear-gradient(top, #ffe57d 0%, #ffd52c 100%);
-    /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #ffe57d 0%, #ffd52c 100%);
-    /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #ffe57d 0%, #ffd52c 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffe57d', endColorstr='#ffd52c', GradientType=0);
-    /* IE6-9 */
 }
 
 .action-btn {
