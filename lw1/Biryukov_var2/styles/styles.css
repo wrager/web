@@ -3,12 +3,6 @@
     background: #f6f5f4;
     margin: 0px;
 }
-.layout_inner
-{
-
-    padding-bottom: 21%;
-    
-}
 
 .layout_inner .header-logo img {
     margin-left: 30px;
@@ -33,7 +27,6 @@
 
     margin: auto;
     text-align: center;
-    padding: auto;
 
     background: url("img/login_form.png") no-repeat;
 }
@@ -42,7 +35,6 @@
 {  
     box-sizing: border-box;
     width: 300px;
-    height: 343px;
 
     margin: 50px 0px -383px;
 }
@@ -174,6 +166,7 @@
     width: 38px;
 
     display: inline; 
+
 }
 .qr_code_button:focus
 {
@@ -186,10 +179,6 @@
         0 0 6px 2px rgba(255,204,0,.7),
         0 1px 0 rgba(255,255,255,.2),
         inset 0 1px 1px rgba(0,0,0,.1);
-}
-.qr_code_button:hover
-{
-    background: linear-gradient(to top, #FFDF0C, #FFDE98);
 }
 
 
@@ -233,23 +222,24 @@
 
 .qr_button
 {
-    width: 39px;
+    width: 38px;
     height: 32px;
+    background-image: url("../img/qr_sprite.png");
+    background-position: -5px -5px;
 
-    border: 0px solid transparent;
+    border: 1px solid transparent;
     border-color: rgba(0,0,0,.27);
     border-top-color: rgba(0,0,0,.38);
     border-bottom-color: rgba(0,0,0,.47); 
 
-    border-radius: 0px 2px 2px 0px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 
-    background-image: url("../img/spritesheet_qrCode.png");
-    background-repeat: no-repeat;
-    background-position: -5px -5px;
+    cursor: pointer;
 }
 
 .qr_button:hover{
-    background-position: -54px -5px;
+    background-position: -53px -5px;
 }
 
 .qr_button:focus
@@ -263,6 +253,9 @@
         0 0 6px 2px rgba(255,204,0,.7),
         0 1px 0 rgba(255,255,255,.2),
         inset 0 1px 1px rgba(0,0,0,.1); 
+
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 
@@ -476,15 +469,10 @@
 
 footer
  {
-    width:100%;
-
-
     position: absolute;
-
-    margin-top: 60px; 
+    bottom: 0;
+    width:100%;
     min-width: 860px;
-    
-   
     border-top: 2px solid #e4e4e4;
 }
 
@@ -522,7 +510,7 @@ footer .footer_inner .left_part .elements_left_part li
 
     color: blue;
 }
-footer .footer_inner .left_part .elements_left_part:hover li
+footer .footer_inner .left_part .elements_left_part li:hover
 {
     cursor: pointer;
     color: red;
@@ -545,7 +533,7 @@ footer .footer_inner .right_part .elements_right_part li a
     text-decoration: none;
     
 }
-footer .footer_inner .right_part .elements_right_part:hover li a
+footer .footer_inner .right_part .elements_right_part li a:hover
 {
     cursor: pointer;
     color: red;
