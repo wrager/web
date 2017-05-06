@@ -33,9 +33,7 @@ Circle.prototype.getY = function () {
     return this.y;
 }
 
-Circle.prototype.draw = function () {
-    var canvas = document.getElementById("canvas");
-    var context = canvas.getContext("2d");
+Circle.prototype.draw = function (context) {
     context.beginPath();
     context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
     context.fillStyle = this.getFillColor();
@@ -45,9 +43,9 @@ Circle.prototype.draw = function () {
 }
 
 Circle.prototype.calculateArea = function () {
-    return Math.PI * Math.pow(this.r, 2);
+    return (Math.PI * Math.pow(this.r, 2)).toFixed(3);
 }
 
 Circle.prototype.calculatePerimeter = function () {
-    return 2 * Math.PI * this.r;
+    return (2 * Math.PI * this.r).toFixed(3);
 }

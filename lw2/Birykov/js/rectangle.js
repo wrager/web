@@ -50,9 +50,7 @@ Rectangle.prototype.getHeight = function () {
     return Math.abs(this.getY1() - this.getY2());
 }
 
-Rectangle.prototype.draw = function () {
-    var canvas = document.getElementById("canvas");
-    var context = canvas.getContext("2d");
+Rectangle.prototype.draw = function (context) {
     var tLeftX = Math.min(this.getX1(), this.getX2());
     var tLeftY = Math.min(this.getY1(), this.getY2());
     context.beginPath();
@@ -64,9 +62,9 @@ Rectangle.prototype.draw = function () {
 }
 
 Rectangle.prototype.calculateArea = function () {
-    return this.getWidth() * this.getHeight();
+    return (this.getWidth() * this.getHeight()).toFixed(3);
 }
 
 Rectangle.prototype.calculatePerimeter = function () {
-    return this.getWidth() * 2 + this.getHeight() * 2;
+    return (this.getWidth() * 2 + this.getHeight() * 2).toFixed(3);
 }
