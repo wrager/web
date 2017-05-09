@@ -3,7 +3,6 @@ body {
     margin: auto;
     overflow: hidden;
     background-image: url(../images/bg.jpg);
-    background-repeat: no-repeat;
 }
 
 .avatarNew {
@@ -51,6 +50,10 @@ a:hover {
         text-decoration: underline;
 }
 
+a:active {
+    color: #0c8484; 
+}
+
 .header {
     display: inline;
 }
@@ -73,7 +76,7 @@ a:hover {
 .header_panel_right {
     display: inline;
     line-height: 45px;
-    left: 950px;
+    left: 400px;
     position: relative;
 }
 
@@ -85,19 +88,6 @@ a:hover {
     margin-right: 16px;
 }
 
-.active_menu {
-    margin-left: 122px;
-    margin-top: 0px;
-}
-
-.active_menu img { 
-    opacity: 0.55; 
-}
-
-.active_menu img:hover {
-    opacity: 1; 
-}
-
 .main {
     width: auto;
     height: 550px;
@@ -106,7 +96,8 @@ a:hover {
 
 .hp_ctrls {
     width: auto;
-	margin-top:550px
+	top: 0px
+	position: absolute;
 }
 
 .header-logo img {
@@ -123,7 +114,7 @@ a:hover {
     border: none;  
     padding: 0px;    
     text-indent: 16px;
-    margin-top: 152px;
+    margin-top: 62px;
     margin-left: 150px;
     position: relative;
 }
