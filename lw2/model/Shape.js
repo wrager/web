@@ -1,16 +1,16 @@
 function Shape(type) {
-	this._outputLineColor= "#000000";
+	this._borderColor= "#000000";
 	this._fillColor=  "#000000";
 }
 
 Shape.prototype = {
 
-	setOutputLineColor: function(color) {
-		this._outputLineColor = color;
+	setBorderColor: function(color) {
+		this._borderColor = color;
 	},
 	
-	getOutputLineColor: function() {
-		return this._outputLineColor;
+	getBorderColor: function() {
+		return this._borderColor;
 	},
 	
 	setFillColor: function(color) {
