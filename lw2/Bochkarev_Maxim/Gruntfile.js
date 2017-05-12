@@ -2,12 +2,7 @@ module.exports = function(grunt){
 	'use strict';
 
 	grunt.initConfig({
-		eslint: {
-			src: ['build/scripts.js'],
-			options: {
-				configFile: "eslint.json",
-			}		
-		},
+		clean: ['build/*', 'build/*'],
 		concat: {
 			js: {
 				src: ['src/Scripts/*js'],
@@ -69,12 +64,11 @@ module.exports = function(grunt){
 			}
 		}		
 	});
-	
-	grunt.loadNpmTasks('grunt-eslint');	
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-cache-breaker');
 	
-	grunt.registerTask('default', ['concat', 'eslint', 'cachebreaker', 'connect', 'watch']);
+	grunt.registerTask('default', ['clean', 'concat', 'cachebreaker', 'connect', 'watch']);
 };
