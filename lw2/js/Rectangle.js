@@ -1,4 +1,5 @@
 function Rectangle() {
+	Shape.call(this, ShapeType.RECTANGLE);
 	this._leftTop = {x: 0, y: 0};
     this._rightBottom = {x: 0, y: 0};
 }
@@ -32,5 +33,10 @@ Rectangle.prototype.getArea = function() {
 	return  Math.abs(this.getWidth() * this.getHeight());
 };
 Rectangle.prototype.getPerimeter = function() {
-	return  Math.abs(((this.getWidth()) + (this.getWidth()) * 2);
+	return  Math.abs((this.getWidth()) + (this.getWidth()) * 2);
+};
+
+Rectangle.prototype.draw = function(ctx) {
+	ctx.fillRect(this._leftTop.x, this._leftTop.y, this._rightBottom.x - this._leftTop.x, this._rightBottom.y - this._leftTop.y);
+	ctx.strokeRect(this._leftTop.x, this._leftTop.y, this._rightBottom.x - this._leftTop.x, this._rightBottom.y - this._leftTop.y);
 };

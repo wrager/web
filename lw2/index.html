@@ -4,10 +4,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script src="js/ShapeType.js" type="text/javascript"></script>
     <script src="js/Shape.js" type="text/javascript"></script>
     <script src="js/Rectangle.js" type="text/javascript"></script>
     <script src="js/Circle.js" type="text/javascript"></script>
     <script src="js/Triangle.js" type="text/javascript"></script>
+	<script src="js/ShapeManager.js" type="text/javascript"></script>	
+    <script src="js/Main.js" type="text/javascript"></script>	
 </head>
 
 <body>
@@ -32,11 +35,15 @@
             </div>
         </div>
         <div class="setting box_sizing output_line has_margin">
-            <div class="title" id="setting_title">Настройки фигуры:</div>
+            <div class="title" id="setting_title">Изменение параметров фигуры:</div>
             <div id="setting" class="setting_shape"></div>
             <button class="draw_shape_button" id="draw_shape_button">нарисовать</button>
         </div>
     </div>
+	
+	  <script>
+        main();
+    </script>
 </body>
 
 </html>

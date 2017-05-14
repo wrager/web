@@ -22,7 +22,7 @@
 	height: 250px;
     margin-top: 15px;
     padding: 10px;
-    font-size: 30px; 
+    font-size: 20px; 
 }
 
 .window .out_data .out_perimeter,
@@ -52,7 +52,7 @@
 
 .window .toolbar .toolbar_element {
       margin: 0 auto 45px;
-	  font-size: 25px; 
+	  font-size: 20px; 
 }
 
 .window .toolbar .change_color input {
@@ -62,12 +62,12 @@
 
 .window .toolbar .color_shape::after {
       content: 'Цвет площади фигуры ';
-	  font-size: 25px; 
+	  font-size: 20px; 
 }
 
 .window .toolbar .color_border::after {
       content: 'Цвет контура фигуры ';
-	  font-size: 25px; 
+	  font-size: 20px; 
 }
 
 .window .toolbar .color_shape::after,
@@ -85,7 +85,7 @@
 .window .setting .title {
     padding-top: 5px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .window .setting .setting_shape input {

@@ -1,4 +1,5 @@
 function Circle() {
+	Shape.call(this, ShapeType.CIRCLE);
 	this._center = {x: 0, y: 0};
 	this._radius = 0;
 }
@@ -28,4 +29,12 @@ Circle.prototype.getArea = function() {
 
 Circle.prototype.getPerimeter = function() {
 	return 2 * Math.PI * this._radius;
+};
+
+Circle.prototype.draw = function(ctx) {
+	ctx.beginPath();
+	ctx.arc(this._center.x, this._center.y, this._radius, 0, Math.PI * 2, true);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
 };

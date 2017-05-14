@@ -1,6 +1,7 @@
 function Shape(type) {
-	this._borderColor= "#000000";
-	this._fillColor=  "#000000";
+	this._borderColor = "#000000";
+	this._fillColor = "#000000";
+	this._type = type;
 }
 
 Shape.prototype = {
@@ -20,5 +21,10 @@ Shape.prototype = {
 	getFillColor: function() {
 		return this._fillColor;
 	},
-
+	
+	draw: function(ctx) {},
+	
+	type: function() {
+		return this._type;
+	}
 };
