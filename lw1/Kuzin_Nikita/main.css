@@ -1,0 +1,212 @@
+body {
+  font-size: 13px;
+}
+
+.content {
+  padding: 0 44px;
+}
+
+.logo img {
+  display: block;
+  padding-right: 4px;
+  padding-bottom: 1px;
+  margin: 25px auto;
+  float: none;
+  background-size: 116px 36px;
+}
+
+.main {
+}
+
+.banner {
+  text-align: center;
+}
+
+.banner h1 {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  font-weight: 300;
+  font-size: 38px;
+  margin-bottom: 21px;
+  padding-top: 1px;
+}
+
+.banner h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 17px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.form {
+  background: #F7F7F7;
+  border-radius: 2px;
+  margin: 0 auto;
+  width: 274px;
+  padding: 40px 40px;
+  height: 237px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.avatar {
+  margin: 0 89px 9px 89px;
+  width: 96px;
+  height: 96px;
+}
+
+.email:focus, .email {
+
+}
+
+.email {
+  padding-left: 8px;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  margin-top: 15px;
+  height: 44px;
+  width: 100%;
+  display: block;
+  margin-bottom: 0.4em;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.email:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.email:focus {
+  outline: none;
+  border: 1px solid #4d90fe;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.submit {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 36px;
+  border: 1px solid #3079ed;
+  border-radius: 3px;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-top: 2px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  background: #4d90fe -webkit-linear-gradient(top, #4d90fe, #4787ed);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.submit:hover {
+  border: 1px solid #2f5bb7;
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  background: #357ae8 -webkit-linear-gradient(top, #4d90fe, #357ae8);
+}
+
+a, a:hover {
+  color: #427fed;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.need-help {
+  float: right;
+  text-align: right;
+}
+
+.card-mask {
+  background-color: #fff;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAAGCAIAAABhDpMcAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gkeFxks6YflLAAAAKlJREFUWMPt2CEShDAMheGmMCFV1MH9z8MtarC4QKfNiuwwOyxHeJ9r6iJ+ETKz3vu+7/M8D8MQAADetNaO41jXNcYYfUREpZRaK7YDAP9qraUUIvLn6NVg5t77tm2qamZYEwDciEhElmVhZm/H6B8ppZxzCOE8T4QDAB7hmKYp55xS+k48E601VVXV67oQDgB4hIOZRURE/BJKv5kwM1QDAF7bcR84Qggf4ShHovU/ogcAAAAASUVORK5CYII=);
+}
+
+.one-google {
+  padding-top: 27px;
+}
+
+.tagline {
+  padding-bottom: 0.05em;
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+}
+
+.card-mask p {
+  margin: 0 0 10px;
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+}
+
+p.create-account {
+  margin-bottom: 31px;
+}
+
+.logo-strip {
+  display: block;
+  margin: 10px auto;
+  background: url(https://ssl.gstatic.com/accounts/ui/wlogostrip_230x17_1x.png) no-repeat;
+  background-size: 230px 17px;
+  width: 230px;
+  height: 16px;
+}
+
+.footer {
+  padding-top: 7px;
+  font-size: .85em;
+  white-space: nowrap;
+  line-height: 0;
+}
+
+.google-footer-bar {
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  overflow: hidden;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer ul {
+  float: left;
+  max-width: 80%;
+  min-height: 16px;
+  padding: 0;
+}
+
+.footer ul li {
+  color: #737373;
+  display: inline;
+  padding: 0 1.5em 0 0;
+}
+
+.footer a {
+  color: #737373;
+}
+
+.lang-chooser-wrap {
+  float: right;
+  display: inline;
+}
+
+.lang-chooser {
+  font-size: 13px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.lang-chooser-wrap img {
+  vertical-align: top;
+}
