@@ -1,0 +1,316 @@
+.html {
+    background: #f6f5f3;
+}
+.header_place {
+    display: table;
+    width: 100%;
+    height: 70px;
+    white-space: nowrap;
+    background: white;
+}
+
+.header-logo {
+    display: table-cell;
+    padding-left: 22px;
+    vertical-align: middle;
+}
+.start_separator{
+    display: block;
+    width:110%;
+
+    margin: 10px -20px;
+    border-bottom: 1px solid #c9d2e5;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.3);
+    content: ' ';
+}
+
+.inner_place {
+    width: 300px;
+    margin: 100px auto;
+}
+
+.domik_roof {
+    margin-top: 50px;
+    position: relative;
+}
+
+.roof {
+    position: absolute;
+    display: block;
+    top: -50px;
+    height: 50px;
+    width: 100%;
+    background-size: auto;
+    background-image: url("../img/roof.svg");
+}
+
+.roof_logo {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 42px;
+    height: 71px;
+    margin-left: -27px;
+    background-image: url("../img/Yalogo.svg");
+}
+
+.domik_content {
+    padding: 60px 20px 10px;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    border-color: #000 #c9d2e5 #c9d2e5;
+    background-color: #e6eeff;
+    background-size: 100% 100%;
+    background: linear-gradient(to bottom,#e6eeff,#dde8ff);
+}
+
+.auth_form {
+    display: block;
+    margin-top: 0em;
+}
+
+.login_form {
+    position: relative;
+
+}
+
+.login_input {
+    padding: .5rem 1rem;
+    width: 225px;
+    font-family: Arial,Helvetica,sans-serif;
+    margin: 0 0 10px;
+}
+
+.login_input:focus {
+    outline: none;
+    box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
+    z-index: 9;
+}
+
+.pass_form {
+    position: relative;
+}
+
+.pass_input {
+    padding: .5rem 1rem;
+    width: 225px;
+    font-family: Arial,Helvetica,sans-serif;
+    margin: 0 0 10px;
+}
+
+.pass_input:focus {
+    outline: none;
+    box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
+    z-index: 9;
+}
+
+.btn_row {
+    position: relative;
+    display: table;
+}
+
+.entering_btn {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 5px 20px;
+    background: #ffcc00;
+}
+
+.entering_btn:hover {
+    background: linear-gradient(#ffcc00, #ffdf60);
+
+}
+
+.entering_btn:focus{
+    outline: none;
+    box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
+    z-index: 9;
+}
+
+.qr_code {
+    display: inline-block;
+
+    position: relative;
+    padding: 9px 9px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: #ffcc00;
+}
+
+.qr_code:hover {
+    background: linear-gradient(#ffcc00, #ffdf60);
+}
+
+.qr_code:focus{
+    outline: none;
+    box-shadow: 0 0 6px 2px rgba(255,204,0,.7), 0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
+    z-index: 9;
+}
+
+.qr_code_btn {
+    position: relative;
+    display: block;
+
+}
+
+.qr_code_link {
+    padding: 10px 10px;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/qr_code.png");
+}
+
+.checkbox_btn {
+}
+
+.another_comp_lbl {
+    position: relative;
+    display: inline-block;
+
+
+}
+
+.lnk_button {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background-color: transparent;
+}
+
+.social_buttons_row {
+    position: relative;
+    left: 50px;
+}
+.vk_button {
+    background-image: url("../img/vk_before.svg");
+}
+
+.vk_button:hover {
+    background-image: url("../img/vk.svg");
+}
+
+.fb_button {
+    background-image: url("../img/fb_before.svg");
+}
+
+.fb_button:hover {
+    background-image: url("../img/facebook.svg");
+}
+
+.tw_button {
+    background-image: url("../img/tw_before.svg");
+}
+
+.tw_button:hover {
+    background-image: url("../img/twitter.svg");
+}
+
+.ml_button {
+    background-image: url("../img/mail_before.svg");
+}
+
+.ml_button:hover {
+    background-image: url("../img/mailru.svg");
+}
+
+.gm_button {
+    background-image: url("../img/gmail_before.svg");
+}
+
+.gm_button:hover {
+    background-image: url("../img/gmail.svg");
+}
+
+.ok_button {
+    background-image: url("../img/ok_before.svg");
+}
+
+.ok_button:hover {
+    background-image: url("../img/ok.svg");
+}
+
+.domik_separator {
+    display: block;
+    margin: 10px -20px;
+    border-bottom: 1px solid #c9d2e5;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.3);
+    content: ' ';
+}
+
+.end_separator {
+    display: block;
+    width:110%;
+
+    margin: 10px -20px;
+    border-bottom: 1px solid #c9d2e5;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.3);
+    content: ' ';
+}
+
+.dop_btn_registration {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.pseudo_btn_left {
+    float: left;
+}
+
+.pseudo_btn_right {
+    font-weight: 700;
+    float: right;
+}
+
+.pseudo_btn {
+    position: relative;
+    top: -10px;
+    vertical-align: baseline;
+    color: #000;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
+    font-size: 0.9rem;
+    line-height: 1rem;
+    padding: .3rem 1rem;
+    text-decoration: none;
+}
+
+.pseudo_btn:hover {
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.35);
+}
+
+.internacional_form {
+    position: relative;
+    left:1%;
+    line-height: normal;
+    display: inline-block;
+}
+
+.country_flag {
+    padding: 10px 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/ru.svg");
+}
+
+.help_btn {
+    position: relative;
+    left:73%;
+    line-height: normal;
+    display: inline-block;
+}
+
+.year_form {
+    position: relative;
+    left:40px;
+}
+
+.yandex_link {
+    position: relative;
+    left:40px;
+}
