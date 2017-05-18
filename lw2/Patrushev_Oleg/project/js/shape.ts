@@ -1,6 +1,4 @@
-//------------------------------------ Shape class
-
-class Shape {
+abstract class Shape {
 
     private fillColor: string;
     private borderColor: string;
@@ -10,31 +8,25 @@ class Shape {
         this.borderColor = "#000000";
     }
 
-    setFillColor(value) {
+    public setFillColor(value) {
         this.fillColor = value;
     }
 
-    getFillColor() {
+    public getFillColor() {
         return this.fillColor;
     }
 
-    setBorderColor(value) {
+    public setBorderColor(value) {
         this.borderColor = value;
     }
 
-    getBorderColor() {
+    public getBorderColor() {
         return this.borderColor;
     }
 
-    draw(context) {
+    public abstract draw(context);
 
-    }
+    public abstract calculateArea();
 
-    calculateArea() {
-
-    }
-
-    calculatePerimeter() {
-
-    }
+    public abstract calculatePerimeter();
 }

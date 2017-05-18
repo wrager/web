@@ -1,5 +1,3 @@
-//------------------------------------ Circle class
-
 class Circle extends Shape {
 
     private x: number;
@@ -7,37 +5,37 @@ class Circle extends Shape {
     private r: number;
 
     constructor() {
-        super()
+        super();
         this.x = 0;
         this.y = 0;
         this.r = 0;
     }
 
-    setRadius(value) {
+    public setRadius(value) {
         this.r = value;
     }
 
-    getRadius() {
+    public getRadius() {
         return this.r;
     }
 
-    setX(value) {
+    public setX(value) {
         this.x = value;
     }
 
-    getX() {
+    public getX() {
         return this.x;
     }
 
-    setY(value) {
+    public setY(value) {
         this.y = value;
     }
 
-    getY() {
+    public getY() {
         return this.y;
     }
 
-    draw (context) {
+    public draw(context) {
         context.beginPath();
         context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
         context.fillStyle = this.getFillColor();
@@ -46,11 +44,11 @@ class Circle extends Shape {
         context.stroke();
     }
 
-    calculateArea() {
+    public calculateArea() {
         return (Math.PI * Math.pow(this.r, 2)).toFixed(3);
     }
 
-    calculatePerimeter() {
+    public calculatePerimeter() {
         return (2 * Math.PI * this.r).toFixed(3);
     }
 }
