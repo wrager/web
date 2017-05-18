@@ -3,6 +3,20 @@ module.exports = function(grunt){
 
 	grunt.initConfig({
 		clean: ['build/*', 'build/*'],
+        ts: {
+            default : {
+                src: ["src/Scripts/*.ts", "!node_modules/**"],
+				tsconfig: true
+            }
+        },
+        tslint: {
+            options: {
+                configuration: "tslint.json"
+            },
+            your_target: {
+                src: ["src/Scripts/*.ts"]
+            }
+        },
 		concat: {
 			js: {
 				src: ['src/Scripts/*js'],
@@ -64,11 +78,14 @@ module.exports = function(grunt){
 			}
 		}		
 	});
+
+    grunt.loadNpmTasks("grunt-ts");
+    grunt.loadNpmTasks("grunt-tslint");
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-cache-breaker');
 	
-	grunt.registerTask('default', ['clean', 'concat', 'cachebreaker', 'connect', 'watch']);
+	grunt.registerTask('default', ['clean', 'tslint', 'ts', 'concat', 'cachebreaker', 'connect', 'watch']);
 };

@@ -1,7 +1,7 @@
 {
   "name": "shape_drawer",
   "version": "1.0.0",
-  "description": "web_lab_3",
+  "description": "web_lab_4",
   "main": "Gruntfile.js",
   "scripts": {
     "start": "grunt"
@@ -17,7 +17,7 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ts": "^6.0.0-beta.15",
-    "tslint": "^5.2.0",
+    "grunt-tslint": "^5.0.1",
     "typescript": "^2.3.2"
   }
 }

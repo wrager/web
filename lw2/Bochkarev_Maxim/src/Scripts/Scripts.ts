@@ -1,4 +1,3 @@
-
 getElement("draw_figure_button").onclick = onDrawButtonClick;
 getElement("shape_select").onchange = onShapeParametersChoice;
 
@@ -30,7 +29,7 @@ function onDrawButtonClick() {
     const shapeType = getShapeTypeValue() as string;
 
     const canvas = getElement("shape_canvas") as HTMLCanvasElement;
-    const context = canvas.getContext("2d") as Canvas2DContextAttributes;
+    const context = canvas.getContext("2d") as CanvasRenderingContext2D;
 
     clearCanvas();
 
@@ -65,42 +64,46 @@ function onDrawButtonClick() {
     printCalcResultOnCanvas(shape, context);
 }
 
-function getElementNumberValue(elem) {
+function getElementNumberValue(elem: string) {
     return (isNumber(getElementValue(elem)) ? getElementValue(elem) : 0) as number;
 }
 
-function getElementColorValue(elem) {
-    return (isColor(getElementValue(elem)) ? getElementValue(elem) : "#000000");
+function getElementColorValue(elem: string) {
+    return (isColor(getElementValue(elem)) ? getElementValue(elem) : "#000000") as string;
 }
 
-function getElement(id) {
+function getElement(id: string) {
     return document.getElementById(id) as HTMLElement;
 }
 
-function getElementValue(id) {
+function getElementValue(id: string) {
     const element = getElement(id) as HTMLElement;
     return element.getAttribute("value");
 }
 
-function isNumber(value) {
+function isNumber(value: any) {
     return !(Number(value) !== Number(value));
 }
 
-function isColor(value) {
+function isColor(value: string) {
     return value.match(/^#[0-9A-F]{6}$/);
 }
 
-function showElement(elemId) {
+function showElement(elemId: string) {
     getElement(elemId).style.display = "block";
 }
 
-function hideElement(elemId) {
+function hideElement(elemId: string) {
     getElement(elemId).style.display = "none";
 }
 
 function getShapeTypeValue() {
     const shape = getElement("shape_select") as HTMLElement;
-    return shape.getAttribute("options")[shape.getAttribute("selectedIndex")].text;
+    const options = shape.getAttribute("options");
+    const index = shape.getAttribute("selectedIndex") as string;
+    return (options === null || index === null) ?
+        null :
+        options[index].text;
 }
 
 function clearCanvas() {
@@ -109,7 +112,7 @@ function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function printCalcResultOnCanvas(shape, context) {
+function printCalcResultOnCanvas(shape: Shape, context: CanvasRenderingContext2D) {
     const areaResult = "Area: " + Number(shape.calculateArea()).toFixed(2);
     const perimeterResult = "Perimeter: " + Number(shape.calculatePerimeter()).toFixed(2);
     context.fillStyle = "black";

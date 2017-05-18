@@ -4,6 +4,7 @@ class Circle extends Shape {
     private radius: number;
 
     constructor(centerX: number, centerY: number, radius: number, fillColor: string, borderColor: string) {
+        super();
         this.centerX = centerX;
         this.centerY = centerY;
         this.radius = radius;
@@ -19,35 +20,12 @@ class Circle extends Shape {
         return Math.pow(this.radius, 2) * Math.PI;
     }
 
-    public draw(context): void {
+    public draw(context: CanvasRenderingContext2D): void {
         context.beginPath();
         context.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI, false);
         context.fillStyle = this.fillColor;
         context.strokeStyle = this.borderColor;
         context.fill();
         context.stroke();
-    }
-
-    get centerY(): number {
-        return this.centerY;
-    }
-
-    set centerY(value: number) {
-        this.centerY = value;
-    }
-
-    get radius(): number {
-        return this.radius;
-    }
-
-    set radius(value: number) {
-        this.radius = value;
-    }
-    get centerX(): number {
-        return this.centerX;
-    }
-
-    set centerX(value: number) {
-        this.centerX = value;
     }
 }
