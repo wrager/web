@@ -5,6 +5,17 @@ class Triangle extends Shape {
     private _Y1: number;
     private _Y2: number;
     private _Y3: number;
+    // tslint:disable-next-line:max-line-length
+    constructor(X1: number, X2: number, X3: number, Y1: number, Y2: number, Y3: number, fillColor: string, borderColor: string) {
+        this._X1 = X1;
+        this._X2 = X2;
+        this._X3 = X3;
+        this._Y1 = Y1;
+        this._Y2 = Y2;
+        this._Y3 = Y3;
+        this.fillColor = fillColor;
+        this.borderColor = borderColor;
+    }
 
     public calculatePerimeter(): number {
         const sideA = this.getLineLength(this.X1, this.Y1, this.X2, this.Y2);

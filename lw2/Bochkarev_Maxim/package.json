@@ -17,6 +17,7 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ts": "^6.0.0-beta.15",
-    "tslint": "^5.2.0"
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
   }
 }

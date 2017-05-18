@@ -1,4 +1,4 @@
 abstract class Shape {
-    protected fillColor: number;
-    protected borderColor: number;
+    protected fillColor: string;
+    protected borderColor: string;
 }

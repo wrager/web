@@ -3,6 +3,14 @@ class Circle extends Shape {
     private centerY: number;
     private radius: number;
 
+    constructor(centerX: number, centerY: number, radius: number, fillColor: string, borderColor: string) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+        this.radius = radius;
+        this.fillColor = fillColor;
+        this.borderColor = borderColor;
+    }
+
     public calculatePerimeter(): number {
         return Math.PI * this.radius * 2;
     }
@@ -13,7 +21,7 @@ class Circle extends Shape {
 
     public draw(context): void {
         context.beginPath();
-        context.arc(this.centerX, this.centerX, this.radius, 0, 2 * Math.PI, false);
+        context.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI, false);
         context.fillStyle = this.fillColor;
         context.strokeStyle = this.borderColor;
         context.fill();

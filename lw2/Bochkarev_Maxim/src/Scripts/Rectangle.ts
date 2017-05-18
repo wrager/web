@@ -4,6 +4,15 @@ class Rectangle extends Shape {
     private _Y1: number;
     private _Y2: number;
 
+    constructor(X1: number, X2: number, Y1: number, Y2: number, fillColor: string, borderColor: string) {
+        this._X1 = X1;
+        this._X2 = X2;
+        this._Y1 = Y1;
+        this._Y2 = Y2;
+        this.fillColor = fillColor;
+        this.borderColor = borderColor;
+    }
+
     public calculatePerimeter(): number {
         return ((this.getHeight() + this.getWidth()) * 2);
     }
