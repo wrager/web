@@ -73,6 +73,38 @@ a:active {
     margin-left: 32px;
 }
 
+.arrows {
+  position:absolute;
+  right:40px;
+  bottom: 42px;
+}
+
+.arrows a {
+  display:block;
+  width:40px;
+  height:40px;
+  float:right;
+  margin-left: 1px;
+  background-color: rgba(34,34,34,.75);
+}
+
+.icon {
+  background: url(http://www.bing.com/s/a/hpc20.png) no-repeat;
+}
+
+
+.prev {
+  background-position: -122px -57px;
+}
+
+.next {
+  background-position: -85px -139px;
+}
+
+.camera {
+  background-position: -84px -98px;
+}
+
 .header_panel_right {
     display: inline;
     line-height: 45px;
