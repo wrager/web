@@ -1,4 +1,5 @@
 class Triangle extends Shape {
+
     private X1: number;
     private X2: number;
     private X3: number;

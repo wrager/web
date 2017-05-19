@@ -1,4 +1,5 @@
 class Rectangle extends Shape {
+
     private X1: number;
     private X2: number;
     private Y1: number;

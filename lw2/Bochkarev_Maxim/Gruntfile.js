@@ -2,7 +2,14 @@ module.exports = function(grunt){
 	'use strict';
 
 	grunt.initConfig({
-		clean: ['build/*', 'build/*'],
+		clean: {
+			build: {
+                src: ['build/*']
+			},
+			js: {
+                src: ['src/Scripts/*.js']
+            }
+		},
         ts: {
             default : {
                 src: ["src/Scripts/*.ts", "!node_modules/**"],
@@ -45,9 +52,9 @@ module.exports = function(grunt){
 			}
 		},
 		watch: {
-			js: {
-				files: ['src/Scripts/*js'],
-				tasks: ['eslint', 'concat:js']
+			ts: {
+				files: ['src/Scripts/*ts'],
+				tasks: ['tslint', 'ts', 'concat:js']
 			},
 			html: {
 				files: ['src/site.html'],
@@ -87,5 +94,5 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-cache-breaker');
 	
-	grunt.registerTask('default', ['clean', 'tslint', 'ts', 'concat', 'cachebreaker', 'connect', 'watch']);
+	grunt.registerTask('default', ['clean:build', 'tslint', 'ts', 'concat', 'clean:js', 'cachebreaker', 'connect', 'watch']);
 };

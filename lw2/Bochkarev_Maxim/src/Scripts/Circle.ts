@@ -1,15 +1,16 @@
 class Circle extends Shape {
+
     private centerX: number;
     private centerY: number;
     private radius: number;
 
-    constructor(centerX: number, centerY: number, radius: number, fillColor: string, borderColor: string) {
+    constructor(centerX?: number, centerY?: number, radius?: number, fillColor?: string, borderColor?: string) {
         super();
-        this.centerX = centerX;
-        this.centerY = centerY;
-        this.radius = radius;
-        this.fillColor = fillColor;
-        this.borderColor = borderColor;
+        this.centerX = centerX || 0;
+        this.centerY = centerY || 0;
+        this.radius = radius || 0;
+        this.fillColor = fillColor || "#000000";
+        this.borderColor = borderColor || "#000000";
     }
 
     public calculatePerimeter(): number {

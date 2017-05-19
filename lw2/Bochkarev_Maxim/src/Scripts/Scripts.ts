@@ -1,5 +1,5 @@
-getElement("draw_figure_button").onclick = onDrawButtonClick;
-getElement("shape_select").onchange = onShapeParametersChoice;
+(getElement("draw_figure_button") as HTMLElement).onclick = onDrawButtonClick;
+(getElement("shape_select") as HTMLElement).onchange = onShapeParametersChoice;
 
 function onShapeParametersChoice() {
     const shapeType = getShapeTypeValue();
@@ -27,7 +27,6 @@ function onShapeParametersChoice() {
 
 function onDrawButtonClick() {
     const shapeType = getShapeTypeValue() as string;
-
     const canvas = getElement("shape_canvas") as HTMLCanvasElement;
     const context = canvas.getContext("2d") as CanvasRenderingContext2D;
 
