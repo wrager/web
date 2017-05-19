@@ -1,5 +1,12 @@
-(getElement("draw_figure_button") as HTMLElement).onclick = onDrawButtonClick;
-(getElement("shape_select") as HTMLElement).onchange = onShapeParametersChoice;
+import {Circle} from "./Circle";
+import {Rectangle} from "./Rectangle";
+import {Shape} from "./Shape";
+import {Triangle} from "./Triangle";
+
+window.onload = () => {
+    (getElement("draw_figure_button") as HTMLElement).onclick = onDrawButtonClick;
+    (getElement("shape_select") as HTMLElement).onchange = onShapeParametersChoice;
+};
 
 function onShapeParametersChoice() {
     const shapeType = getShapeTypeValue();
@@ -34,30 +41,30 @@ function onDrawButtonClick() {
 
     let shape;
     if (shapeType === "Rectangle") {
-        shape = new Rectangle(
-            getElementNumberValue("rectX1"),
-            getElementNumberValue("rectX2"),
-            getElementNumberValue("rectY1"),
-            getElementNumberValue("rectY2"),
-            getElementColorValue("fillColor"),
-            getElementColorValue("borderColor"));
+        shape = new Rectangle( {
+            X1: getElementNumberValue("rectX1"),
+            X2: getElementNumberValue("rectX2"),
+            Y1: getElementNumberValue("rectY1"),
+            Y2: getElementNumberValue("rectY2"),
+            borderColor: getElementColorValue("borderColor"),
+            fillColor: getElementColorValue("fillColor")});
     } else if (shapeType === "Triangle") {
-        shape = new Triangle(
-            getElementNumberValue("triangleX1"),
-            getElementNumberValue("triangleX2"),
-            getElementNumberValue("triangleX3"),
-            getElementNumberValue("triangleY1"),
-            getElementNumberValue("triangleY2"),
-            getElementNumberValue("triangleY3"),
-            getElementColorValue("fillColor"),
-            getElementColorValue("borderColor"));
+        shape = new Triangle( {
+            X1: getElementNumberValue("triangleX1"),
+            X2: getElementNumberValue("triangleX2"),
+            X3: getElementNumberValue("triangleX3"),
+            Y1: getElementNumberValue("triangleY1"),
+            Y2: getElementNumberValue("triangleY2"),
+            Y3: getElementNumberValue("triangleY3"),
+            borderColor: getElementColorValue("borderColor"),
+            fillColor: getElementColorValue("fillColor")});
     } else if (shapeType === "Circle") {
-        shape = new Circle(
-            getElementNumberValue("circleCenterX"),
-            getElementNumberValue("circleCenterY"),
-            getElementNumberValue("circleRadius"),
-            getElementColorValue("fillColor"),
-            getElementColorValue("borderColor"));
+        shape = new Circle({
+            borderColor: getElementColorValue("borderColor"),
+            centerX: getElementNumberValue("circleCenterX"),
+            centerY: getElementNumberValue("circleCenterY"),
+            fillColor: getElementColorValue("fillColor"),
+            radius: getElementNumberValue("circleRadius")});
     }
     shape.draw(context);
     printCalcResultOnCanvas(shape, context);

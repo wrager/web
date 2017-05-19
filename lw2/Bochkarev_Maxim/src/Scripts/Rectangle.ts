@@ -1,18 +1,20 @@
-class Rectangle extends Shape {
+import {Shape} from "./Shape";
+
+export class Rectangle extends Shape {
 
     private X1: number;
     private X2: number;
     private Y1: number;
     private Y2: number;
 
-    constructor(X1: number, X2: number, Y1: number, Y2: number, fillColor: string, borderColor: string) {
+    constructor(parameters: {X1: number, X2: number, Y1: number, Y2: number, fillColor: string, borderColor: string}) {
         super();
-        this.X1 = X1;
-        this.X2 = X2;
-        this.Y1 = Y1;
-        this.Y2 = Y2;
-        this.fillColor = fillColor;
-        this.borderColor = borderColor;
+        this.X1 = parameters.X1;
+        this.X2 = parameters.X2;
+        this.Y1 = parameters.Y1;
+        this.Y2 = parameters.Y2;
+        this.fillColor = parameters.fillColor;
+        this.borderColor = parameters.borderColor;
     }
 
     public calculatePerimeter(): number {

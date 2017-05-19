@@ -1,4 +1,6 @@
-class Triangle extends Shape {
+import {Shape} from "./Shape";
+
+export class Triangle extends Shape {
 
     private X1: number;
     private X2: number;
@@ -7,16 +9,16 @@ class Triangle extends Shape {
     private Y2: number;
     private Y3: number;
     // tslint:disable-next-line:max-line-length
-    constructor(X1: number, X2: number, X3: number, Y1: number, Y2: number, Y3: number, fillColor: string, borderColor: string) {
+    constructor(parameters: {X1: number, X2: number, X3: number, Y1: number, Y2: number, Y3: number, fillColor: string, borderColor: string}) {
         super();
-        this.X1 = X1;
-        this.X2 = X2;
-        this.X3 = X3;
-        this.Y1 = Y1;
-        this.Y2 = Y2;
-        this.Y3 = Y3;
-        this.fillColor = fillColor;
-        this.borderColor = borderColor;
+        this.X1 = parameters.X1;
+        this.X2 = parameters.X2;
+        this.X3 = parameters.X3;
+        this.Y1 = parameters.Y1;
+        this.Y2 = parameters.Y2;
+        this.Y3 = parameters.Y3;
+        this.fillColor = parameters.fillColor;
+        this.borderColor = parameters.borderColor;
     }
 
     public calculatePerimeter(): number {

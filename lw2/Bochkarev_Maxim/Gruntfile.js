@@ -36,6 +36,10 @@ module.exports = function(grunt){
 			css: {
 				src: ['node_modules/bootstrap/dist/css/bootstrap.min.css', 'src/styles/style.css'],
 				dest: 'build/styles.css'
+			},
+			systemjs: {
+				src: ['node_modules/systemjs/dist/system.js'],
+				dest: 'build/system.js'
 			}
 		},
 		connect: {
