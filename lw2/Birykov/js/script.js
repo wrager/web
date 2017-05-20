@@ -1,5 +1,5 @@
-var FONT_SIZE = 16;
-var INFO_TEXT_COLOR = "#000000";
+const FONT_SIZE = 16;
+const INFO_TEXT_COLOR = "#000000";
 
 var circle;
 var rectangle;
@@ -23,13 +23,16 @@ function onShapeSelect() {
 }
 
 function onApplyClick() {
+	
     var canvas = getElement("canvas");
     var context = canvas.getContext("2d");
     var selectedValue = getSelectorValue();
+	
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     if (selectedValue == "Circle") {
         circle = new Circle();
+		
         circle.setFillColor(getElementValue("input-fill-color"));
         circle.setBorderColor(getElementValue("input-border-color"));
         circle.setRadius(getElementValue("circle-r"));
@@ -37,6 +40,7 @@ function onApplyClick() {
         circle.setY(getElementValue("circle-y"));
     } else if (selectedValue == "Rectangle") {
         rectangle = new Rectangle();
+		
         rectangle.setFillColor(getElementValue("input-fill-color"));
         rectangle.setBorderColor(getElementValue("input-border-color"));
         rectangle.setX1(getElementValue("rectangle-x1"));
@@ -45,6 +49,7 @@ function onApplyClick() {
         rectangle.setY2(getElementValue("rectangle-y2"));
     } else if (selectedValue == "Triangle") {
         triangle = new Triangle();
+		
         triangle.setFillColor(getElementValue("input-fill-color"));
         triangle.setBorderColor(getElementValue("input-border-color"));
         triangle.setP1X(getElementValue("triangle-x1"));
@@ -59,10 +64,12 @@ function onApplyClick() {
 }
 
 function exist(item) {
+	
     return typeof (item) != 'undefined' && item != null;
 }
 
 function draw(shapes, context) {
+	
     var index = 1;
 
     shapes.forEach(function(element) {
@@ -75,6 +82,7 @@ function draw(shapes, context) {
 }
 
 function drawShapeInfo(context, shape, shift) {
+	
     context.font=FONT_SIZE + "px Montserrat Alternates";
     context.fillStyle = INFO_TEXT_COLOR;
     context.fillText(shape.constructor.name, 300, shift * FONT_SIZE * 2);
@@ -83,24 +91,29 @@ function drawShapeInfo(context, shape, shift) {
 }
 
 function getElement(id) {
+	
     return document.getElementById(id);
 }
 
 function getElementValue(id) {
+	
     return getElement(id).value;
 }
 
 function hide(id) {
+	
     var element =  getElement(id);
     element.style.display = "none";
 }
 
 function show (id) {
+	
     var element =  getElement(id);
     element.style.display = "block"
 }
 
 function getSelectorValue() {
+	
     var selector = getElement("shape-selector");
     return selector.options[selector.selectedIndex].value;
 }
