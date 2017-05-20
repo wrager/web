@@ -77,9 +77,9 @@ function draw(shapes, context) {
 function drawShapeInfo(context, shape, shift) {
     context.font=FONT_SIZE + "px Montserrat Alternates";
     context.fillStyle = INFO_TEXT_COLOR;
-    context.fillText(shape.constructor.name, 800, shift * FONT_SIZE * 2);
-    context.fillText("Perimeter: " + shape.calculatePerimeter(), 800, shift * FONT_SIZE * 2 + FONT_SIZE);
-    context.fillText("Area: " + shape.calculateArea(), 800, shift * FONT_SIZE * 2 + FONT_SIZE * 2);
+    context.fillText(shape.constructor.name, 300, shift * FONT_SIZE * 2);
+    context.fillText("Perimeter: " + shape.calculatePerimeter(), 300, shift * FONT_SIZE * 2 + FONT_SIZE);
+    context.fillText("Area: " + shape.calculateArea(), 300, shift * FONT_SIZE * 2 + FONT_SIZE * 2);
 }
 
 function getElement(id) {
