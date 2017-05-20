@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+        "module": "system",
+        "target": "es5",
+		"strict": true
+    },
+    "files": [
+        "src/js/inherit.ts"
+		"src/js/point.ts",
+        "src/js/shape.ts",
+        "src/js/circle.ts",
+        "src/js/triangle.ts",
+        "src/js/rectangle.ts",
+        "src/js/script.ts",
+		"src/js/canvas.ts",
+		"src/js/main.ts"	
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
