@@ -6,9 +6,9 @@ module.exports = function( grunt ) {
                 src: ['src/styles/*.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css', 'node_modules/bootstrap/dist/css/bootstrap-theme.min.css'],
                 dest: 'build/styles.css'
 			},
-			ts: {
-				src: ['src/js/*.ts'],
-				dest: 'build/script.ts'
+			js: {
+				src: ['src/js/*.js'],
+				dest: 'build/script.js'
 			},
 			html: {
 				src: ['src/index.html'],
@@ -52,7 +52,7 @@ module.exports = function( grunt ) {
 			},
 			ts: {
 				files: ['src/js/*.ts'],
-				tasks: ['tslint', 'concat:ts', 'cachebreaker']
+				tasks: ['concat:js', 'cachebreaker']
 			},
 			html: {
 				files: ['src/index.html'],
@@ -64,7 +64,7 @@ module.exports = function( grunt ) {
 				options: {
 					match: [
 						{
-							'script.ts': 'build/script.ts',
+							'script.js': 'build/script.js',
 							'styles.css': 'build/styles.css'
 						}
 					],
