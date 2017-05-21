@@ -5,14 +5,14 @@
 		"strict": true
     },
     "files": [
-		"src/js/point.ts",
+        "src/js/point.ts",
         "src/js/shape.ts",
-        "src/js/circle.ts",
         "src/js/triangle.ts",
+        "src/js/circle.ts",
         "src/js/rectangle.ts",
-		"src/js/canvas.ts",
-		"src/js/painter.ts",
-		"src/js/main.ts"
+        "src/js/canvas.ts",
+        "src/js/painter.ts",
+        "src/js/main.ts"
     ],
     "exclude": [
         "node_modules"

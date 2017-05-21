@@ -7,7 +7,7 @@ module.exports = function( grunt ) {
                 dest: 'build/styles.css'
 			},
 			js: {
-				src: ['src/js/*.js'],
+				src: ["src/js/point.js", "src/js/shape.js", "src/js/triangle.js", "src/js/circle.js", "src/js/rectangle.js", "src/js/canvas.js", "src/js/painter.js", "src/js/main.js"],
 				dest: 'build/script.js'
 			},
 			html: {
@@ -52,7 +52,7 @@ module.exports = function( grunt ) {
 			},
 			ts: {
 				files: ['src/js/*.ts'],
-				tasks: ['concat:js', 'cachebreaker']
+				tasks: ['tslint', 'ts', 'concat:js', 'cachebreaker']
 			},
 			html: {
 				files: ['src/index.html'],

@@ -6,7 +6,7 @@ function getElement(id) {
 }
 
 function getElementValue(id) {
-    return (getElement(id) as HTMLInputElement).valueAsNumber;
+    return Number((getElement(id) as HTMLInputElement).value);
 }
 
 function getElementValueStr(id) {
@@ -26,6 +26,7 @@ function getComboValue() {
     const combobox = getElement("shape-combobox") as HTMLSelectElement;
     return combobox.options[combobox.selectedIndex].value;
 }
+
 class Painter {
 
     private canvas: Canvas;

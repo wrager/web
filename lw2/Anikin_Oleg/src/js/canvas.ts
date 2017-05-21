@@ -10,13 +10,13 @@ class Canvas {
     private triangle: Triangle;
 
     constructor() {
-        this.circle = null;
-        this.rectangle = null;
-        this.triangle = null;
+        this.circle = undefined;
+        this.rectangle = undefined;
+        this.triangle = undefined;
     }
 
     public updateCircle(center: Point, radius: number, fillColor: string, borderColor: string) {
-        if (this.circle === null) {
+        if (this.circle === undefined) {
             this.circle = new Circle();
         }
 
@@ -27,7 +27,7 @@ class Canvas {
     }
 
     public updateRectangle(leftTop: Point, rightButtom: Point, fillColor: string, borderColor: string) {
-        if (this.rectangle === null) {
+        if (this.rectangle === undefined) {
             this.rectangle = new Rectangle();
         }
 
@@ -38,7 +38,7 @@ class Canvas {
     }
 
     public updateTriangle(first: Point, second: Point, third: Point, fillColor: string, borderColor: string) {
-        if (this.triangle === null) {
+        if (this.triangle === undefined) {
             this.triangle = new Triangle();
         }
 
