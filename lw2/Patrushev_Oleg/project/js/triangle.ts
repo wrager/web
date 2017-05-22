@@ -17,7 +17,7 @@ class Triangle extends Shape {
         this.p3Y = 0;
     }
 
-    public setP1X(value) {
+    public setP1X(value: number) {
         this.p1X = value;
     }
 
@@ -25,7 +25,7 @@ class Triangle extends Shape {
         return this.p1X;
     }
 
-    public setP2X(value) {
+    public setP2X(value: number) {
         this.p2X = value;
     }
 
@@ -33,7 +33,7 @@ class Triangle extends Shape {
         return this.p2X;
     }
 
-    public setP3X(value) {
+    public setP3X(value: number) {
         this.p3X = value;
     }
 
@@ -41,7 +41,7 @@ class Triangle extends Shape {
         return this.p3X;
     }
 
-    public setP1Y(value) {
+    public setP1Y(value: number) {
         this.p1Y = value;
     }
 
@@ -49,7 +49,7 @@ class Triangle extends Shape {
         return this.p1Y;
     }
 
-    public setP2Y(value) {
+    public setP2Y(value: number) {
         this.p2Y = value;
     }
 
@@ -57,7 +57,7 @@ class Triangle extends Shape {
         return this.p2Y;
     }
 
-    public setP3Y(value) {
+    public setP3Y(value: number) {
         this.p3Y = value;
     }
 
@@ -65,7 +65,7 @@ class Triangle extends Shape {
         return this.p3Y;
     }
 
-    public draw(context) {
+    public draw(context: CanvasRenderingContext2D) {
         context.beginPath();
         context.moveTo(this.getP1X(), this.getP1Y());
         context.lineTo(this.getP2X(), this.getP2Y());
@@ -90,7 +90,7 @@ class Triangle extends Shape {
         return +(lines[0] + lines[1] + lines[2]).toFixed(3);
     }
 
-    private getLineLength(x1, y1, x2, y2) {
+    private getLineLength(x1: number, y1: number, x2: number, y2: number) {
         return Math.sqrt(Math.pow(x2 - x1, 2) + (Math.pow(y2 - y1, 2)));
     }
 

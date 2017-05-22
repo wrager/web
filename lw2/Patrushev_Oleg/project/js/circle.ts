@@ -11,7 +11,7 @@ class Circle extends Shape {
         this.r = 0;
     }
 
-    public setRadius(value) {
+    public setRadius(value: number) {
         this.r = value;
     }
 
@@ -19,7 +19,7 @@ class Circle extends Shape {
         return this.r;
     }
 
-    public setX(value) {
+    public setX(value: number) {
         this.x = value;
     }
 
@@ -27,7 +27,7 @@ class Circle extends Shape {
         return this.x;
     }
 
-    public setY(value) {
+    public setY(value: number) {
         this.y = value;
     }
 
@@ -35,7 +35,7 @@ class Circle extends Shape {
         return this.y;
     }
 
-    public draw(context) {
+    public draw(context: CanvasRenderingContext2D) {
         context.beginPath();
         context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
         context.fillStyle = this.getFillColor();

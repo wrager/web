@@ -13,7 +13,7 @@ class Rectangle extends Shape {
         this.y2 = 0;
     }
 
-    public setX1(value) {
+    public setX1(value: number) {
         this.x1 = value;
     }
 
@@ -21,7 +21,7 @@ class Rectangle extends Shape {
         return this.x1;
     }
 
-    public setY1(value) {
+    public setY1(value: number) {
         this.y1 = value;
     }
 
@@ -29,7 +29,7 @@ class Rectangle extends Shape {
         return this.y1;
     }
 
-    public setX2(value) {
+    public setX2(value: number) {
         this.x2 = value;
     }
 
@@ -37,7 +37,7 @@ class Rectangle extends Shape {
         return this.x2;
     }
 
-    public setY2(value) {
+    public setY2(value: number) {
         this.y2 = value;
     }
 
@@ -53,7 +53,7 @@ class Rectangle extends Shape {
         return Math.abs(this.getY1() - this.getY2());
     }
 
-    public draw(context) {
+    public draw(context: CanvasRenderingContext2D) {
         const tLeftX = Math.min(this.getX1(), this.getX2());
         const tLeftY = Math.min(this.getY1(), this.getY2());
         context.beginPath();
