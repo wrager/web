@@ -29,7 +29,7 @@ function onApplyClick() {
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     if (selectedShape == "Circle") {
-        circle = new Circle(); //создаем объект
+        circle = new Circle();
         circle.setFillColor(getElementValue("fill-color"));
         circle.setBorderColor(getElementValue("border-color"));
         circle.setRadius(getElementValue("circle-r"));
@@ -77,7 +77,7 @@ function drawFigureInformation(context, shape, shift) {
 }
 
 function getElementValue(id) {
-    return document.getElementById(id).value; //доступ к элменту
+    return document.getElementById(id).value;
 }
 
 function hide(id) {
