@@ -1,43 +1,51 @@
-function Сircle() {
+function Circle() {
+    Shape.apply(this, arguments);
     this.x = 0;
     this.y = 0;
     this.radius = 0;
 }
 
-Сircle.prototype = Object.create(Shape.prototype);
-Сircle.prototype.constructor = Сircle;
+Circle.prototype = Object.create(Shape.prototype);
+Circle.prototype.constructor = Circle;
 
-Сircle.prototype.getRadius = function () {
-    return this.radius;
-}
-
-Сircle.prototype.setRadius = function (value) {
+Circle.prototype.setRadius = function (value) {
     this.radius = value;
 }
 
-Сircle.prototype.getX = function () {
-    return this.x = value;
+Circle.prototype.getRadius = function () {
+    return this.radius;
 }
 
-Сircle.prototype.setX = function (value) {
-    this.x;
+Circle.prototype.setX = function (value) {
+    this.x = value;
 }
 
-Сircle.prototype.getY = function () {
-    return this.y = value;
+Circle.prototype.getX = function () {
+    return this.x;
 }
 
-Сircle.prototype.setY = function (value) {
+Circle.prototype.setY = function (value) {
     this.y = value;
 }
 
-Сircle.prototype.draw = function () {
+Circle.prototype.getY = function () {
+    return this.y;
 }
 
-Сircle.prototype.calculateArea = function () {
-    return Math.PI * Math.pow(this.getRadius(), 2);
+Circle.prototype.draw = function (context) {
+    context.beginPath();
+    context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
+    context.closePath();
+    context.fillStyle = this.getFillColor();
+    context.fill();
+    context.strokeStyle = this.getBorderColor();
+    context.stroke();
 }
 
-Сircle.prototype.calculatePerimeter = function () {
-    return 2 * Math.PI * this.getRadius();
+Circle.prototype.calculateArea = function () {
+    return (Math.PI * Math.pow(this.radius, 2)).toFixed(0);
+}
+
+Circle.prototype.calculatePerimeter = function () {
+    return (2 * Math.PI * this.radius).toFixed(0);
 }

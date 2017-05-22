@@ -1,4 +1,5 @@
 function Rectangle() {
+    Shape.apply(this, arguments);
     this.x1 = 0;
     this.y1 = 0;
     this.x2 = 0;
@@ -48,13 +49,22 @@ Rectangle.prototype.getHeight = function (value) {
     return Math.abs(this.getY2() - this.getY1());
 }
 
-Rectangle.prototype.draw = function () {
+Rectangle.prototype.draw = function (context) {
+    var x0 = Math.min(this.getX1(), this.getX2());
+    var y0 = Math.min(this.getY1(), this.getY2());
+    context.beginPath();
+    context.rect(x0, y0, this.getWidth(), this.getHeight());
+    context.closePath();
+    context.fillStyle = this.getFillColor();
+    context.fill();
+    context.strokeStyle = this.getBorderColor();
+    context.stroke();
 }
 
 Rectangle.prototype.calculateArea = function () {
-    return this.getWidth() * this.getHeight();
+    return (this.getWidth() * this.getHeight()).toFixed(0);
 }
 
 Rectangle.prototype.calculatePerimeter = function () {
-    return 2 * (this.getWidth() + this.getHeight());
+    return (2 * (this.getWidth() + this.getHeight())).toFixed(0);
 }
