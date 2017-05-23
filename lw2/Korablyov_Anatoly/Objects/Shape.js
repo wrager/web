@@ -2,8 +2,8 @@
  * @constructor
  */
 function CShape() {
-    this.fillShape = "#000000";
-    this.borderColor = "#000000";
+    this.fillShape = "#00ff00";
+    this.borderColor = "#0000ff";
 }
 
 /**

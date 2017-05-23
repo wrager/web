@@ -68,6 +68,13 @@ CCircle.prototype.getY = function () {
 };
 
 CCircle.prototype.draw = function () {
+    context = document.getElementById("canvas").getContext('2d');
+    context.beginPath();
+    context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
+    context.fillStyle = this.getFillColor();
+    context.fill();
+    context.strokeStyle = this.getBorderColor();
+    context.stroke();
 };
 
 /**

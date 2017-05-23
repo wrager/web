@@ -102,7 +102,13 @@ CRectangle.prototype.getHeight = function () {
 };
 
 CRectangle.prototype.draw = function () {
-
+    context = document.getElementById("canvas").getContext('2d');
+    context.beginPath();
+    context.rect(this._x1, this._y1, this.getWidth(), this.getHeight());
+    context.fillStyle = this.getFillColor();
+    context.fill();
+    context.strokeStyle = this.getBorderColor();
+    context.stroke();
 };
 
 /**

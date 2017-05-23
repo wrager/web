@@ -38,7 +38,6 @@ function CTriangle() {
      * @private
      */
     this._y3 = 0;
-
 }
 
 CTriangle.prototype = Object.create(CShape.prototype);
@@ -130,6 +129,16 @@ CTriangle.prototype.getY3 = function () {
 
 
 CTriangle.prototype.draw = function () {
+    var context = document.getElementById("canvas").getContext('2d');
+    context.beginPath();
+    context.moveTo(this.getX1(), this.getY1());
+    context.lineTo(this.getX2(), this.getY2());
+    context.lineTo(this.getX3(), this.getY3());
+    context.closePath();
+    context.fillStyle = this.getFillColor();
+    context.fill();
+    context.strokeStyle = this.getBorderColor();
+    context.stroke();
 };
 
 /**
@@ -148,7 +157,7 @@ function subAbsNum(num1, num2) {
  * @param {number} y2
  * @returns {number}
  */
-function lengthSide(x1, y1, x2, y2)
+function lengthSide(x1, y1, x2, y2) 
 {
     return (Math.sqrt(Math.pow(subAbsNum(x1, x2), 2) + Math.sqrt(Math.pow(subAbsNum(y1, y2), 2))));
 }
