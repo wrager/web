@@ -1,0 +1,202 @@
+.header {
+    width: auto;
+    height: 61;
+}
+
+.header-logo img {
+    margin-left: 7;
+    margin-top: 6;
+    width: 127;
+    height: 52;
+}
+
+.help {
+    float: right;
+    margin-top: -40;
+    margin-right: -8; 
+}
+
+.sign-in-form-header {
+    position: absolute;
+    margin-left: 1101px;
+    margin-top: 3px;
+    width: 358px;
+    height: 4px;
+    background: linear-gradient(to right, #188fff, #400090);
+}
+
+.center {
+    display: table;
+    margin: 0 auto;
+}
+
+.right {
+    float: right;
+    width: auto;
+}
+
+.sign-in-form {
+    position: relative;
+    left: 1101px;
+    top: 3px;
+    padding: 30;
+    width: 298px;
+    height: 516px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
+
+}
+
+.sign-in-form-logo img {
+    margin-top: 4px;
+    width: 116px;
+    height: 48px;
+}
+
+.sign-in-form-sign-in-label {
+    margin-top: 2px;
+    font-size: 13.5pt;
+    font-family: Arial, sans-serif;
+}
+
+.text-view {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+    padding: 0 8;
+    margin-top: 11px;
+    height: 40;
+    width: 300;
+    border: none;
+    border-bottom: 1px solid #cfd2d4;
+}
+
+.text-view:focus {
+    outline-style: none;
+    border: none;
+    border-bottom: 2px solid #188fff;
+}
+
+.sign-in-button {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #188fff;
+    margin-top: 23;
+    padding: 9 0;
+    width: 300; 
+    border: none;
+}
+
+.sign-in-button:hover {
+    background-color: #4ca9ff;
+    cursor: pointer;
+}
+
+.sign-in-button:active {
+    background-color: #0036b0;
+    background-image: linear-gradient(transparent,rgba(0,0,0,0.15) 75%,rgba(0,0,0,0.40));
+}
+
+.sign-in-form-login-helper {
+    margin-top: 16px;
+}
+
+#checkbox + label {
+    margin-left: 0;
+    color: #a497a4;
+}
+
+#checkbox:hover + label:hover {
+    cursor: pointer;
+}
+
+#checkbox:checked + label {
+    color: #188fff;
+}
+
+#checkbox:before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADYUExURUxpcX9/f4OLlIaNjYWKkIaLkIeLkH+Pj4aLj4eMj4iIiIaLj4aLkKqqqn9/mYeMkIeLj4eLj4eMj39/f4iIkYiNjYaMj4aMj////4aMkIWRkYeMkIeMkIeLkIaMkIeMj4mJiYaMj4eMkIiMj4eLjoaLkIeLkIeLj4eLj4ePj4WNkYaMkYaMkImJkJGRkYiLkIaMj4eMj4aKkYeMj4eMj4eNkIaMj4eLkIaLkIaLj4SKj4aLkIaLj4WMj4aMjoaLj4eLj4WNkYaMkIWLkYaNkYeMj4eHloeMkJjgH2IAAABHdFJOUwAGHyQu9uQQ+rkPN+sDCv3xvtMCHC3cTgHpFc3GprKcDVeGaULtr+qAID909CUHWIz1Rpf3U6XvbG4wyfxQW9C3QbYqSKARYZZvFgAAASVJREFUOMvV1NdygzAQBdBLLzbg3lt677337P//UVg5GCcRkmfy5H1AK+2ZAYkdAUsRduDTn5gHk5vrCTuHSAnDO6LXdAxIDeNqOr1PE18NjWeePqUZj17hBqJNrpffdLB+yeXKLTSwc8ZVpwQdPObi+Tp0cJtrfhs6uCf2fwQdXPt1UBm86HZX5t1jUgC3iJJ27h4SksP6CX/4abb67lMBxKo4st3p4ovolA8p7IzFTxCHW6pwPv6UQkRDTjeaQPOKs2HkySGMkWgA66DM48hAEcQhtx65Lj+rBooh4kG210EMFUTYn7p+CDVEr8bzWg86iEaLqNWAHmLHdU0sAmFZWAzm8Q9oetIwf0D5BTALfwYDNQzyy8xRuX1bc+19vzewsUTxBVY9kJT/9a9rAAAAAElFTkSuQmCC);
+}
+
+.stay-signed-in-label {
+    font-size: 10pt;
+    font-family: Arial, sans-serif;
+    margin-left: 5;
+}
+
+.link {
+    font-size: 10pt;
+    font-family: Arial, sans-serif;
+    padding-top: 4;
+    color: #188fff;
+    text-decoration: none;
+}
+
+.sign-in-form-security-form {
+    background-color: #fff6d7;
+    margin-top: 13px;
+    padding: 5;
+    height: 180px;
+}
+
+.sign-in-form-security-form a {
+    padding: 10 60;
+    text-align: center;
+}
+
+.important {
+    font-size: 9.5pt;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #dd1037;
+    margin-top: 10px;
+}
+
+.usual {
+    font-size: 9.5pt;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+
+.usual:before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAMAAAC3SZ14AAAAZlBMVEUAAABFT08tNT4tNT4tNT8yO0M2RUktNT4uNj4tNT8uNj8uNj8uNz8tOD8tNT4tNT4tNj4tNj8tNj4vNj8uNz8yOkYtNT4wN0IwNz4uNT4tNT8uNT4tNj8tNj8uNz8vNz8zOkItNT4lfUnHAAAAIXRSTlMAA+3f2BwJyMOkhWFZLPfzuaqYUEQVlCYl+9GsZa+afiMjWvc/AAAAtElEQVQY01WP2RaCMBBDp5tdpCA7Ci75/5+UThEwD01y50xPS5smayf6U1EBVXECnYMsCgnXcR2XRgG1ITI1oJplJAnIJhIrNqmR1FGk2rbpFFFL0opY1mZXmlyZY99nLx15GI7DwGbg6YorZ4AtVYP6jOa09Cj7A/XlI/0F4UCBrxGq+vzQVKn8SLjVQ1inFi2xBnieiRovyrrcMF9We+K22s501+md8Mr7DtyDoLNG7+MWv2QSC1pVZFdoAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    position:absolute;
+    margin-left: -24;
+    margin-top: -1;
+}
+
+.sign-in-form-sign-up {
+    padding-left: 37;
+    padding-top: 15.5;
+}
+
+.sign-up-label {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+}
+
+.sign-up-label a {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    margin-top: 297px;
+}
+
+.link-footer-small {
+    font-size: 7pt;
+    font-family: Arial, sans-serif;
+    padding-top: 4;
+    color: #188fff;
+    text-decoration: none;
+}
+
+.footer-small {
+    font-size: 7.7pt;
+    font-family: Arial, sans-serif;
+    padding-top: 4;
+    text-decoration: none;
+}
