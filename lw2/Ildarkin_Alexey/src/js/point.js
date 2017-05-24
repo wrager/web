@@ -3,7 +3,7 @@ function Point() {
     this.y = 0;
 }
 
-createPoint = function(x, y) {
+function createPoint(x, y) {
     var point = new Point();
     point.x = x;
     point.y = y;

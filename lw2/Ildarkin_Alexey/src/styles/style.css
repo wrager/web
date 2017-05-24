@@ -1,0 +1,11 @@
+#draw {
+    display: none;
+}
+
+#canvas {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: auto;
+    background-color: #f9f9f9;
+    border: 4px double lightgray;
+}

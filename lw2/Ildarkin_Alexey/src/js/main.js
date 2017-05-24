@@ -56,3 +56,6 @@ function getSelectorValue() {
     var selector = getElementById("shape-selector");
     return selector.options[selector.selectedIndex].value;
 }
+
+document.getElementById("shape-selector").onchange = onShapeTypeSelected;
+document.getElementById("apply-btn").onclick = onApplyClicked;
