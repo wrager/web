@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"module": "system",
+		"target": "es5",
+		"strict":true
+	},
+	"files": [
+		"src/js/circle.ts",
+		"src/js/main.ts",
+		"src/js/point.ts",
+		"src/js/rectangle.ts",
+		"src/js/shape.ts",
+		"src/js/shape-creator.ts",
+		"src/js/triangle.ts"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
