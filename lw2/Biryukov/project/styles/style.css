@@ -1,33 +1,28 @@
+html, body {
+    background-color: #29324e;
+    height: 100%;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.whiteBackground {
+    background-color: #fff;
+}
+
 #canvas {
-    position: absolute; 
-    left: 50%; 
-    top: 50%; 
-    margin-left: auto; 
-    margin-right: auto; 
-    margin-top: 350px;
     height: 500px;
     width: 500px;
     background-color: #f9f9f9;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    border: 1px solid #ccc;
+    border-radius: 2px;
 }
 
-
-#circle-optional-form {
+#circle-optional-form, #rectangle-optional-form, #triangle-optional-form, #apply-btn  {
     display: none;
 }
-
-#rectangle-optional-form {
-    display: none;
-}
-
-#triangle-optional-form {
-    display: none;
-}
-
-
 
 #apply-btn {
-    display: none;
+    margin-top: 10px;
 }

@@ -59,7 +59,7 @@ function onApplyClick() {
 
     draw([circle, rectangle, triangle], context);
 }
-(document.getElementById("apply-btn") as HTMLElement).onchange = onApplyClick;
+(document.getElementById("apply-btn") as HTMLElement).onclick = onApplyClick;
 
 function exist(item: any) {
     return typeof (item) !== "undefined" && item !== null;
