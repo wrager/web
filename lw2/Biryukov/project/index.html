@@ -2,108 +2,120 @@
 <html>
 
 <head>
+    <title>Lab 2</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
 
-    <div class="content">
-        <div class="row">
-			<div class="col-md-4">
-		
-            <div class="normal-margin figure-input">
-                <div class="input-line">
-                    <label for="shape-selector" class="control-label">Select shape:</label>
-                    <select class="selector" id="shape-selector">
-                            <option disabled selected hidden>Select shape</option>
-                            <option>Circle</option>
-                            <option>Rectangle</option>
-                            <option>Triangle</option>
-                        </select>
+    <div class="container fullHeight">
+        <div class="row fullHeight whiteBackground">
+            <h1 class="text-center">Lab 2</h1>
+            <div>
+		  	   <div class="col-md-6">
+                    <form>
+                        <div class="normal-margin figure-input">
+                            <div class="form-group">
+                                <label for="shape-selector" class="control-label">Select shape:</label>
+                                <select class="form-control" id="shape-selector">
+                                        <option disabled selected hidden>Select shape</option>
+                                        <option>Circle</option>
+                                        <option>Rectangle</option>
+                                        <option>Triangle</option>
+                                    </select>
+                            </div>
+                            <div>
+                                <label for="input-fill-color" class="control-label">Fill color:</label>
+                                <input type="text" class="form-control" id="input-fill-color" placeholder="#ff0000" value="#ff0000">
+                            </div>
+                            <div>
+                                <label for="input-border-color">Border color:</label>
+                                <input type="text" class="form-control" id="input-border-color" placeholder="#00ff00" value="#00ff00">
+                            </div>
+                        </div>
+        
+        
+                        <div id="circle-optional-form">
+                            <div>
+                                <label for="circle-r">Circle radius:</label>
+                                <input type="text" class="form-control" id="circle-r" value="0">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="circle-x">Circle center X:</label>
+                                    <input type="text" class="form-control" id="circle-x" value="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="circle-y">Circle center Y:</label>
+                                    <input type="text" class="form-control" id="circle-y" value="0">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div id="rectangle-optional-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="rectangle-x1">Recangle x1:</label>
+                                    <input type="text" class="form-control" id="rectangle-x1" value="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="rectangle-y1">Recangle y1:</label>
+                                    <input type="text" class="form-control" id="rectangle-y1" value="0">
+                                </div>
+                            </div>
+                            <div class="row">
+                               <d iv class="col-md-6">
+                                    <label for="rectangle-x2">Recangle x2:</label>
+                                    <input type="text" class="form-control" id="rectangle-x2" value="0">
+                               </ div>
+                               <d iv class="col-md-6">
+                                    <label for="rectangle-y2">Recangle y2:</label>
+                                    <input type="text" class="form-control" id="rectangle-y2" value="0">
+                            </div>
+                        </div>
+        
+                        <div id="triangle-optional-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="triangle-x1">Triangle x1:</label>
+                                    <input type="text" class="form-control" id="triangle-x1" value="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="triangle-y1">Triangle y1:</label>
+                                    <input type="text" class="form-control" id="triangle-y1" value="0">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="triangle-x2">Triangle x2:</label>
+                                    <input type="text" class="form-control" id="triangle-x2" value="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="triangle-y2">Triangle y2:</label>
+                                    <input type="text" class="form-control" id="triangle-y2" value="0">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="triangle-x3">Triangle x3:</label>
+                                    <input type="text" class="form-control" id="triangle-x3" value="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="triangle-y3">Triangle y3:</label>
+                                    <input type="text" class="form-control" id="triangle-y3" value="0">
+                                </div>
+                            </div>
+                        </div>
+    
+        
+                        <button class="btn btn-primary btn-lg btn-block" id="apply-btn">Apply</button>
+                    </form>
                 </div>
-                <div class="input-line">
-                    <label for="input-fill-color" class="control-label">Fill color:</label>
-                    <input type="text" class="input-box" id="input-fill-color" value="#ff0000">
-                </div>
-                <div class="input-line">
-                    <label for="input-border-color" class="control-label">Border color:</label>
-                    <input type="text" class="input-box" id="input-border-color" value="#00ff00">
-                </div>
-            </div>
-
-            <div class=" normal-margin figure-extenged-input">
-
-                <div class="fixed-height" id="circle-optional-form">
-                    <div class="input-line">
-                        <label for="circle-r" class="control-label">Circle radius:</label>
-                        <input type="text" class="input-box" id="circle-r" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="circle-x" class="control-label">Circle center X:</label>
-                        <input type="text" class="input-box" id="circle-x" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="circle-y" class="control-label">Circle center Y:</label>
-                        <input type="text" class="input-box" id="circle-y" value="0">
-                    </div>
-                </div>
-
-                <div class="fixed-height" id="rectangle-optional-form">
-                    <div class="input-line">
-                        <label for="rectangle-x1" class="control-label">Recangle x1:</label>
-                        <input type="text" class="input-box" id="rectangle-x1" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="rectangle-y1" class="control-label">Recangle y1:</label>
-                        <input type="text" class="input-box" id="rectangle-y1" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="rectangle-x2" class="control-label">Recangle x2:</label>
-                        <input type="text" class="input-box" id="rectangle-x2" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="rectangle-y2" class="control-label">Recangle y2:</label>
-                        <input type="text" class="input-box" id="rectangle-y2" value="0">
-                    </div>
-                </div>
-
-                <div class="fixed-height" id="triangle-optional-form">
-                    <div class="input-line">
-                        <label for="triangle-x1" class="control-label">Triangle x1:</label>
-                        <input type="text" class="input-box" id="triangle-x1" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="triangle-y1" class="control-label">Triangle y1:</label>
-                        <input type="text" class="input-box" id="triangle-y1" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="triangle-x2" class="control-label">Triangle x2:</label>
-                        <input type="text" class="input-box" id="triangle-x2" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="triangle-y2" class="control-label">Triangle y2:</label>
-                        <input type="text" class="input-box" id="triangle-y2" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="triangle-x3" class="control-label">Triangle x3:</label>
-                        <input type="text" class="input-box" id="triangle-x3" value="0">
-                    </div>
-                    <div class="input-line">
-                        <label for="triangle-y3" class="control-label">Triangle y3:</label>
-                        <input type="text" class="input-box" id="triangle-y3" value="0">
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="button">
-                    <button class="button" id="apply-btn">Apply</button>
-            </div>
-			</div>
-			<div class="col-md-8">
-            <canvas id="canvas" width="500" height="500"></canvas>
-			</div>
-		</div>
+		  	</div>
+		  	<div class="col-md-6">
+                <canvas id="canvas" width="500" height="500"></canvas>
+		  	</div>
+	   </div>
     </div>
 
     <!-- Loading scripts here -->

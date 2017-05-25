@@ -54,6 +54,7 @@ function onApplyClick() {
     }
 
     draw([circle, rectangle, triangle], context);
+    return false;
 }
 document.getElementById("apply-btn").onclick = onApplyClick;
 
