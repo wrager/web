@@ -13,28 +13,6 @@
     z-index: -1;
 }
 
-.normal-margin {
-    margin-top: 20px;
-    margin-left: 30%;
-}
-
-.fixed-height {
-    height: 120px;
-}
-
-.input-line {
-    padding: 5px;
-    width: 300px;
-    height: 17px;
-}
-
-.control-label {
-    float: left;
-}
-
-.input-box {
-    float: right;
-}
 
 #circle-optional-form {
     display: none;
