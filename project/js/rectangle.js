@@ -45,7 +45,7 @@ Rectangle.prototype.getWidth = function () {
     return Math.abs(this.getX2() - this.getX1());
 }
 
-Rectangle.prototype.getHeight = function (value) {
+Rectangle.prototype.getHeight = function () {
     return Math.abs(this.getY2() - this.getY1());
 }
 

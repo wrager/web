@@ -1,3 +1,5 @@
+var document = document.getElementById('root');
+var canvas = document.getElementById('canvas');
 var circle;
 var rectangle;
 var triangle;
@@ -21,11 +23,11 @@ function onShapeSelect() {
         hide("rectangle-options");
     }
 }
+document.getElementById("shape-selector").onchange = onShapeSelect;
 
 function onApplyClick() {
-    var canvas = document.getElementById("canvas");
-    var context = canvas.getContext("2d");    
     var selectedShape = getSelectorShape();
+    var context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     if (selectedShape == "Circle") {
@@ -57,6 +59,7 @@ function onApplyClick() {
     
     draw([circle, rectangle, triangle], context);
 }
+document.getElementById("apply").onchange = onApplyClick;
 
 function draw(shapes, context) {
     var index = 1;
