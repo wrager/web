@@ -1,10 +1,26 @@
 export abstract class Shape {
-    protected fillColor: string;
-    protected borderColor: string;
+    private fillColor: string;
+    private borderColor: string;
 
     constructor() {
         this.fillColor = "#000000";
         this.borderColor = "#000000";
+    }
+
+    public getFillColor(): string {
+        return this.fillColor;
+    }
+
+    public setFillColor(value: string) {
+        this.fillColor = value;
+    }
+
+    public getBorderColor(): string {
+        return this.borderColor;
+    }
+
+    public setBorderColor(value: string) {
+        this.borderColor = value;
     }
 
     public abstract calculateArea(): number;

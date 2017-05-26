@@ -39,35 +39,38 @@ function onDrawButtonClick() {
 
     clearCanvas();
 
-    let shape;
+    let shape = null;
     if (shapeType === "Rectangle") {
-        shape = new Rectangle( {
-            X1: getElementNumberValue("rectX1"),
-            X2: getElementNumberValue("rectX2"),
-            Y1: getElementNumberValue("rectY1"),
-            Y2: getElementNumberValue("rectY2"),
-            borderColor: getElementColorValue("borderColor"),
-            fillColor: getElementColorValue("fillColor")});
+        shape = new Rectangle();
+        shape.setX1(getElementNumberValue("rectX1"));
+        shape.setX2(getElementNumberValue("rectX2"));
+        shape.setY1(getElementNumberValue("rectY1"));
+        shape.setY2(getElementNumberValue("rectY2"));
+        shape.setBorderColor(getElementColorValue("borderColor"));
+        shape.setFillColor(getElementColorValue("fillColor"));
     } else if (shapeType === "Triangle") {
-        shape = new Triangle( {
-            X1: getElementNumberValue("triangleX1"),
-            X2: getElementNumberValue("triangleX2"),
-            X3: getElementNumberValue("triangleX3"),
-            Y1: getElementNumberValue("triangleY1"),
-            Y2: getElementNumberValue("triangleY2"),
-            Y3: getElementNumberValue("triangleY3"),
-            borderColor: getElementColorValue("borderColor"),
-            fillColor: getElementColorValue("fillColor")});
+        shape = new Triangle();
+        shape.setX1(getElementNumberValue("triangleX1"));
+        shape.setX2(getElementNumberValue("triangleX2"));
+        shape.setX3(getElementNumberValue("triangleX3"));
+        shape.setY1(getElementNumberValue("triangleY1"));
+        shape.setY2(getElementNumberValue("triangleY2"));
+        shape.setY2(getElementNumberValue("triangleY3"));
+        shape.setBorderColor(getElementColorValue("borderColor"));
+        shape.setFillColor(getElementColorValue("fillColor"));
     } else if (shapeType === "Circle") {
-        shape = new Circle({
-            borderColor: getElementColorValue("borderColor"),
-            centerX: getElementNumberValue("circleCenterX"),
-            centerY: getElementNumberValue("circleCenterY"),
-            fillColor: getElementColorValue("fillColor"),
-            radius: getElementNumberValue("circleRadius")});
+        shape = new Circle();
+        shape.setX(getElementNumberValue("circleCenterX"));
+        shape.setY(getElementNumberValue("circleCenterY"));
+        shape.setRadius(getElementNumberValue("circleRadius"));
+        shape.setBorderColor(getElementColorValue("borderColor"));
+        shape.setFillColor(getElementColorValue("fillColor"));
     }
-    shape.draw(context);
-    printCalcResultOnCanvas(shape, context);
+    if (shape != null) {
+        shape.draw(context);
+        printCalcResultOnCanvas(shape, context);
+    }
+
 }
 
 function getElementNumberValue(elem: string) {
@@ -83,8 +86,8 @@ function getElement(id: string) {
 }
 
 function getElementValue(id: string) {
-    const element = getElement(id) as HTMLElement;
-    return element.getAttribute("value");
+    const value = (getElement(id) as HTMLElement).getAttribute("value");
+    return (value != null) ? value : "";
 }
 
 function isNumber(value: any) {
@@ -109,13 +112,15 @@ function getShapeTypeValue() {
     const index = shape.getAttribute("selectedIndex") as string;
     return (options === null || index === null) ?
         null :
-        options[index].text;
+        options[Number(index)];
 }
 
 function clearCanvas() {
     const canvas = getElement("shape_canvas") as HTMLCanvasElement;
     const ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (ctx != null) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
 }
 
 function printCalcResultOnCanvas(shape: Shape, context: CanvasRenderingContext2D) {
