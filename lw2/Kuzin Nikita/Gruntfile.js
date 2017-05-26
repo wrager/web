@@ -6,12 +6,22 @@ module.exports = function(grunt) {
 	
     pkg: grunt.file.readJSON('package.json'),
 	concat: {
-	  options: {
-		separator: '\n\n'
-	  },
 	  scripts: {
-		src: ['model/**/*.js', 'view/**/*.js', 'presenter/**/*.js'],
-		dest: '.build/scripts.js'
+		src: ['model/shape.ts',
+		'model/rectangle.ts',
+		'model/triangle.ts',
+		'model/circle.ts', 
+		'view/base_drawer.ts',
+		'view/rectangle_drawer.ts',
+		'view/circle_drawer.ts',
+		'view/triangle_drawer.ts',
+		'presenter/base_shape_presenter.ts',
+		'presenter/circle_presenter.ts',
+		'presenter/rectangle_presenter.ts',
+		'presenter/triangle_presenter.ts',
+		'presenter/window_presenter.ts',
+		'presenter/main.ts'],
+		dest: '.build/scripts.ts'
 	  },
 	  index: {
 		src: ['index.html'],
@@ -26,19 +36,19 @@ module.exports = function(grunt) {
 		dest: '.build/bootstrap.min.css'
 	  }
 	},
-	eslint: {
+	tslint: {
 		options: {
-                configFile: 'eslint.json',
+                configFile: 'tslint.json',
                 reset: true
             },
-		target: ['.build/scripts.js']
+		target: ['.build/scripts.ts']
 	},
 	cachebreaker: {
 		dev: {
 			options: {
 				match: [
 					{
-						'scripts.js' : '.build/scripts.js',
+						'scripts.ts' : '.build/scripts.ts',
 						'styles.css' : '.build/styles.css'
 					}
 				],
@@ -72,15 +82,23 @@ module.exports = function(grunt) {
 				}
 			}
 		}
-	  }
+	},
+	ts: {
+		default: {
+		  src: '.build/scripts.ts',
+		}
+  },
   });
    
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-cache-breaker');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks("grunt-ts");
+  grunt.loadNpmTasks("grunt-tslint --force");
+
   
-  grunt.registerTask('main', ['concat', 'eslint', 'cachebreaker']);
+  grunt.registerTask('main', ['concat', 'tslint', 'cachebreaker', 'ts']);
   grunt.registerTask('default', ['main', 'connect', 'watch']);
 
 };

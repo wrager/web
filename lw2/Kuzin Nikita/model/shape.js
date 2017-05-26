@@ -1,26 +1,30 @@
 /**
  * Created by Dzzirt on 15.03.2017.
  */
-
-function Shape() {
-    this._mFillColor = "#000000";
-    this._mBorderColor = "#000000";
-	
-}
-
-Shape.prototype.setFillColor = function (fillColor) {
-    this._mFillColor = fillColor;
-};
-
-Shape.prototype.getFillColor = function () {
-    return this._mFillColor;
-};
-
-Shape.prototype.setBorderColor = function (borderColor) {
-    this._mBorderColor = borderColor;
-};
-
-Shape.prototype.getBorderColor = function () {
-    return this._mBorderColor;
-};
-
+var Shape = (function () {
+    function Shape() {
+        this.mFillColor = "#000000";
+        this.mBorderColor = "#000000";
+    }
+    Object.defineProperty(Shape.prototype, "fillColor", {
+        get: function () {
+            return this.mFillColor;
+        },
+        set: function (fillColor) {
+            this.mFillColor = fillColor;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Shape.prototype, "borderColor", {
+        get: function () {
+            return this.mBorderColor;
+        },
+        set: function (value) {
+            this.mBorderColor = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Shape;
+}());
