@@ -1,0 +1,135 @@
+
+header {
+    display: inline-block;
+    background: linear-gradient(to right, #59adeb, #35ce93);
+    height: 47px;
+    width: 100%;
+    background-size: cover;
+    position: fixed;
+    white-space: nowrap;
+}
+
+
+.ghost-button {
+    display: inline-block;
+    white-space: nowrap;
+    height: 47px;
+    margin-left: 50%;
+    padding: 10px 25px;
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/logo.png");
+    background-size: 22px 17px;
+    background-position-x: center;
+    background-position-y: 13px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.ghost-button:hover {
+    border-bottom: 5px solid #1da1f2;
+}
+
+.header-hyperlinks {
+    margin-top: 12px;
+    float: right;
+    margin-right: 125px;
+}
+
+.header-hyperlinks li {
+    margin: 0;
+    padding-right: 32px;
+    display: inline-block;
+}
+.header-hyperlinks a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.header-hyperlinks a:hover {
+    color: #1da1f2;
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial,sans-serif;
+    color: #292f33;
+}
+a {
+    color: #1da1f2;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.signup-wrapper {
+    width: 392px;
+    padding: 140px 0;
+    margin: 0 auto;
+    outline: none;
+}
+
+.signup-wrapper h1 {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 300;
+    margin-bottom: 11px;
+}
+
+.signup-wrapper input {
+    padding: 10px;
+}
+
+.text-license-agreement {
+    width: 392px;
+    display: block;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Arial,sans-serif;
+    color: #66757f;
+    margin-top: 12px;
+}
+
+input[type="text"] {
+    border: 0.5px solid #e1e8ed;
+    border-radius: 3px;
+    font-size: 18px;
+    width: 372px;
+    margin: 13px 0;
+    outline: none;
+}
+input[type="text"]::-webkit-input-placeholder {color:#aab8c2;}
+input[type="text"]::-moz-placeholder          {color:#aab8c2;}/* Firefox 19+ */
+input[type="text"]:-moz-placeholder           {color:#aab8c2;}/* Firefox 18- */
+input[type="text"]:-ms-input-placeholder      {color:#aab8c2;}
+
+input[type="text"]:focus {
+    border-color: #1da1f2;
+}
+
+.signup-wrapper button {
+    background-color: #1da1f2;
+    border: none;
+    border-radius: 5px;
+    padding: 13px 32px 15px;
+    display: inline-block;
+    width: 392px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-top: 25px;
+    padding: 13px;
+    cursor: pointer;
+}
+
+.text-license-agreement p {
+    font-size: 12px;
+    color: #66757f;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
