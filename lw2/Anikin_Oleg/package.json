@@ -1,17 +1,22 @@
 {
   "name": "shapes",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "integrate_package.json",
   "author": "AniSkyWorker",
   "license": "MIT",
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "grunt": "^1.0.1",
+    "grunt-assets-hash": "^0.1.4",
+    "grunt-cache-breaker": "^2.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
-    "gruntify-eslint": "^3.1.0",
     "grunt-contrib-watch": "^1.0.0",
-	  "grunt-cache-breaker": "^2.0.1"
+    "grunt-eslint": "^19.0.0",
+    "grunt-ts": "^6.0.0-beta.15",
+    "grunt-tslint": "^5.0.1",
+    "tslint": "^5.0.0",
+    "typescript": "^2.3.2"
   },
   "scripts": {
     "start": "grunt"

@@ -7,7 +7,7 @@ module.exports = function( grunt ) {
                 dest: 'build/styles.css'
 			},
 			js: {
-				src: ['src/js/*.js'],
+				src: ["src/js/point.js", "src/js/shape.js", "src/js/triangle.js", "src/js/circle.js", "src/js/rectangle.js", "src/js/canvas.js", "src/js/painter.js", "src/js/main.js"],
 				dest: 'build/script.js'
 			},
 			html: {
@@ -15,11 +15,19 @@ module.exports = function( grunt ) {
                 dest: 'build/index.html'
 			}
         },
-		eslint: {
+		ts: {
+			default : {
+				src: ["src/js/*.ts", "!node_modules/**"],
+				tsconfig: true
+			}
+		},
+		tslint: {
 			options: {
-				configFile: "eslint.json",
+				configuration: "tslint.json"
 			},
-			src: ['build/script.js']
+			your_target: {
+				src: ["src/js/*.ts"]
+			}
 		},
 		connect: {
 			server: {
@@ -42,9 +50,9 @@ module.exports = function( grunt ) {
 				files: ['src/styles/*.css'],
 				tasks: ['concat:css', 'cachebreaker']
 			},
-			js: {
-				files: ['src/js/*.js'],
-				tasks: ['concat:js', 'eslint', 'cachebreaker']
+			ts: {
+				files: ['src/js/*.ts'],
+				tasks: ['tslint', 'ts', 'concat:js', 'cachebreaker']
 			},
 			html: {
 				files: ['src/index.html'],
@@ -71,8 +79,9 @@ module.exports = function( grunt ) {
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks("gruntify-eslint");
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-cache-breaker');
-    grunt.registerTask('default', ['concat', 'eslint', 'cachebreaker', 'connect', 'watch']);
+	grunt.loadNpmTasks('grunt-ts');
+	grunt.loadNpmTasks("grunt-tslint");
+    grunt.registerTask('default', ['tslint', 'ts', 'concat', 'cachebreaker', 'connect', 'watch']);
 };
