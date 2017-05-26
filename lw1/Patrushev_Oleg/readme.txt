@@ -1,0 +1,1 @@
+http://patrushevoleg.ru/yahoo/
