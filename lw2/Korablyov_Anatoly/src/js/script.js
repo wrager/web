@@ -1,3 +1,9 @@
+document.getElementById("clear_canvas").onclick = ClearCanvas();
+document.getElementById("select_shapes").onchange = SelectShape(document.getElementById("select_shapes").value);
+document.getElementById("add_triangle").onclick = AddTriangle();
+document.getElementById("add_circle").onclick = AddCircle();
+document.getElementById("add_rectangle").onclick = AddRectangle();
+
 function SelectShape(value)
 {
     ResetMenu();
@@ -11,12 +17,7 @@ function ResetMenu()
     document.getElementById("rectangle_menu").style.display = "none";
 }
 
-/**
- * @constructor
- */
-function CObject() {
-    
-}
+
 
 function AddTriangle() {
 
@@ -30,10 +31,8 @@ function AddTriangle() {
 
     this.triangle.setFillColor(document.getElementById("shape_fill_color").value);
     this.triangle.setBorderColor(document.getElementById("shape_border_color").value);
-
     this.triangle.draw();
-
-   	document.getElementById("figure").innerHTML = "Triangle";
+    document.getElementById("figure").innerHTML = "Triangle";
     document.getElementById("area").innerHTML = "Area: " + this.triangle.calculateArea();
     document.getElementById("perimeter").innerHTML = "Perimeter: " + this.triangle.calculatePerimeter();
 
