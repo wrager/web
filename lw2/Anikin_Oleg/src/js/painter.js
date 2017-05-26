@@ -3,23 +3,24 @@ function Painter() {
 
     this._cssCavas = undefined;
     this._drawContext =  undefined;
-    this._selectedShapeType = undefined
+    this._selectedShapeType = undefined;
 }
 
 Painter.prototype.onShapeSelect = function() {
     showElement("circle-form", false);
     showElement("rectangle-form", false);
     showElement("triangle-form", false);
-    showElement("draw");
 
     this._selectedShapeType = getComboValue();
     if (this._selectedShapeType == "Circle") {
-        showElement("circle-form");
+        showElement("circle-form", true);
     } else if (this._selectedShapeType == "Rectangle") {
-        showElement("rectangle-form");
+        showElement("rectangle-form", true);
     } else if (this._selectedShapeType == "Triangle") {
-        showElement("triangle-form");
+        showElement("triangle-form", true);
     }
+
+    showElement("draw", true);
 }
 
 Painter.prototype.onDrawButtonClick = function() {
@@ -27,7 +28,7 @@ Painter.prototype.onDrawButtonClick = function() {
         this._cssCavas = getElement("canvas");
         this._drawContext = this._cssCavas.getContext("2d");
     }
-    
+
     this._drawContext.clearRect(0, 0, this._cssCavas.width, this._cssCavas.height);
 
     var fillColor = getElementValue("fill-color") 
@@ -43,7 +44,6 @@ Painter.prototype.onDrawButtonClick = function() {
 
     } else if (this._selectedShapeType == "Rectangle") {
         this._canvas.updateRectangle(
-
             createPoint(getElementValue("rectangle-x1"), getElementValue("rectangle-y1"))
         , createPoint(getElementValue("rectangle-x2"), getElementValue("rectangle-y2"))
         , fillColor, borderColor);
@@ -65,8 +65,8 @@ Painter.prototype.onDrawButtonClick = function() {
 Painter.prototype.drawShapeInfo = function(shape) {
     this._drawContext.font= FONT_SIZE + "px Arial";
     this._drawContext.fillStyle = INFO_TEXT_COLOR;
-    this._drawContext.fillText("Perimeter: " + shape.calculatePerimeter(), 800, (FONT_SIZE * 2 + FONT_SIZE) + 500);
-    this._drawContext.fillText("Area: " + shape.calculateArea(), 800, (FONT_SIZE * 2 + FONT_SIZE * 2) + 500);
+    this._drawContext.fillText("Perimeter: " + shape.calculatePerimeter(), 400, (FONT_SIZE * 2 + FONT_SIZE) + 500);
+    this._drawContext.fillText("Area: " + shape.calculateArea(), 400, (FONT_SIZE * 2 + FONT_SIZE * 2) + 500);
 }
 
 Painter.prototype.drawShape = function(shape, index) {
@@ -77,15 +77,15 @@ Painter.prototype.drawShape = function(shape, index) {
 var FONT_SIZE = 16;
 var INFO_TEXT_COLOR = "#000000";
 
-getElement = function(id) {
+function getElement(id) {
     return document.getElementById(id);
 }
 
-getElementValue = function(id) {
+ function getElementValue(id) {
     return getElement(id).value;
 }
 
-showElement = function(id, show = true) {
+ function showElement(id, show) {
     var element = getElement(id);
     if (show) {
         element.style.display = "block";
@@ -94,7 +94,7 @@ showElement = function(id, show = true) {
     }
 }
 
-getComboValue = function() {
+function getComboValue() {
     var combobox = getElement("shape-combobox");
     return combobox.options[combobox.selectedIndex].value;
 }

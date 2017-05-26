@@ -1,4 +1,4 @@
-setShapeColor = function(shape, fillColor, borderColor) {
+function setShapeColor(shape, fillColor, borderColor) {
     shape.setFillColor(fillColor);
     shape.setBorderColor(borderColor);
 }

@@ -14,11 +14,11 @@ Rectangle.prototype.setRightButtom = function (rightButtom) {
 }
 
 Rectangle.prototype.getRightButtom = function () {
-    return _rightButtom;
+    return this._rightButtom;
 }
 
 Rectangle.prototype.getLeftTop = function () {
-    return _leftTop;
+    return this._leftTop;
 }
 
 Rectangle.prototype.getWidth = function () {
