@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 has_border has_margin">
+                <div>
+                    <canvas id="canvas" width="570px" height="500px" class="has_border"></canvas>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 has_border">
+                            <div class="col-md-9">
+                                <div class="out_perimeter" id="perimeter">Perimeter:</div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="out_area" id="area">Area:</div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 has_margin">
+                            <select id="shape_type">
+                                <option value="Rectangle">Rectangle</option>
+                                <option value="Triangle">Triangle</option>
+                                <option value="Circle">Circle</option>
+                            </select>
+                            <button id="add_shape">Add shape</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 has_border has_margin">
+                <div class="col-md-12 has_border">
+                    <select class="toolbar_element has_margin" id="type_shape">
+                        <option value="">None</option>
+                    </select>
+                    <div class="row change_color toolbar_element has_margin">
+                        <div class="col-md-12 colors"><input id="color_shape"><div>Color shape</div> </div>
+                        <div class="col-md-12 colors"><input id="color_border"><div>Color border</div></div>
+                    </div>
+                </div>
+                <div class="col-md-12 has_border settings">
+                    <div class="title" id="setting_title">Setting</div>
+                    <div id="setting" class="setting_shape"></div>
+                    <button class="draw_shape" id="draw_shape">Draw shape</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        Start();
+    </script>
+</body>
+</html>

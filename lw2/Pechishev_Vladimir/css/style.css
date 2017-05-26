@@ -1,0 +1,72 @@
+[class*="col-"] {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-size: 16px;
+}
+
+.has_border {
+    outline: 1px solid black;
+}
+
+.has_padding {
+    padding: 10px;
+}
+
+.has_margin {
+    margin: 10px;
+}
+
+.out_data {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.out_data .out_perimeter,
+.out_data .out_area {
+    margin: 20px 15px;
+}
+
+.out_data .out_perimeter::before {
+    content: 'Perimeter: ';
+}
+
+.out_data .out_area::before {
+    content: 'Area: ';
+}
+
+.toolbar_element {
+    float: left;
+}
+
+.change_color .toolbar_element .colors input {
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+.settings {
+    margin-top: 10px;
+
+    height: 400px;
+}
+
+.settings .title {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.settings .setting_shape input {
+    width: 100px;
+    margin: 15px 16px;
+}
+
+
+.draw_shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 15px 15px;
+}
