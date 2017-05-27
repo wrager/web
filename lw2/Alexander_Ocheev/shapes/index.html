@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title></title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='css/style.css' rel='stylesheet'>
+    <script src='js/shape.js'></script>
+    <script src='js/circle.js'></script>
+    <script src='js/triangle.js'></script>
+    <script src='js/rectangle.js'></script>
+    <script src='js/script.js'></script>
+</head>
+
+<body>
+    <form>
+        <select id='select-shape'>
+        <option selected value='Triangle'>Triangle</option>
+        <option value='Circle'>Circle</option>
+        <option value='Rectangle'>Rectangle</option>
+    </select>
+        <div id='common-props'>
+            Outline thickness:<input type='number' id='outline-thickness'></input>
+            Outline color:<input type='text' id='outline-color'></input>
+            Fill color:<input type='text' id='fill-color'></input>
+        </div>
+        <div id='circle-props'>
+            Radius:<input type='number' class='changed-prop' id='radius'></input>
+            Center.x:<input type='number' class='changed-prop' id='center-x'></input>
+            Center.y:<input type='number' class='changed-prop' id='center-y'></input>
+        </div>
+        <div id='rectangle-props'>
+            LeftTop.x:<input type='number' class='changed-prop' id='lefttop-x'></input>
+            LeftTop.y:<input type='number' class='changed-prop' id='lefttop-y'></input>
+            Width:<input type='number' class='changed-prop' id='width'></input>
+            Height:<input type='number' class='changed-prop' id='height'></input>
+        </div>
+        <div id='triangle-props'>
+            A.x:<input type='number' class='changed-prop' id='a-x'></input>
+            A.y:<input type='number' class='changed-prop' id='a-y'></input>
+            B.x:<input type='number' class='changed-prop' id='b-x'></input>
+            B.y:<input type='number' class='changed-prop' id='b-y'></input>
+            C.x:<input type='number' class='changed-prop' id='c-x'></input>
+            C.y:<input type='number' class='changed-prop' id='c-y'></input>
+        </div>
+    </form>
+    <div id='canvas'>
+        <canvas id='canvasText' width='1000' height='25'></canvas>
+        <canvas id='canvasShape' width='1000' height='1000'></canvas>
+    </div>
+</body>
+
+</html>
