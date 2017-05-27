@@ -1,6 +1,5 @@
-import {Shape} from "./Shape";
 
-export class Triangle extends Shape {
+class Triangle extends AbstractShape {
 
     private X1: number;
     private X2: number;
@@ -8,19 +7,63 @@ export class Triangle extends Shape {
     private Y1: number;
     private Y2: number;
     private Y3: number;
-    // tslint:disable-next-line:max-line-length
-    constructor(parameters: {X1: number, X2: number, X3: number, Y1: number, Y2: number, Y3: number, fillColor: string, borderColor: string}) {
+
+    constructor() {
         super();
-        this.X1 = parameters.X1;
-        this.X2 = parameters.X2;
-        this.X3 = parameters.X3;
-        this.Y1 = parameters.Y1;
-        this.Y2 = parameters.Y2;
-        this.Y3 = parameters.Y3;
-        this.fillColor = parameters.fillColor;
-        this.borderColor = parameters.borderColor;
+        this.X1 = 0;
+        this.X2 = 0;
+        this.X3 = 0;
+        this.Y1 = 0;
+        this.Y2 = 0;
+        this.Y3 = 0;
+    }
+    public setX1(value: number) {
+        this.X1 = value;
     }
 
+    public getX1() {
+        return this.X1;
+    }
+
+    public setX2(value: number) {
+        this.X2 = value;
+    }
+
+    public getX2() {
+        return this.X2;
+    }
+
+    public setX3(value: number) {
+        this.X3 = value;
+    }
+
+    public getX3() {
+        return this.X3;
+    }
+
+    public setY1(value: number) {
+        this.Y1 = value;
+    }
+
+    public getY1() {
+        return this.Y1;
+    }
+
+    public setY2(value: number) {
+        this.Y2 = value;
+    }
+
+    public getY2() {
+        return this.Y2;
+    }
+
+    public setY3(value: number) {
+        this.Y3 = value;
+    }
+
+    public getY3() {
+        return this.Y3;
+    }
     public calculatePerimeter(): number {
         const sideA = this.getLineLength(this.X1, this.Y1, this.X2, this.Y2);
         const sideB = this.getLineLength(this.X1, this.Y1, this.X3, this.Y3);
@@ -44,8 +87,8 @@ export class Triangle extends Shape {
         context.lineTo(this.X2, this.Y2);
         context.lineTo(this.X3, this.Y3);
         context.closePath();
-        context.fillStyle = this.fillColor;
-        context.strokeStyle = this.borderColor;
+        context.fillStyle = this.getFillColor();
+        context.strokeStyle = this.getBorderColor();
         context.fill();
         context.stroke();
     }

@@ -1,33 +1,54 @@
-import {Shape} from "./Shape";
 
-export class Circle extends Shape {
+class Circle extends AbstractShape {
 
-    private _X: number;
-    private _Y: number;
-    private _R: number;
-    // tslint:disable-next-line:max-line-length
-    constructor(parameters: {centerX: number, centerY: number, radius: number, fillColor: string, borderColor: string}) {
+    private x: number;
+    private y: number;
+    private r: number;
+
+    constructor() {
         super();
-        this._X = parameters.centerX;
-        this._Y = parameters.centerY;
-        this._R = parameters.radius;
-        this.fillColor = parameters.fillColor;
-        this.borderColor = parameters.borderColor;
+        this.x = 0;
+        this.y = 0;
+        this.r = 0;
+    }
+
+    public setRadius(value: number) {
+        this.r = value;
+    }
+
+    public getRadius() {
+        return this.r;
+    }
+
+    public setX(value: number) {
+        this.x = value;
+    }
+
+    public getX() {
+        return this.x;
+    }
+
+    public setY(value: number) {
+        this.y = value;
+    }
+
+    public getY() {
+        return this.y;
     }
 
     public calculatePerimeter(): number {
-        return Math.PI * this._R * 2;
+        return Math.PI * this.r * 2;
     }
 
     public calculateArea(): number {
-        return Math.pow(this._R, 2) * Math.PI;
+        return Math.pow(this.r, 2) * Math.PI;
     }
 
     public draw(context: CanvasRenderingContext2D): void {
         context.beginPath();
-        context.arc(this._X, this._Y, this._R, 0, 2 * Math.PI, false);
-        context.fillStyle = this.fillColor;
-        context.strokeStyle = this.borderColor;
+        context.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+        context.fillStyle = this.getFillColor();
+        context.strokeStyle = this.getBorderColor();
         context.fill();
         context.stroke();
     }

@@ -58,7 +58,7 @@ module.exports = function(grunt){
 		watch: {
 			ts: {
 				files: ['src/Scripts/*ts'],
-				tasks: ['tslint', 'ts', 'concat:js']
+				tasks: ['tslint', 'ts', 'concat:js', 'clean:js']
 			},
 			html: {
 				files: ['src/site.html'],

@@ -1,17 +1,11 @@
-import {Circle} from "./Circle";
-import {Rectangle} from "./Rectangle";
-import {Shape} from "./Shape";
-import {Triangle} from "./Triangle";
-
 window.onload = () => {
-    (getElement("draw_figure_button") as HTMLElement).onclick = onDrawButtonClick;
-    (getElement("shape_select") as HTMLElement).onchange = onShapeParametersChoice;
+    (document.getElementById("draw_figure_button") as HTMLElement).onclick = onDrawButtonClick;
+    (document.getElementById("shape_select") as HTMLElement).onchange = onShapeParametersChoice;
 };
 
 function onShapeParametersChoice() {
-    const shapeType = getShapeTypeValue();
-    getElement("draw_figure_button").setAttribute("disabled", "false");
-
+    const shapeType = getShapeSelectorValue();
+    showElement("draw_figure_button");
     if (shapeType === "Rectangle") {
         showElement("rectangle_options");
         hideElement("triangle_options");
@@ -27,47 +21,49 @@ function onShapeParametersChoice() {
     } else {
         hideElement("rectangle_options");
         hideElement("triangle_options");
+        hideElement("draw_figure_button");
         hideElement("circle_options");
-        getElement("draw_figure_button").setAttribute("disabled", "true");
     }
 }
 
 function onDrawButtonClick() {
-    const shapeType = getShapeTypeValue() as string;
+    const shapeType = getShapeSelectorValue();
     const canvas = getElement("shape_canvas") as HTMLCanvasElement;
     const context = canvas.getContext("2d") as CanvasRenderingContext2D;
 
     clearCanvas();
-
     let shape;
     if (shapeType === "Rectangle") {
-        shape = new Rectangle( {
-            X1: getElementNumberValue("rectX1"),
-            X2: getElementNumberValue("rectX2"),
-            Y1: getElementNumberValue("rectY1"),
-            Y2: getElementNumberValue("rectY2"),
-            borderColor: getElementColorValue("borderColor"),
-            fillColor: getElementColorValue("fillColor")});
+        shape = new Rectangle();
+        shape.setX1(getElementNumberValue("rectX1"));
+        shape.setX2(getElementNumberValue("rectX2"));
+        shape.setY1(getElementNumberValue("rectY1"));
+        shape.setY2(getElementNumberValue("rectY2"));
+        shape.setBorderColor(getElementColorValue("borderColor"));
+        shape.setFillColor(getElementColorValue("fillColor"));
     } else if (shapeType === "Triangle") {
-        shape = new Triangle( {
-            X1: getElementNumberValue("triangleX1"),
-            X2: getElementNumberValue("triangleX2"),
-            X3: getElementNumberValue("triangleX3"),
-            Y1: getElementNumberValue("triangleY1"),
-            Y2: getElementNumberValue("triangleY2"),
-            Y3: getElementNumberValue("triangleY3"),
-            borderColor: getElementColorValue("borderColor"),
-            fillColor: getElementColorValue("fillColor")});
+        shape = new Triangle();
+        shape.setX1(getElementNumberValue("triangleX1"));
+        shape.setX2(getElementNumberValue("triangleX2"));
+        shape.setX3(getElementNumberValue("triangleX3"));
+        shape.setY1(getElementNumberValue("triangleY1"));
+        shape.setY2(getElementNumberValue("triangleY2"));
+        shape.setY2(getElementNumberValue("triangleY3"));
+        shape.setBorderColor(getElementColorValue("borderColor"));
+        shape.setFillColor(getElementColorValue("fillColor"));
     } else if (shapeType === "Circle") {
-        shape = new Circle({
-            borderColor: getElementColorValue("borderColor"),
-            centerX: getElementNumberValue("circleCenterX"),
-            centerY: getElementNumberValue("circleCenterY"),
-            fillColor: getElementColorValue("fillColor"),
-            radius: getElementNumberValue("circleRadius")});
+        shape = new Circle();
+        shape.setX(getElementNumberValue("circleCenterX"));
+        shape.setY(getElementNumberValue("circleCenterY"));
+        shape.setRadius(getElementNumberValue("circleRadius"));
+        shape.setBorderColor(getElementColorValue("borderColor"));
+        shape.setFillColor(getElementColorValue("fillColor"));
     }
-    shape.draw(context);
-    printCalcResultOnCanvas(shape, context);
+    if (shape != null || shape !== undefined) {
+        shape.draw(context);
+        printCalcResultOnCanvas(shape, context);
+        return;
+    }
 }
 
 function getElementNumberValue(elem: string) {
@@ -79,12 +75,11 @@ function getElementColorValue(elem: string) {
 }
 
 function getElement(id: string) {
-    return document.getElementById(id) as HTMLElement;
+    return document.getElementById(id);
 }
 
 function getElementValue(id: string) {
-    const element = getElement(id) as HTMLElement;
-    return element.getAttribute("value");
+    return (getElement(id) as HTMLInputElement).value as string;
 }
 
 function isNumber(value: any) {
@@ -92,37 +87,41 @@ function isNumber(value: any) {
 }
 
 function isColor(value: string) {
-    return value.match(/^#[0-9A-F]{6}$/);
+    return (value.match(/^#[0-9A-Fa-f]{6}$/) !== null);
 }
 
 function showElement(elemId: string) {
-    getElement(elemId).style.display = "block";
+    const element =  getElement(elemId);
+    if (element !== null && element !== undefined) {
+        element.style.display = "block";
+    }
 }
 
 function hideElement(elemId: string) {
-    getElement(elemId).style.display = "none";
-}
-
-function getShapeTypeValue() {
-    const shape = getElement("shape_select") as HTMLElement;
-    const options = shape.getAttribute("options");
-    const index = shape.getAttribute("selectedIndex") as string;
-    return (options === null || index === null) ?
-        null :
-        options[index].text;
+    const element =  getElement(elemId);
+    if (element !== null && element !== undefined) {
+        element.style.display = "none";
+    }
 }
 
 function clearCanvas() {
     const canvas = getElement("shape_canvas") as HTMLCanvasElement;
     const ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (ctx != null) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
 }
 
-function printCalcResultOnCanvas(shape: Shape, context: CanvasRenderingContext2D) {
+function printCalcResultOnCanvas(shape: AbstractShape, context: CanvasRenderingContext2D) {
     const areaResult = "Area: " + Number(shape.calculateArea()).toFixed(2);
     const perimeterResult = "Perimeter: " + Number(shape.calculatePerimeter()).toFixed(2);
     context.fillStyle = "black";
     context.font = "bold 12px Arial";
     context.fillText(perimeterResult, 5, 370);
     context.fillText(areaResult, 5, 390);
+}
+
+function getShapeSelectorValue() {
+    const selector = (document.getElementById("shape_select") as HTMLSelectElement);
+    return (selector).options[selector.selectedIndex].value;
 }
