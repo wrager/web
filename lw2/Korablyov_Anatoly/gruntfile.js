@@ -5,6 +5,7 @@ module.exports = function( grunt ) {
 			dev: {
 				options: {
 					match: [{
+						'scripts.js': 'build/scripts.js',
 						'style.css': 'build/style.css'
 					}],
 					replacement: 'md5',
@@ -16,7 +17,7 @@ module.exports = function( grunt ) {
 		},
 		ts: {
 			default : {
-				src: ["src/js/*.ts", "!node_modules/**"],
+				src: ["src/ts/*.ts", "!node_modules/**"],
 				tsconfig: true
 			}
 		},
@@ -25,7 +26,7 @@ module.exports = function( grunt ) {
 				configuration: "tslint.json"
 			},
 			your_target: {
-				src: ["src/js/*.ts"]
+				src: ["src/ts/*.ts"]
 			}
 		},
         concat: {
@@ -34,7 +35,7 @@ module.exports = function( grunt ) {
                 dest: 'build/style.css'
             },
             js: {
-                src: ['src/ts/Script.js', 'src/ts/Shape.js', 'src/ts/Circle.js', 'src/ts/Rectangle.js', 'src/ts/Triangle.js'],
+                src: ['src/ts/Shape.js', 'src/ts/Circle.js', 'src/ts/Rectangle.js', 'src/ts/Triangle.js', 'src/ts/script.js'],
                 dest: 'build/scripts.js'
             },
 			html: {

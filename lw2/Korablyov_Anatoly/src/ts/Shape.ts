@@ -1,4 +1,4 @@
-abstract class CShape {
+abstract class Shape {
     private fillColor: string;
     private borderColor: string;
 
@@ -23,8 +23,8 @@ abstract class CShape {
         return this.borderColor;
     }
 
-    abstract draw(): void;
-    abstract calculateArea(): number;
+    public abstract draw(): void;
+    public abstract calculateArea(): number;
 
-    abstract calculatePerimeter(): number;
+    public abstract calculatePerimeter(): number;
 }

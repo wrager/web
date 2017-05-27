@@ -1,93 +1,54 @@
-/**
- * @constructor
- */
-function CCircle() {
-    CShape.apply(this, arguments);
-    /**
-     * @type {number}
-     * @private
-     */
-    this._x = 0;
+class Circle extends Shape {
+    private x: number;
+    private y: number;
+    private radius: number;
+    constructor() {
+        super();
+        this.x = 0;
+        this.y = 0;
+        this.radius = 0;
+    }
 
-    /**
-     * @type {number}
-     * @private
-     */
-    this._y = 0;
+    public setRadius(value: number) {
+        this.radius = value;
+    }
 
-    /**
-     * @type {number}
-     * @private
-     */
-    this._radius = 0;
+    public getRadius() {
+        return this.radius;
+    }
+
+    public setX(value: number) {
+        this.x = value;
+    }
+
+    public getX() {
+        return this.x;
+    }
+
+    public setY(value: number) {
+        this.y = value;
+    }
+
+    public getY() {
+        return this.y;
+    }
+
+    public draw() {
+        const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+        const context = canvas.getContext("2d") as CanvasRenderingContext2D;
+        context.beginPath();
+        context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
+        context.fillStyle = this.getFillColor();
+        context.fill();
+        context.strokeStyle = this.getBorderColor();
+        context.stroke();
+    }
+
+    public calculateArea() {
+        return (Math.PI * Math.pow(this.radius, 2));
+    }
+
+    public calculatePerimeter() {
+        return (2 * Math.PI * this.radius);
+    }
 }
-
-CCircle.prototype = Object.create(CShape.prototype);
-CCircle.prototype.constructor = CCircle;
-
-/**
- * @param {number} value
- */
-CCircle.prototype.setRadius = function (value) {
-    this._radius = value;
-};
-
-/**
- * @return {number}
- */
-CCircle.prototype.getRadius = function () {
-    return this._radius;
-};
-
-/**
- * @param {number} value
- */
-CCircle.prototype.setX = function (value) {
-    this._x = value;
-};
-
-/**
- * @return {number}
- */
-CCircle.prototype.getX = function () {
-    return this._x;
-};
-
-/**
- * @param {number} value
- */
-CCircle.prototype.setY = function (value) {
-    this._y = value;
-};
-
-/**
- * @return {number}
- */
-CCircle.prototype.getY = function () {
-    return this._y;
-};
-
-CCircle.prototype.draw = function () {
-    const canvas = document.getElementById("canvas") as HTMLCanvasElement;
-    const context = canvas.getContext("2d") as CanvasRenderingContext2D;
-    context.beginPath();
-    context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
-    context.fillStyle = this.getFillColor();
-    context.fill();
-    context.strokeStyle = this.getBorderColor();
-    context.stroke();
-};
-
-/**
- * @returns {number}
- */
-CCircle.prototype.calculateArea = function () {
-    return (Math.PI * Math.pow(this._radius, 2));
-};
-
-/**
- * @returns {number}
- */
-CCircle.prototype.calculatePerimeter = function () {
-    return (2 * Math.PI * this._radius);
-};
