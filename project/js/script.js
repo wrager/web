@@ -1,5 +1,3 @@
-var document = document.getElementById('root');
-var canvas = document.getElementById('canvas');
 var circle;
 var rectangle;
 var triangle;
@@ -26,8 +24,9 @@ function onShapeSelect() {
 document.getElementById("shape-selector").onchange = onShapeSelect;
 
 function onApplyClick() {
-    var selectedShape = getSelectorShape();
+    var canvas = document.getElementById('canvas');
     var context = canvas.getContext("2d");
+    var selectedShape = getSelectorShape();
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     if (selectedShape == "Circle") {
