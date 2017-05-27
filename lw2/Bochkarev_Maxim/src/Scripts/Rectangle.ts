@@ -1,6 +1,5 @@
-import {Shape} from "./Shape";
 
-export class Rectangle extends Shape {
+class Rectangle extends AbstractShape {
 
     private X1: number;
     private X2: number;

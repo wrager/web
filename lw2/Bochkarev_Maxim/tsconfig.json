@@ -6,7 +6,7 @@
     "sourceMap": false
   },
   "files": [
-    "src/Scripts/Shape.ts",
+    "src/Scripts/AbstractShape.ts",
     "src/Scripts/Circle.ts",
     "src/Scripts/Triangle.ts",
     "src/Scripts/Rectangle.ts",

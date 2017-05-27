@@ -1,17 +1,11 @@
-import {Circle} from "./Circle";
-import {Rectangle} from "./Rectangle";
-import {Shape} from "./Shape";
-import {Triangle} from "./Triangle";
-
 window.onload = () => {
-    (getElement("draw_figure_button") as HTMLElement).onclick = onDrawButtonClick;
-    (getElement("shape_select") as HTMLElement).onchange = onShapeParametersChoice;
+    (document.getElementById("draw_figure_button") as HTMLElement).onclick = onDrawButtonClick;
+    (document.getElementById("shape_select") as HTMLElement).onchange = onShapeParametersChoice;
 };
 
 function onShapeParametersChoice() {
-    const shapeType = getShapeTypeValue();
-    getElement("draw_figure_button").setAttribute("disabled", "false");
-
+    const shapeType = getShapeSelectorValue();
+    showElement("draw_figure_button");
     if (shapeType === "Rectangle") {
         showElement("rectangle_options");
         hideElement("triangle_options");
@@ -27,19 +21,18 @@ function onShapeParametersChoice() {
     } else {
         hideElement("rectangle_options");
         hideElement("triangle_options");
+        hideElement("draw_figure_button");
         hideElement("circle_options");
-        getElement("draw_figure_button").setAttribute("disabled", "true");
     }
 }
 
 function onDrawButtonClick() {
-    const shapeType = getShapeTypeValue() as string;
+    const shapeType = getShapeSelectorValue();
     const canvas = getElement("shape_canvas") as HTMLCanvasElement;
     const context = canvas.getContext("2d") as CanvasRenderingContext2D;
 
     clearCanvas();
-
-    let shape = null;
+    let shape;
     if (shapeType === "Rectangle") {
         shape = new Rectangle();
         shape.setX1(getElementNumberValue("rectX1"));
@@ -66,11 +59,11 @@ function onDrawButtonClick() {
         shape.setBorderColor(getElementColorValue("borderColor"));
         shape.setFillColor(getElementColorValue("fillColor"));
     }
-    if (shape != null) {
+    if (shape != null || shape !== undefined) {
         shape.draw(context);
         printCalcResultOnCanvas(shape, context);
+        return;
     }
-
 }
 
 function getElementNumberValue(elem: string) {
@@ -82,12 +75,11 @@ function getElementColorValue(elem: string) {
 }
 
 function getElement(id: string) {
-    return document.getElementById(id) as HTMLElement;
+    return document.getElementById(id);
 }
 
 function getElementValue(id: string) {
-    const value = (getElement(id) as HTMLElement).getAttribute("value");
-    return (value != null) ? value : "";
+    return (getElement(id) as HTMLInputElement).value as string;
 }
 
 function isNumber(value: any) {
@@ -95,24 +87,21 @@ function isNumber(value: any) {
 }
 
 function isColor(value: string) {
-    return value.match(/^#[0-9A-F]{6}$/);
+    return (value.match(/^#[0-9A-Fa-f]{6}$/) !== null);
 }
 
 function showElement(elemId: string) {
-    getElement(elemId).style.display = "block";
+    const element =  getElement(elemId);
+    if (element !== null && element !== undefined) {
+        element.style.display = "block";
+    }
 }
 
 function hideElement(elemId: string) {
-    getElement(elemId).style.display = "none";
-}
-
-function getShapeTypeValue() {
-    const shape = getElement("shape_select") as HTMLElement;
-    const options = shape.getAttribute("options");
-    const index = shape.getAttribute("selectedIndex") as string;
-    return (options === null || index === null) ?
-        null :
-        options[Number(index)];
+    const element =  getElement(elemId);
+    if (element !== null && element !== undefined) {
+        element.style.display = "none";
+    }
 }
 
 function clearCanvas() {
@@ -123,11 +112,16 @@ function clearCanvas() {
     }
 }
 
-function printCalcResultOnCanvas(shape: Shape, context: CanvasRenderingContext2D) {
+function printCalcResultOnCanvas(shape: AbstractShape, context: CanvasRenderingContext2D) {
     const areaResult = "Area: " + Number(shape.calculateArea()).toFixed(2);
     const perimeterResult = "Perimeter: " + Number(shape.calculatePerimeter()).toFixed(2);
     context.fillStyle = "black";
     context.font = "bold 12px Arial";
     context.fillText(perimeterResult, 5, 370);
     context.fillText(areaResult, 5, 390);
+}
+
+function getShapeSelectorValue() {
+    const selector = (document.getElementById("shape_select") as HTMLSelectElement);
+    return (selector).options[selector.selectedIndex].value;
 }

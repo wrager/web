@@ -1,6 +1,5 @@
-import {Shape} from "./Shape";
 
-export class Circle extends Shape {
+class Circle extends AbstractShape {
 
     private x: number;
     private y: number;

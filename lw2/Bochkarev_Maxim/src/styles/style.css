@@ -30,6 +30,7 @@ canvas {
 }
 
 .btn {
+    display: none;
     position: absolute;
     bottom: 15px;
     left: 0;
