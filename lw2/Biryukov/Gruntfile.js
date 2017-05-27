@@ -31,7 +31,7 @@ module.exports = function( grunt ) {
 		},
         concat: {
             css: {
-                src: ['project/styles/*.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css', 'node_modules/bootstrap/dist/css/bootstrap-theme.min.css'],
+                src: ['node_modules/bootstrap/dist/css/bootstrap.min.css', 'node_modules/bootstrap/dist/css/bootstrap-theme.min.css', 'project/styles/*.css'],
                 dest: 'build/styles.css'
             },
             js: {
