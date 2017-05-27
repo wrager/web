@@ -129,7 +129,8 @@ CTriangle.prototype.getY3 = function () {
 
 
 CTriangle.prototype.draw = function () {
-    var context = document.getElementById("canvas").getContext('2d');
+    const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+    const context = canvas.getContext("2d") as CanvasRenderingContext2D;
     context.beginPath();
     context.moveTo(this.getX1(), this.getY1());
     context.lineTo(this.getX2(), this.getY2());

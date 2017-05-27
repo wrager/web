@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>ShapeManager</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
     
 </head>
 <body>
@@ -17,7 +17,7 @@
 
         <div class="toolbar">
 
-            <select id="select_shape" onchange=SelectShape(this.value) value="circle">
+            <select id="select_shape" onchange="SelectShape()" value="circle">
                 <option disabled>Select shape</option>
                 <option value="circle">Circle</option>
                 <option value="triangle">Triangle</option>
@@ -29,7 +29,7 @@
 
 
         <div class="enter_form">
-            <div class="circle_menu" id="circle_menu" display="none">
+            <div id="circle_menu" class="circle_menu">
                 <input class="coord" id="circ_centerX" placeholder="CenterX">
                 <input class="coord" id="circ_centerY" placeholder="CenterY">
                 <input class="coord" id="circ_radius" placeholder="Radius">
