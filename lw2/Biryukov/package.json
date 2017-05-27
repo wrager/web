@@ -1,9 +1,5 @@
 {
   "description": "lab4",
-  "repository": {
-    "type": "git",
-    "url": "JokerSSmile/web"
-  },
   "license": "MIT",
   "scripts": {
     "start": "grunt"
