@@ -88,6 +88,11 @@ body {
     left: -9;
 }
 
+.first-header-left-a {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #fff !important;
+}
+
 .search-box input {
     font: 16 arial, sans-serif;
     height: 50.8;
@@ -175,7 +180,18 @@ footer {
 footer a {
     font-size: small;
     display: inline-block;
-    color: #9a9a9a;
+    text-decoration: none;
+    color: #616464;
     padding-left: 10px;
     font-size: 9pt;
+    letter-spacing: 0.5;
+}
+
+footer a:last-child {
+    color: #9a9a9a;
+}
+
+footer a:hover {
+    color: #9a9a9a;
+    text-decoration: underline;
 }
