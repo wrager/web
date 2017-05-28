@@ -1,11 +1,47 @@
 body {
-    font: 13px Tahoma, sans-serif;
-    margin: auto;
-    overflow: hidden;
+    font-family: "Segoe UI", Segoe, Tahoma, Arial, Verdana, sans-serif;
+    font-size: small;
+    overflow: auto;
     background-image: url(../images/bg.jpg);
 }
 
-.avatarNew {
+.header {
+    display: inline;
+}
+
+.header-left {
+    display: inline;
+    position: relative;
+    top: -42;
+    left: 41;
+}
+
+.header-left-non-search {
+    display: inline;
+    position: relative;
+    left: 0;
+    top: 1;
+}
+
+.header-left a {
+    margin-right: 32.5;
+}
+
+.header-left-line {
+    position: relative;
+    top: -2;
+    margin-left: -3;
+    margin-right: 29 !important;
+}
+
+.header-right {
+    display: inline;
+    line-height: 45px;
+    left: 400px;
+    position: relative;
+}
+
+.avatar {
     margin: 20px 0px 20px 0px;
 }
 
@@ -24,18 +60,10 @@ body {
     float: left;
 }
 
-.right-text {
+.footer-text {
     float: right;
     line-height: 40px;
     margin-right: 30px;
-}
-
-body,
-td,
-a,
-p,
-.h {
-    font-family: arial, sans-serif;
 }
 
 a {
@@ -49,25 +77,6 @@ a:hover {
 
 a:active {
     color: #0c8484;
-}
-
-.header {
-    display: inline;
-}
-
-.header-panel-left {
-    display: inline;
-    line-height: 45px;
-    left: 20px;
-    position: relative;
-}
-
-.header-panel-left a {
-    text-align: left;
-    font-size: 13px;
-    position: relative;
-    top: -25px;
-    margin-left: 32px;
 }
 
 .arrows {
@@ -101,27 +110,6 @@ a:active {
     background-position: -84px -98px;
 }
 
-.header-panel-right {
-    display: inline;
-    line-height: 45px;
-    left: 400px;
-    position: relative;
-}
-
-.header-panel-right a {
-    text-align: right;
-    font-size: 13px;
-    position: relative;
-    top: -25px;
-    margin-right: 16px;
-}
-
-.main {
-    width: auto;
-    height: 550px;
-    margin-left: 30px;
-}
-
 .hp-ctrls {
     width: auto;
     top: 0px;
@@ -129,20 +117,27 @@ a:active {
 }
 
 .header-logo img {
-    margin-top: 6%;
-    margin-left: -70%;
-    width: 441;
-    height: 141;
+    width: 132;
+    height: 52;
+}
+
+.search {
+    position: absolute;
+    top: 98px;
+    left: -31px;
+    margin-top: 10px;
+    height: 550px;
+    margin-left: 30px;
 }
 
 .search-box input {
     font: 16px arial, sans-serif;
-    height: 44px;
-    width: 491px;
+    height: 50.8;
+    width: 626;
     border: none;
     padding: 0px;
     text-indent: 16px;
-    margin-top: 62px;
+    margin-top: 45px;
     margin-left: 150px;
     position: relative;
 }
@@ -153,7 +148,7 @@ a:active {
     left: 125px;
 }
 
-.seachbox {
+.search-icon {
     top: -44px;
     left: 768px;
     height: 24px;
@@ -171,16 +166,15 @@ footer {
     background: #333;
     height: 40px;
     width: 100%;
-    min-width: 980px;
     position: absolute;
     left: 0;
     bottom: 0;
-    font-size: 10pt;
 }
 
 footer a {
     font-size: small;
     display: inline-block;
-    color: #666666;
+    color: #9a9a9a;
     padding-left: 10px;
+    font-size: 9pt;
 }

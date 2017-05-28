@@ -3,40 +3,41 @@
 <title>Bing</title>
 <link rel="icon" href="images/favicon.png" type="image/png">
 <link rel="stylesheet" href="css/style.css" type="text/css">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
 
 </head>
 
 <body>
     <div class="header">
-        <div class="header-panel-left">
+        <div class="header-left">
             <a href="https://www.bing.com/?scope=web&FORM=Z9LH">Поиск</a>
-            <a href="https://www.bing.com/?scope=images&FORM=Z9LH1">Изображения</a>
-            <a href="https://www.bing.com/videos?FORM=Z9LH2">Видео</a>
-            <a href="https://www.bing.com/maps/?FORM=Z9LH3">Карты</a>
-            <a href="https://www.bing.com/?scope=news&FORM=Z9LH4">Новости</a>
-            <a>|</a>
-            <a href="http://ru.msn.com/?ocid=BHEA000">MSN</a>
-            <a href="http://www.office.com/?WT.mc-id=O16-BingHP">Office Online</a>
-            <a href="https://outlook.com/?WT.mc-id=O16-BingHP?mkt=ru-RU">Outlook.com</a>
+            <div class="header-left-non-search">
+                <a href="https://www.bing.com/?scope=images&FORM=Z9LH1">Изображения</a>
+                <a href="https://www.bing.com/videos?FORM=Z9LH2">Видео</a>
+                <a href="https://www.bing.com/maps/?FORM=Z9LH3">Карты</a>
+                <a href="https://www.bing.com/?scope=news&FORM=Z9LH4">Новости</a>
+                <a class="header-left-line">|</a>
+                <a href="http://ru.msn.com/?ocid=BHEA000">MSN</a>
+                <a href="http://www.office.com/?WT.mc-id=O16-BingHP">Office Online</a>
+                <a href="https://outlook.com/?WT.mc-id=O16-BingHP?mkt=ru-RU">Outlook.com</a>
+            </div>
         </div>
-        <div class="header-panel-right">
-            <a href="https://www.bing.com/?setmkt=ru-ru&setlang=en-us&sid=14CE2476B3BA61E8118B2E1AB2C8608E" class="langLbl">English</a>
+        <div class="header-right">
+            <a href="https://www.bing.com/?setmkt=ru-ru&setlang=en-us&sid=14CE2476B3BA61E8118B2E1AB2C8608E" class="lang">English</a>
             <div class="user-exit">
                 <a href="">Войти</a>
-                <img class="avatarNew" src="images/avatar.png">
+                <img class="avatar" src="images/avatar.png">
             </div>
             <div class="user-exit">
-                <img class="avatarNew" src="images/ham.png">
+                <img class="avatar" src="images/ham.png">
             </div>
         </div>
     </div>
-    <div class="main">
+    <div class="search">
         <div class="search-box">
             <img src="images/logo.png" />
             <input type="search" />
         </div>
-        <img class="seachbox" src="images/seachbox.png" />
+        <img class="search-icon" src="images/search_icon.png" />
         <div class="arrows">
             <a href="#" class="icon camera"></a>
             <a href="#" class="icon next"></a>
@@ -44,7 +45,7 @@
         </div>
     </div>
     <footer>
-        <div class="right-text">
+        <div class="footer-text">
             <a class="copyright">&copy; Майкрософт (Microsoft), 2017</a>
             <a>|</a>
             <a href="http://go.microsoft.com/fwlink/?LinkId=521839&CLCID=419">Заявление о конфиденциальности и файлы cookie</a>
