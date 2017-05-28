@@ -317,39 +317,28 @@ var Triangle = (function (_super) {
 }(Shape));
 //# sourceMappingURL=triangle.js.map
 window.onload = function () {
-    var triangle = new Triangle();
-    var rectangle = new Rectangle();
-    var circle = new Circle();
-    changeField(triangle, rectangle, circle);
+    changeField();
 };
-function changeField(triangle, rectangle, circle) {
-    var type = selectShape();
+function changeField() {
+    var shape = selectShape();
     document.getElementById("select-shape").onchange = function () {
-        type = selectShape();
+        shape = selectShape();
     };
     var elements = document.getElementsByClassName("changed-prop");
     var _loop_1 = function (i, len) {
         var node = elements.item(i).id;
         document.getElementById(node).onchange = function () {
-            if (type == 'Triangle') {
-                changeShapeProp(node, triangle, node);
-            }
-            else if (type == 'Rectangle') {
-                changeShapeProp(node, rectangle, node);
-            }
-            else if (type == 'Circle') {
-                changeShapeProp(node, circle, node);
-            }
+            changeShapeProp(node, shape, node);
         };
     };
     for (var i = 0, len = elements.length; i < len; i++) {
         _loop_1(i, len);
     }
 }
-function changeShapeProp(node, shape, val) {
-    if (shape[val] !== null) {
-        var element = document.getElementById(node);
-        shape[val] = element.value;
+function changeShapeProp(id, shape, fieldName) {
+    if (shape[fieldName] !== null) {
+        var element = document.getElementById(id);
+        shape[fieldName] = element.value;
         shape.draw();
     }
 }
@@ -358,12 +347,15 @@ function selectShape() {
     var selected = select.options[select.selectedIndex].value;
     if (selected === "Triangle") {
         myOnSelect('triangle-props');
+        return new Triangle();
     }
     else if (selected === "Circle") {
         myOnSelect('circle-props');
+        return new Circle();
     }
     else if (selected === "Rectangle") {
         myOnSelect('rectangle-props');
+        return new Rectangle();
     }
     return selected;
 }
@@ -390,6 +382,9 @@ function clearCanvas() {
     var c = document.getElementById("canvasShape");
     var ctx = c.getContext("2d");
     ctx.clearRect(0, 0, 1000, 1000);
+    c = document.getElementById("canvasText");
+    ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, 1000, 25);
 }
 function clearChangedProps() {
     var changedFields = document.getElementsByClassName('changed-prop');
