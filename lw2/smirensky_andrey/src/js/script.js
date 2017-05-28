@@ -1,3 +1,5 @@
+document.getElementById("draw_figure_button").onclick = onDrawButtonClick();
+document.getElementById("shape_choice").onchange = onShapeParametersChoice(document.getElementById("shape_choice").value);
 
 var shape = undefined;
 
@@ -20,8 +22,8 @@ function onShapeParametersChoice(shapeType) {
 }
 
 function onDrawButtonClick() {
-    var sel = document.getElementById("shape_choice");
-    var shapeType = sel.options[sel.selectedIndex].text;
+    var selector = document.getElementById("shape_choice");
+    var shapeType = selector.options[selector.selectedIndex].value;
 
     var canvas = document.getElementById("shape_canvas");
     var context = canvas.getContext("2d");
@@ -67,20 +69,12 @@ function getElementNumberValue(elem) {
     return (isNumber(getElementValue(elem)) ? getElementValue(elem) : 0);
 }
 
-function getElementColorValue(elem) {
-    return (isColor(getElementValue(elem)) ? getElementValue(elem) : '#000000');
-}
-
 function getElementValue(id) {
     return document.getElementById(id).value;
 }
 
 function isNumber(value) {
     return !(Number(value) !== Number(value));
-}
-
-function isColor(value) {
-    return value.match(/^#[0-9A-F]{6}$/);
 }
 
 function showElement(elemId) {

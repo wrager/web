@@ -1,17 +1,9 @@
 
-function Circle(params) {
+function Circle() {
     Shape.apply(this, arguments);
-    if (params == undefined) {
         this.centerX = 0;
         this.centerY = 0;
         this.radius = 0;
-    } else {
-        this.centerX = params.centerX;
-        this.centerY = params.centerY;
-        this.radius = params.radius;
-        this.fillColor = params.fillColor;
-        this.borderColor = params.borderColor;
-    }
 }
 
 Circle.prototype = Object.create(Shape.prototype);
@@ -49,8 +41,8 @@ Circle.prototype = {
     draw: function (context) {
         context.beginPath();
         context.arc(this.getCenterX(), this.getCenterY(), this.getRadius(), 0, 2 * Math.PI, false);
-        context.fillStyle = Shape.prototype.getFillColor.call(this);
-        context.strokeStyle = Shape.prototype.getBorderColor.call(this);
+        context.fillStyle = this.fillColor;
+        context.strokeStyle = this.borderColor;
         context.fill();
         context.stroke();
     },

@@ -57,8 +57,8 @@ Rectangle.prototype = {
         var y = Math.min(this.getY1(), this.getY2());
         context.beginPath();
         context.rect(x, y, this.getWidth(), this.getHeight());
-        context.fillStyle = Shape.prototype.getFillColor.call(this);
-        context.strokeStyle = Shape.prototype.getBorderColor.call(this);
+        context.fillStyle = this.fillColor;
+        context.strokeStyle = this.borderColor;
         context.fill();
         context.stroke();
     },

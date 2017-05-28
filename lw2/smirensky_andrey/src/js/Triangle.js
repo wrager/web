@@ -1,5 +1,6 @@
 function Triangle() {
     Shape.apply(this, arguments);
+    
     this.X1 = 0;
     this.X2 = 0;
     this.Y1 = 0;
@@ -11,8 +12,8 @@ function Triangle() {
 
 Triangle.prototype = Object.create(Shape.prototype);
 
-
 Triangle.prototype = {
+
     setX1: function (value) {
         this.X1 = value;
     },
@@ -79,8 +80,8 @@ Triangle.prototype = {
         context.lineTo(this.getX2(), this.getY2());
         context.lineTo(this.getX3(), this.getY3());
         context.closePath();
-        context.fillStyle = Shape.prototype.getFillColor.call(this);
-        context.strokeStyle = Shape.prototype.getBorderColor.call(this);
+        context.fillStyle = this.fillColor;
+        context.strokeStyle = this.borderColor;
         context.fill();
         context.stroke();
     },
