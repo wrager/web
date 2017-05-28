@@ -44,7 +44,7 @@ abstract class Shape {
         ctx.fillText('S : ' + s + ', P : ' + p, 10, 20);
 
         ctx.moveTo(0, 25);
-        ctx.lineTo(1500, 25);
+        ctx.lineTo(1000, 25);
         ctx.stroke();
     }
 
