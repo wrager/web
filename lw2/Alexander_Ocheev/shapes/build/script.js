@@ -187,7 +187,7 @@ var Rectangle = (function (_super) {
         return (this.width * this.height).toFixed(2);
     };
     Rectangle.prototype.calculatePerimeter = function () {
-        return (2 * (this.width + this.height)).toFixed(2);
+        return (2 * (this.width * 1.0 + this.height * 1.0)).toFixed(2);
     };
     Rectangle.prototype.drawShape = function () {
         var c = document.getElementById("canvasShape");
@@ -287,7 +287,7 @@ var Triangle = (function (_super) {
     Triangle.prototype.drawShape = function () {
         var c = document.getElementById("canvasShape");
         var ctx = c.getContext("2d");
-        ctx.clearRect(0, 0, 1500, 1000);
+        ctx.clearRect(0, 0, 1000, 1000);
         ctx.beginPath();
         ctx.moveTo(this.aX, this.aY);
         ctx.lineTo(this.bX, this.bY);
@@ -458,6 +458,7 @@ function selectShape() {
 function myOnSelect(inpId) {
     makeVisible(inpId);
     clearChangedProps();
+    clearCanvas();
 }
 function makeVisible(inpId) {
     var ids = ['rectangle-props', 'circle-props', 'triangle-props'];
@@ -472,6 +473,11 @@ function makeVisible(inpId) {
             el.style.display = 'none';
         }
     }, this);
+}
+function clearCanvas() {
+    var c = document.getElementById("canvasShape");
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, 1000, 1000);
 }
 function clearChangedProps() {
     var changedFields = document.getElementsByClassName('changed-prop');

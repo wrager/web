@@ -49,7 +49,7 @@ class Rectangle extends Shape {
     }
 
     public calculatePerimeter() {
-        return (2 * (this.width + this.height)).toFixed(2);
+        return (2 * (this.width * 1.0 + this.height * 1.0)).toFixed(2);
     }
 
     public drawShape() {

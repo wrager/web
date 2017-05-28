@@ -143,7 +143,7 @@ window.onload = function() {
 }
 
 function selectShape() {
-    var select: any = document.getElementById("select-shape")
+    var select: any = document.getElementById("select-shape");
     var selected = select.options[select.selectedIndex].value;
     if (selected === "Triangle") {
         myOnSelect('triangle-props');
@@ -158,6 +158,7 @@ function selectShape() {
 function myOnSelect(inpId) {
     makeVisible(inpId);
     clearChangedProps();
+    clearCanvas(); 
 }
 
 function makeVisible(inpId) {
@@ -172,6 +173,12 @@ function makeVisible(inpId) {
             el.style.display = 'none';
         }
     }, this);
+}
+
+function clearCanvas() {
+    var c = <HTMLCanvasElement>document.getElementById("canvasShape");
+    var ctx = c.getContext("2d") as CanvasRenderingContext2D;
+    ctx.clearRect(0, 0, 1000, 1000);
 }
 
 function clearChangedProps() {

@@ -67,7 +67,7 @@ class Triangle extends Shape {
     public drawShape() {
         var c = <HTMLCanvasElement>document.getElementById("canvasShape");
         var ctx = c.getContext("2d") as CanvasRenderingContext2D;
-        ctx.clearRect(0, 0, 1500, 1000);
+        ctx.clearRect(0, 0, 1000, 1000);
         ctx.beginPath();
         ctx.moveTo(this.aX, this.aY);
         ctx.lineTo(this.bX, this.bY);
