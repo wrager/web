@@ -56,29 +56,25 @@ body {
     text-decoration: none;
 }
 
+.enter {
+    position: relative;
+    top: 1;
+    left: -1.5;
+}
+
 .avatar {
     top: 25;
-    left: 15;
+    left: 17;
     position: relative;
     margin: 20px 20px 20px 0px;
 }
 
-.enter {
-    position: relative;
-    top: 1;
-    left: 2;
-}
-
 .ham {
     position: relative;
-    left: 6;
+    left: 4;
     top: 20;
     height: 13;
     width: 20;
-}
-
-.lang {
-    display: table-cell;
 }
 
 .user-exit {
@@ -86,22 +82,50 @@ body {
     padding-left: 20px;
 }
 
-.left-text {
-    line-height: 40px;
-    margin-left: 3px;
-    float: left;
+.search {
+    position: relative;
+    top: 40;
+    left: -9;
 }
 
-.footer-text {
-    float: right;
-    line-height: 40px;
-    margin-right: 30px;
+.search-box input {
+    font: 16 arial, sans-serif;
+    height: 50.8;
+    width: 626;
+    border: none;
+    padding: 0px;
+    text-indent: 16;
+    margin-top: 45;
+    margin-left: 150;
+    position: relative;
+}
+
+.search-box img {
+    position: relative;
+    top: 16px;
+    left: 125px;
+}
+
+.input-search {
+    position: relative;
+    top: -7;
+    left: 0;
+}
+
+.search-icon {
+    top: -58;
+    left: 851;
+    height: 24;
+    width: 24;
+    background-color: #007DAA;
+    position: relative;
+    padding: 14px;
 }
 
 .arrows {
     position: absolute;
-    right: 40px;
-    bottom: 42px;
+    right: 23;
+    bottom: -455;
 }
 
 .arrows a {
@@ -129,41 +153,10 @@ body {
     background-position: -84px -98px;
 }
 
-.search {
-    position: absolute;
-    top: 98px;
-    left: -31px;
-    margin-top: 10px;
-    height: 550px;
-    margin-left: 30px;
-}
-
-.search-box input {
-    font: 16px arial, sans-serif;
-    height: 50.8;
-    width: 626;
-    border: none;
-    padding: 0px;
-    text-indent: 16px;
-    margin-top: 45px;
-    margin-left: 150px;
-    position: relative;
-}
-
-.search-box img {
-    position: relative;
-    top: 16px;
-    left: 125px;
-}
-
-.search-icon {
-    top: -44px;
-    left: 768px;
-    height: 24px;
-    width: 24px;
-    background-color: #0c8484;
-    position: relative;
-    padding: 10px;
+.footer-text {
+    float: right;
+    line-height: 40px;
+    margin-right: 30px;
 }
 
 img {
