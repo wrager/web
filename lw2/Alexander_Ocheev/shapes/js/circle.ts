@@ -19,11 +19,11 @@ class Circle extends Shape {
     }
 
     public set centerX(value: number) {
-        this.centerX = value;
+        this._centerX = value;
     }
 
     public get centerX() {
-        return this.centerX;
+        return this._centerX;
     }
     
     public set centerY(value: number) {
@@ -31,7 +31,7 @@ class Circle extends Shape {
     }
 
     public get centerY() {
-        return this.centerY;
+        return this._centerY;
     }
 
     public calculateArea() {

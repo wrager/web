@@ -67,7 +67,7 @@ class Triangle extends Shape {
     public drawShape() {
         var c = <HTMLCanvasElement>document.getElementById("canvasShape");
         var ctx = c.getContext("2d") as CanvasRenderingContext2D;
-        ctx.clearRect(0, 0, 1000, 1000);
+        ctx.clearRect(0, 0, 1500, 1000);
         ctx.beginPath();
         ctx.moveTo(this.aX, this.aY);
         ctx.lineTo(this.bX, this.bY);
@@ -88,6 +88,7 @@ class Triangle extends Shape {
         var s = Math.sqrt(p2 * (p2 - a) * (p2 - b) * (p2 - c));
         return s.toFixed(2);
     }
+    
     public calculatePerimeter() {
         var a = Math.sqrt(Math.pow(this.bX - this.aX, 2) + Math.pow(this.bY - this.aY, 2));
         var b = Math.sqrt(Math.pow(this.cX - this.bX, 2) + Math.pow(this.cY - this.bY, 2));
