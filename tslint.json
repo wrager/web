@@ -1,5 +1,5 @@
 {
-	"extends": "eslint:recommended",
+	"extends": "tslint:recommended",
 	"env": {
 		"browser": true
 	}
