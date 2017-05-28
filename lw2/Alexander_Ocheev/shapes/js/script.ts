@@ -3,106 +3,45 @@ window.onload = function() {
     var rectangle = new Rectangle();
     var circle = new Circle();
 
+    changeField(triangle, rectangle, circle);
+
+}
+
+function changeField(triangle: Triangle, rectangle: Rectangle, circle: Circle) {
     var type = selectShape();
 
     document.getElementById("select-shape").onchange = function() {
         type = selectShape();
     }
 
-    document.getElementById('fill-color').onchange = function() {
-        if (type == 'Circle') {
-             changeShapeProp('fill-color', circle, 'fillColor');
+    var elements = document.getElementsByClassName("changed-prop");
+
+    for (let i: number = 0, len: number = elements.length; i < len; i++) {
+        let node: string = elements.item(i).id;
+        document.getElementById(node).onchange = function() {
+            if (type == 'Triangle')
+            {
+                changeShapeProp(node, triangle, node);
+            }
+            else if (type == 'Rectangle')
+            {
+                changeShapeProp(node, rectangle, node);
+            }
+            else if (type == 'Circle')
+            {
+                changeShapeProp(node, circle, node);
+            }
         }
-        else if (type == 'Rectangle') {
-            changeShapeProp('fill-color', rectangle, 'fillColor');
-        }
-        else if (type == 'Triangle') {
-            changeShapeProp('fill-color', triangle, 'fillColor');
-        }
+        
     }
-
-    document.getElementById('outline-color').onchange = function() {
-        if (type == 'Circle') {
-             changeShapeProp('outline-color', circle, 'borderColor');
-        }
-        else if (type == 'Rectangle') {
-            changeShapeProp('outline-color', rectangle, 'borderColor');
-        }
-        else if (type == 'Triangle') {
-            changeShapeProp('outline-color', triangle, 'borderColor');
-        }
-    }
-
-    document.getElementById('outline-thickness').onchange = function() {
-        if (type == 'Circle') {
-             changeShapeProp('outline-thickness', circle, 'borderLine');
-        }
-        else if (type == 'Rectangle') {
-            changeShapeProp('outline-thickness', rectangle, 'borderLine');
-        }
-        else if (type == 'Triangle') {
-            changeShapeProp('outline-thickness', triangle, 'borderLine');
-        }
-    }
-
-    document.getElementById('radius').onchange = function() {
-        changeShapeProp('radius', circle, 'radius');
-    };
-
-    document.getElementById('center-x').onchange = function() {
-        changeShapeProp('center-x', circle, 'centerX');
-    };
-
-    document.getElementById('center-y').onchange = function() {
-        changeShapeProp('center-y', circle, 'centerY');
-    };
-
-    document.getElementById('lefttop-x').onchange = function() {
-        changeShapeProp('lefttop-x', rectangle, 'leftTopX');
-    };
-
-    document.getElementById('lefttop-y').onchange = function() {
-        changeShapeProp('lefttop-y', rectangle, 'leftTopY');
-    };
-
-    document.getElementById('width').onchange = function() {
-        changeShapeProp('width', rectangle, 'width');
-    };
-
-    document.getElementById('height').onchange = function() {
-        changeShapeProp('height', rectangle, 'height');
-    };
-
-    document.getElementById('a-x').onchange = function() {
-        changeShapeProp('a-x', triangle, 'aX');
-    };
-
-    document.getElementById('a-y').onchange = function() {
-        changeShapeProp('a-y', triangle, 'aY');
-    };
-
-    document.getElementById('b-x').onchange = function() {
-        changeShapeProp('b-x', triangle, 'bX');
-    };
-
-    document.getElementById('b-y').onchange = function() {
-        changeShapeProp('b-y', triangle, 'bY');
-    };
-
-    document.getElementById('c-x').onchange = function() {
-        changeShapeProp('c-x', triangle, 'cX');
-    };
-
-    document.getElementById('c-y').onchange = function() {
-        changeShapeProp('c-y', triangle, 'cY');
-    };
 }
 
 function changeShapeProp(node: string, shape: Shape, val: string) {
-    let element: any = document.getElementById(node);
-    shape[val] = element.value;
-    console.log(element.value);
-    shape.draw();
+    if (shape[val] !== null) {
+        let element: any = document.getElementById(node);
+        shape[val] = element.value;
+        shape.draw();
+    }
 }
 
 function selectShape() {
