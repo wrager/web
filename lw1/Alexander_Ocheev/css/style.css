@@ -1,0 +1,219 @@
+body {
+    font-family: "Segoe UI", Segoe, Tahoma, Arial, Verdana, sans-serif;
+    font-size: small;
+    overflow: hidden;
+    background-image: url(../images/bg.jpg);
+}
+
+.header {
+    display: inline;
+}
+
+.header-left {
+    display: inline;
+    position: relative;
+    top: -42;
+    left: 41;
+}
+
+.header-left-non-search {
+    display: inline;
+    position: relative;
+    left: 0;
+    top: 1;
+}
+
+.header a {
+    color: #C4C9C4;
+}
+
+.header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-left a {
+    margin-right: 32.5;
+    text-decoration: none;
+    position: relative;
+    top: -11;
+}
+
+.header-left-line {
+    position: relative;
+    top: -2;
+    margin-left: -3;
+    margin-right: 29 !important;
+}
+
+.header-right {
+    display: inline;
+    position: relative;
+    top: -54;
+    left: 560;
+}
+
+.header-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.enter {
+    position: relative;
+    top: 1;
+    left: -1.5;
+}
+
+.avatar {
+    height: 14;
+    width: 14;
+    padding: 9;
+    border-radius: 50%;
+    top: 35;
+    left: 5;
+    position: relative;
+    margin: 20px 20px 20px 0px;
+    background-color: #555555;
+}
+
+.ham {
+    position: relative;
+    left: -10;
+    top: 1;
+    height: 13.5;
+    width: 20;
+}
+
+.user-exit {
+    display: table-cell;
+    padding-left: 20px;
+}
+
+.search {
+    position: relative;
+    top: 32;
+    left: -9;
+}
+
+.first-header-left-a {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff !important;
+}
+
+.search-box input {
+    font-family: "Segoe UI", Segoe, Tahoma, Arial, Verdana, sans-serif;
+    font-size: 18;
+    height: 50.8;
+    width: 626;
+    border: none;
+    padding: 0px;
+    text-indent: 14;
+    margin-top: 45;
+    margin-left: 150;
+    position: relative;
+}
+
+.vert:hover {
+    color: #616464;
+    text-decoration: none;
+}
+
+.search-box img {
+    position: relative;
+    height: 49;
+    width: 125;
+    top: 13;
+    left: 125;
+}
+
+.input-search {
+    position: relative;
+    top: -7;
+    left: 0;
+}
+
+.copyright:hover {
+    text-decoration: none;
+}
+
+.search-icon {
+    top: -58;
+    left: 853;
+    height: 27;
+    width: 27;
+    background-color: #007DAA;
+    position: relative;
+    padding: 12px;
+}
+
+.arrows {
+    position: absolute;
+    right: 23;
+    bottom: -453;
+}
+
+.arrows a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-left: 1px;
+    background-color: rgba(34, 34, 34, .75);
+}
+
+.icon {
+    background: url(http://www.bing.com/s/a/hpc20.png) no-repeat;
+}
+
+.prev {
+    background-position: -122px -57px;
+}
+
+.next {
+    background-position: -85px -139px;
+}
+
+.camera {
+    background-position: -84px -98px;
+}
+
+.footer-text {
+    float: right;
+    line-height: 40px;
+    margin-right: 30px;
+}
+
+img {
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    height: 35;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+footer .ft {
+    font-size: small;
+    display: inline-block;
+    text-decoration: none;
+    color: #616464;
+    position: relative;
+    top: -4;
+    left: 0;
+    padding-left: 10px;
+    font-size: 9pt;
+    letter-spacing: 0.5;
+}
+
+footer a:last-child {
+    color: #9a9a9a;
+}
+
+footer a:hover {
+    color: #9a9a9a;
+    text-decoration: underline;
+}
