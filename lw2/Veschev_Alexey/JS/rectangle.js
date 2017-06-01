@@ -1,5 +1,5 @@
 function Rectangle(){
-    Shape.apply(this, arg);
+    Shape.apply(this, arguments);
     this.mX1 = 0;
     this.mY1 = 0;
     this.mX2 = 0;
@@ -18,8 +18,8 @@ Rectangle.prototype.setY1 = function (value) {
 }
 
 Rectangle.prototype.setFirstPoint = function(x, y){
-    this.mX1 = value;
-    this.mY1 = value;
+    this.mX1 = x;
+    this.mY1 = y;
 }
 
 Rectangle.prototype.getX1 = function () {
@@ -41,8 +41,8 @@ Rectangle.prototype.setY2 = function (value) {
 }
 
 Rectangle.prototype.setSecondPoint = function(x, y){
-    this.mX2 = value;
-    this.mY2 = value;
+    this.mX2 = x;
+    this.mY2 = y;
 }
 
 Rectangle.prototype.getX2 = function () {

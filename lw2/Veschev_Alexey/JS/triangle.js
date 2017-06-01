@@ -7,20 +7,6 @@ function Triangle() {
     this.mX3 = 0;
     this.mY3 = 0;
 }
-
-this.getFirstLine = function(){
-    return Math.sqrt(Math.pow(this.getX1() - this.getY1(), 2) + (Math.pow(this.getX2() - this.getY2(), 2)));
-}
-
-this.getSecondLine = function(){
-    return Math.sqrt(Math.pow(this.getX1() - this.getY1(), 2) + (Math.pow(this.getX3() - this.getY3(), 2)));
-}
-
-this.getThirdLine = function(){
-    return Math.sqrt(Math.pow(this.getX2() - this.getY2(), 2) + (Math.pow(this.getX3() - this.getY3(), 2)));
-}
-   
-
 Triangle.prototype = Object.create(Shape.prototype);
 Triangle.prototype.constructor = Triangle;
 
@@ -106,11 +92,20 @@ Triangle.prototype.draw = function (context) {
 }
 
 //calculate
+Triangle.prototype.getFirstLine = function(){
+    return Math.sqrt(Math.pow(this.getX1() - this.getY1(), 2) + (Math.pow(this.getX2() - this.getY2(), 2)));
+}
+
+Triangle.prototype.getSecondLine = function(){
+    return Math.sqrt(Math.pow(this.getX1() - this.getY1(), 2) + (Math.pow(this.getX3() - this.getY3(), 2)));
+}
+
+Triangle.prototype.getThirdLine = function(){
+    return Math.sqrt(Math.pow(this.getX2() - this.getY2(), 2) + (Math.pow(this.getX3() - this.getY3(), 2)));
+}
+
 Triangle.prototype.calculatePerimeter = function(){
-   // var line1 = Math.sqrt(Math.pow(this.getX1() - this.getY1(), 2) + (Math.pow(this.getX2() - this.getY2(), 2)));
-   // var line2 = Math.sqrt(Math.pow(this.getX1() - this.getY1(), 2) + (Math.pow(this.getX3() - this.getY3(), 2)));
-    //var line3 = Math.sqrt(Math.pow(this.getX2() - this.getY2(), 2) + (Math.pow(this.getX3() - this.getY3(), 2)));
-    var perimeter = (this.getFirstLine() + this.getSecondLine() + this.getThirdLine()).toFixed(3);
+   var perimeter = (this.getFirstLine() + this.getSecondLine() + this.getThirdLine()).toFixed(3);
     return perimeter;
     
 }
