@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script type="text/javascript" src="scripts/shape.js"></script>
+    <script type="text/javascript" src="scripts/circle.js"></script>
+    <script type="text/javascript" src="scripts/rectangle.js"></script>
+    <script type="text/javascript" src="scripts/triangle.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+</head>
+
+<body>
+
+    <div class="content">
+        
+            <div class="shape-info figure-input">
+                <div class="input-line">
+                    <label for="shape-selector" class="value-shape">Shape:</label>
+                    <select class="input-box selector" id="shape-selector" onchange="onShapeSelect()">
+                        <option disabled selected hidden>Select shape</option>
+                        <option>Circle</option>
+                        <option>Rectangle</option>
+                        <option>Triangle</option>
+                    </select>
+                </div>
+				
+				<div class="button">
+                    <button class="button" id="apply-btn" onclick="onApplyClick()">Apply</button>
+				</div>
+				
+                <div class="input-line">
+                    <label for="input-fill-color" class="value-shape">Fill color:</label>
+                    <input type="text" class="input-box" id="input-fill-color" value="#00FA9A">
+                </div>
+                <div class="input-line">
+                    <label for="input-border-color" class="value-shape">Border color:</label>
+                    <input type="text" class="input-box" id="input-border-color" value="#2E8B57">
+                </div>
+            </div>
+
+            <div class="shape-info figure-extenged-input">
+
+                <div id="circle-parametrs-form">
+                    <div class="input-line">
+                        <label for="circle-r" class="value-shape">Circle radius:</label>
+                        <input type="text" class="input-box" id="circle-r" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="circle-x" class="value-shape">Circle center X:</label>
+                        <input type="text" class="input-box" id="circle-x" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="circle-y" class="value-shape">Circle center Y:</label>
+                        <input type="text" class="input-box" id="circle-y" value="0">
+                    </div>
+                </div>
+
+                <div id="rectangle-parametrs-form">
+                    <div class="input-line">
+                        <label for="rectangle-x1" class="value-shape">Recangle x1:</label>
+                        <input type="text" class="input-box" id="rectangle-x1" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="rectangle-y1" class="value-shape">Recangle y1:</label>
+                        <input type="text" class="input-box" id="rectangle-y1" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="rectangle-x2" class="value-shape">Recangle x2:</label>
+                        <input type="text" class="input-box" id="rectangle-x2" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="rectangle-y2" class="value-shape">Recangle y2:</label>
+                        <input type="text" class="input-box" id="rectangle-y2" value="0">
+                    </div>
+                </div>
+
+                <div id="triangle-parametrs-form">
+                    <div class="input-line">
+                        <label for="triangle-x1" class="value-shape">Triangle x1:</label>
+                        <input type="text" class="input-box" id="triangle-x1" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="triangle-y1" class="value-shape">Triangle y1:</label>
+                        <input type="text" class="input-box" id="triangle-y1" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="triangle-x2" class="value-shape">Triangle x2:</label>
+                        <input type="text" class="input-box" id="triangle-x2" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="triangle-y2" class="value-shape">Triangle y2:</label>
+                        <input type="text" class="input-box" id="triangle-y2" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="triangle-x3" class="value-shape">Triangle x3:</label>
+                        <input type="text" class="input-box" id="triangle-x3" value="0">
+                    </div>
+                    <div class="input-line">
+                        <label for="triangle-y3" class="value-shape">Triangle y3:</label>
+                        <input type="text" class="input-box" id="triangle-y3" value="0">
+                    </div>
+                </div>
+
+            </div>
+
+			<div class="canvas-shape">
+				<canvas id="canvas" width="900" height="500"></canvas>
+			</div>
+    </div>
+</body>
+</html>
