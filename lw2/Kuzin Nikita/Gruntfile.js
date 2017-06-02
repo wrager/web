@@ -95,7 +95,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-cache-breaker');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks("grunt-ts");
-  grunt.loadNpmTasks("grunt-tslint --force");
+  grunt.loadNpmTasks("grunt-tslint");
 
   
   grunt.registerTask('main', ['concat', 'tslint', 'cachebreaker', 'ts']);
