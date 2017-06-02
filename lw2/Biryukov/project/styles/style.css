@@ -1,0 +1,28 @@
+html, body {
+    background-color: #29324e;
+    height: 100%;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.whiteBackground {
+    background-color: #fff;
+}
+
+#canvas {
+    height: 500px;
+    width: 500px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+#circle-optional-form, #rectangle-optional-form, #triangle-optional-form, #apply-btn  {
+    display: none;
+}
+
+#apply-btn {
+    margin-top: 10px;
+}
