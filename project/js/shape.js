@@ -1,4 +1,3 @@
-//------------------------------------ Shape class
 function Shape() {
     this.fillColor = "#000000";
     this.borderColor = "#000000";
@@ -20,14 +19,11 @@ Shape.prototype.getBorderColor = function () {
     return this.borderColor;
 }
 
-Shape.prototype.draw = function (context) {
-
+Shape.prototype.draw = function () {
 }
 
 Shape.prototype.calculateArea = function () {
-
 }
 
 Shape.prototype.calculatePerimeter = function () {
-
 }

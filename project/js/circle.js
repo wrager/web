@@ -1,20 +1,19 @@
-//------------------------------------ Circle class
 function Circle() {
     Shape.apply(this, arguments);
     this.x = 0;
     this.y = 0;
-    this.r = 0;
+    this.radius = 0;
 }
 
 Circle.prototype = Object.create(Shape.prototype);
 Circle.prototype.constructor = Circle;
 
 Circle.prototype.setRadius = function (value) {
-    this.r = value;
+    this.radius = value;
 }
 
 Circle.prototype.getRadius = function () {
-    return this.r;
+    return this.radius;
 }
 
 Circle.prototype.setX = function (value) {
@@ -36,6 +35,7 @@ Circle.prototype.getY = function () {
 Circle.prototype.draw = function (context) {
     context.beginPath();
     context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
+    context.closePath();
     context.fillStyle = this.getFillColor();
     context.fill();
     context.strokeStyle = this.getBorderColor();
@@ -43,9 +43,9 @@ Circle.prototype.draw = function (context) {
 }
 
 Circle.prototype.calculateArea = function () {
-    return (Math.PI * Math.pow(this.r, 2)).toFixed(2);
+    return (Math.PI * Math.pow(this.radius, 2)).toFixed(0);
 }
 
 Circle.prototype.calculatePerimeter = function () {
-    return (2 * Math.PI * this.r).toFixed(2);
+    return (2 * Math.PI * this.radius).toFixed(0);
 }

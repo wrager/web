@@ -1,4 +1,3 @@
-//------------------------------------ Rectangle class
 function Rectangle() {
     Shape.apply(this, arguments);
     this.x1 = 0;
@@ -10,51 +9,52 @@ function Rectangle() {
 Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.constructor = Rectangle;
 
-Rectangle.prototype.setX1 = function (value) {
-    this.x1 = value;
-}
-
 Rectangle.prototype.getX1 = function () {
     return this.x1;
 }
 
-Rectangle.prototype.setY1 = function (value) {
-    this.y1 = value;
+Rectangle.prototype.setX1 = function (value) {
+    this.x1 = value;
 }
 
 Rectangle.prototype.getY1 = function () {
     return this.y1;
 }
 
-Rectangle.prototype.setX2 = function (value) {
-    this.x2 = value;
+Rectangle.prototype.setY1 = function (value) {
+    this.y1 = value;
 }
 
 Rectangle.prototype.getX2 = function () {
     return this.x2;
 }
 
-Rectangle.prototype.setY2 = function (value) {
-    this.y2 = value;
+Rectangle.prototype.setX2 = function (value) {
+    this.x2 = value;
 }
 
 Rectangle.prototype.getY2 = function () {
     return this.y2;
 }
 
+Rectangle.prototype.setY2 = function (value) {
+    this.y2 = value;
+}
+
 Rectangle.prototype.getWidth = function () {
-    return Math.abs(this.getX1() - this.getX2());
+    return Math.abs(this.getX2() - this.getX1());
 }
 
 Rectangle.prototype.getHeight = function () {
-    return Math.abs(this.getY1() - this.getY2());
+    return Math.abs(this.getY2() - this.getY1());
 }
 
 Rectangle.prototype.draw = function (context) {
-    var tLeftX = Math.min(this.getX1(), this.getX2());
-    var tLeftY = Math.min(this.getY1(), this.getY2());
+    var x0 = Math.min(this.getX1(), this.getX2());
+    var y0 = Math.min(this.getY1(), this.getY2());
     context.beginPath();
-    context.rect(tLeftX, tLeftY, this.getWidth(), this.getHeight());
+    context.rect(x0, y0, this.getWidth(), this.getHeight());
+    context.closePath();
     context.fillStyle = this.getFillColor();
     context.fill();
     context.strokeStyle = this.getBorderColor();
@@ -62,9 +62,9 @@ Rectangle.prototype.draw = function (context) {
 }
 
 Rectangle.prototype.calculateArea = function () {
-    return (this.getWidth() * this.getHeight()).toFixed(2);
+    return (this.getWidth() * this.getHeight()).toFixed(0);
 }
 
 Rectangle.prototype.calculatePerimeter = function () {
-    return (this.getWidth() * 2 + this.getHeight() * 2).toFixed(2);
+    return (2 * (this.getWidth() + this.getHeight())).toFixed(0);
 }
