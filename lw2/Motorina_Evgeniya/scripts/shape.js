@@ -1,6 +1,6 @@
 function Shape(){
-    this._fillColor = "#000000";
-    this._borderColor = "#000000";
+    this._fillColor = "black";
+    this._borderColor = "black";
 }
 
 Shape.prototype.setFillColor = function (value) {

@@ -4,6 +4,7 @@ function Rectangle () {
     this._y1 = 0; 
     this._x2 = 0;
     this._y2 = 0;
+
 }
 
 Rectangle.prototype = Object.create(Shape.prototype);
@@ -41,8 +42,12 @@ Rectangle.prototype.setY2 = function (value) {
     this._y2 = value;
 }
 
-Rectangle.prototype.draw = function () {
-
+Rectangle.prototype.draw = function (ctx) {
+    Shape.prototype.draw.apply(this);
+    ctx.fillStyle = this._fillColor;
+    ctx.fillRect(this._x1, this._y1, this._x2 - this._x1, this._y2 - this._y1);
+    ctx.strokeStyle = this._borderColor;
+    ctx.strokeRect(this._x1, this._y1, this._x2 - this._x1, this._y2 - this._y1);
 }
 
 Rectangle.prototype.calculateArea = function () {
@@ -50,7 +55,7 @@ Rectangle.prototype.calculateArea = function () {
     return area;
 }
 
-Rectangle.prototype.calculatePerimetr = function () {
-    var perimetr = (Math.abs(this._x1 - this._x2) + Math.abs(this._y1 - this._y2)) * 2;
-    return perimetr;
+Rectangle.prototype.calculatePerimeter = function () {
+    var perimeter = (Math.abs(this._x1 - this._x2) + Math.abs(this._y1 - this._y2)) * 2;
+    return perimeter;
 }

@@ -32,14 +32,25 @@ Circle.prototype.setY = function (value) {
     this._y = value;
 }
 
-Circle.prototype.draw = function () {
+Circle.prototype.draw = function (ctx) {
+    Shape.prototype.draw.apply(this);
+    ctx.fillStyle = this._fillColor;
+    ctx.beginPath();
+    ctx.arc(this._x, this._y, this._radius, 0, 2 * Math.PI, false);
+    ctx.fill();
 
+    ctx.strokeStyle = this._borderColor;
+    ctx.beginPath();
+    ctx.arc(this._x, this._y, this._radius, 0, 2 * Math.PI, false);
+    ctx.stroke();
 }
 
 Circle.prototype.calculateArea = function () {
-    var area = Math.PI * Math.pow(r, 2);
+    var area = Math.PI * Math.pow(this._radius, 2);
+    return area;
 }
 
-Circle.prototype.calculatePerimetr = function () {
-    var perimetr = 2 * Math.PI * r;
+Circle.prototype.calculatePerimeter = function () {
+    var perimeter = 2 * Math.PI * this._radius;
+    return perimeter;
 }
