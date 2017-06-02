@@ -1,4 +1,3 @@
-///<reference path="triangle_presenter.ts"/>
 /**
  * Created by Dzzirt on 17.03.2017.
  */
