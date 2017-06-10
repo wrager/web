@@ -19,6 +19,7 @@ function onShapeSelect() {
         show("triangle-optional-form");
     }
 }
+document.getElementById("shape-selector").onchange = onShapeSelect;
 
 function onApplyClick() {
     var shapeCanvas = getElement("canvas-shape");
@@ -28,7 +29,6 @@ function onApplyClick() {
 
     var infoCanvas = getElement("canvas-info");
     var infoContext = infoCanvas.getContext("2d");
-    var selectedValue = getSelectorValue();
     infoContext.clearRect(0, 0, infoCanvas.width, infoCanvas.height);
 
    if (selectedValue == "Circle"){
@@ -56,6 +56,7 @@ function onApplyClick() {
    }
    draw([circle, rectangle, triangle], shapeContext, infoContext);
 }
+document.getElementById("apply-btn").onchange = onApplyClick;
 
 function exist(item) {
     return typeof (item) != 'undefined' && item != null;

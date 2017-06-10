@@ -29,11 +29,11 @@ Circle.prototype.getRadius = function () {
     return this.mRadius;
 }
 
-Circle.prototype.getX = function (x) {
+Circle.prototype.getX = function () {
     return this.mX;
 }
 
-Circle.prototype.getY = function (y) {
+Circle.prototype.getY = function () {
     return this.mY;
 }
 
