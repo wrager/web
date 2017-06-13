@@ -11,15 +11,8 @@ function ResetMenu()
     document.getElementById("rectangle_menu").style.display = "none";
 }
 
-/**
- * @constructor
- */
-function CObject() {
-    
-}
-
-function AddTriangle() {
-
+function AddTriangle() 
+{
     this.triangle = new Triangle();
     this.triangle.setX1(document.getElementById("triangle_x1").value);
     this.triangle.setX2(document.getElementById("triangle_x2").value);
@@ -39,7 +32,8 @@ function AddTriangle() {
 
 }
 
-function AddCircle() {
+function AddCircle() 
+{
     this.circle = new Circle();
     this.circle.setX(document.getElementById("circ_centerX").value);
     this.circle.setY(document.getElementById("circ_centerY").value);
@@ -56,7 +50,8 @@ function AddCircle() {
 
 }
 
-function AddRectangle() {
+function AddRectangle() 
+{
     this.rectangle = new Rectangle();
 
     this.rectangle.setX1(document.getElementById("rect_x1").value);
@@ -72,10 +67,10 @@ function AddRectangle() {
     document.getElementById("figure").innerHTML = "Rectangle";
     document.getElementById("area").innerHTML = "Area: " + this.rectangle.calculateArea().toFixed(1);
     document.getElementById("perimeter").innerHTML = "Perimeter: " + this.rectangle.calculatePerimeter().toFixed(1);
-
 }
 
-function ClearCanvas() {
+function ClearCanvas() 
+{
 	this._canvas = document.getElementById("canvas");
     this._context = this.canvas.getContext('2d');
 	this._context.clearRect(0, 0, this._canvas.width, this._canvas.height);      
