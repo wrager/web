@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.has_border {
+  outline: 2px solid black; }
+
+.has_margin {
+  margin: 10px; }
+
+.scalable {
+  box-sizing: border-box; }
+
+.title {
+  font-size: 20px;
+  padding-top: 5px;
+  text-align: center; }
+
+.canvas_container {
+  float: left; }
+  .canvas_container .canvas {
+    width: 500px;
+    height: 500px; }
+
+.option_container {
+  float: left;
+  width: 400px;
+  height: 700px; }
+  .option_container .shape_select_container {
+    height: 100px;
+    padding: 15px; }
+    .option_container .shape_select_container select {
+      min-width: 100px; }
+  .option_container .setting {
+    position: relative;
+    height: auto;
+    min-height: 150px;
+    padding: 10px; }
+    .option_container .setting .common_options {
+      margin: 0 auto 15px; }
+      .option_container .setting .common_options .option_labels {
+        text-align: center; }
+      .option_container .setting .common_options .color_shape,
+      .option_container .setting .common_options .color_border {
+        display: inline-block;
+        margin: 0px 5px 5px 0px; }
+    .option_container .setting .setting_shape input {
+      width: 100px;
+      margin: 15px 15px; }
+    .option_container .setting .draw_shape {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0 15px 15px; }
+  .option_container .shape_characteristics {
+    padding: 10px;
+    font-size: 20px; }
+    .option_container .shape_characteristics .output_perimeter,
+    .option_container .shape_characteristics .output_area {
+      margin: 20px 15px; }
+    .option_container .shape_characteristics .output_perimeter::before {
+      content: 'Perimeter: '; }
+    .option_container .shape_characteristics .output_area::before {
+      content: 'Area: '; }
+  .option_container .add_shape {
+    padding: 10px; }
+  .option_container .add_shape button {
+    margin-left: 10px; }
+
+/*# sourceMappingURL=style.css.map */
