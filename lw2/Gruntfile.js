@@ -15,12 +15,7 @@ module.exports = function( grunt ) {
 				}
 			}
 		},
-		eslint: {
-			options: {
-				configFile: "eslint.json",
-			},
-			src: ['.build/scripts.js']
-		},
+
         concat: {
             css: {
                 src: ['project/css/style.css'],
@@ -34,6 +29,20 @@ module.exports = function( grunt ) {
 				src: ['project/index.html'],
                 dest: '.build/index.html'
 			}
+        },
+		ts: {
+            default : {
+                src: ["project/js/common/*.ts", "project/js/shapes/*.ts", 'project/js/ShapeManager.ts', 'project/js/main.ts', "!node_modules/**"],
+                tsconfig: true
+            }
+        },
+        tslint: {
+            options: {
+                configuration: "tslint.json"
+            },
+            your_target: {
+                src: ["project/js/*.ts", "project/js/common/*.ts", "project/js/shapes/*.ts"], 
+            }
         },
 		connect: {
 			server: {
@@ -58,22 +67,23 @@ module.exports = function( grunt ) {
             },
             js: {
                 files: ['project/js/*.js'],
-                tasks: ['concat:js', 'eslint', 'cachebreaker']
+                tasks: ['concat:js', 'tslint', 'cachebreaker']
             },
 			html: {
 				files: ['project/index.html'],
-                tasks: ['cachebreaker']
+                tasks: ['concat:html', 'cachebreaker']
 			}
         }
     });
 
     // 2. Where we tell Grunt we plan to use this plug-in.
-	grunt.loadNpmTasks("gruntify-eslint");
     grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-cache-breaker');
+    grunt.loadNpmTasks("grunt-tslint");
+    grunt.loadNpmTasks("grunt-ts");
 
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'eslint', 'cachebreaker', 'connect', 'watch']);
+    grunt.registerTask('default', ['concat', 'tslint', 'ts', 'cachebreaker', 'connect', 'watch']);
 };
