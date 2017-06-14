@@ -1,0 +1,24 @@
+{
+  "name": "shape_drawer",
+  "version": "1.0.0",
+  "description": "lw3",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "start": "grunt"
+  },
+  "author": "Kolchin Il'ya PS-31",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "grunt": "^1.0.1",
+    "grunt-assets-hash": "^0.1.4",
+    "grunt-cache-breaker": "^2.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "typescript": "^2.3.4",
+    "grunt-ts": "^6.0.0-beta.15",
+    "grunt-tslint": "^5.0.1"
+  }
+}
