@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShapeManager</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts.js"></script>
+    
+</head>
+<body>
+    <div class="inner_block">
+
+        <div class="chooseColor">
+            <input class="color" id="shape_fill_color" placeholder="Fill color">
+            <input class="color" id="shape_border_color" placeholder="Border color">
+        </div>
+
+        <div class="toolbar">
+
+            <select id="select_shape" onchange="SelectShape()" value="circle">
+                <option disabled>Select shape</option>
+                <option value="circle">Circle</option>
+                <option value="triangle">Triangle</option>
+                <option value="rectangle">Rectangle</option>
+            </select>
+
+            <button id="clear_canvas" onclick="ClearCanvas()">Clear Canvas</button>
+        </div>
+
+
+        <div class="enter_form">
+            <div id="circle_menu" class="circle_menu">
+                <input class="coord" id="circ_centerX" placeholder="CenterX">
+                <input class="coord" id="circ_centerY" placeholder="CenterY">
+                <input class="coord" id="circ_radius" placeholder="Radius">
+                <button id="add_circle" onclick="AddCircle()">Add</button>
+            </div>
+            <div class="triangle_menu" id="triangle_menu">
+                <input class="coord" id="triangle_x1" placeholder="X1">
+                <input class="coord" id="triangle_y1" placeholder="Y1">
+                <input class="coord" id="triangle_x2" placeholder="X2">
+                <input class="coord" id="triangle_y2" placeholder="Y2">
+                <input class="coord" id="triangle_x3" placeholder="X3">
+                <input class="coord" id="triangle_y3" placeholder="Y3">
+                <button id="add_triangle" onclick="AddTriangle()">Add</button>
+            </div>
+            <div class="rectangle_menu" id="rectangle_menu">
+                <input class="coord" id="rect_x1" placeholder="X1">
+                <input class="coord" id="rect_y1" placeholder="Y1">
+                <input class="coord" id="rect_x2" placeholder="X2">
+                <input class="coord" id="rect_y2" placeholder="Y2">
+                <button id="add_rectangle" onclick="AddRectangle()">Add</button>
+            </div>
+        </div>
+
+        <div class="info">
+            <div id="figure"></div>
+            <div id="area"></div>
+            <div id="perimeter"></div>
+        </div>
+
+        <canvas  id="canvas" class="canvas"></canvas>
+    </div>
+</body>
+</html>
