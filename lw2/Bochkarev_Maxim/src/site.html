@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shape Drawer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div class="row">
+    <div class="page-header">
+        <h2 class="header">
+            <small>
+                Shape Drawer. Choose figure from the list above
+            </small>
+        </h2>
+    </div>
+
+    <div class="col-md-2 parameter_input_col">
+        <div class="col-sm-5 shape_select">
+            <select class="col-sm-4 form-control" id="shape_select">
+                <option selected disabled>Select shape</option>
+                <option>Rectangle</option>
+                <option>Circle</option>
+                <option>Triangle</option>
+            </select>
+        </div>
+        <div class="parameter_input">
+
+            <form id="rectangle_options" class="parameter_input_div">
+                <label for="rectX1" class="col-sm-4 control-label">X1 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="rectX1" value="0">
+                </div>
+                <label for="rectY1" class="col-sm-4 control-label">Y1 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="rectY1" value="0">
+                </div>
+
+                <label for="rectX2" class="col-sm-4 control-label">X2 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="rectX2" value="0">
+                </div>
+                <label for="rectY2" class="col-sm-4 control-label">Y2 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="rectY2" value="0">
+                </div>
+            </form>
+
+            <form id="triangle_options" class="parameter_input_div">
+                <label for="triangleX1" class="col-sm-4 control-label">X1 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="triangleX1" value="0">
+                </div>
+                <label for="triangleY1" class="col-sm-4 control-label">Y1 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="triangleY1" value="0">
+                </div>
+
+                <label for="triangleX2" class="col-sm-4 control-label">X2 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="triangleX2" value="0">
+                </div>
+                <label for="triangleY2" class="col-sm-4 control-label">Y2 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="triangleY2" value="0">
+                </div>
+
+                <label for="triangleX3" class="col-sm-4 control-label">X3 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="triangleX3" value="0">
+                </div>
+                <label for="triangleY3" class="col-sm-4 control-label">Y3 coord</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="triangleY3" value="0">
+                </div>
+            </form>
+
+            <form id="circle_options" class="parameter_input_div">
+                <label for="circleRadius" class="col-sm-4 control-label">Radius</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="circleRadius" value="0">
+                </div>
+
+                <label for="circleCenterX" class="col-sm-4 control-label">Center X</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="circleCenterX" value="0">
+                </div>
+
+                <label for="circleCenterY" class="col-sm-4 control-label">Center Y</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="circleCenterY" value="0">
+                </div>
+            </form>
+            <label for="fillColor" class="col-sm-4 control-label">Fill Color</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="fillColor" value="0">
+            </div>
+            <label for="borderColor" class="col-sm-4 control-label">Border Color</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="borderColor" value="0">
+            </div>
+        </div>
+        <button type="button" id="draw_figure_button" disabled class="btn btn-default">
+            Draw Figure
+        </button>
+    </div>
+
+    <div class="col-md-4">
+        <div class="draw_elem">
+            <canvas id="shape_canvas" width="500" height="396"></canvas>
+        </div>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
