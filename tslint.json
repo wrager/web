@@ -1,0 +1,6 @@
+{
+	"extends": "tslint:recommended",
+	"env": {
+		"browser": true
+	}
+}

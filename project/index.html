@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shapes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="row">
+            <div class="col-md-4">
+
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="shape-selector" class="col-sm-4">Shape</label>
+                        <div class="col-sm-5">
+                            <select class="col-sm-15 input-field selector" id="shape-selector">
+                        <option selected disabled hidden>Select shape</option>
+                        <option>Rectangle</option>
+                        <option>Circle</option>
+                        <option>Triangle</option>
+                    </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fill-color" class="col-sm-4">Fill color</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="fill-color" value="#000000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="border-color" class="col-sm-4">Stroke color</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="border-color" value="#000000">
+                        </div>
+                    </div>
+                </form>
+
+                <form class="form-horizontal" id="circle-options" hidden>
+                    <div class="form-group">
+                        <label for="circle-r" class="col-sm-4">Circle radius</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="circle-r" value="30">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="circle-x" class="col-sm-4">Circle X</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="circle-x" value="200">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="circle-y" class="col-sm-4">Circle Y</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="circle-y" value="200">
+                        </div>
+                    </div>
+                </form>
+
+                <form class="form-horizontal" id="rectangle-options" hidden>
+                    <div class="form-group">
+                        <label for="rectangle-x1" class="col-sm-4">Rectangle X1</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="rectangle-x1" value="90">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rectangle-y1" class="col-sm-4">Rectangle Y1</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="rectangle-y1" value="90">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rectangle-x2" class="col-sm-4">Rectangle X2</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="rectangle-x2" value="150">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rectangle-y2" class="col-sm-4">Rectangle Y2</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="rectangle-y2" value="150">
+                        </div>
+                    </div>
+                </form>
+
+                <form class="form-horizontal" id="triangle-options" hidden>
+                    <div class="form-group">
+                        <label for="triangle-x1" class="col-sm-4">Triangle X1</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="triangle-x1" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="triangle-y1" class="col-sm-4">Triangle Y1</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="triangle-y1" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="triangle-x2" class="col-sm-4">Triangle X2</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="triangle-x2" value="30">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="triangle-y2" class="col-sm-4">Triangle Y2</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="triangle-y2" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="triangle-x3" class="col-sm-4">Triangle X3</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="triangle-x3" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="triangle-y3" class="col-sm-4">Triangle Y3</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="input-field" id="triangle-y3" value="30">
+                        </div>
+                    </div>
+                </form>
+
+                <button type="submit" class="center-block btn" id="apply" onclick="onApplyClick()">Apply</button>
+
+
+            </div>
+            <div class="col-md-8">
+                <canvas id="canvas" width="950" height="550">
+            </div>
+
+    </div>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>
