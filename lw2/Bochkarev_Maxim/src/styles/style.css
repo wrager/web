@@ -1,0 +1,47 @@
+label {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.header {
+    margin-left: 20px;
+}
+
+.parameter_input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    margin: auto;
+}
+
+.parameter_input_div {
+    display: none;
+}
+
+canvas {
+    border: 2px solid black;
+}
+
+.parameter_input_col {
+    border: 2px solid black;
+    height: 400px;
+    width: 500px;
+}
+
+.btn {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.shape_select {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    margin: auto;
+}

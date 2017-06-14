@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "target": "es5",
+    "strict": true,
+    "sourceMap": false
+  },
+  "files": [
+    "src/Scripts/AbstractShape.ts",
+    "src/Scripts/Circle.ts",
+    "src/Scripts/Triangle.ts",
+    "src/Scripts/Rectangle.ts",
+    "src/Scripts/Scripts.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
