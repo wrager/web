@@ -44,7 +44,7 @@ class ShapeManager {
     }
 
     public addShape(type: any) {
-        var shape;
+        let shape;
         switch (type) {
         case TRIANGLE:
             shape = new Triangle(TRIANGLE);
@@ -117,8 +117,7 @@ class ShapeManager {
         const option = document.createElement("option");
         option.setAttribute("value", type);
         option.textContent = type;
-        
-        let select = document.getElementById("typeshape");
+        const select = document.getElementById("typeshape");
         select.appendChild(option);
     }
 
@@ -126,7 +125,6 @@ class ShapeManager {
         this.ctx.strokeStyle = this.currentShape.getBorderColor();
         this.ctx.fillStyle = this.currentShape.getFillColor();
     }
-
 
     public outputData(firstData: any, secondData: any) {
         const perimeterContainer = document.getElementById("perimeter");
@@ -202,19 +200,19 @@ class ShapeManager {
         input.setAttribute("class", "input");
         input.setAttribute("placeholder", text);
 
-        input.onchange = function() {
+        input.onchange = () => {
             this.draw();
         };
 
         if (value > 0) {
             input.value = value;
         }
-        input.onchange = function() {
+        input.onchange = () => {
             handler(Number(input.value));
         };
         this.settingField.appendChild(input);
     }
-    
+
     public createSettingField() {
         this.settingField = document.createElement("div");
         this.settingField.setAttribute("class", "settingfield");
