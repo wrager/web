@@ -1,11 +1,11 @@
 class Rectangle extends Shape {
-    private leftTopPosition: Position;
-    private rightBottomPos: Position;
+    private leftTopPosition: Point;
+    private rightBottomPos: Point;
 
     constructor(type: string) {
         super();
-        this.leftTopPosition = Position.createPoint(0, 0);
-        this.rightBottomPos = Position.createPoint(0, 0);
+        this.leftTopPosition = createPoint(0, 0);
+        this.rightBottomPos = createPoint(0, 0);
         this.type = type;
     }
 

@@ -1,17 +1,17 @@
 class Triangle extends Shape {
-    private Position1: Position;
-    private Position2: Position;
-    private Position3: Position;
+    private Position1: Point;
+    private Position2: Point;
+    private Position3: Point;
 
     constructor(type: string) {
         super();
         this.type = type;
-        this.Position1 = Position.createPoint(0, 0);
-        this.Position2 = Position.createPoint(0, 0);
-        this.Position3 = Position.createPoint(0, 0);
+        this.Position1 = createPoint(0, 0);
+        this.Position2 = createPoint(0, 0);
+        this.Position3 = createPoint(0, 0);
     }
 
-    public setFirstPosition(value: Position) {
+    public setFirstPosition(value: Point) {
         this.Position1 = value;
     }
 
@@ -19,7 +19,7 @@ class Triangle extends Shape {
         return this.Position1;
     }
 
-    public setSecondPosition(value: Position) {
+    public setSecondPosition(value: Point) {
         this.Position2 = value;
     }
 
@@ -27,7 +27,7 @@ class Triangle extends Shape {
         return this.Position2;
     }
 
-    public setThirdPosition(value: Position) {
+    public setThirdPosition(value: Point) {
         this.Position3 = value;
     }
 
@@ -64,7 +64,7 @@ class Triangle extends Shape {
         return Math.sqrt(Math.pow(x2 - x1, 2) + (Math.pow(y2 - y1, 2)));
     }
 
-    private getSide = function(Position1: Position, Position2: Position): number {
+    private getSide = function(Position1: Point, Position2: Point): number {
         return Math.sqrt(Math.pow((this.Position2.getX() - this.Position1.getX()), 2)
         + Math.pow((this.Position2.getY() - this.Position1.getY()), 2));
     };

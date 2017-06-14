@@ -18,7 +18,7 @@ class ShapeManager {
 
         const colorShape = document.getElementById("colorshape");
         colorShape.onchange = function() {
-            const value = colorShape.value;
+            const value = colorShape.nodeValue;
             if (this.currentShape && (value !== "")) {
                 this.currentShape.setFillColor(value);
             }
@@ -26,7 +26,7 @@ class ShapeManager {
 
         const colorBorder = document.getElementById("colorborder");
         colorBorder.onchange = function() {
-            const value = colorBorder.value;
+            const value = colorBorder.nodeValue;
             if (this.currentShape && (value !== "")) {
                 this.currentShape.setBorderColor(value);
             }
@@ -109,8 +109,8 @@ class ShapeManager {
     }
 
     public fillColorsFields(colorShapeValue: any, colorBorderValue: any) {
-        document.getElementById("colorshape").value = colorShapeValue;
-        document.getElementById("colorborder").value = colorBorderValue;
+        document.getElementById("colorshape").nodeValue = colorShapeValue;
+        document.getElementById("colorborder").nodeValue = colorBorderValue;
     }
 
     public addShapeToSelectElement(type: any) {
@@ -205,7 +205,7 @@ class ShapeManager {
         };
 
         if (value > 0) {
-            input.value = value;
+            input.value = value.toString();
         }
         input.onchange = () => {
             handler(Number(input.value));

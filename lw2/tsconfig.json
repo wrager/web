@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"module": "system",
+		"target": "es5",
+		"strict":true
+	},
+	"files": [
+		"project/js/common/ShapeType.ts",
+		"project/js/common/Position.ts",
+		"project/js/shapes/Shape.ts",
+		"project/js/shapes/Rectangle.ts",
+		"project/js/shapes/Triangle.ts",
+		"project/js/shapes/Circle.ts",
+		"project/js/ShapeManager.ts",
+		"project/js/main.ts"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}

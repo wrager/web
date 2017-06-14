@@ -1,19 +1,13 @@
-
-class Position {
-    public static createPoint(x: number, y: number): Position {
-        const point = new Position();
-        point.setX(x);
-        point.setY(y);
-
-        return point;
-    }
-
+class Point {
     private x: number;
     private y: number;
 
-    constructor(xValue: number, yValue: number)  {
-        this.x = xValue;
-        this.y = yValue;
+    public getX() {
+        return this.x;
+    }
+
+    public getY() {
+        return this.y;
     }
 
     public setX(value: number) {
@@ -23,13 +17,12 @@ class Position {
     public setY(value: number) {
         this.y = value;
     }
+}
 
-    public getX(): number {
-        return this.x;
-    }
+function createPoint(x: number, y: number): Point {
+    const point = new Point();
+    point.setX(x);
+    point.setY(y);
 
-    public getY(): number {
-        return this.y;
-    }
-
+    return point;
 }
