@@ -64,16 +64,18 @@ class Triangle extends Shape {
         return this.y3;
     }
 
-    public draw(ctx: any) {
-        ctx.beginPath();
-        ctx.moveTo(this.getX1(), this.getY1());
-        ctx.lineTo(this.getX2(), this.getY2());
-        ctx.lineTo(this.getX3(), this.getY3());
-        ctx.closePath();
-        ctx.fillStyle = this.getFillColor();
-        ctx.fill();
-        ctx.strokeStyle = this.getBorderColor();
-        ctx.stroke();
+    public draw() {
+        const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+        const context = canvas.getContext("2d") as CanvasRenderingContext2D;
+        context.beginPath();
+        context.moveTo(this.getX1(), this.getY1());
+        context.lineTo(this.getX2(), this.getY2());
+        context.lineTo(this.getX3(), this.getY3());
+        context.closePath();
+        context.fillStyle = this.getFillColor();
+        context.fill();
+        context.strokeStyle = this.getBorderColor();
+        context.stroke();
     }
 
     public subAbsNum(num1: number, num2: number) {

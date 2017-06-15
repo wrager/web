@@ -1,8 +1,22 @@
-(document.getElementById("select_shape") as HTMLSelectElement).onchange = SelectShape;
-(document.getElementById("add_triangle") as HTMLElement).onclick = AddTriangle;
-(document.getElementById("add_circle") as HTMLElement).onclick = AddCircle;
-(document.getElementById("add_rectangle") as HTMLElement).onclick = AddRectangle;
-(document.getElementById("clear_canvas") as HTMLElement).onclick = ClearCanvas;
+let selectShape: HTMLSelectElement;
+selectShape = document.getElementById("select_shape") as HTMLSelectElement;
+selectShape.onchange = SelectShape;
+
+let addTriangle: HTMLElement;
+addTriangle = document.getElementById("add_triangle") as HTMLElement;
+addTriangle.onclick = AddTriangle;
+
+let addCircle: HTMLElement;
+addCircle = document.getElementById("add_circle") as HTMLElement;
+addCircle.onclick = AddCircle;
+
+let addRectangle: HTMLElement;
+addRectangle = document.getElementById("add_rectangle") as HTMLElement;
+addRectangle.onclick = AddRectangle;
+
+let clearCanvas: HTMLElement;
+clearCanvas = document.getElementById("clear_canvas") as HTMLElement;
+clearCanvas.onclick = ClearCanvas;
 
 let circle: Circle;
 let rectangle: Rectangle;
@@ -32,11 +46,10 @@ function AddTriangle() {
 
     triangle.setFillColor((document.getElementById("shape_fill_color") as HTMLInputElement).value);
     triangle.setBorderColor((document.getElementById("shape_border_color") as HTMLInputElement).value);
-    ctx = this._canvas.getContext("2d") as CanvasRenderingContext2D;
-    triangle.draw(ctx);
+    triangle.draw();
     (document.getElementById("figure") as HTMLElement).innerHTML = "Triangle";
     (document.getElementById("area") as HTMLElement).innerHTML = "Area: " + triangle.calculateArea();
-    (document.getElementById("perimeter") as HTMLElement).innerHTML = "P=: " + triangle.calculatePerimeter();
+    (document.getElementById("perimeter") as HTMLElement).innerHTML = "Perimeter: " + triangle.calculatePerimeter();
 
 }
 
@@ -48,8 +61,8 @@ function AddCircle() {
 
     circle.setFillColor((document.getElementById("shape_fill_color") as HTMLInputElement).value);
     circle.setBorderColor((document.getElementById("shape_border_color") as HTMLInputElement).value);
-    ctx = this._canvas.getContext("2d") as CanvasRenderingContext2D;
-    circle.draw(ctx);
+
+    circle.draw();
 
     document.getElementById("figure").innerHTML = "Circle";
     document.getElementById("area").innerHTML = "Area: " + circle.calculateArea();
@@ -67,8 +80,8 @@ function AddRectangle() {
 
     rectangle.setFillColor((document.getElementById("shape_fill_color") as HTMLInputElement).value);
     rectangle.setBorderColor((document.getElementById("shape_border_color") as HTMLInputElement).value);
-    ctx = this._canvas.getContext("2d") as CanvasRenderingContext2D;
-    rectangle.draw(ctx);
+
+    rectangle.draw();
 
     document.getElementById("figure").innerHTML = "Rectangle";
     document.getElementById("area").innerHTML = "Area: " + rectangle.calculateArea();

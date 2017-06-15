@@ -52,13 +52,15 @@ class Rectangle extends Shape {
         return (Math.abs(this.y2) - Math.abs(this.y1));
     }
 
-    public draw(ctx: any): void {
-        ctx.beginPath();
-        ctx.rect(this.x1, this.y1, this.getWidth(), this.getHeight());
-        ctx.fillStyle = this.getFillColor();
-        ctx.fill();
-        ctx.strokeStyle = this.getBorderColor();
-        ctx.stroke();
+    public draw(): void {
+        const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+        const context = canvas.getContext("2d") as CanvasRenderingContext2D;
+        context.beginPath();
+        context.rect(this.x1, this.y1, this.getWidth(), this.getHeight());
+        context.fillStyle = this.getFillColor();
+        context.fill();
+        context.strokeStyle = this.getBorderColor();
+        context.stroke();
     }
     public calculateArea(): number {
         return (this.getWidth() * this.getHeight());

@@ -33,13 +33,15 @@ class Circle extends Shape {
         return this.y;
     }
 
-    public draw(ctx: any) {
-        ctx.beginPath();
-        ctx.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
-        ctx.fillStyle = this.getFillColor();
-        ctx.fill();
-        ctx.strokeStyle = this.getBorderColor();
-        ctx.stroke();
+    public draw() {
+        const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+        const context = canvas.getContext("2d") as CanvasRenderingContext2D;
+        context.beginPath();
+        context.arc(this.getX(), this.getY(), this.getRadius(), 0, 2 * Math.PI, false);
+        context.fillStyle = this.getFillColor();
+        context.fill();
+        context.strokeStyle = this.getBorderColor();
+        context.stroke();
     }
 
     public calculateArea() {
