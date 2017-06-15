@@ -1,0 +1,45 @@
+.inner_block {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 30px;
+}
+
+.toolbar {
+    position: relative;
+    margin: 5px;
+}
+
+.info {
+    position: relative;
+    display: block;
+}
+
+.canvas {
+    border: 1px solid;
+    display: block;
+    width: 600px;
+    height: 300px;
+}
+
+.color {
+    position: relative;
+    width: 100px;
+}
+
+.coord {
+    position: relative;
+    width: 50px;
+}
+
+.circle_menu {
+    display: none;
+}
+
+.triangle_menu {
+    display: none;
+}
+
+.rectangle_menu {
+    display: none;
+}
