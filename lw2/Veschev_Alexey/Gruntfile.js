@@ -15,11 +15,19 @@ module.exports = function( grunt ) {
 				}
 			}
 		},
-		eslint: {
+        ts: {
+			default : {
+				src: ["project/js/*.ts", "!node_modules/**"],
+				tsconfig: true
+			}
+		},
+		tslint: {
 			options: {
-				configFile: "eslint.json",
+				configuration: "tslint.json"
 			},
-			src: ['build/scripts.js']
+			your_target: {
+				src: ["project/js/*.ts"]
+			}
 		},
         concat: {
             css: {
@@ -27,7 +35,13 @@ module.exports = function( grunt ) {
                 dest: 'build/styles.css'
             },
             js: {
-                src: ['project/js/main.js', 'project/js/shape.js', 'project/js/circle.js', 'project/js/rectangle.js', 'project/js/triangle.js'],
+                src: [
+                        'project/js/main.js',
+						'project/js/shape.js',
+						'project/js/circle.js',
+						'project/js/rectangle.js',
+						'project/js/triangle.js'
+                ],
                 dest: 'build/scripts.js'
             },
 			html: {
@@ -39,11 +53,14 @@ module.exports = function( grunt ) {
 			server: {
 				options: {
 					hostname: 'localhost',
-					port: 8080,
 					livereload: true,
-					base: 'build/'
+					port: 8080,
+					base: 'build/',
+					open: {
+						target: 'http://localhost:8080'
+					}
 				}
-			}
+            }
 		},
         watch: {
 			options: {
@@ -54,8 +71,8 @@ module.exports = function( grunt ) {
                 tasks: ['concat:css', 'cachebreaker']
             },
             js: {
-                files: ['project/js/*.js'],
-                tasks: ['concat:js', 'eslint', 'cachebreaker']
+                files: ['project/js/*.ts'],
+                tasks: ['tslint', 'ts', 'concat:js', 'cachebreaker']
             },
 			html: {
 				files: ['project/index.html'],
@@ -65,12 +82,13 @@ module.exports = function( grunt ) {
     });
 
     // 2. Where we tell Grunt we plan to use this plug-in.
-	grunt.loadNpmTasks("gruntify-eslint");
     grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-cache-breaker');
+    grunt.loadNpmTasks('grunt-ts');
+	grunt.loadNpmTasks("grunt-tslint");
 
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'eslint', 'cachebreaker', 'connect', 'watch']);
+    grunt.registerTask('default', ['tslint', 'ts', 'concat', 'cachebreaker', 'connect', 'watch']);
 };
