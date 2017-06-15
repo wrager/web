@@ -1,0 +1,42 @@
+.inner_block {
+    position: relative;
+    display: block;
+}
+
+.toolbar {
+    position: relative;
+}
+
+.info {
+    position: relative;
+    display: block;
+}
+
+.canvas {
+    display: block;
+    width: 800px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+.color {
+    position: relative;
+    width: 100px;
+}
+
+.coord {
+    position: relative;
+    width: 50px;
+}
+
+.circle_menu {
+    display: none;
+}
+
+.triangle_menu {
+    display: none;
+}
+
+.rectangle_menu {
+    display: none;
+}
